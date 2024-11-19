@@ -1,0 +1,46 @@
+# Shopify theme files to ignore
+# config/settings_data.json
+
+# Node.js dependencies
+node_modules/
+
+# Tailwind CSS build artifacts
+public/css/
+dist/
+build/
+*.css.map
+
+# Logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.DS_Store
+*.tmp
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Shopify theme check (if used)
+.theme-check.yml
+
+# Lock files (optional, if you don't want to commit them)
+package-lock.json
+yarn.lock
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Local environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Miscellaneous
+*.bak
+*.swp
+*.swo
+*.orig
