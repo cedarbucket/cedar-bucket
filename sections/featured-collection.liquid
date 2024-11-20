@@ -30,6 +30,58 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .title {
+    color: #000;
+    text-align: center;
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .grid__item {
+    padding: 10px;
+  }
+  
+  .card--radius {    
+    border-radius: 16px;    
+    overflow: hidden;
+   }
+   
+   .card:has(.card--overlay) {
+    position: relative;
+   }
+   .card--overlay {
+    background: linear-gradient(0deg, #000000 0%, #1e1e1e 85%, #775D47 100%);
+    position: absolute;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    opacity: 0.4;
+    overflow: hidden;
+    will-change: opacity;
+    transition: opacity 0.3s ease-in-out;
+   }
+
+   .card--overlay:hover {
+    opacity: 0.1;
+   }
+
+  .absolute_content {
+    position: absolute;
+    bottom: 0;
+    padding-left: 4% !important; 
+    z-index: 30;  
+  }
+
+  .absolute_content .h5,
+  .absolute_content a {
+    font-family: "Nuetra Text";
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -113,8 +165,10 @@
               show_rating: section.settings.show_rating,
               skip_styles: skip_card_product_styles,
               section_id: section.id,
-              quick_add: section.settings.quick_add
-            %}
+              quick_add: section.settings.quick_add,
+              absolute_content: section.settings.absolute_content
+              show_overlay: section.settings.show_overlay
+            %}          
           </li>
           {%- assign skip_card_product_styles = true -%}
         {%- else -%}
@@ -249,6 +303,18 @@
       "type": "checkbox",
       "id": "show_description",
       "label": "t:sections.featured-collection.settings.show_description.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "absolute_content",
+      "label": "Make Content Absolute",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show Overlay",
       "default": false
     },
     {

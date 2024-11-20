@@ -15,6 +15,12 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/neutra-text-alt" rel="stylesheet">
+
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -102,24 +108,25 @@
       }
 
       :root {
+        --font-body-family: 'Neutra Text', sans-serif;
         {% if settings.custom_body_font %}
-          --font-body-family: {{ settings.custom_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+          /* --font-body-family: {{ settings.custom_body_font.family }}, {{ settings.type_body_font.fallback_families }};
           --font-body-style: {{ settings.custom_body_font.style }};
-          --font-body-weight: {{ settings.custom_body_font.weight }};  
+          --font-body-weight: {{ settings.custom_body_font.weight }};   */
         {% else %}
-          --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+          /* --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
           --font-body-style: {{ settings.type_body_font.style }};
-          --font-body-weight: {{ settings.type_body_font.weight }};
+          --font-body-weight: {{ settings.type_body_font.weight }}; */
         {% endif %}
    
         {% if settings.custom_header_font %}
-          --font-heading-family: {{ settings.custom_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+          /* --font-heading-family: {{ settings.custom_header_font.family }}, {{ settings.type_header_font.fallback_families }};
           --font-heading-style: {{ settings.custom_header_font.style }};
-          --font-heading-weight: {{ settings.custom_header_font.weight }};  
+          --font-heading-weight: {{ settings.custom_header_font.weight }};   */
         {% else %}
-          --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+          /* --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
           --font-heading-style: {{ settings.type_header_font.style }};
-          --font-heading-weight: {{ settings.type_header_font.weight }};
+          --font-heading-weight: {{ settings.type_header_font.weight }}; */
         {% endif %}      
 
        

@@ -168,7 +168,13 @@
       "settings": {
         "absolute_header": {
           "label": "Header absolute top"
-        }
+        },
+        "search_header": {
+          "label": "Enable Search"
+        },
+        "shopping_cart": {
+          "label": "Enable Cart Icon"
+        },
       }
     },
     "brand_information": {

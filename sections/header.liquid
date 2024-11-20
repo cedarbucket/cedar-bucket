@@ -36,6 +36,10 @@
     display: flex;
   }
 
+  .header.page-width.drawer-menu {
+    max-width: 1400px;
+  }
+
   .list-menu {
     list-style: none;
     padding: 0;
@@ -224,7 +228,19 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      
+      {% if settings.search_header %}{% render 'header-search', input_id: 'Search-In-Modal' %}{% endif %}
+
+       <div class="header__social_icons">
+          <p>Follow us on</p>
+          <a href="#" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+            <span class="svg-wrapper">{{'icon-instagram.svg' | inline_asset_content }}</span>
+        </a>
+
+          <a href="#" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+            <span class="svg-wrapper">{{'icon-facebook.svg' | inline_asset_content }}</span>
+        </a>
+       </div>
 
       {%- if shop.customer_accounts_enabled -%}
         <a
@@ -262,7 +278,8 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+    {%- if settings.shopping_cart -%}
+    <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{'icon-cart-empty.svg' | inline_asset_content }}</span>
           {% else %}
@@ -278,6 +295,7 @@
           </div>
         {%- endif -%}
       </a>
+    {%- endif -%}
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>

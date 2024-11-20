@@ -41,6 +41,18 @@
         "id": "absolute_header",
         "default": false,
         "label": "t:settings_schema.header.settings.absolute_header.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "search_header",
+        "default": false,
+        "label": "t:settings_schema.header.settings.search_header.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "shopping_cart",
+        "default": false,
+        "label": "t:settings_schema.header.settings.shopping_cart.label"
       }
     ]
   },
