@@ -35,13 +35,7 @@
   },
   {
     "name": "t:settings_schema.header.name",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "absolute_header",
-        "default": false,
-        "label": "t:settings_schema.header.settings.absolute_header.label"
-      },
+    "settings": [      
       {
         "type": "checkbox",
         "id": "search_header",

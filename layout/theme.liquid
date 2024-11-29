@@ -314,7 +314,7 @@
       >
     {%- endif -%}    
     
-    <link href="{{ 'theme.css' | asset_url }}" rel="stylesheet" type="text/css" />
+    {% comment %} <link href="{{ 'theme.css' | asset_url }}" rel="stylesheet" type="text/css" /> {% endcomment %}
     <script src="{{ 'custom-scripts.js.liquid' | asset_url }}" defer="defer"></script>
 
     <script>
@@ -333,7 +333,11 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% sections 'header-group' %}
+    {% if template.name == 'index' %}
+      {% sections 'header-group' %}
+    {% else %}
+      {% section 'header-alternate' %}
+    {% endif %}    
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

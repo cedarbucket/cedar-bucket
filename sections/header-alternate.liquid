@@ -139,17 +139,17 @@
         <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- if settings.logo != blank -%}
+            {%- if section.settings.alternate_logo != blank -%}
               <div class="header__heading-logo-wrapper">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
+                {%- assign logo_height = section.settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(max-width: {{ section.settings.logo_width | times: 2 }}px) 50vw, {{ section.settings.logo_width }}px{% endcapture %}
+                {% capture widths %}{{ section.settings.logo_width }}, {{ section.settings.logo_width | times: 1.5 | round }}, {{ section.settings.logo_width | times: 2 }}{% endcapture %}
+                {{ section.settings.alternate_logo | image_url: width: 600 | image_tag:
                   class: 'header__heading-logo motion-reduce',
                   widths: widths,
                   height: logo_height,
-                  width: settings.logo_width,
+                  width: section.settings.logo_width,
                   alt: logo_alt,
                   sizes: sizes,
                   preload: true
@@ -179,17 +179,17 @@
         <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- if settings.logo != blank -%}
+            {%- if section.settings.alternate_logo != blank -%}
               <div class="header__heading-logo-wrapper">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
+                {%- assign logo_height = section.settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(min-width: 750px) {{ section.settings.logo_width }}px, 50vw{% endcapture %}
+                {% capture widths %}{{ section.settings.logo_width }}, {{ section.settings.logo_width | times: 1.5 | round }}, {{ section.settings.logo_width | times: 2 }}{% endcapture %}
+                {{ section.settings.alternate_logo | image_url: width: 600 | image_tag:
                   class: 'header__heading-logo',
                   widths: widths,
                   height: logo_height,
-                  width: settings.logo_width,
+                  width: section.settings.logo_width,
                   alt: logo_alt,
                   sizes: sizes,
                   preload: true
@@ -229,18 +229,7 @@
         {%- endif -%}
       </div>
       
-      {% if settings.search_header %}{% render 'header-search', input_id: 'Search-In-Modal' %}{% endif %}
-
-       <div class="header__social_icons">
-          <p>Follow us on</p>
-          <a href="#" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-            <span class="svg-wrapper">{{'icon-instagram.svg' | inline_asset_content }}</span>
-        </a>
-
-          <a href="#" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-            <span class="svg-wrapper">{{'icon-facebook.svg' | inline_asset_content }}</span>
-        </a>
-       </div>
+      {% if settings.search_header %}{% render 'header-search', input_id: 'Search-In-Modal' %}{% endif %}       
 
       {%- if shop.customer_accounts_enabled -%}
         <a
@@ -421,8 +410,8 @@
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": {{ shop.name | json }},
-    {% if settings.logo %}
-      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% if section.settings.alternate_logo %}
+      "logo": {{ section.settings.alternate_logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
     "sameAs": [
       {{ settings.social_twitter_link | json }},
@@ -463,6 +452,21 @@
   "max_blocks": 3,
   "settings": [
     {
+        "type": "image_picker",
+        "id": "alternate_logo",
+        "label": "t:settings_schema.logo.settings.logo_image.label"
+    },
+    {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "default": 100,
+        "unit": "px",
+        "label": "t:settings_schema.logo.settings.logo_width.label"
+    },
+    {
       "type": "select",
       "id": "logo_position",
       "options": [
@@ -481,6 +485,10 @@
         {
           "value": "middle-center",
           "label": "t:sections.header.settings.logo_position.options__4.label"
+        },
+        {
+          "value": "left-right",
+          "label": "t:sections.header.settings.logo_position.options__5.label"
         }
       ],
       "default": "middle-left",

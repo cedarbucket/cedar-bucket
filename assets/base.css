@@ -2413,6 +2413,12 @@ input[type='checkbox'] {
     column-gap: 2rem;
   }
 
+  .header--left-right {
+    grid-template-areas: 'heading icons navigation';
+    grid-template-columns: auto 1fr auto;
+    column-gap: 2rem;
+  }
+
   .header--middle-center:not(.drawer-menu) {
     grid-template-areas: 'navigation heading icons';
     grid-template-columns: 1fr auto 1fr;
