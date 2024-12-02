@@ -16,7 +16,7 @@
 
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} sb-page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -48,8 +48,18 @@
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
+                  style="
+                  --animation-order: {{ forloop.index }};
+                  font-family: {{ block.settings.sb_custom_font }};
+                  font-size: {{ block.settings.sb_font_size }}px;
+                  line-height: {{ block.settings.sb_font_size | times: 1.5 }}px;
+                  "
+                {% endif %}   
+                style="
+                    font-family: {{ block.settings.sb_custom_font }};
+                    font-size: {{ block.settings.sb_font_size }}px;
+                    line-height: {{ block.settings.sb_font_size | times: 1.5 }}px;
+                  "                         
               >
                 {{ block.settings.text }}
               </div>
@@ -282,6 +292,32 @@
           "id": "text",
           "default": "t:sections.rich-text.blocks.text.settings.text.default",
           "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "sb_custom_font",
+          "options": [
+              {
+                "value": "Neutra Text",
+                "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
+              },
+              {
+                "value": "Poiret One",
+                "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
+              }        
+            ],
+          "default": "Neutra Text",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
+        },
+        {
+          "type": "range",
+          "id": "sb_font_size",
+          "min": 0,
+          "max": 80,
+          "step": 2,
+          "unit": "px",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_font_size.label",
+          "default": 24
         }
       ]
     },

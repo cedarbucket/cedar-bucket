@@ -32,7 +32,7 @@
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_position }}">
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
@@ -44,9 +44,10 @@
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+        class="{% if section.settings.sb_column_grid %}sb-multicolumn-list {% endif %} multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
         id="Slider-{{ section.id }}"
         role="list"
+        {%- if section.settings.sb_custom_font -%}style="font-family: '{{ section.settings.sb_custom_font }}';"{%- endif -%}
       >
         {%- liquid
           assign highest_ratio = 0
@@ -80,6 +81,13 @@
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
+                
+                {% if section.settings.sb_column_grid %}
+                  <div class="card--overlay">
+                    <div></div>
+                  </div>                
+                {% endif %}
+
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
@@ -200,10 +208,46 @@
   },
   "settings": [
     {
+      "type": "select",
+      "id": "sb_custom_font",
+      "options": [
+        {
+          "value": "Neutra Text",
+          "label": "t:sections.all.sb_custom_font.options__1.label"
+        },
+        {
+          "value": "Poiret One",
+          "label": "t:sections.all.sb_custom_font.options__2.label"
+        }        
+      ],
+      "default": "Neutra Text",
+      "label": "t:sections.all.sb_custom_font.label"
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "default": "t:sections.multicolumn.settings.title.default",
       "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.heading_position.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.heading_position.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.heading_position.options__3.label"
+        }        
+      ],
+      "default": "left",
+      "label": "t:sections.all.heading_position.label"
     },
     {
       "type": "select",
@@ -232,6 +276,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "sb_column_grid",
+      "default": false,
+      "label": "t:sections.multicolumn.settings.sb_column_grid.label"
     },
     {
       "type": "select",

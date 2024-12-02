@@ -45,6 +45,7 @@
         "menu_type_desktop": "drawer",
         "sticky_header_type": "none",
         "show_line_separator": false,
+        "absolute_header": true,
         "color_scheme": "scheme-bcdab6cc-f1e6-407b-a64f-426f27c6f25c",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": true,

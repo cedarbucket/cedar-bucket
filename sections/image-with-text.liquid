@@ -70,6 +70,7 @@
                   <h2
                     class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
                     {{ block.shopify_attributes }}
+                    {%- if block.settings.sb_custom_font -%}style="font-family: '{{ block.settings.sb_custom_font }}';"{%- endif -%}
                   >
                     {{ block.settings.heading }}
                   </h2>
@@ -81,7 +82,7 @@
                     {{ block.settings.caption | escape }}
                   </p>
                 {%- when 'text' -%}
-                  <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                  <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }} {%- if block.settings.sb_custom_font -%}style="font-family: '{{ block.settings.sb_custom_font }}';"{%- endif -%}>
                     {{ block.settings.text }}
                   </div>
                 {%- when 'button' -%}
@@ -362,6 +363,22 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "sb_custom_font",
+          "options": [
+            {
+              "value": "Neutra Text",
+              "label": "t:sections.all.sb_custom_font.options__1.label"
+            },
+            {
+              "value": "Poiret One",
+              "label": "t:sections.all.sb_custom_font.options__2.label"
+            }        
+          ],
+          "default": "Neutra Text",
+          "label": "t:sections.all.sb_custom_font.label"
         }
       ]
     },
@@ -440,6 +457,22 @@
           ],
           "default": "body",
           "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
+        },
+        {
+        "type": "select",
+        "id": "sb_custom_font",
+        "options": [
+            {
+              "value": "Neutra Text",
+              "label": "t:sections.all.sb_custom_font.options__1.label"
+            },
+            {
+              "value": "Poiret One",
+              "label": "t:sections.all.sb_custom_font.options__2.label"
+            }        
+          ],
+          "default": "Neutra Text",
+          "label": "t:sections.all.sb_custom_font.label"
         }
       ]
     },

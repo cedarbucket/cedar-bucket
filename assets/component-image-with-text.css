@@ -415,3 +415,23 @@
     row-gap: var(--grid-desktop-vertical-spacing);
   }
 }
+
+
+/* SB changes */
+.image-with-text__grid--reverse .image-with-text__content {
+  gap: 25px;
+}
+
+.image-with-text .grid__item {
+  padding: 0;
+}
+.image-with-text__heading {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 37.44px;
+}
+.image-with-text__text.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+}

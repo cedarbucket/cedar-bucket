@@ -403,6 +403,16 @@
   },
   "sections": {
     "all": {
+      "sb_custom_font": {
+        "label": "Font Family",
+        "options__1": {
+          "label": "Neutra Text"
+        },
+        "options__2": {
+          "label": "Poiret One"
+        },
+        "info": "Select custom font"
+      },
       "animation": {
         "content": "Animations",
         "image_behavior": {
@@ -430,6 +440,18 @@
       "colors": {
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
+      },
+      "heading_position": {
+        "label": "Heading Postion",
+        "options__1": {
+          "label": "Left"
+        },
+        "options__2": {
+          "label": "Center"
+        },
+        "options__3": {
+          "label": "Right"
+        }
       },
       "heading_size": {
         "label": "Heading size",
@@ -645,7 +667,7 @@
     },
     "collection-list": {
       "name": "Collection list",
-      "settings": {
+      "settings": {        
         "title": {
           "default": "Collections",
           "label": "Heading"
@@ -708,7 +730,20 @@
         "title": {
           "default": "Contact form",
           "label": "Heading"
-        }
+        },
+        "sb_background_overlay": {
+          "label": "Background Overlay",
+          "info": "Add background overlay if added image"
+        },
+        "image_one": {
+          "label": "Overlay Image 1"
+        },
+        "image_two": {
+          "label": "Overlay Image 2"
+        },
+        "image_three": {      
+          "label": "Overlay Image 3"
+        },
       }
     },
     "custom-liquid": {
@@ -2589,10 +2624,13 @@
     },
     "multicolumn": {
       "name": "Multicolumn",
-      "settings": {
+      "settings": {        
         "title": {
           "label": "Heading",
           "default": "Multicolumn"
+        },
+        "sb_column_grid": {
+          "label": "Stylish Column Grid"
         },
         "image_width": {
           "label": "Image width",
@@ -3026,6 +3064,19 @@
             "text": {
               "label": "Description",
               "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            },
+            "sb_custom_font": {
+              "label": "Font Family",
+              "options__1": {
+                "label": "Neutra Text"
+              },
+              "options__2": {
+                "label": "Poiret One"
+              },
+              "info": "Select custom font"
+            },
+            "sb_font_size": {
+              "label": "Font Size"
             }
           }
         },

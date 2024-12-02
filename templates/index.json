@@ -268,6 +268,92 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_BQAnXq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Gya9cT": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Quality pre-owned furniture ready to find a new home</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EkY46P": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003689.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9p9D4T": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Hand-picked furniture, only one visit away</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EJYr3h": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003759.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aA3AyG": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "<p>Enjoyable, affordable, and accessible experience for everyone<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fCV7NA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003758.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Gya9cT",
+        "column_EkY46P",
+        "column_9p9D4T",
+        "column_EJYr3h",
+        "column_aA3AyG",
+        "column_fCV7NA"
+      ],
+      "settings": {
+        "title": "Find Us On Instagram",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -278,6 +364,7 @@
     "image_with_text_BdAn7d",
     "rich_text_7tQ4MV",
     "multirow_BaH9jq",
-    "contact_form_8rpyyA"
+    "contact_form_8rpyyA",
+    "multicolumn_BQAnXq"
   ]
 }
