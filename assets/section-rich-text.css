@@ -17,11 +17,15 @@
   width: 100%;
 }
 
-.sb-page-width .rich-text__blocks {
-  max-width: 60%;
+.sb-page-width {
+  margin: auto;
 }
 
 @media screen and (min-width: 750px) {
+  .sb-page-width .rich-text__blocks {
+    max-width: 60%;
+  }
+
   .rich-text__wrapper {
     width: 100%;
   }

@@ -82,7 +82,7 @@
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
@@ -94,7 +94,9 @@
         "text_KD3cUx": {
           "type": "text",
           "settings": {
-            "text": "<p>At Cedar Bucket, we make furniture shopping easy, sustainable, and affordable. Our platform connects buyers with quality pre-owned furniture sold by student ready to find a new home. Shop with confidence knowing every piece has been carefully selected for its value, style, and condition. Ready to furnish your space?</p>"
+            "text": "<p>At Cedar Bucket, we make furniture shopping easy, sustainable, and affordable. Our platform connects buyers with quality pre-owned furniture sold by student ready to find a new home. Shop with confidence knowing every piece has been carefully selected for its value, style, and condition. Ready to furnish your space?</p>",
+            "sb_custom_font": "Poiret One",
+            "sb_font_size": 32
           }
         }
       },
@@ -104,10 +106,10 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "rich_text_nqt4yk": {
@@ -123,7 +125,9 @@
         "text_kgk7kJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to Cedar Bucket, where we believe that finding quality furniture should be an enjoyable, affordable, and accessible experience for everyone.</p>"
+            "text": "<p>Welcome to Cedar Bucket, where we believe that finding quality furniture should be an enjoyable, affordable, and accessible experience for everyone.</p>",
+            "sb_custom_font": "Neutra Text",
+            "sb_font_size": 24
           }
         }
       },
@@ -147,14 +151,16 @@
           "type": "heading",
           "settings": {
             "heading": "History of Cedar Bucket",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_waGfLw": {
           "type": "text",
           "settings": {
             "text": "<p>Welcome to Cedar Bucket, where we believe that finding quality furniture should be an enjoyable, affordable, and accessible experience for everyone. We’re a one-of-a-kind furniture warehouse, designed for people who want high-quality, curated furniture without the high-end price tag</p>",
-            "text_style": "body"
+            "text_style": "subtitle",
+            "sb_custom_font": "Neutra Text"
           }
         }
       },
@@ -173,100 +179,9 @@
         "section_color_scheme": "scheme-3",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "rich_text_7tQ4MV": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_9eWWT7": {
-          "type": "heading",
-          "settings": {
-            "heading": "Find Us On Instagram",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_9eWWT7"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "multirow_BaH9jq": {
-      "type": "multirow",
-      "blocks": {
-        "row_MxXRBR": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Frame_1000003689.png",
-            "caption": "",
-            "heading": "",
-            "text": "<p>Quality pre-owned furniture ready to find a new home</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_VxbarV": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Frame_1000003759.png",
-            "caption": "",
-            "heading": "",
-            "text": "<p>Hand-picked furniture, only one visit away</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_yDthfP": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Frame_1000003758.png",
-            "caption": "",
-            "heading": "",
-            "text": "<p>Enjoyable, affordable, and accessible experience for everyone</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_MxXRBR",
-        "row_VxbarV",
-        "row_yDthfP"
-      ],
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "contact_form_8rpyyA": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "Let’s Connect",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn_BQAnXq": {
@@ -275,6 +190,10 @@
         "column_Gya9cT": {
           "type": "column",
           "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "center",
             "title": "",
             "text": "<p>Quality pre-owned furniture ready to find a new home</p>",
             "link_label": "",
@@ -285,6 +204,10 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Frame_1000003689.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
             "title": "",
             "text": "",
             "link_label": "",
@@ -294,6 +217,10 @@
         "column_9p9D4T": {
           "type": "column",
           "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "center",
             "title": "",
             "text": "<p>Hand-picked furniture, only one visit away</p>",
             "link_label": "",
@@ -304,6 +231,10 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Frame_1000003759.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
             "title": "",
             "text": "",
             "link_label": "",
@@ -313,6 +244,10 @@
         "column_aA3AyG": {
           "type": "column",
           "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "center",
             "title": "",
             "text": "<p>Enjoyable, affordable, and accessible experience for everyone<br/><br/></p>",
             "link_label": "",
@@ -323,6 +258,10 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Frame_1000003758.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
             "title": "",
             "text": "",
             "link_label": "",
@@ -339,8 +278,11 @@
         "column_fCV7NA"
       ],
       "settings": {
+        "sb_custom_font": "Poiret One",
         "title": "Find Us On Instagram",
+        "heading_position": "center",
         "heading_size": "h1",
+        "sb_column_grid": true,
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 6,
@@ -351,8 +293,22 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "contact_form_8rpyyA": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Let’s Connect",
+        "heading_size": "h1",
+        "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "sb_background_overlay": 90,
+        "image_one": "shopify://shop_images/33560c89bf9f52ef4c088f94c5a365bb.jpg",
+        "image_two": "shopify://shop_images/362f150949906132546966a182fd427a.jpg",
+        "image_three": "shopify://shop_images/be216cb1d7958e42012adc9a49bc126d.jpg"
       }
     }
   },
@@ -362,9 +318,7 @@
     "rich_text_rntMki",
     "rich_text_nqt4yk",
     "image_with_text_BdAn7d",
-    "rich_text_7tQ4MV",
-    "multirow_BaH9jq",
-    "contact_form_8rpyyA",
-    "multicolumn_BQAnXq"
+    "multicolumn_BQAnXq",
+    "contact_form_8rpyyA"
   ]
 }

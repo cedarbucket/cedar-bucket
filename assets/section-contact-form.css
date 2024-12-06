@@ -1,6 +1,6 @@
 .sb-contact-form-wrapper {
   position: relative;
-  height: 110vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
   top: 10%;
   right: 0;
   z-index: 10;
-  perspective: 1000px;  
+  perspective: 1000px;
 }
 
 .sb-image-three {
@@ -26,9 +26,9 @@
   right: 0;
   left: 0;
   z-index: 10;
-  margin: auto;    
+  margin: auto;
   text-align: center;
-  perspective: 1000px;  
+  perspective: 1000px;
 }
 
 .sb-image-one img,
@@ -41,18 +41,21 @@
   height: 380px;
 }
 
-.sb-image-one img{
+.sb-image-one img {
   transform-style: preserve-3d;
-  transform: rotateX(-7deg) rotateY(18deg) rotateZ(-3deg) translateX(-3em) translateY(40px) translateZ(14px);
+  transform: rotateX(-7deg) rotateY(18deg) rotateZ(-3deg) translateX(-3em)
+    translateY(40px) translateZ(14px);
 }
-.sb-image-two img{
+.sb-image-two img {
   transform-style: preserve-3d;
-  transform: rotateX(-8deg) rotateY(-18deg) rotateZ(3deg) translateX(30px) translateY(42px) translateZ(0);
+  transform: rotateX(-8deg) rotateY(-18deg) rotateZ(3deg) translateX(30px)
+    translateY(42px) translateZ(0);
 }
 
-.sb-image-three img{
+.sb-image-three img {
   transform-style: preserve-3d;
-  transform: rotateX(58deg) rotateY(-1deg) rotateZ(-44deg) translateX(0em) translateY(0) translateZ(-175px);
+  transform: rotateX(58deg) rotateY(-1deg) rotateZ(-44deg) translateX(0em)
+    translateY(0) translateZ(-175px);
 }
 
 .sb-background-overlay {
@@ -61,22 +64,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 20;  
+  z-index: 20;
   background-color: white;
 }
 
 .sb-contact-form-wrapper .contact {
-    position: relative;
-    z-index: 50;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: relative;
+  z-index: 50;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sb-contact-form-wrapper form input,
 .sb-contact-form-wrapper form textarea {
-  background-color: transparent;  
+  background-color: transparent;
 }
 
 .sb-contact-form-wrapper form button {
@@ -97,25 +100,31 @@
 }
 
 .contact .field {
-  margin-bottom: 1.5rem;  
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1024px) {
-  .sb-image-one img, .sb-image-two img, .sb-image-three img {    
+  .sb-image-one img,
+  .sb-image-two img,
+  .sb-image-three img {
     width: 300px;
     height: 250px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .sb-image-one img, .sb-image-two img, .sb-image-three img {    
+  .sb-image-one img,
+  .sb-image-two img,
+  .sb-image-three img {
     width: 220px;
     height: 180px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .sb-image-one img, .sb-image-two img, .sb-image-three img {    
+  .sb-image-one img,
+  .sb-image-two img,
+  .sb-image-three img {
     width: 180px;
     height: 120px;
   }

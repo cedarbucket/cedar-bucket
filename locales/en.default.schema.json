@@ -130,6 +130,9 @@
           "label": "Background gradient",
           "info": "Background gradient replaces background where possible."
         },
+        "heading": {
+          "label": "Heading"
+        },
         "text": {
           "label": "Text"
         },
@@ -174,7 +177,7 @@
         },
         "shopping_cart": {
           "label": "Enable Cart Icon"
-        },
+        }
       }
     },
     "brand_information": {
@@ -412,6 +415,18 @@
           "label": "Poiret One"
         },
         "info": "Select custom font"
+      },
+      "sb_text_alignment": {
+        "options__1": {
+          "label": "Left"
+        },
+        "options__2": {
+          "label": "Center"
+        },
+        "options__3": {
+          "label": "Right"
+        },
+        "label": "Text alignment"
       },
       "animation": {
         "content": "Animations",
@@ -667,7 +682,7 @@
     },
     "collection-list": {
       "name": "Collection list",
-      "settings": {        
+      "settings": {
         "title": {
           "default": "Collections",
           "label": "Heading"
@@ -741,9 +756,9 @@
         "image_two": {
           "label": "Overlay Image 2"
         },
-        "image_three": {      
+        "image_three": {
           "label": "Overlay Image 3"
-        },
+        }
       }
     },
     "custom-liquid": {
@@ -1196,7 +1211,7 @@
           "options__3": {
             "label": "Drawer"
           }
-        },       
+        },
         "show_line_separator": {
           "label": "Show separator line"
         },
@@ -2624,7 +2639,7 @@
     },
     "multicolumn": {
       "name": "Multicolumn",
-      "settings": {        
+      "settings": {
         "title": {
           "label": "Heading",
           "default": "Multicolumn"
@@ -2709,6 +2724,12 @@
           "settings": {
             "image": {
               "label": "Image"
+            },
+            "sb_make_image_background": {
+              "label": "Make Image Background"
+            },
+            "sb_column_numbering": {
+              "label": "Show Numbering"
             },
             "title": {
               "label": "Heading",

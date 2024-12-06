@@ -1,0 +1,17 @@
+{
+  "name": "cedar-bucket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.6.1",
+    "prettier": "^3.4.1"
+  }
+}

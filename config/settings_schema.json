@@ -35,7 +35,7 @@
   },
   {
     "name": "t:settings_schema.header.name",
-    "settings": [      
+    "settings": [
       {
         "type": "checkbox",
         "id": "search_header",
@@ -68,6 +68,12 @@
             "id": "background_gradient",
             "label": "t:settings_schema.colors.settings.background_gradient.label",
             "info": "t:settings_schema.colors.settings.background_gradient.info"
+          },
+          {
+            "type": "color",
+            "id": "heading",
+            "label": "t:settings_schema.colors.settings.heading.label",
+            "default": "#ffffff"
           },
           {
             "type": "color",

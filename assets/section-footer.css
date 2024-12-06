@@ -1,3 +1,45 @@
+.sb-footer-section .footer__blocks-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.sb-footer-section .footer-block:nth-child(1) {
+  grid-column: span 4;
+  grid-row: 1;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.sb-footer-section .footer-block:nth-child(1) .footer-block__heading {
+  font-size: 32px;
+  text-align: center;
+}
+
+.sb-footer-section .footer-block:nth-child(2) {
+  grid-column: span 1;
+  grid-row: 2;
+  width: 100%;
+}
+
+.sb-footer-section .footer-block:nth-child(3) {
+  grid-column: span 1;
+  grid-row: 2;
+  width: 100%;
+}
+
+.sb-footer-section .footer-block:nth-child(4) {
+  grid-column: span 1;
+  grid-row: 2;
+  width: 100%;
+}
+
+.sb-footer-section .footer-block:nth-child(5) {
+  margin-top: 24px;
+  grid-column: span 4;
+  grid-row: 1 / span 4;
+  width: 100%;
+}
+
 .footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
@@ -35,7 +77,7 @@
 
 @media screen and (min-width: 750px) {
   .footer__content-top .grid {
-    row-gap: 6rem;
+    row-gap: 0;
     margin-bottom: 0;
   }
 }
@@ -156,6 +198,9 @@
 }
 
 @media screen and (min-width: 990px) {
+  .sb-footer-section .footer-block:nth-child(1) .footer-block__heading {
+    font-size: 48px;
+  }
   .footer-block__heading {
     font-size: calc(var(--font-heading-scale) * 1.8rem);
   }
@@ -196,7 +241,8 @@
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsletter:not(:only-child)
+    .newsletter-form__message--success {
     left: auto;
   }
 
@@ -296,7 +342,8 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
+  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center)
+    .footer__copyright {
     text-align: right;
   }
 }
@@ -420,7 +467,9 @@
   text-align: center;
 }
 
-.footer-block:only-child > .footer-block__brand-info > .footer-block__image-wrapper {
+.footer-block:only-child
+  > .footer-block__brand-info
+  > .footer-block__image-wrapper {
   margin-left: auto;
   margin-right: auto;
 }
@@ -430,7 +479,9 @@
   height: auto;
 }
 
-.footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
+.footer-block:only-child
+  .footer-block__brand-info
+  .footer__list-social.list-social {
   justify-content: center;
 }
 
@@ -462,7 +513,7 @@
 }
 
 .policies li::before {
-  content: '\00B7';
+  content: "\00B7";
   padding: 0 0.8rem;
 }
 

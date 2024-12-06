@@ -13,12 +13,59 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "text_XRVLeL": {
+          "type": "text",
+          "settings": {
+            "heading": "Discover Quality Furniture",
+            "subtext": ""
+          }
+        },
+        "image_FCMPd8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003701_adfb1151-05fc-4551-a427-f1a14b8b9442.png",
+            "image_width": 550,
+            "alignment": ""
+          }
+        },
+        "image_P6rwby": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003703.png",
+            "image_width": 550,
+            "alignment": ""
+          }
+        },
+        "image_nY8w4i": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003702_743153d8-53d7-45b1-adba-7a26503a609d.png",
+            "image_width": 550,
+            "alignment": ""
+          }
+        },
+        "text_LYyLcx": {
+          "type": "text",
+          "settings": {
+            "heading": "Have a Visit",
+            "subtext": "<p>TARUN TAHILIANI,<br/>Qutab Garden, Block B, H-5/12<br/>Ward No- 1 Style Mile Road,<br/>Mehrauli, Near Qila Restaurant & Qutab Minar,<br/>New Delhi- 110030</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_XRVLeL",
+        "image_FCMPd8",
+        "image_P6rwby",
+        "image_nY8w4i",
+        "text_LYyLcx"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-3",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": true,

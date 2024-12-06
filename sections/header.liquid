@@ -132,7 +132,7 @@
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
         render 'header-search', input_id: 'Search-In-Modal-1'
       endif
-    -%}
+    -%}    
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -231,8 +231,9 @@
       
       {% if settings.search_header %}{% render 'header-search', input_id: 'Search-In-Modal' %}{% endif %}
 
+        {% if  social_links %}
        <div class="header__social_icons">
-          <p>Follow us on</p>
+          <div class="medium-hide small-hide"><p>Follow us on</p></div>
           <a href="#" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
             <span class="svg-wrapper">{{'icon-instagram.svg' | inline_asset_content }}</span>
         </a>
@@ -241,6 +242,7 @@
             <span class="svg-wrapper">{{'icon-facebook.svg' | inline_asset_content }}</span>
         </a>
        </div>
+      {% endif %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a

@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/neutra-text-alt" rel="stylesheet">
 
-
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -34,7 +33,7 @@
 
     {% render 'meta-tags' %}
 
-    <link href="{{ 'custom-font.css.liquid' | asset_url }}" rel="stylesheet" />
+    <link href="{{ 'custom-font.css.liquid' | asset_url }}" rel="stylesheet">
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -87,6 +86,7 @@
           endif
         %}
 
+        --color-heading: {{ scheme.settings.heading.red }},{{ scheme.settings.heading.green }},{{ scheme.settings.heading.blue }};
         --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --color-background-contrast: {{ background_color_contrast.red }},{{ background_color_contrast.green }},{{ background_color_contrast.blue }};
         --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
@@ -118,7 +118,7 @@
           --font-body-style: {{ settings.type_body_font.style }};
           --font-body-weight: {{ settings.type_body_font.weight }}; */
         {% endif %}
-   
+
         {% if settings.custom_header_font %}
           /* --font-heading-family: {{ settings.custom_header_font.family }}, {{ settings.type_header_font.fallback_families }};
           --font-heading-style: {{ settings.custom_header_font.style }};
@@ -127,10 +127,10 @@
           /* --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
           --font-heading-style: {{ settings.type_header_font.style }};
           --font-heading-weight: {{ settings.type_header_font.weight }}; */
-        {% endif %}      
+        {% endif %}
 
-       
-        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};      
+
+        --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
@@ -312,10 +312,12 @@
         media="print"
         onload="this.media='all'"
       >
-    {%- endif -%}    
-    
-    {% comment %} <link href="{{ 'theme.css' | asset_url }}" rel="stylesheet" type="text/css" /> {% endcomment %}
-    <script src="{{ 'custom-scripts.js.liquid' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    {% comment %} <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+    <script src="{{ 'gsap-tasks.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'custom-scripts.js' | asset_url }}" defer="defer"></script>
 
     <script>
       if (Shopify.designMode) {
@@ -337,7 +339,7 @@
       {% sections 'header-group' %}
     {% else %}
       {% section 'header-alternate' %}
-    {% endif %}    
+    {% endif %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

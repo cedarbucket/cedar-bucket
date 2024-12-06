@@ -14,6 +14,20 @@
   }
 {%- endstyle -%}
 
+{% for block in section.blocks %}
+  {% assign custom_font = block.settings.sb_custom_font %}
+  {% assign font_size = block.settings.sb_font_size %}
+  {% assign line_height = font_size | times: 1.5 %}
+
+  <style>
+    .sb-font-style-{{ block.id }} {
+      font-family: {{ custom_font }};
+      font-size: {{ font_size }}px;
+      line-height: {{ line_height }}px;
+    }
+  </style>
+{% endfor %}
+
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} sb-page-width{% endif %}">
@@ -44,22 +58,12 @@
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="sb-font-style-{{ block.id }} rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="
-                  --animation-order: {{ forloop.index }};
-                  font-family: {{ block.settings.sb_custom_font }};
-                  font-size: {{ block.settings.sb_font_size }}px;
-                  line-height: {{ block.settings.sb_font_size | times: 1.5 }}px;
-                  "
-                {% endif %}   
-                style="
-                    font-family: {{ block.settings.sb_custom_font }};
-                    font-size: {{ block.settings.sb_font_size }}px;
-                    line-height: {{ block.settings.sb_font_size | times: 1.5 }}px;
-                  "                         
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
               >
                 {{ block.settings.text }}
               </div>
@@ -297,15 +301,15 @@
           "type": "select",
           "id": "sb_custom_font",
           "options": [
-              {
-                "value": "Neutra Text",
-                "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
-              },
-              {
-                "value": "Poiret One",
-                "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
-              }        
-            ],
+            {
+              "value": "Neutra Text",
+              "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
+            },
+            {
+              "value": "Poiret One",
+              "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
+            }
+          ],
           "default": "Neutra Text",
           "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
         },

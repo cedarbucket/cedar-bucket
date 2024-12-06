@@ -1,0 +1,200 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_3jRxte": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_TEzMRb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Effortless Storage for College Students",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_7F6fA9": {
+          "type": "text",
+          "settings": {
+            "text": "Need a secure, flexible, and affordable place to store your items? Our college storage solution is tailored just for you",
+            "text_style": "capitalize",
+            "font_size": 32
+          }
+        },
+        "buttons_HLEqTD": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Browse Our Invertory",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "Request Storage",
+            "button_link_2": "#",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_TEzMRb",
+        "text_7F6fA9",
+        "buttons_HLEqTD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2c7e90126af63b4f6beb1dfcb7c67dfd.jpg",
+        "image_overlay_opacity": 60,
+        "image_height": "full",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_rPjQ6y": {
+      "type": "rich-text",
+      "blocks": {
+        "text_QC7QFm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Cedar Bucket, we make furniture shopping easy, sustainable, and affordable. Our platform connects buyers with quality pre-owned furniture sold by student ready to find a new home. Shop with confidence knowing every piece has been carefully selected for its value, style, and condition. Ready to furnish your space?</p>",
+            "sb_custom_font": "Poiret One",
+            "sb_font_size": 32
+          }
+        }
+      },
+      "block_order": [
+        "text_QC7QFm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "multicolumn_jpKzCY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Ue4B9z": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003701.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": true,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "center",
+            "title": "Submit Your Request",
+            "text": "<p>Fill out our quick online form to let us know what you need to store and for how long</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jN8pqd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003702.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": true,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "center",
+            "title": "We Pick Up & Store",
+            "text": "<p>Our team will come to your location, pick up your items, and store them in our secure facility</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LXGT6T": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003704.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": true,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "center",
+            "title": "Request Delivery When Needed",
+            "text": "<p>When you’re ready to get your items back, let us know, and we’ll deliver them to your specified location.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Ue4B9z",
+        "column_jN8pqd",
+        "column_LXGT6T"
+      ],
+      "settings": {
+        "sb_custom_font": "Neutra Text",
+        "title": "How Does It works ?",
+        "heading_position": "center",
+        "heading_size": "h1",
+        "sb_column_grid": true,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17333165994f24c5e9": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_rYHpL3": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "264017",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_rYHpL3"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner_3jRxte",
+    "main",
+    "rich_text_rPjQ6y",
+    "multicolumn_jpKzCY",
+    "17333165994f24c5e9"
+  ]
+}
