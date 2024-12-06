@@ -201,6 +201,7 @@
 @media screen and (min-width: 990px) {
   .sb-footer-section .footer-block:nth-child(1) .footer-block__heading {
     font-size: 48px;
+    text-align: left;
   }
   .footer-block__heading {
     font-size: calc(var(--font-heading-scale) * 1.8rem);

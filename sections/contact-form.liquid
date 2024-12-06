@@ -14,22 +14,18 @@
   }
 {%- endstyle -%}
 
-{%- if section.settings.image_one or  section.settings.image_two or section.settings.image_three -%}
-
-{%-  assign sb_contact_styles = "sb-contact-form-wrapper" -%}
-
-{%-  endif
--%}
+{%- if section.settings.image_one or section.settings.image_two or section.settings.image_three -%}
+  {%- assign sb_contact_styles = 'sb-contact-form-wrapper' -%}
+{%- endif -%}
 
 <div class="{{ sb_contact_styles }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="sb-background-overlay" style="opacity:{{ section.settings.sb_background_overlay }}%"><div></div></div>
   {%- if section.settings.image_one -%}
-  <div class="sb-image-one">
+    <div class="sb-image-one">
       {{
         section.settings.image_one
         | image_url: width: 400
         | image_tag:
-          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',          
+          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
           class: 'multicolumn-card__image'
       }}
     </div>
@@ -48,8 +44,8 @@
       if settings.animations_reveal_on_scroll
         assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
       endif
-    -%}    
-      
+    -%}
+
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -153,31 +149,30 @@
         </button>
       </div>
     {%- endform -%}
-
-    </div>
-    {%- if section.settings.image_two -%}
+  </div>
+  {%- if section.settings.image_two -%}
     <div class="sb-image-two">
-     {{
-       section.settings.image_two
-       | image_url: width: 400
-       | image_tag:
-         widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',          
-         class: 'multicolumn-card__image'
-     }}
+      {{
+        section.settings.image_two
+        | image_url: width: 400
+        | image_tag:
+          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+          class: 'multicolumn-card__image'
+      }}
     </div>
-  {%- endif -%} 
+  {%- endif -%}
 
-    {%- if section.settings.image_three -%}
-      <div class="sb-image-three">
-       {{
-       section.settings.image_three
-       | image_url: width: 400
-       | image_tag:
-         widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',          
-         class: 'multicolumn-card__image'
-     }}
-      </div>
-    {%- endif -%} 
+  {%- if section.settings.image_three -%}
+    <div class="sb-image-three">
+      {{
+        section.settings.image_three
+        | image_url: width: 400
+        | image_tag:
+          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+          class: 'multicolumn-card__image'
+      }}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -263,21 +258,21 @@
       "label": "t:sections.contact-form.settings.sb_background_overlay.label",
       "default": 40
     },
-     {
+    {
       "type": "image_picker",
       "id": "image_one",
       "label": "t:sections.contact-form.settings.image_one.label"
-     },
-     {
+    },
+    {
       "type": "image_picker",
       "id": "image_two",
       "label": "t:sections.contact-form.settings.image_two.label"
-     },
-     {
+    },
+    {
       "type": "image_picker",
       "id": "image_three",
       "label": "t:sections.contact-form.settings.image_three.label"
-     }
+    }
   ],
   "presets": [
     {

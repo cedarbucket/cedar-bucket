@@ -337,11 +337,14 @@
 
     {% if template.name == 'index' %}
       {% sections 'header-group' %}
+    {% elsif template == 'page.storage' %}
+      {% section 'header-storage' %}
     {% else %}
       {% section 'header-alternate' %}
     {% endif %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ template.page_type }}
       {{ content_for_layout }}
     </main>
 
