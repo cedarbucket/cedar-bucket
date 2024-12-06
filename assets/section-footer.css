@@ -1,6 +1,7 @@
 .sb-footer-section .footer__blocks-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .sb-footer-section .footer-block:nth-child(1) {
