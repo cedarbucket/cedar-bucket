@@ -19,6 +19,7 @@
 {%- endif -%}
 
 <div class="{{ sb_contact_styles }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="sb-background-overlay" style="opacity:{{ section.settings.sb_background_overlay }}%"><div></div></div>
   {%- if section.settings.image_one -%}
     <div class="sb-image-one">
       {{
