@@ -104,7 +104,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   position: relative;
   top: 5px;
   right: 5px;
-  color: black;
+  color: white; /* Default color */
+  mix-blend-mode: difference;
   z-index: 100;
   transform: scale(0.7) !important;
 }
