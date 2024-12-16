@@ -449,6 +449,8 @@
       "padding": {
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
+        "padding_left": "Left padding",
+        "padding_right": "Right padding",
         "padding_bottom": "Bottom padding"
       },
       "spacing": "Spacing",
@@ -1309,6 +1311,15 @@
             "label": "Full"
           },
           "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
+        },
+        "adjust_content_position": {
+          "label": "Adjust Content Position"
+        },
+        "show_box_shadow": {
+          "label": "Shadow"
+        },
+        "show_box_border": {
+          "label": "Border"
         },
         "desktop_content_position": {
           "options__1": {
@@ -3098,6 +3109,9 @@
             },
             "sb_font_size": {
               "label": "Font Size"
+            },
+            "sb_font_weight": {
+              "label": "Font Weight"
             }
           }
         },

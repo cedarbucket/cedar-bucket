@@ -39,11 +39,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text_QEHxDA",
-        "button"
-      ],
+      "block_order": ["heading", "text_QEHxDA", "button"],
       "settings": {
         "image": "shopify://shop_images/Hero.png",
         "image_overlay_opacity": 60,
@@ -100,9 +96,7 @@
           }
         }
       },
-      "block_order": [
-        "text_KD3cUx"
-      ],
+      "block_order": ["text_KD3cUx"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -131,10 +125,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_xYTjaN",
-        "text_kgk7kJ"
-      ],
+      "block_order": ["heading_xYTjaN", "text_kgk7kJ"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -164,10 +155,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_pyxfmG",
-        "text_waGfLw"
-      ],
+      "block_order": ["heading_pyxfmG", "text_waGfLw"],
       "settings": {
         "image": "shopify://shop_images/Frame_1000003754.png",
         "height": "adapt",
@@ -297,6 +285,72 @@
         "padding_bottom": 60
       }
     },
+    "multicolumn_6pAqqt": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AtVHKm": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+            "sb_text_alignment": "left",
+            "title": "Discover Our Storage Units",
+            "text": "<p>enjoyable, affordable, and accessible storage space for your furnitures</p>",
+            "link_label": "View Details",
+            "link": "#"
+          }
+        },
+        "column_p9rxNi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003760.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hYNDdn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000003691.png",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["column_AtVHKm", "column_p9rxNi", "column_hYNDdn"],
+      "settings": {
+        "sb_custom_font": "Neutra Text",
+        "title": "",
+        "heading_position": "left",
+        "heading_size": "h1",
+        "sb_column_grid": true,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "contact_form_8rpyyA": {
       "type": "contact-form",
       "settings": {
@@ -319,6 +373,7 @@
     "rich_text_nqt4yk",
     "image_with_text_BdAn7d",
     "multicolumn_BQAnXq",
+    "multicolumn_6pAqqt",
     "contact_form_8rpyyA"
   ]
 }

@@ -3,12 +3,16 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-left: {{ section.settings.padding_left | times: 0.75 | round: 0 }}px;
+    padding-right: {{ section.settings.padding_right | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
+      padding-left: {{ section.settings.padding_left }}px;
+      padding-right: {{ section.settings.padding_right }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
@@ -17,24 +21,32 @@
 {% for block in section.blocks %}
   {% assign custom_font = block.settings.sb_custom_font %}
   {% assign font_size = block.settings.sb_font_size %}
+  {% assign font_weight = block.settings.sb_font_weight %}
   {% assign line_height = font_size | times: 1.5 %}
 
   <style>
     .sb-font-style-{{ block.id }} {
       font-family: {{ custom_font }};
       font-size: {{ font_size }}px;
+      font-weight: {{ font_weight }};
       line-height: {{ line_height }}px;
     }
   </style>
 {% endfor %}
 
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+<div class="isolate {% if section.settings.full_width %}sb-page-width{% endif %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} sb-page-width{% endif %}">
-      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}">
+      <div class="rich-text__blocks {{ section.settings.content_alignment }} {% if section.settings.full_width %}sb-page-width{% endif %}">
+        {% if section.settings.border_style %}
+          <fieldset class="sb-fieldset-style">
+        {% endif %}
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
+              {% if section.settings.border_style %}
+                <legend>
+              {% endif %}
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
@@ -45,6 +57,9 @@
               >
                 {{ block.settings.heading }}
               </h2>
+              {% if section.settings.border_style %}
+                </legend>
+              {% endif %}
             {%- when 'caption' -%}
               <p
                 class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -103,6 +118,12 @@
               </div>
           {%- endcase -%}
         {%- endfor -%}
+        <div>
+          {% content_for 'blocks' %}
+        </div>
+        {% if section.settings.border_style %}
+          </fieldset>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -171,6 +192,12 @@
       "label": "t:sections.rich-text.settings.full_width.label"
     },
     {
+      "type": "checkbox",
+      "id": "border_style",
+      "default": false,
+      "label": "Add Border Style"
+    },
+    {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
@@ -186,6 +213,26 @@
     },
     {
       "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_left",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_right",
+      "default": 0
+    },
+    {
+      "type": "range",
       "id": "padding_bottom",
       "min": 0,
       "max": 100,
@@ -196,6 +243,7 @@
     }
   ],
   "blocks": [
+    { "type": "@app" },
     {
       "type": "heading",
       "name": "t:sections.rich-text.blocks.heading.name",
@@ -302,7 +350,7 @@
           "id": "sb_custom_font",
           "options": [
             {
-              "value": "Neutra Text",
+              "value": "NeutraText-Bold",
               "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
             },
             {
@@ -310,7 +358,7 @@
               "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
             }
           ],
-          "default": "Neutra Text",
+          "default": "NeutraText-Bold",
           "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
         },
         {
@@ -322,6 +370,15 @@
           "unit": "px",
           "label": "t:sections.rich-text.blocks.text.settings.sb_font_size.label",
           "default": 24
+        },
+        {
+          "type": "range",
+          "id": "sb_font_weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "label": "t:sections.rich-text.blocks.text.settings.sb_font_weight.label",
+          "default": 400
         }
       ]
     },

@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "map_tn4GVj": {
+      "type": "map",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1000003738.png",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0.7,
+        "color_scheme": "default",
+        "title": "Explore Quality Furniture",
+        "subtitle": "Only one visit away",
+        "days": "Tuesday to Saturday",
+        "hours": "10am to 5pm",
+        "address": "3517 W. Gray St. Utica, Pennsylvania 57867",
+        "map_address": "3517 W. Gray St. Utica, Pennsylvania 57867",
+        "api_key": "YOUR_API_KEY_HERE",
+        "static_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.9182765621546!2d-122.08424968467945!3d37.42206577982054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0a2af643f17%3A0x36b8aaf95a40a78b!2sGoogleplex!5e0!3m2!1sen!2sus!4v1636539185265!5m2!1sen!2sus",
+        "button_text": "Delivery Service Agreement",
+        "button_link": "/"
+      }
+    }
+  },
+  "order": ["main", "map_tn4GVj"]
+}

@@ -39,11 +39,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_TEzMRb",
-        "text_7F6fA9",
-        "buttons_HLEqTD"
-      ],
+      "block_order": ["heading_TEzMRb", "text_7F6fA9", "buttons_HLEqTD"],
       "settings": {
         "image": "shopify://shop_images/2c7e90126af63b4f6beb1dfcb7c67dfd.jpg",
         "image_overlay_opacity": 60,
@@ -78,9 +74,7 @@
           }
         }
       },
-      "block_order": [
-        "text_QC7QFm"
-      ],
+      "block_order": ["text_QC7QFm"],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -136,11 +130,7 @@
           }
         }
       },
-      "block_order": [
-        "column_Ue4B9z",
-        "column_jN8pqd",
-        "column_LXGT6T"
-      ],
+      "block_order": ["column_Ue4B9z", "column_jN8pqd", "column_LXGT6T"],
       "settings": {
         "sb_custom_font": "Neutra Text",
         "title": "How Does It works ?",
@@ -182,9 +172,7 @@
           }
         }
       },
-      "block_order": [
-        "forms_inline_rYHpL3"
-      ],
+      "block_order": ["forms_inline_rYHpL3"],
       "settings": {
         "include_margins": true
       }

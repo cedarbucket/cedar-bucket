@@ -1,0 +1,135 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_TCnbcJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_crHQPC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Consignment Journey",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": ["heading_crHQPC"],
+      "settings": {
+        "image": "shopify://shop_images/cafe-patio.jpg",
+        "image_overlay_opacity": 60,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-bcdab6cc-f1e6-407b-a64f-426f27c6f25c",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_pA9wBr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MLWmfV": {
+          "type": "heading",
+          "settings": {
+            "heading": "How to Consign with Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_rYhF4p": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>We are always looking for QUALITY furniture and home decor.<br/>If you have new-condition pieces and would like our consideration:</strong></p><p>At Cedar Bucket, we believe that every piece of furniture is more than just decor—it's a cornerstone of comfort, functionality, and personal style. Our curated selection of tables and furnishings combines timeless design with exceptional craftsmanship, perfect for transforming any room into a space you'll love. Whether you're looking for a statement piece or an everyday essential, each item in our collection is thoughtfully designed to enhance your home.<br/><br/><strong>Please Fill-up the form so that we could better understand your product condition</strong></p>",
+            "sb_custom_font": "Neutra Text",
+            "sb_font_size": 24
+          }
+        }
+      },
+      "block_order": ["heading_MLWmfV", "text_rYhF4p"],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "17340688835dbba9d9": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_DcMyr6": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "281463",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": ["forms_inline_DcMyr6"],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "173406947312f98783": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_4UUyCT": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "281471",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": ["forms_inline_4UUyCT"],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner_TCnbcJ",
+    "main",
+    "rich_text_pA9wBr",
+    "17340688835dbba9d9",
+    "173406947312f98783"
+  ]
+}
