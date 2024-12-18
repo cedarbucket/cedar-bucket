@@ -28,15 +28,27 @@
           }
         }
       },
-      "block_order": ["heading_RWRFna", "text_gp689f"],
+      "block_order": [
+        "heading_RWRFna",
+        "text_gp689f"
+      ],
       "settings": {
         "image": "shopify://shop_images/cafe-patio.jpg",
         "image_overlay_opacity": 60,
+        "container_style": "boxed",
+        "show_box_shadow": true,
+        "show_box_border": true,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
+        "adjust_content_position": 0,
+        "section_radius": 16,
         "desktop_content_alignment": "center",
         "color_scheme": "",
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -66,17 +78,24 @@
           "settings": {
             "text": "<p>At Cedar Bucket, we believe that every piece of furniture is more than just decor—it's a cornerstone of comfort, functionality, and personal style. Our curated selection of tables and furnishings combines timeless design with exceptional craftsmanship, perfect for transforming any room into a space you'll love. Whether you're looking for a statement piece or an everyday essential, each item in our collection is thoughtfully designed to enhance your home.</p><p></p><p>Explore our range to find furniture that resonates with your lifestyle. Crafted from premium materials and built to last, our pieces are ready to redefine the way you live, work, and relax. From contemporary to classic, every item is here to inspire.</p><p></p><p><strong>Browse below and start your journey toward a beautifully furnished home.</strong></p>",
             "sb_custom_font": "Neutra Text",
-            "sb_font_size": 24
+            "sb_font_size": 24,
+            "sb_font_weight": 400
           }
         }
       },
-      "block_order": ["heading_K4WWP9", "text_Y4JQ8T"],
+      "block_order": [
+        "heading_K4WWP9",
+        "text_Y4JQ8T"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
         "full_width": true,
-        "padding_top": 40,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
         "padding_bottom": 52
       }
     },
@@ -95,17 +114,24 @@
           "settings": {
             "text": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After submitting your storage request, you can schedule a pick-up date and time that works best for you.</li><li>Pick-up is available from dorms, apartments, or any location within our service area.</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p><strong>Packaging Requirements</strong></p><ul><li>All items must be securely packed before pick-up.</li><li>We recommend labeling your boxes for easy identification.</li><li>Packing materials are available for purchase upon request.</li></ul><p><strong>Pick-Up Fees</strong></p><ul><li>A nominal pick-up fee may apply, depending on your location.</li><li>Pick-up fees will be clearly communicated during the scheduling process.</li></ul>",
             "sb_custom_font": "Neutra Text",
-            "sb_font_size": 24
+            "sb_font_size": 24,
+            "sb_font_weight": 400
           }
         }
       },
-      "block_order": ["heading_R7H79f", "text_H4g7J8"],
+      "block_order": [
+        "heading_R7H79f",
+        "text_H4g7J8"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
         "full_width": true,
-        "padding_top": 40,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
         "padding_bottom": 52
       }
     },
@@ -124,17 +150,24 @@
           "settings": {
             "text": "<p><strong>Scheduling a Delivery</strong></p><ul><li>When you’re ready to retrieve your items, simply log into your account or contact us to schedule a delivery.</li><li>Provide at least 10 days notice to ensure availability.</li></ul><p><strong>Delivery Confirmation</strong></p><ul><li>After scheduling your delivery, you’ll receive a confirmation email or SMS with the delivery details and time frame.</li></ul><p><strong>Missed Delivery Policy</strong></p><ul><li>If you are not available during the scheduled delivery time, we will reschedule at the earliest convenience, but a rescheduling fee may apply.</li></ul><p><strong>Delivery Fees</strong></p><ul><li>Delivery fees may vary based on the distance and volume of items.</li><li>Exact fees will be communicated during the scheduling process.</li></ul>",
             "sb_custom_font": "Neutra Text",
-            "sb_font_size": 24
+            "sb_font_size": 24,
+            "sb_font_weight": 400
           }
         }
       },
-      "block_order": ["heading_q6XmfL", "text_fiKdTw"],
+      "block_order": [
+        "heading_q6XmfL",
+        "text_fiKdTw"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
         "full_width": true,
-        "padding_top": 40,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
         "padding_bottom": 52
       }
     },
@@ -146,7 +179,7 @@
         "description": "",
         "show_description": false,
         "absolute_content": true,
-        "show_overlay": false,
+        "show_overlay": true,
         "description_style": "body",
         "collection": "chair",
         "products_to_show": 4,
@@ -175,14 +208,14 @@
         "heading_size": "h1",
         "description": "",
         "show_description": false,
-        "absolute_content": false,
-        "show_overlay": false,
+        "absolute_content": true,
+        "show_overlay": true,
         "description_style": "body",
         "collection": "table",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "",

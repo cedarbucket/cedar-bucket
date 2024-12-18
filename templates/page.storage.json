@@ -39,15 +39,28 @@
           }
         }
       },
-      "block_order": ["heading_TEzMRb", "text_7F6fA9", "buttons_HLEqTD"],
+      "block_order": [
+        "heading_TEzMRb",
+        "text_7F6fA9",
+        "buttons_HLEqTD"
+      ],
       "settings": {
         "image": "shopify://shop_images/2c7e90126af63b4f6beb1dfcb7c67dfd.jpg",
         "image_overlay_opacity": 60,
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
         "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
+        "adjust_content_position": 70,
+        "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
@@ -70,17 +83,23 @@
           "settings": {
             "text": "<p>At Cedar Bucket, we make furniture shopping easy, sustainable, and affordable. Our platform connects buyers with quality pre-owned furniture sold by student ready to find a new home. Shop with confidence knowing every piece has been carefully selected for its value, style, and condition. Ready to furnish your space?</p>",
             "sb_custom_font": "Poiret One",
-            "sb_font_size": 32
+            "sb_font_size": 32,
+            "sb_font_weight": 400
           }
         }
       },
-      "block_order": ["text_QC7QFm"],
+      "block_order": [
+        "text_QC7QFm"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
+        "border_style": false,
         "padding_top": 80,
+        "padding_left": 52,
+        "padding_right": 52,
         "padding_bottom": 80
       }
     },
@@ -130,7 +149,11 @@
           }
         }
       },
-      "block_order": ["column_Ue4B9z", "column_jN8pqd", "column_LXGT6T"],
+      "block_order": [
+        "column_Ue4B9z",
+        "column_jN8pqd",
+        "column_LXGT6T"
+      ],
       "settings": {
         "sb_custom_font": "Neutra Text",
         "title": "How Does It works ?",
@@ -151,20 +174,27 @@
         "padding_bottom": 36
       }
     },
-    "17333165994f24c5e9": {
-      "type": "apps",
+    "rich_text_a98TQ4": {
+      "type": "rich-text",
       "blocks": {
-        "forms_inline_rYHpL3": {
+        "heading_qFcRGT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Storage Request",
+            "heading_size": "h1"
+          }
+        },
+        "forms_inline_e93BFc": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "264017",
             "text_color": "#202020",
             "button_background_color": "#202020",
-            "button_label_color": "#ffffff",
-            "links_color": "#1878b9",
-            "errors_color": "#e02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "left",
+            "form_alignment": "flex-start",
             "padding_top": 0,
             "padding_bottom": 0,
             "padding_right": 0,
@@ -172,9 +202,20 @@
           }
         }
       },
-      "block_order": ["forms_inline_rYHpL3"],
+      "block_order": [
+        "heading_qFcRGT",
+        "forms_inline_e93BFc"
+      ],
       "settings": {
-        "include_margins": true
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+        "full_width": true,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52
       }
     }
   },
@@ -183,6 +224,6 @@
     "main",
     "rich_text_rPjQ6y",
     "multicolumn_jpKzCY",
-    "17333165994f24c5e9"
+    "rich_text_a98TQ4"
   ]
 }

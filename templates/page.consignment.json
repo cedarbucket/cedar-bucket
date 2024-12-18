@@ -20,15 +20,26 @@
           }
         }
       },
-      "block_order": ["heading_crHQPC"],
+      "block_order": [
+        "heading_crHQPC"
+      ],
       "settings": {
         "image": "shopify://shop_images/cafe-patio.jpg",
         "image_overlay_opacity": 60,
+        "container_style": "boxed",
+        "show_box_shadow": true,
+        "show_box_border": true,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
+        "adjust_content_position": 0,
+        "section_radius": 16,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-bcdab6cc-f1e6-407b-a64f-426f27c6f25c",
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -58,24 +69,11 @@
           "settings": {
             "text": "<p><strong>We are always looking for QUALITY furniture and home decor.<br/>If you have new-condition pieces and would like our consideration:</strong></p><p>At Cedar Bucket, we believe that every piece of furniture is more than just decor—it's a cornerstone of comfort, functionality, and personal style. Our curated selection of tables and furnishings combines timeless design with exceptional craftsmanship, perfect for transforming any room into a space you'll love. Whether you're looking for a statement piece or an everyday essential, each item in our collection is thoughtfully designed to enhance your home.<br/><br/><strong>Please Fill-up the form so that we could better understand your product condition</strong></p>",
             "sb_custom_font": "Neutra Text",
-            "sb_font_size": 24
+            "sb_font_size": 24,
+            "sb_font_weight": 400
           }
-        }
-      },
-      "block_order": ["heading_MLWmfV", "text_rYhF4p"],
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "17340688835dbba9d9": {
-      "type": "apps",
-      "blocks": {
-        "forms_inline_DcMyr6": {
+        },
+        "forms_inline_KtE9aP": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "281463",
@@ -84,8 +82,8 @@
             "button_label_color": "#FFFFFF",
             "links_color": "#1878B9",
             "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
+            "text_alignment": "left",
+            "form_alignment": "flex-start",
             "padding_top": 0,
             "padding_bottom": 0,
             "padding_right": 0,
@@ -93,15 +91,43 @@
           }
         }
       },
-      "block_order": ["forms_inline_DcMyr6"],
+      "block_order": [
+        "heading_MLWmfV",
+        "text_rYhF4p",
+        "forms_inline_KtE9aP"
+      ],
       "settings": {
-        "include_margins": true
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+        "full_width": true,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52
       }
     },
-    "173406947312f98783": {
-      "type": "apps",
+    "rich_text_Xifn4A": {
+      "type": "rich-text",
       "blocks": {
-        "forms_inline_4UUyCT": {
+        "heading_EmceBR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Consignor Contract",
+            "heading_size": "h1"
+          }
+        },
+        "text_xm4cWD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>I have read and understood the terms of the Consignment Contract and agree to accept the conditions therein as applicable to all items consigned with Cedar Bucket</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        },
+        "forms_inline_Jdik3c": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "281471",
@@ -119,9 +145,21 @@
           }
         }
       },
-      "block_order": ["forms_inline_4UUyCT"],
+      "block_order": [
+        "heading_EmceBR",
+        "text_xm4cWD",
+        "forms_inline_Jdik3c"
+      ],
       "settings": {
-        "include_margins": true
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+        "full_width": true,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52
       }
     }
   },
@@ -129,7 +167,6 @@
     "image_banner_TCnbcJ",
     "main",
     "rich_text_pA9wBr",
-    "17340688835dbba9d9",
-    "173406947312f98783"
+    "rich_text_Xifn4A"
   ]
 }

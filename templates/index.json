@@ -39,15 +39,28 @@
           }
         }
       },
-      "block_order": ["heading", "text_QEHxDA", "button"],
+      "block_order": [
+        "heading",
+        "text_QEHxDA",
+        "button"
+      ],
       "settings": {
         "image": "shopify://shop_images/Hero.png",
         "image_overlay_opacity": 60,
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
         "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
+        "adjust_content_position": 70,
+        "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
@@ -92,17 +105,23 @@
           "settings": {
             "text": "<p>At Cedar Bucket, we make furniture shopping easy, sustainable, and affordable. Our platform connects buyers with quality pre-owned furniture sold by student ready to find a new home. Shop with confidence knowing every piece has been carefully selected for its value, style, and condition. Ready to furnish your space?</p>",
             "sb_custom_font": "Poiret One",
-            "sb_font_size": 32
+            "sb_font_size": 32,
+            "sb_font_weight": 400
           }
         }
       },
-      "block_order": ["text_KD3cUx"],
+      "block_order": [
+        "text_KD3cUx"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
+        "border_style": false,
         "padding_top": 60,
+        "padding_left": 0,
+        "padding_right": 0,
         "padding_bottom": 60
       }
     },
@@ -121,17 +140,24 @@
           "settings": {
             "text": "<p>Welcome to Cedar Bucket, where we believe that finding quality furniture should be an enjoyable, affordable, and accessible experience for everyone.</p>",
             "sb_custom_font": "Neutra Text",
-            "sb_font_size": 24
+            "sb_font_size": 24,
+            "sb_font_weight": 400
           }
         }
       },
-      "block_order": ["heading_xYTjaN", "text_kgk7kJ"],
+      "block_order": [
+        "heading_xYTjaN",
+        "text_kgk7kJ"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
+        "border_style": false,
         "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
         "padding_bottom": 52
       }
     },
@@ -155,7 +181,10 @@
           }
         }
       },
-      "block_order": ["heading_pyxfmG", "text_waGfLw"],
+      "block_order": [
+        "heading_pyxfmG",
+        "text_waGfLw"
+      ],
       "settings": {
         "image": "shopify://shop_images/Frame_1000003754.png",
         "height": "adapt",
@@ -330,7 +359,11 @@
           }
         }
       },
-      "block_order": ["column_AtVHKm", "column_p9rxNi", "column_hYNDdn"],
+      "block_order": [
+        "column_AtVHKm",
+        "column_p9rxNi",
+        "column_hYNDdn"
+      ],
       "settings": {
         "sb_custom_font": "Neutra Text",
         "title": "",

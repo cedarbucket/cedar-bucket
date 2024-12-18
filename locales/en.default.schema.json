@@ -3100,9 +3100,12 @@
             "sb_custom_font": {
               "label": "Font Family",
               "options__1": {
-                "label": "Neutra Text"
+                "label": "Neutra Text Book"
               },
               "options__2": {
+                "label": "Neutra Text Bold"
+              },
+              "options__3": {
                 "label": "Poiret One"
               },
               "info": "Select custom font"
