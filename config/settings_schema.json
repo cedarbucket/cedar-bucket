@@ -1380,6 +1380,12 @@
       },
       {
         "type": "text",
+        "id": "social_label",
+        "label": "t:settings_schema.social-media.settings.social_label.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_label.info"
+      },
+      {
+        "type": "text",
         "id": "social_facebook_link",
         "label": "t:settings_schema.social-media.settings.social_facebook_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_facebook_link.info"

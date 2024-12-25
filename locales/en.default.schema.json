@@ -283,6 +283,10 @@
         "header": {
           "content": "Social accounts"
         },
+        "social_label": {
+          "label": "Title",
+          "info": "Add your title before the social media links."
+        },
         "social_twitter_link": {
           "label": "X / Twitter",
           "info": "https://x.com/shopify"
@@ -839,6 +843,9 @@
         },
         "collection": {
           "label": "Collection"
+        },
+        "pagination_number": {
+          "label": "Paginate number"
         },
         "products_to_show": {
           "label": "Maximum products to show"
@@ -2749,6 +2756,9 @@
             "text": {
               "label": "Description",
               "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
+            },
+            "link_as_button": {
+              "label": "Make link a button"
             },
             "link_label": {
               "label": "Link label"

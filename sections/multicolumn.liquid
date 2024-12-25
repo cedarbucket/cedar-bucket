@@ -36,12 +36,12 @@
     }
 
     .multicolumn-list__item.sb-make-image-background-{{ block.id }} {
-      height: fit-content;
+      height: 100%;
     }
 
     .multicolumn-card__info.sb-make-image-background-{{ block.id }} {
       position: absolute;
-      bottom: 25px;
+      /* bottom: 25px; */
       padding-right: 10% !important;
       padding-left: 10% !important;
     }
@@ -164,25 +164,49 @@
                 {% endif %}
 
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                  <h3
+                    class="inline-richtext {{ block.settings.heading_size }}"
+                    style="line-height: 1;padding-bottom: 20px;"
+                  >
+                    {{ block.settings.title }}
+                  </h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div
+                    class="rte"
+                    style="font-size: {{ block.settings.sb_font_size }}px;line-height: {{ block.settings.sb_font_size | times: 1.2 }}px;font-weight: 400;"
+                  >
+                    {{ block.settings.text }}
+                  </div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
-                  <a
-                    class="link animate-arrow"
-                    {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.link }}"
-                    {% endif %}
-                  >
-                    {{- block.settings.link_label | escape -}}
-                    <span class="svg-wrapper"
-                      ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                  {%- if block.settings.link_as_button -%}
+                    <a
+                      class="button button--primary"
+                      style="width: 230px;"
+                      {% if block.settings.link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.link }}"
+                      {% endif %}
                     >
-                  </a>
+                      {{- block.settings.link_label | escape -}}
+                    </a>
+                  {%- else -%}
+                    <a
+                      class="link animate-arrow"
+                      {% if block.settings.link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.link }}"
+                      {% endif %}
+                    >
+                      {{- block.settings.link_label | escape -}}
+                      <span class="svg-wrapper"
+                        ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
+                      >
+                    </a>
+                  {%- endif -%}
                 {%- endif -%}
               </div>
             </div>
@@ -525,10 +549,53 @@
           "label": "t:sections.multicolumn.blocks.column.settings.title.label"
         },
         {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
           "type": "richtext",
           "id": "text",
           "default": "t:sections.multicolumn.blocks.column.settings.text.default",
           "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "range",
+          "id": "sb_font_size",
+          "min": 0,
+          "max": 80,
+          "step": 2,
+          "unit": "px",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_font_size.label",
+          "default": 24
+        },
+        {
+          "type": "checkbox",
+          "id": "link_as_button",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_as_button.label"
         },
         {
           "type": "text",

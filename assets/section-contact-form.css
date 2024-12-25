@@ -113,6 +113,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .sb-contact-form-wrapper {
+    height: 75vh;
+  }
   .sb-image-one img,
   .sb-image-two img,
   .sb-image-three img {

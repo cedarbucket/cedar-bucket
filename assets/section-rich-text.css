@@ -21,6 +21,7 @@
 .sb-page-width {
   max-width: var(--page-width) !important;
   margin: auto;
+  padding: 0 1rem;
 }
 
 .sb-fieldset-style {

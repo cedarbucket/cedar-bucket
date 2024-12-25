@@ -111,6 +111,7 @@
     "brand_headline": "",
     "brand_description": "<p></p>",
     "brand_image_width": 100,
+    "social_label": "Follow us on",
     "social_facebook_link": "#",
     "social_instagram_link": "#",
     "social_youtube_link": "",
@@ -176,8 +177,8 @@
           "sticky_header_type": "on-scroll-up",
           "show_line_separator": false,
           "absolute_header": true,
-          "color_scheme": "scheme-bcdab6cc-f1e6-407b-a64f-426f27c6f25c",
-          "menu_color_scheme": "scheme-810e1c90-a34e-4abe-9f1d-8dc726a94a68",
+          "color_scheme": "scheme-3",
+          "menu_color_scheme": "scheme-3",
           "enable_country_selector": false,
           "enable_language_selector": false,
           "enable_customer_avatar": true,
@@ -194,7 +195,7 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "heading": "#ffffff",
+          "heading": "#121212",
           "text": "#121212",
           "button": "#121212",
           "button_label": "#ffffff",
@@ -207,7 +208,7 @@
           "background": "#f3f3f3",
           "background_gradient": "",
           "heading": "#ffffff",
-          "text": "#121212",
+          "text": "#ffffff",
           "button": "#121212",
           "button_label": "#f3f3f3",
           "secondary_button_label": "#121212",
@@ -216,12 +217,12 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#1e1e1e",
           "background_gradient": "",
           "heading": "#ffffff",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#000000",
+          "button_label": "#1e1e1e",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -242,7 +243,7 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "heading": "#121212",
+          "heading": "#ffffff",
           "text": "#ffffff",
           "button": "#ffffff",
           "button_label": "#ffffff",

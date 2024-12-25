@@ -5,7 +5,8 @@ function applyCustomStylesToForm(formId, styles) {
         // Check if the mutation target has the desired `data-forms-id` attribute value
         const targetForm =
           mutation.target.getAttribute &&
-          mutation.target.getAttribute("data-forms-id") === `forms-root-${formId}`;
+          mutation.target.getAttribute("data-forms-id") ===
+            `forms-root-${formId}`;
 
         if (targetForm) {
           mutation.addedNodes.forEach((node) => {
@@ -17,13 +18,13 @@ function applyCustomStylesToForm(formId, styles) {
 
               // Access an element inside the shadow root
               const shadowRootElement = node.shadowRoot.querySelector(
-                "._formContainer_stahb_30"
+                "._formContainer_stahb_30",
               );
               if (shadowRootElement) {
                 // Add a custom class to the shadow root element
                 shadowRootElement.classList.add("sb-custom-style");
                 console.log(
-                  "Class 'sb-custom-style' added to shadow root element"
+                  "Class 'sb-custom-style' added to shadow root element",
                 );
 
                 // Inject the provided styles into the Shadow DOM
@@ -56,7 +57,6 @@ function applyCustomStylesToForm(formId, styles) {
     observer.observe(document.body, { childList: true, subtree: true });
   });
 }
-
 
 const customStyles = `
   .sb-custom-style {
@@ -123,7 +123,6 @@ const customStyles = `
 
 // Apply custom styles to form with ID "264017"
 applyCustomStylesToForm("264017", customStyles);
-
 
 const customStyles_281463 = `
   .sb-custom-style {
@@ -203,7 +202,6 @@ const customStyles_281463 = `
       margin-top: 20px;
   }
 `;
-
 
 applyCustomStylesToForm("281463", customStyles_281463);
 applyCustomStylesToForm("281471", customStyles);

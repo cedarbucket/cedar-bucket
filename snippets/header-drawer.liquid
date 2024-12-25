@@ -12,7 +12,11 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {%- if header_type == 'header-alternate' -%}
+          {{- 'icon-hamburger-dark.svg' | inline_asset_content -}}
+        {%- else -%}
+          {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {%- endif -%}
         {{- 'icon-close.svg' | inline_asset_content -}}
       </span>
     </summary>

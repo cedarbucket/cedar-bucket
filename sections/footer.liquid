@@ -6,9 +6,147 @@
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  :root {
+    --color-border: 119, 93, 71;
+  }
+
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
+
+  .sb-footer-grid {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .sb-footer-grid .footer__social_icons {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: solid 0.1rem rgba(var(--color-border), 0.5);
+    border-bottom: solid 0.1rem rgba(var(--color-border), 0.5);
+    margin-bottom: -1px;
+    margin-right: -1px;
+  }
+
+  .sb-footer-grid .footer__content-top {
+    grid-column: 2;
+    grid-row: 1;
+    padding-block: 30px;
+  }
+
+  .sb-footer-grid .footer__content-bottom {
+    grid-column: 2;
+    grid-row: 2;
+    border-top: solid 0.1rem rgba(var(--color-border), 0.5);
+    border-left: solid 0.1rem rgba(var(--color-border), 0.5);
+  }
+
+  .footer__social_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .footer__social_icons .list-social {
+    gap: 10px;
+    padding-top: 4px;
+    flex-direction: column;
+  }
+  .footer__social_icons .list-social__link {
+    padding: 0;
+  }
+
+  .footer__social_icons .svg-wrapper {
+    width: 24px;
+    height: 24px;
+  }
+
+   .footer__social_icons .list-social__item .icon {
+    height: 24px;
+    width: 24px;
+  }
+
+  .sb-social-label p {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 3px;
+  }
+
+  .footer__copyright {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .footer__copyright p {
+    grid-column: span 4;
+    grid-row: 1;
+    width: 100%;
+    text-align: left;
+  }
+  .footer__copyright ul {
+    grid-column: span 3;
+    grid-row: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .footer__copyright small {
+    grid-column: span 2;
+    grid-row: 1;
+    width: 100%;
+  }
+
+
+  .policies li::before {
+    content: "";
+    padding: 0;
+  }
+
+  .policies li::after {
+    content: '|';
+    margin: 0 20px;
+    color: #ccc;
+  }
+  .policies li:last-child::after {
+    content: '';
+  }
+
+  @media screen and (max-width: 750px) {
+    .footer__copyright {
+      gap: 5px;
+    }
+    .footer__copyright p {
+      grid-column: span 8;
+      grid-row: 1;
+      width: 100%;
+      text-align: left;
+    }
+    .footer__copyright ul {
+      grid-column: span 8;
+      grid-row: 2;
+      width: 100%;
+      text-align: left;
+      padding-left: 0;
+    }
+    .footer__copyright small {
+      grid-column: span 8;
+      grid-row: 3;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
 
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -27,7 +165,7 @@
   }
 {%- endstyle -%}
 
-<footer class="footer sb-footer-section color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer sb-footer-section sb-footer-grid color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -48,6 +186,107 @@
     and has_social_icons == true
     or section.settings.enable_follow_on_shop
   -%}
+    {% if has_social_icons %}
+      <div class="footer__social_icons">
+        {% if settings.social_label %}
+          <div class="sb-social-label medium-hide small-hide">
+            <p>{{ settings.social_label }}</p>
+          </div>
+        {% endif %}
+        <ul class="list list-social list-unstyled" role="list">
+          {%- if settings.social_twitter_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-twitter.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_facebook_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-facebook.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_pinterest_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-pinterest.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_instagram_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-instagram.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_tiktok_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-tiktok.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_tumblr_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-tumblr.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_snapchat_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-snapchat.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_youtube_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-youtube.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_vimeo_link != blank -%}
+            <li class="list-social__item">
+              <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
+                <span class="svg-wrapper">
+                  {{- 'icon-vimeo.svg' | inline_asset_content -}}
+                </span>
+                <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+      </div>
+    {% endif %}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
         {%- if section.blocks.size > 0 -%}
@@ -298,24 +537,48 @@
       </div>
     </div>
     <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+      {% comment %}
+        <div class="footer__copyright caption">
+          <small class="copyright__content"
+            >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          </small>
+          <small class="copyright__content">{{ powered_by_link }}</small>
+          {%- if section.settings.show_policy -%}
+            <ul class="policies list-unstyled">
+              {%- for policy in shop.policies -%}
+                {%- if policy != blank -%}
+                  <li>
+                    <small class="copyright__content"
+                      ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
+                    >
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+      {% endcomment %}
       <div class="footer__copyright caption">
-        <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
-        </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        <p>Enjoyable, affordable, and accessible experience for everyone</p>
         {%- if section.settings.show_policy -%}
-          <ul class="policies list-unstyled">
+          <ul class="policies">
+            <li>
+              <small class="copyright__content">
+                <a href="#">Terms & Conditions</a>
+              </small>
+            </li>
             {%- for policy in shop.policies -%}
               {%- if policy != blank -%}
                 <li>
-                  <small class="copyright__content"
-                    ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
-                  >
+                  <small class="copyright__content">
+                    <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+                  </small>
                 </li>
               {%- endif -%}
             {%- endfor -%}
           </ul>
         {%- endif -%}
+        <small class="copyright__content">&copy; {{ 'now' | date: '%Y' }}</small>
       </div>
     </div>
   </div>
