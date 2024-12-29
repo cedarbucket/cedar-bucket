@@ -2,50 +2,80 @@ function applyCustomStylesToForm(formId, styles) {
   document.addEventListener("DOMContentLoaded", function () {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        // Check if the mutation target has the desired `data-forms-id` attribute value
         const targetForm =
           mutation.target.getAttribute &&
           mutation.target.getAttribute("data-forms-id") ===
-            `forms-root-${formId}`;
+          `forms-root-${formId}`;
 
         if (targetForm) {
           mutation.addedNodes.forEach((node) => {
-            console.log("Added node:", node);
-
-            // Check if the added node is the `form-embed` element
             if (node.id === "app-embed" && node.shadowRoot) {
-              console.log("Shadow root found:", node.shadowRoot);
-
-              // Access an element inside the shadow root
               const shadowRootElement = node.shadowRoot.querySelector(
-                "._formContainer_stahb_30",
+                "._formContainer_stahb_30"
               );
-              if (shadowRootElement) {
-                // Add a custom class to the shadow root element
-                shadowRootElement.classList.add("sb-custom-style");
-                console.log(
-                  "Class 'sb-custom-style' added to shadow root element",
-                );
 
-                // Inject the provided styles into the Shadow DOM
+              if (shadowRootElement) {
+                shadowRootElement.classList.add("sb-custom-style");
                 const style = document.createElement("style");
                 style.textContent = styles;
                 node.shadowRoot.appendChild(style);
-                console.log("Custom styles injected into Shadow DOM");
 
                 // Modify specific shadow DOM elements
                 node.shadowRoot
                   .querySelectorAll("._formFileInputButton_ehvsf_18")
                   .forEach((element) => {
                     element.textContent = "";
-                    element.insertAdjacentHTML("beforeend", "+"); // Add the "+" symbol
+                    element.insertAdjacentHTML("beforeend", "+");
                     element.style.backgroundColor = "transparent";
                     element.style.fontSize = "60px";
                     element.style.opacity = 0.5;
                   });
+
+                // Track file input changes
+                node.shadowRoot
+                  .querySelectorAll('input[type="file"]')
+                  .forEach((fileInput) => {
+                    if (!fileInput.dataset.listenerAdded) {
+                      fileInput.addEventListener("change", (event) => {
+                        const files = event.target.files;
+                        if (files.length > 0) {
+                          const file = files[0];
+                          if (file.type.startsWith("image/")) {
+                            const reader = new FileReader();
+
+                            reader.onload = (e) => {
+                              const previewImage = document.createElement("img");
+                              previewImage.src = e.target.result;
+                              previewImage.alt = "Uploaded Image Preview";
+                              previewImage.style.maxWidth = "100%";
+
+                              // Append the image below the file input
+                              const parent = fileInput.parentElement;
+                              if (parent) {
+                                const existingPreview =
+                                  parent.querySelector(".image-preview");
+                                if (existingPreview) {
+                                  existingPreview.src = e.target.result; // Update existing preview
+                                } else {
+                                  previewImage.classList.add("image-preview");
+                                  parent.appendChild(previewImage);
+                                }
+                              }
+                            };
+
+                            reader.readAsDataURL(file);
+                          } else {
+                            console.warn("Selected file is not an image.");
+                          }
+                        }
+                      });
+
+                      fileInput.dataset.listenerAdded = "true";
+                    }
+                  });
               }
 
-              // Disconnect the observer after applying the styles
+              // Disconnect the observer after applying styles
               observer.disconnect();
             }
           });
@@ -53,14 +83,14 @@ function applyCustomStylesToForm(formId, styles) {
       });
     });
 
-    // Observe the document body for changes
     observer.observe(document.body, { childList: true, subtree: true });
   });
 }
 
+
 const customStyles = `
-  .sb-custom-style {
-    max-width: 98% !important;
+  .sb-custom-style {    
+    min-width: 90% !important;
     margin: 0;
     padding: 20px;                
   }
@@ -102,13 +132,56 @@ const customStyles = `
       grid-column: span 1; /* Each item takes 1 column in a 4-column grid */
   }
 
+  form._formFieldset_1ll8d_67 button._formFileInputField_ehvsf_5  {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 10px;
+    overflow: hidden;
+    width: 220px;   
+    height: 220px; 
+    padding: 10px;    
+    }  
+  
+  form._formFieldset_1ll8d_67 button img {
+    width: 200px;
+    height: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  form._formFieldset_1ll8d_67 button > div { 
+    width: 100%;
+    margin: 0;
+  }
+
+  form._formFieldset_1ll8d_67 button._formFileInputField_ehvsf_5 span {
+    display: -webkit-box;     
+    -webkit-line-clamp: 3;    
+    -webkit-box-orient: vertical;
+    overflow: hidden;            
+    text-overflow: ellipsis;  
+    max-width: 220px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
   @media screen and (max-width: 768px) {
+  ._inline_stahb_47 ._formContainer_stahb_30 {
+    min-width: 90% !important;
+  }
+  form._formFieldset_1ll8d_67 button._formFileInputField_ehvsf_5  {
+    width: 100%;
+  }
       form._formFieldset_1ll8d_67 > *:nth-child(n+12):nth-child(-n+15) {
           grid-column: span 2; 
       }
   }
 
   @media screen and (max-width: 480px) {
+    form._formFieldset_1ll8d_67 button > div {
+      justify-content: center;  
+    }
       form._formFieldset_1ll8d_67 > *:nth-child(n+12):nth-child(-n+15) {
           grid-column: span 4;
       }
@@ -126,7 +199,7 @@ applyCustomStylesToForm("264017", customStyles);
 
 const customStyles_281463 = `
   .sb-custom-style {
-    max-width: 98% !important;
+    max-width: 90% !important;
     margin: 0;
     padding: 20px;                
   }
@@ -164,13 +237,54 @@ const customStyles_281463 = `
     grid-column: span 4;
   }
 
+  form._formFieldset_1ll8d_67 button._formFileInputField_ehvsf_5  {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    gap: 10px;
+    overflow: hidden;
+    width: 220px;
+    height: 220px;
+    padding: 10px;
+    }
+
+  form._formFieldset_1ll8d_67 button img {
+    width: 200px;
+    height: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  form._formFieldset_1ll8d_67 button > div {
+    width: 100%;
+    margin: 0;
+  }
+
+  form._formFieldset_1ll8d_67 button._formFileInputField_ehvsf_5 span {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
   @media screen and (max-width: 1024px) {
       form._formFieldset_1ll8d_67 > *:nth-child(n+7) {
           grid-column: span 2; 
       }
 
       form._formFieldset_1ll8d_67 > *:nth-child(11) {
-          grid-column: span 4;
+          grid-column: span 2;
+      }
+
+      form._formFieldset_1ll8d_67 button._formFileInputField_ehvsf_5  {
+        width: 100%;
+      }
+      form._formFieldset_1ll8d_67 > *:nth-child(n+12):nth-child(-n+15) {
+          grid-column: span 2;
       }
   }
 
@@ -179,7 +293,7 @@ const customStyles_281463 = `
         max-width: 580px;
       }
       form._formFieldset_1ll8d_67 > *:nth-child(n+7) {
-          grid-column: span 4; 
+          grid-column: span 2; 
       }
 
       form._formFieldset_1ll8d_67 > *:nth-child(11) {
@@ -193,6 +307,9 @@ const customStyles_281463 = `
       }
       form._formFieldset_1ll8d_67 > *:nth-child(n){
           grid-column: span 4;
+      }
+      form._formFieldset_1ll8d_67 button > div {
+        justify-content: center;
       }
   }
 
