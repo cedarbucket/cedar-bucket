@@ -20,63 +20,125 @@ function applyCustomStylesToForm(formId, styles) {
                 style.textContent = styles;
                 node.shadowRoot.appendChild(style);
 
-                // Modify specific shadow DOM elements
-                node.shadowRoot
-                  .querySelectorAll("._formFileInputButton_ehvsf_18")
-                  .forEach((element) => {
-                    element.textContent = "";
-                    element.insertAdjacentHTML("beforeend", "+");
-                    element.style.backgroundColor = "transparent";
-                    element.style.fontSize = "60px";
-                    element.style.opacity = 0.5;
-                  });
+                // Monitor and handle output elements
+                const form = shadowRootElement.querySelector("form");
+                if (form) {
+                  const formObserver = new MutationObserver(() => {
+                    form.querySelectorAll("output").forEach((outputElement) => {
+                      const errorMessage = outputElement.textContent.trim();
 
-                // Track file input changes
-                node.shadowRoot
-                  .querySelectorAll('input[type="file"]')
-                  .forEach((fileInput) => {
-                    if (!fileInput.dataset.listenerAdded) {
-                      fileInput.addEventListener("change", (event) => {
-                        const files = event.target.files;
-                        if (files.length > 0) {
-                          const file = files[0];
-                          if (file.type.startsWith("image/")) {
-                            const reader = new FileReader();
+                      if (errorMessage) {
+                        // Locate the related input or textarea
+                        const relatedInput = form.querySelector(
+                          `[aria-labelledby="${outputElement.previousElementSibling?.id}"]`
+                        ) || outputElement.previousElementSibling;
 
-                            reader.onload = (e) => {
-                              const previewImage = document.createElement("img");
-                              previewImage.src = e.target.result;
-                              previewImage.alt = "Uploaded Image Preview";
-                              previewImage.style.maxWidth = "100%";
+                        if (relatedInput) {
+                          const parentDiv = relatedInput.closest("div");
 
-                              // Append the image below the file input
-                              const parent = fileInput.parentElement;
-                              if (parent) {
-                                const existingPreview =
-                                  parent.querySelector(".image-preview");
-                                if (existingPreview) {
-                                  existingPreview.src = e.target.result; // Update existing preview
-                                } else {
-                                  previewImage.classList.add("image-preview");
-                                  parent.appendChild(previewImage);
-                                }
-                              }
-                            };
+                          if (parentDiv) {
+                            // Find or create the .error-message div
+                            let errorElement = parentDiv.querySelector(".error-message");
+                            if (!errorElement) {
+                              errorElement = document.createElement("div");
+                              errorElement.className = "error-message";
+                              errorElement.style.color = "red";
+                              errorElement.style.marginTop = "8px";
+                              parentDiv.appendChild(errorElement);
+                            }
 
-                            reader.readAsDataURL(file);
-                          } else {
-                            console.warn("Selected file is not an image.");
+                            // Move the output element into the error-message div
+                            errorElement.innerHTML = ""; // Clear existing content
+                            errorElement.appendChild(outputElement); // Append the output element
                           }
                         }
-                      });
+                      }
+                    });
+                  });
 
-                      fileInput.dataset.listenerAdded = "true";
+                  formObserver.observe(form, { childList: true, subtree: true });
+
+                  form.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    let isValid = true;
+
+                    form.querySelectorAll("input, textarea").forEach((input) => {
+                      const parentDiv = input.closest("div");
+                      let errorElement = parentDiv.querySelector(".error-message");
+
+                      if (!input.value.trim()) {
+                        isValid = false;
+
+                        if (!errorElement) {
+                          errorElement = document.createElement("div");
+                          errorElement.className = "error-message";
+                          errorElement.style.color = "red";
+                          errorElement.style.marginTop = "8px";
+                          parentDiv.appendChild(errorElement);
+                        }
+                      }
+                    });
+
+                    if (isValid) {
+                      console.log("Form submitted successfully!");
+                      form.submit();
                     }
                   });
-              }
 
-              // Disconnect the observer after applying styles
-              observer.disconnect();
+                  // Ensure file input styles remain intact
+                  node.shadowRoot
+                    .querySelectorAll("._formFileInputButton_ehvsf_18")
+                    .forEach((element) => {
+                      element.textContent = "";
+                      element.insertAdjacentHTML("beforeend", "+");
+                      element.style.backgroundColor = "transparent";
+                      element.style.fontSize = "60px";
+                      element.style.opacity = 0.5;
+                    });
+
+                  // File input change handler
+                  node.shadowRoot
+                    .querySelectorAll('input[type="file"]')
+                    .forEach((fileInput) => {
+                      if (!fileInput.dataset.listenerAdded) {
+                        fileInput.addEventListener("change", (event) => {
+                          const files = event.target.files;
+                          if (files.length > 0) {
+                            const file = files[0];
+                            if (file.type.startsWith("image/")) {
+                              const reader = new FileReader();
+
+                              reader.onload = (e) => {
+                                const previewImage = document.createElement("img");
+                                previewImage.src = e.target.result;
+                                previewImage.alt = "Uploaded Image Preview";
+                                previewImage.style.maxWidth = "100%";
+
+                                const parent = fileInput.parentElement;
+                                if (parent) {
+                                  const existingPreview =
+                                    parent.querySelector(".image-preview");
+                                  if (existingPreview) {
+                                    existingPreview.src = e.target.result;
+                                  } else {
+                                    previewImage.classList.add("image-preview");
+                                    parent.appendChild(previewImage);
+                                  }
+                                }
+                              };
+
+                              reader.readAsDataURL(file);
+                            } else {
+                              console.warn("Selected file is not an image.");
+                            }
+                          }
+                        });
+
+                        fileInput.dataset.listenerAdded = "true";
+                      }
+                    });
+                }
+              }
             }
           });
         }
@@ -86,6 +148,9 @@ function applyCustomStylesToForm(formId, styles) {
     observer.observe(document.body, { childList: true, subtree: true });
   });
 }
+
+
+
 
 
 const customStyles = `
@@ -106,6 +171,13 @@ const customStyles = `
   ._textBody_2aowh_10 {
     text-align: left;
     max-width: 800px;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
   }
 
   form._formFieldset_1ll8d_67 {
