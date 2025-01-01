@@ -149,16 +149,14 @@
         "id": "custom_header_font",
         "label": "t:settings_schema.typography.settings.custom_header_font.label",
         "info": "t:settings_schema.typography.settings.custom_header_font.info",
-        "default": "NeutraText-Bold",
+        "default": "Neutra Text Bold",
         "options": [
-          { "value": "NeutraText-BookAlt", "label": "Neutra Text Book Alt" },
-          { "value": "NeutraText-Light", "label": "Neutra Text Light" },
-          { "value": "NeutraTextTF-Book", "label": "Neutra Text TF Book" },
-          { "value": "NeutraText-Bold", "label": "Neutra Text Bold" },
-          {
-            "value": "NeutraText-BoldItalic",
-            "label": "Neutra Text Bold Italic"
-          }
+          { "value": "Neutra Text Alt", "label": "Neutra Text Alt" },
+          { "value": "Neutra Text TF", "label": "Neutra Text TF" },
+          { "value": "Neutra Text Book", "label": "Neutra Text Book" },
+          { "value": "Neutra Text Bold", "label": "Neutra Text Bold" },
+          { "value": "Neutra Text Bold Italic", "label": "Neutra Text Bold Italic" },          
+          { "value": "Poiret One", "label": "Poiret One" }          
         ]
       },
       {
@@ -193,16 +191,17 @@
         "id": "custom_body_font",
         "label": "t:settings_schema.typography.settings.custom_body_font.label",
         "info": "t:settings_schema.typography.settings.custom_body_font.info",
-        "default": "NeutraText-BookAlt",
+        "default": "Neutra Text Book",
         "options": [
-          { "value": "NeutraText-BookAlt", "label": "Neutra Text Book Alt" },
-          { "value": "NeutraText-Light", "label": "Neutra Text Light" },
-          { "value": "NeutraTextTF-Book", "label": "Neutra Text TF Book" },
-          { "value": "NeutraText-Bold", "label": "Neutra Text Bold" },
+          { "value": "Neutra Text Alt", "label": "Neutra Text Alt" },
+          { "value": "Neutra Text TF", "label": "Neutra Text TF" },
+          { "value": "Neutra Text Book", "label": "Neutra Text Book" },
+          { "value": "Neutra Text Bold", "label": "Neutra Text Bold" },
           {
-            "value": "NeutraText-BoldItalic",
+            "value": "Neutra Text Bold Italic",
             "label": "Neutra Text Bold Italic"
-          }
+          },
+          { "value": "Poiret One", "label": "Poiret One" }
         ]
       },
       {

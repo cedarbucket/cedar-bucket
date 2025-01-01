@@ -15,10 +15,7 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/neutra-text-alt" rel="stylesheet">
+    {{ 'custom-font.css' | asset_url | stylesheet_tag }}
 
     <title>
       {{ page_title }}
@@ -31,9 +28,7 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    {% render 'meta-tags' %}
-
-    <link href="{{ 'Custom-Font.css' | asset_url }}" rel="stylesheet">
+    {% render 'meta-tags' %}    
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -103,30 +98,30 @@
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-foreground), 0.75);
+        color: rgba(var(--color-foreground), 1);
         background-color: rgb(var(--color-background));
       }
 
       :root {
-        --font-body-family: 'Neutra Text', sans-serif;
+        --font-body-family: 'Neutra Text Book', sans-serif;
         {% if settings.custom_body_font %}
-          /* --font-body-family: {{ settings.custom_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+          --font-body-family: {{ settings.custom_body_font.family }}, {{ settings.type_body_font.fallback_families }};
           --font-body-style: {{ settings.custom_body_font.style }};
-          --font-body-weight: {{ settings.custom_body_font.weight }};   */
+          --font-body-weight: {{ settings.custom_body_font.weight }};  
         {% else %}
-          /* --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+          --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
           --font-body-style: {{ settings.type_body_font.style }};
-          --font-body-weight: {{ settings.type_body_font.weight }}; */
+          --font-body-weight: {{ settings.type_body_font.weight }};
         {% endif %}
 
         {% if settings.custom_header_font %}
-          /* --font-heading-family: {{ settings.custom_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+          --font-heading-family: {{ settings.custom_header_font.family }}, {{ settings.type_header_font.fallback_families }};
           --font-heading-style: {{ settings.custom_header_font.style }};
-          --font-heading-weight: {{ settings.custom_header_font.weight }};   */
+          --font-heading-weight: 700;  
         {% else %}
-          /* --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+          --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
           --font-heading-style: {{ settings.type_header_font.style }};
-          --font-heading-weight: {{ settings.type_header_font.weight }}; */
+          --font-heading-weight: 700;
         {% endif %}
 
 
