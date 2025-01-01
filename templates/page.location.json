@@ -23,7 +23,7 @@
         "background_image": "shopify://shop_images/Frame_1000003738.png",
         "inner_padding_top": 52,
         "inner_padding_bottom": 52,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-4",
         "overlay_color": "#000000",
         "overlay_opacity": 0.7,
         "container_style": "boxed",
@@ -48,5 +48,8 @@
       }
     }
   },
-  "order": ["main", "map_tn4GVj"]
+  "order": [
+    "main",
+    "map_tn4GVj"
+  ]
 }

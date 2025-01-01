@@ -20,17 +20,19 @@
           }
         }
       },
-      "block_order": ["heading_Uhjywy"],
+      "block_order": [
+        "heading_Uhjywy"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-1",
         "full_width": true,
         "border_style": false,
         "padding_top": 40,
         "padding_left": 0,
         "padding_right": 0,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "main": {
@@ -56,5 +58,9 @@
       }
     }
   },
-  "order": ["rich_text_nKiGCb", "main", "form"]
+  "order": [
+    "rich_text_nKiGCb",
+    "main",
+    "form"
+  ]
 }

@@ -23,7 +23,9 @@
           }
         }
       },
-      "block_order": ["announcement-bar-0"],
+      "block_order": [
+        "announcement-bar-0"
+      ],
       "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
@@ -44,7 +46,7 @@
         "sticky_header_type": "none",
         "show_line_separator": false,
         "absolute_header": true,
-        "color_scheme": "scheme-bcdab6cc-f1e6-407b-a64f-426f27c6f25c",
+        "color_scheme": "scheme-4",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": true,
         "enable_language_selector": true,
@@ -56,5 +58,8 @@
       }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }

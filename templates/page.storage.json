@@ -39,7 +39,11 @@
           }
         }
       },
-      "block_order": ["heading_TEzMRb", "text_7F6fA9", "buttons_HLEqTD"],
+      "block_order": [
+        "heading_TEzMRb",
+        "text_7F6fA9",
+        "buttons_HLEqTD"
+      ],
       "settings": {
         "image": "shopify://shop_images/2c7e90126af63b4f6beb1dfcb7c67dfd.jpg",
         "image_overlay_opacity": 60,
@@ -84,7 +88,9 @@
           }
         }
       },
-      "block_order": ["text_QC7QFm"],
+      "block_order": [
+        "text_QC7QFm"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -106,7 +112,7 @@
             "image": "shopify://shop_images/Frame_1000003701.png",
             "sb_make_image_background": true,
             "sb_column_numbering": true,
-            "sb_color_scheme": "scheme-2",
+            "sb_color_scheme": "scheme-4",
             "sb_text_alignment": "center",
             "title": "Submit Your Request",
             "heading_size": "h1",
@@ -123,7 +129,7 @@
             "image": "shopify://shop_images/Frame_1000003702.png",
             "sb_make_image_background": true,
             "sb_column_numbering": true,
-            "sb_color_scheme": "scheme-2",
+            "sb_color_scheme": "scheme-4",
             "sb_text_alignment": "center",
             "title": "We Pick Up & Store",
             "heading_size": "h1",
@@ -140,7 +146,7 @@
             "image": "shopify://shop_images/Frame_1000003704.png",
             "sb_make_image_background": true,
             "sb_column_numbering": true,
-            "sb_color_scheme": "scheme-5",
+            "sb_color_scheme": "scheme-4",
             "sb_text_alignment": "center",
             "title": "Request Delivery When Needed",
             "heading_size": "h1",
@@ -152,7 +158,11 @@
           }
         }
       },
-      "block_order": ["column_Ue4B9z", "column_jN8pqd", "column_LXGT6T"],
+      "block_order": [
+        "column_Ue4B9z",
+        "column_jN8pqd",
+        "column_LXGT6T"
+      ],
       "settings": {
         "sb_custom_font": "Neutra Text",
         "title": "How Does It works ?",
@@ -187,8 +197,8 @@
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
             "form_id": "264017",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
+            "text_color": "#1e1e1e",
+            "button_background_color": "#1e1e1e",
             "button_label_color": "#ffffff",
             "links_color": "#1878b9",
             "errors_color": "#e02229",
@@ -201,11 +211,14 @@
           }
         }
       },
-      "block_order": ["heading_qFcRGT", "forms_inline_e93BFc"],
+      "block_order": [
+        "heading_qFcRGT",
+        "forms_inline_e93BFc"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
-        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "border_style": true,
         "padding_top": 52,

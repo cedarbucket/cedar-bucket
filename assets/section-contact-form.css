@@ -1,6 +1,5 @@
 .sb-contact-form-wrapper {
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -92,15 +91,19 @@
 }
 
 .contact .form__message {
-  align-items: flex-start;
+  align-items: center;
 }
 
 .contact .icon-success {
   margin-top: 0.2rem;
 }
 
+.contact .field__wrapper {
+  margin-bottom: 20px;
+}
+
 .contact .field {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -135,7 +138,7 @@
 
 @media screen and (min-width: 750px) {
   .contact .field {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
 }
 

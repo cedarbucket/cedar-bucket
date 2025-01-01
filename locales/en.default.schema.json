@@ -410,6 +410,10 @@
   },
   "sections": {
     "all": {
+      "sb_wrapper_height": {
+        "label": "Height",
+        "info": "Set the height of the section."
+      },
       "sb_custom_font": {
         "label": "Font Family",
         "options__1": {

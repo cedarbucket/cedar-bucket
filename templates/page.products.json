@@ -28,7 +28,10 @@
           }
         }
       },
-      "block_order": ["heading_RWRFna", "text_gp689f"],
+      "block_order": [
+        "heading_RWRFna",
+        "text_gp689f"
+      ],
       "settings": {
         "image": "shopify://shop_images/cafe-patio.jpg",
         "image_overlay_opacity": 60,
@@ -80,7 +83,10 @@
           }
         }
       },
-      "block_order": ["heading_K4WWP9", "text_Y4JQ8T"],
+      "block_order": [
+        "heading_K4WWP9",
+        "text_Y4JQ8T"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -113,7 +119,10 @@
           }
         }
       },
-      "block_order": ["heading_R7H79f", "text_H4g7J8"],
+      "block_order": [
+        "heading_R7H79f",
+        "text_H4g7J8"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -146,7 +155,10 @@
           }
         }
       },
-      "block_order": ["heading_q6XmfL", "text_fiKdTw"],
+      "block_order": [
+        "heading_q6XmfL",
+        "text_fiKdTw"
+      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -176,7 +188,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-4",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -206,7 +218,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-4",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
