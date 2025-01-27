@@ -24,22 +24,22 @@
         "heading_crHQPC"
       ],
       "settings": {
-        "image": "shopify://shop_images/cafe-patio.jpg",
+        "image": "shopify://shop_images/Dorm_STORE.jpg",
         "image_overlay_opacity": 60,
-        "container_style": "boxed",
-        "show_box_shadow": true,
-        "show_box_border": true,
-        "image_height": "medium",
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
+        "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "adjust_content_position": 0,
-        "section_radius": 16,
+        "adjust_content_position": 50,
+        "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-4",
-        "padding_top": 52,
-        "padding_left": 52,
-        "padding_right": 52,
-        "padding_bottom": 52,
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -67,7 +67,7 @@
         "text_rYhF4p": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>We are always looking for QUALITY furniture and home decor.<br/>If you have new-condition pieces and would like our consideration:</strong></p><p>At Cedar Bucket, we believe that every piece of furniture is more than just decor—it's a cornerstone of comfort, functionality, and personal style. Our curated selection of tables and furnishings combines timeless design with exceptional craftsmanship, perfect for transforming any room into a space you'll love. Whether you're looking for a statement piece or an everyday essential, each item in our collection is thoughtfully designed to enhance your home.<br/><br/><strong>Please Fill-up the form so that we could better understand your product condition</strong></p>",
+            "text": "<p><strong>We are always looking for QUALITY college furniture and decor.<br/>If you have new-condition pieces and would like our consideration:</strong></p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400
@@ -121,7 +121,7 @@
         "text_xm4cWD": {
           "type": "text",
           "settings": {
-            "text": "<p>I have read and understood the terms of the Consignment Contract and agree to accept the conditions therein as applicable to all items consigned with Cedar Bucket</p>",
+            "text": "<p>By submitting the form above, you confirm that you have read and understood the terms of the Consignment Contract and agree to accept the conditions therein as applicable to all items consigned with Cedar Bucket.</p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400

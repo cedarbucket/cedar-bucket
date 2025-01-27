@@ -15,37 +15,25 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Find Quality Used Items For Your College Home",
-            "heading_size": "hxxl"
+            "heading": "Oxford, MS",
+            "heading_size": "hxl"
           }
         },
         "text_QEHxDA": {
           "type": "text",
           "settings": {
-            "text": "consign your items with us and share in the profit",
-            "text_style": "capitalize",
-            "font_size": 38
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Browse Our Collection",
-            "button_link_1": "shopify://pages/products",
-            "button_style_secondary_1": false,
-            "button_label_2": "Consign with us",
-            "button_link_2": "shopify://pages/consignment",
-            "button_style_secondary_2": true
+            "text": "<strong>Consignment | Storage | Moving</strong>",
+            "text_style": "body",
+            "font_size": 36
           }
         }
       },
       "block_order": [
         "heading",
-        "text_QEHxDA",
-        "button"
+        "text_QEHxDA"
       ],
       "settings": {
-        "image": "shopify://shop_images/Hero.png",
+        "image": "shopify://shop_images/oliviasewelldelaneycavanaugh.jpg",
         "image_overlay_opacity": 60,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -75,7 +63,7 @@
         "description": "",
         "show_description": false,
         "absolute_content": true,
-        "show_overlay": true,
+        "show_overlay": false,
         "description_style": "body",
         "pagination_number": 4,
         "products_to_show": 25,
@@ -99,7 +87,7 @@
         "text_KD3cUx": {
           "type": "text",
           "settings": {
-            "text": "<p>At Cedar Bucket, we make furniture shopping easy, sustainable, and affordable. Our platform connects buyers with quality pre-owned furniture sold by student ready to find a new home. Shop with confidence knowing every piece has been carefully selected for its value, style, and condition. Ready to furnish your space?</p>",
+            "text": "<h1><strong>Mission:</strong></h1><p>At Cedar Bucket, we make furniture shopping and storage easy.</p><p>Our <strong>consignment</strong> platform connects buyers with quality pre-owned home furnishings that is affordable and ready to find a new home. Stop paying for marked up retail items and come shop with us instead!</p><p>Our <strong>storage</strong> platform offers unique solutions that local self storage units cannot. Are you looking for a hands free way of storing your belongings over the summer months? Are you looking for a place to safely ship and store your home items in anticipation for move in week? Our warehouses offer a variety of services that meet your needs.</p>",
             "sb_custom_font": "Poiret One",
             "sb_font_size": 32,
             "sb_font_weight": 400
@@ -121,49 +109,13 @@
         "padding_bottom": 52
       }
     },
-    "rich_text_nqt4yk": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xYTjaN": {
-          "type": "heading",
-          "settings": {
-            "heading": "About US",
-            "heading_size": "h1"
-          }
-        },
-        "text_kgk7kJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Welcome to Cedar Bucket, where we believe that finding quality furniture should be an enjoyable, affordable, and accessible experience for everyone.</p>",
-            "sb_custom_font": "Neutra Text",
-            "sb_font_size": 24,
-            "sb_font_weight": 400
-          }
-        }
-      },
-      "block_order": [
-        "heading_xYTjaN",
-        "text_kgk7kJ"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": false,
-        "border_style": false,
-        "padding_top": 40,
-        "padding_left": 0,
-        "padding_right": 0,
-        "padding_bottom": 52
-      }
-    },
     "image_with_text_BdAn7d": {
       "type": "image-with-text",
       "blocks": {
         "heading_pyxfmG": {
           "type": "heading",
           "settings": {
-            "heading": "History of Cedar Bucket",
+            "heading": "History",
             "heading_size": "h1",
             "sb_custom_font": "Poiret One"
           }
@@ -171,7 +123,7 @@
         "text_waGfLw": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to Cedar Bucket, where we believe that finding quality furniture should be an enjoyable, affordable, and accessible experience for everyone. We’re a one-of-a-kind furniture warehouse, designed for people who want high-quality, curated furniture without the high-end price tag</p>",
+            "text": "<p>The Cedar Bucket, located on Highway 6, serves as a cherished landmark and the gateway to Oxford. Proudly recognized as the world’s largest cedar bucket, it was originally built in 1985 by the previous owner, whose craftsmanship and vision brought this unique structure to life. Preserved as a piece of local history, the Cedar Bucket stands as a testament to the area’s heritage and invites visitors to experience its grandeur firsthand.</p>",
             "text_style": "subtitle",
             "sb_custom_font": "Neutra Text"
           }
@@ -182,7 +134,7 @@
         "text_waGfLw"
       ],
       "settings": {
-        "image": "shopify://shop_images/Frame_1000003754.png",
+        "image": "shopify://shop_images/CEDAR_BUCKET.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -219,7 +171,7 @@
         "column_EkY46P": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_1000003689.png",
+            "image": "shopify://shop_images/cameron_sdorm.webp",
             "sb_make_image_background": true,
             "sb_column_numbering": false,
             "sb_color_scheme": "",
@@ -252,7 +204,7 @@
         "column_EJYr3h": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_1000003759.png",
+            "image": "shopify://shop_images/Lindy-Goodson-Ole-Miss-dorm-chic.webp",
             "sb_make_image_background": true,
             "sb_column_numbering": false,
             "sb_color_scheme": "",
@@ -285,7 +237,7 @@
         "column_fCV7NA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_1000003758.png",
+            "image": "shopify://shop_images/ctg_2113-bu-2.webp",
             "sb_make_image_background": true,
             "sb_column_numbering": false,
             "sb_color_scheme": "",
@@ -338,9 +290,9 @@
             "sb_column_numbering": false,
             "sb_color_scheme": "scheme-1",
             "sb_text_alignment": "left",
-            "title": "Discover Our Storage Units",
+            "title": "Discover Our Storage Packages",
             "heading_size": "h1",
-            "text": "<p>Enjoyable, affordable, and accessible storage space for your furnitures</p>",
+            "text": "<p>Practical solutions for out of state students and parents</p>",
             "sb_font_size": 24,
             "link_as_button": true,
             "link_label": "View Details",
@@ -413,6 +365,7 @@
         "heading": "Let’s Connect",
         "heading_size": "h1",
         "color_scheme": "",
+        "sb_wrapper_height": 100,
         "padding_top": 36,
         "padding_bottom": 36,
         "sb_background_overlay": 90,
@@ -426,7 +379,6 @@
     "image_banner",
     "featured_products_by_category_gE8RtJ",
     "rich_text_rntMki",
-    "rich_text_nqt4yk",
     "image_with_text_BdAn7d",
     "multicolumn_BQAnXq",
     "multicolumn_6pAqqt",

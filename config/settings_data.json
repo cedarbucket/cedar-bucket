@@ -9,8 +9,11 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/main-logo.svg",
-    "logo_width": 150,
+    "logo": "shopify://shop_images/Pine-plates.png",
+    "logo_width": 160,
+    "favicon": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+    "search_header": false,
+    "shopping_cart": true,
     "type_header_font": "assistant_n4",
     "header_custom_font": true,
     "custom_header_font": "Neutra Text Bold",
@@ -27,10 +30,10 @@
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
-    "buttons_radius": 4,
+    "buttons_radius": 2,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
-    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_vertical_offset": 0,
     "buttons_shadow_blur": 5,
     "variant_pills_border_thickness": 1,
     "variant_pills_border_opacity": 55,
@@ -113,7 +116,7 @@
     "brand_headline": "",
     "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_label": "Follow us on",
+    "social_label": "",
     "social_facebook_link": "#",
     "social_instagram_link": "#",
     "social_youtube_link": "",
@@ -136,8 +139,9 @@
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
+        "custom_css": [],
         "settings": {
-          "color_scheme": "scheme-1"
+          "color_scheme": "scheme-3"
         }
       },
       "main-password-footer": {
@@ -149,49 +153,56 @@
       "header-alternate": {
         "type": "header-alternate",
         "settings": {
-          "alternate_logo": "shopify://shop_images/page-logo.svg",
-          "logo_width": 100,
+          "alternate_logo": "shopify://shop_images/Pine-plates.png",
+          "logo_width": 160,
           "logo_position": "left-right",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
-          "sticky_header_type": "none",
-          "show_line_separator": true,
-          "absolute_header": false,
-          "color_scheme": "scheme-1",
-          "menu_color_scheme": "scheme-1",
+          "sticky_header_type": "reduce-logo-size",
+          "show_line_separator": false,
+          "absolute_header": true,
+          "color_scheme": "scheme-4",
+          "menu_color_scheme": "scheme-3",
           "enable_country_selector": false,
           "enable_language_selector": false,
           "enable_customer_avatar": true,
           "mobile_logo_position": "center",
           "margin_bottom": 0,
-          "padding_top": 20,
-          "padding_bottom": 20
+          "padding_top": 0,
+          "padding_bottom": 0
         }
       },
       "header-storage": {
         "type": "header-storage",
         "settings": {
-          "alternate_logo": "shopify://shop_images/main-logo.svg",
-          "logo_width": 100,
+          "alternate_logo": "shopify://shop_images/Pine-plates.png",
+          "logo_width": 160,
           "logo_position": "left-right",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
-          "sticky_header_type": "on-scroll-up",
+          "sticky_header_type": "reduce-logo-size",
           "show_line_separator": false,
           "absolute_header": true,
           "color_scheme": "scheme-4",
-          "menu_color_scheme": "scheme-4",
+          "menu_color_scheme": "scheme-3",
           "enable_country_selector": false,
           "enable_language_selector": false,
           "enable_customer_avatar": true,
           "mobile_logo_position": "center",
           "margin_bottom": 0,
-          "padding_top": 20,
-          "padding_bottom": 20
+          "padding_top": 0,
+          "padding_bottom": 0
         }
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "5563440753204486960": {
+        "type": "shopify://apps/bta-appointment-booking-app/blocks/widgets/447b4be3-b8e8-4347-959f-d9a05d4b2d5d",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -423,5 +434,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".password-page .password-wrapper {display: none;}"
+    ]
   }
 }

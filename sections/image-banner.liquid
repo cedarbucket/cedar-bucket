@@ -176,12 +176,11 @@
           {%- when 'text' -%}
             <div
               class="banner__text rte {{ block.settings.text_style }}"
-              {{ block.shopify_attributes }}
-              {% if block.settings.font_size %}
-                style="font-size:{{ block.settings.font_size }}px; line-height: 1;"
-              {% endif %}
+              {{ block.shopify_attributes }}              
             >
-              <p>{{ block.settings.text }}</p>
+              <p {% if block.settings.font_size %}
+                style="font-size:{{ block.settings.font_size }}px; line-height: 1;"
+              {% endif %}>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
@@ -196,6 +195,12 @@
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  style="
+                    padding-top: {{ block.settings.btn_one_padding_top }}px;
+                    padding-bottom: {{ block.settings.btn_one_padding_bottom }}px;
+                    padding-left: {{ block.settings.btn_one_padding_left }}px;
+                    padding-right: {{ block.settings.btn_one_padding_right }}px;
+                  "
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -208,6 +213,12 @@
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  style="
+                    padding-top: {{ block.settings.btn_two_padding_top }}px;
+                    padding-bottom: {{ block.settings.btn_two_padding_bottom }}px;
+                    padding-left: {{ block.settings.btn_two_padding_left }}px;
+                    padding-right: {{ block.settings.btn_two_padding_right }}px;
+                  "
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
@@ -618,6 +629,50 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
         },
         {
+          "type": "header",
+          "content": "Button 1 Padding"
+        },
+        {
+          "type": "range",
+          "id": "btn_one_padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "btn_one_padding_left",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_left",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "btn_one_padding_right",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_right",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "btn_one_padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 24
+        },
+        {
           "type": "checkbox",
           "id": "button_style_secondary_1",
           "default": false,
@@ -640,6 +695,50 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+            {
+          "type": "header",
+          "content": "Button 2 Padding"
+        },
+        {
+          "type": "range",
+          "id": "btn_two_padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "btn_two_padding_left",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_left",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "btn_two_padding_right",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_right",
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "btn_two_padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 24
         }
       ]
     }

@@ -17,13 +17,36 @@
     justify-self: start;
     margin-left: 5px;
   }
+
+  .header--left-right {
+        grid-template-areas: "heading navigation icons";
+        grid-template-columns: auto 1fr auto;        
+  }
+
+  @media (max-width: 990px) {
+    .header--left-right {
+      grid-template-areas: "left-icons heading icons";        
+    }
+  }
+
+  .header__inline-menu {
+    text-align: right;
+  }
+  
+ .header__inline-menu {
+    margin-top: -3px !important;
+  }
   
   #shopify-section-header-storage {
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 150;
+  }
+
+  #shopify-section-header-storage.shopify-section-header-sticky.scrolled-past-header {
+    position: sticky;
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -77,6 +100,127 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
+   .header__search {
+    padding-right: 5px;
+  }
+  .header__social_icons {    
+    gap: 0px;
+  }
+  .header__social_icons .list-social { 
+    gap: 7px;    
+  }
+
+  .header__social_icons .list-social {
+    justify-content: flex-end;
+    margin-right: -10px;
+  }
+  .header__social_icons .list-social__link {
+    padding: 0;
+  }
+
+  .header__icon.header__icon--cart {
+    margin: 0 0px;
+  }
+  .header__icon.header__icon--search {
+    width: auto;
+  }
+  .header__icon .svg-wrapper,
+  .header__social_icons .svg-wrapper {
+    height: auto;
+    width: auto;
+  }
+  
+  .list-social__item .icon {
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  .header__icons {
+    gap: 0px;
+  }
+   .header__icon .icon.icon-search {
+    width: 36px;      
+    height: 30px;
+  }
+
+  .header__icon--cart {      
+    width: 30px;    
+}
+
+  .header__icon:not(.header__icon--menu) .icon,   
+  .header__social_icons .list-social__item .icon, {
+    height: 32px;
+    width: 32px;    
+  }
+
+  .header__icon--cart .icon {
+    height: 54px;
+    width: 54px;
+  }
+
+  .search-modal .search-modal__content {    
+    position: fixed;
+    height: 100vh;
+    z-index: 500;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(5px);
+  }
+  .search-modal__form input {
+    color: black;
+    background: rgba(255,255,255,0.98);
+    border: 1px solid black;
+  }
+  .predictive-search {
+    color: black;
+    background: transparent;  
+    padding: 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .search-modal__form .reset__button {
+    right: -48px;
+    top: -4px;
+    opacity: 0;
+  }
+  
+  .search-modal__close-button .svg-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .search-modal__form .field__label,
+  .search-modal__form .svg-wrapper,
+  .predictive-search__item,
+  .predictive-search__item--term .icon-arrow,
+  .predictive-search__item .svg-wrapper,
+  .predictive-search__list-item[aria-selected="true"] > *, .predictive-search__list-item:hover > *, .predictive-search__item[aria-selected="true"], .predictive-search__item:hover {
+    color: black;
+    background: white;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .header__icons {
+      gap: 0px;
+    }
+    .header__icon--menu .icon.icon-hamburger {      
+      width: 35px;
+      height: 35px;
+    }
+
+    .header__icon .icon.icon-search {
+      width: auto;          
+    }
+
+    .header__icon--cart {      
+        width: 30px;    
+    }
+  }
+
   @media screen and (min-width: 750px) {
     .list-menu__item {    
      font-size: 20px;
@@ -90,7 +234,7 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 2rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 2rem;
   }
 
   .section-header {
@@ -305,16 +449,22 @@
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
 {%- endif -%}
 
-{% javascript %}
-  class StickyHeader extends HTMLElement {
+
+<script>
+ class StickyHeader extends HTMLElement {
     constructor() {
       super();
     }
 
     connectedCallback() {
       this.header = document.querySelector('.section-header');
+      this.headerWrapper = document.querySelector('.header-wrapper');
       this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
       this.headerBounds = {};
+
+      // Store the Liquid color classes
+      this.colorScheme = "color-{{ section.settings.menu_color_scheme }}";
+      this.menuColorScheme = "color-{{ section.settings.color_scheme }}";
 
       this.setHeaderHeight();
 
@@ -322,14 +472,14 @@
 
       if (this.headerIsAlwaysSticky) {
         this.header.classList.add('shopify-section-header-sticky');
-      };
+      }
 
       this.currentScrollTop = 0;
       this.preventReveal = false;
       this.predictiveSearch = this.querySelector('predictive-search');
 
       this.onScrollHandler = this.onScroll.bind(this);
-      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+      this.hideHeaderOnScrollUp = () => (this.preventReveal = true);
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.addEventListener('scroll', this.onScrollHandler, false);
@@ -360,29 +510,49 @@
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (this.preventHide) return;
-        requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (!this.preventReveal) {
-          requestAnimationFrame(this.reveal.bind(this));
-        } else {
-          window.clearTimeout(this.isScrolling);
+      const offset = 200; // Starting point for opacity
+      const maxOpacityScroll = 700; // Scroll position for full opacity
+      let opacity = 0;
 
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
+      if (scrollTop > offset) {
+        // Calculate opacity between 0 and 1
+        const progress = Math.min((scrollTop - offset) / (maxOpacityScroll - offset), 1);
+        opacity = progress; // Value between 0 and 1
+      }
 
-          requestAnimationFrame(this.hide.bind(this));
-        }
-      } else if (scrollTop <= this.headerBounds.top) {
+      // Dynamically get the background color from the CSS variable
+      const computedStyle = getComputedStyle(this.headerWrapper);
+      const baseColor = computedStyle.getPropertyValue('--color-background') || 'rgb(0, 0, 0)';
+
+      // Apply the color with opacity
+      if (scrollTop > this.headerBounds.bottom + offset) {
+        this.headerWrapper.style.backgroundColor = `rgba(${baseColor
+          .match(/\d+/g)
+          .join(', ')}, ${opacity})`;
+        this.header.classList.add('scrolled-past-header');
+        this.updateColorScheme(true);
+      } else if (scrollTop <= this.headerBounds.top + offset) {
+        // Reset to transparent
+        this.headerWrapper.style.backgroundColor = `rgba(${baseColor
+          .match(/\d+/g)
+          .join(', ')}, 0)`;
         this.header.classList.remove('scrolled-past-header');
-        requestAnimationFrame(this.reset.bind(this));
+        this.updateColorScheme(false);
       }
 
       this.currentScrollTop = scrollTop;
+    }
+
+    updateColorScheme(isScrolledPast) {
+      if (!this.headerWrapper) return;
+
+      if (isScrolledPast) {
+        this.headerWrapper.classList.remove(this.menuColorScheme);
+        this.headerWrapper.classList.add(this.colorScheme);
+      } else {
+        this.headerWrapper.classList.remove(this.colorScheme);
+        this.headerWrapper.classList.add(this.menuColorScheme);
+      }
     }
 
     hide() {
@@ -405,7 +575,7 @@
 
     closeMenuDisclosure() {
       this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
-      this.disclosures.forEach(disclosure => disclosure.close());
+      this.disclosures.forEach((disclosure) => disclosure.close());
     }
 
     closeSearchModal() {
@@ -415,7 +585,8 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
-{% endjavascript %}
+</script>
+
 
 <script type="application/ld+json">
   {
