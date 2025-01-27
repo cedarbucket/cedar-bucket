@@ -17,8 +17,8 @@
         "text_XRVLeL": {
           "type": "text",
           "settings": {
-            "heading": "Discover Quality Furniture",
-            "subtext": ""
+            "heading": "Discover",
+            "subtext": "<h4>Furniture Solutions</h4>"
           }
         },
         "image_FCMPd8": {
@@ -48,8 +48,8 @@
         "text_LYyLcx": {
           "type": "text",
           "settings": {
-            "heading": "Have a Visit",
-            "subtext": "<p>TARUN TAHILIANI,<br/>Qutab Garden, Block B, H-5/12<br/>Ward No- 1 Style Mile Road,<br/>Mehrauli, Near Qila Restaurant & Qutab Minar,<br/>New Delhi- 110030</p>"
+            "heading": "Store Information",
+            "subtext": "<p>Cedar Bucket Consignment & Storage<br/>979 MS-6, Oxford, MS 38655</p><p>info@cedarbucket.com</p><p>901-361-2828</p><p></p>"
           }
         }
       },
@@ -76,5 +76,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }

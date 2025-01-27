@@ -103,7 +103,7 @@
       }
 
       :root {
-        --font-body-family: 'Neutra Text Book', sans-serif;
+        --font-body-family: 'Neutra Text Book', sans-serif !important;
         {% if settings.custom_body_font %}
           --font-body-family: {{ settings.custom_body_font.family }}, {{ settings.type_body_font.fallback_families }};
           --font-body-style: {{ settings.custom_body_font.style }};
@@ -308,8 +308,7 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-
-    {{ 'custom.css' | asset_url | stylesheet_tag }}
+    
     {% comment %} <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     <script src="{{ 'gsap-tasks.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom-scripts.js' | asset_url }}" defer="defer"></script>
@@ -331,11 +330,11 @@
     {%- endif -%}
 
     {% if template.name == 'index' %}
-      {% sections 'header-group' %}
-    {% elsif template == 'page.storage' %}
+      {% section 'header-alternate' %}
+    {% elsif template == 'page.storage' or template == 'page.consignment' or template == 'page.products' %}
       {% section 'header-storage' %}
     {% else %}
-      {% section 'header-alternate' %}
+        {% sections 'header-group' %}      
     {% endif %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">

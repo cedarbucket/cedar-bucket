@@ -1228,6 +1228,9 @@
         "show_line_separator": {
           "label": "Show separator line"
         },
+        "show_social_icons": {
+          "label": "Show social icons"
+        },
         "header__1": {
           "content": "Color"
         },
