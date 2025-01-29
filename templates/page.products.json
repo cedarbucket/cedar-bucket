@@ -33,7 +33,7 @@
         "text_gp689f"
       ],
       "settings": {
-        "image": "shopify://shop_images/cafe-patio.jpg",
+        "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
         "image_overlay_opacity": 40,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -71,7 +71,7 @@
           "settings": {
             "heading": "About",
             "icon": "question_mark",
-            "row_content": "<p>At Cedar Bucket, we believe that every piece of furniture is more than just decor—it's a cornerstone of comfort, functionality, and personal style. Our curated selection of tables and furnishings combines timeless design with exceptional craftsmanship, perfect for transforming any room into a space you'll love. Whether you're looking for a statement piece or an everyday essential, each item in our collection is thoughtfully designed to enhance your home.</p>",
+            "row_content": "<p>At Cedar Bucket, we sell top quality used college furniture to simply your college move. Furniture and decor is available for online purchase to be picked up at our Oxford location or delivered to your future home!</p>",
             "page": ""
           }
         },
@@ -197,7 +197,7 @@
         "text_H4g7J8": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After submitting your storage request, you can schedule a pick-up date and time that works best for you.</li><li>Pick-up is available from dorms, apartments, or any location within our service area.</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p><strong>Packaging Requirements</strong></p><ul><li>All items must be securely packed before pick-up.</li><li>We recommend labeling your boxes for easy identification.</li><li>Packing materials are available for purchase upon request.</li></ul><p><strong>Pick-Up Fees</strong></p><ul><li>A nominal pick-up fee may apply, depending on your location.</li><li>Pick-up fees will be clearly communicated during the scheduling process.</li></ul>",
+            "text": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After purchasing your item, you can schedule a pick-up date and time that works best for you.</li><li>Please call or text the store to schedule your pick up.</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p></p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400

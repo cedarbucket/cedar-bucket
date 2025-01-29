@@ -309,8 +309,7 @@
       >
     {%- endif -%}
     
-    {% comment %} <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-    <script src="{{ 'gsap-tasks.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}    
     <script src="{{ 'custom-scripts.js' | asset_url }}" defer="defer"></script>
 
     <script>
@@ -329,8 +328,12 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% if template.name == 'index' %}
+    {% if template == 'index' %}
       {% section 'header-alternate' %}
+    {% elsif template == 'page.contact' %}
+      {% section 'header-contact' %}
+    {% elsif template == 'page.moving' %}
+      {% section 'header-moving' %}
     {% elsif template == 'page.storage' or template == 'page.consignment' or template == 'page.products' %}
       {% section 'header-storage' %}
     {% else %}
