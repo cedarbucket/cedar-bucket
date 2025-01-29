@@ -9,19 +9,65 @@
  */
 {
   "sections": {
+    "image_banner_6GNcpK": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_qQRGTh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Connect with Us - Let's Get in Touch!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qQRGTh"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/person-holding-box.jpg",
+        "image_overlay_opacity": 60,
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
+        "image_height": "full",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "adjust_content_position": 70,
+        "section_radius": 0,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "rich_text_nKiGCb": {
       "type": "rich-text",
       "blocks": {
         "heading_Uhjywy": {
           "type": "heading",
           "settings": {
-            "heading": "Contact with us",
+            "heading": "Questions, Comments, Concerns?",
             "heading_size": "h1"
+          }
+        },
+        "caption_BTpQ44": {
+          "type": "caption",
+          "settings": {
+            "caption": "We're here to help. Fill out the form below and we'll be in touch ASAP.",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
           }
         }
       },
       "block_order": [
-        "heading_Uhjywy"
+        "heading_Uhjywy",
+        "caption_BTpQ44"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -29,7 +75,7 @@
         "color_scheme": "scheme-1",
         "full_width": true,
         "border_style": false,
-        "padding_top": 40,
+        "padding_top": 100,
         "padding_left": 0,
         "padding_right": 0,
         "padding_bottom": 0
@@ -46,12 +92,13 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Contact Us",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "sb_background_overlay": 90,
+        "sb_wrapper_height": 65,
+        "padding_top": 100,
+        "padding_bottom": 88,
+        "sb_background_overlay": 70,
         "image_one": "shopify://shop_images/33560c89bf9f52ef4c088f94c5a365bb.jpg",
         "image_two": "shopify://shop_images/362f150949906132546966a182fd427a.jpg",
         "image_three": "shopify://shop_images/be216cb1d7958e42012adc9a49bc126d.jpg"
@@ -59,6 +106,7 @@
     }
   },
   "order": [
+    "image_banner_6GNcpK",
     "rich_text_nKiGCb",
     "main",
     "form"

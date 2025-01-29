@@ -15,8 +15,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Oxford, MS",
-            "heading_size": "hxl"
+            "heading": "<strong>Oxford, MS</strong>",
+            "heading_size": "hxxl"
           }
         },
         "text_QEHxDA": {
@@ -24,13 +24,33 @@
           "settings": {
             "text": "<strong>Consignment | Storage | Moving</strong>",
             "text_style": "body",
-            "font_size": 36
+            "font_size": 18
+          }
+        },
+        "buttons_9xabXM": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Online",
+            "button_link_1": "shopify://pages/products",
+            "btn_one_padding_top": 24,
+            "btn_one_padding_left": 24,
+            "btn_one_padding_right": 24,
+            "btn_one_padding_bottom": 24,
+            "button_style_secondary_1": false,
+            "button_label_2": "Consign with Us",
+            "button_link_2": "shopify://pages/consignment",
+            "button_style_secondary_2": true,
+            "btn_two_padding_top": 24,
+            "btn_two_padding_left": 24,
+            "btn_two_padding_right": 24,
+            "btn_two_padding_bottom": 24
           }
         }
       },
       "block_order": [
         "heading",
-        "text_QEHxDA"
+        "text_QEHxDA",
+        "buttons_9xabXM"
       ],
       "settings": {
         "image": "shopify://shop_images/oliviasewelldelaneycavanaugh.jpg",
@@ -53,32 +73,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
-      }
-    },
-    "featured_products_by_category_gE8RtJ": {
-      "type": "featured-products-by-category",
-      "settings": {
-        "title": "View Products",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "absolute_content": true,
-        "show_overlay": false,
-        "description_style": "body",
-        "pagination_number": 4,
-        "products_to_show": 25,
-        "columns_desktop": 3,
-        "full_width": false,
-        "color_scheme": "scheme-4",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "rich_text_rntMki": {
@@ -377,7 +371,6 @@
   },
   "order": [
     "image_banner",
-    "featured_products_by_category_gE8RtJ",
     "rich_text_rntMki",
     "image_with_text_BdAn7d",
     "multicolumn_BQAnXq",

@@ -9,42 +9,6 @@
  */
 {
   "sections": {
-    "rich_text_zrYTTx": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_WeCcYR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Oxford's Best Moving Solution",
-            "heading_size": "h1"
-          }
-        },
-        "text_8t9cPP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We only hire locally from Ole Miss Fraternities to guarantee you the highest quality moving service.</p>",
-            "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 18,
-            "sb_font_weight": 400
-          }
-        }
-      },
-      "block_order": [
-        "heading_WeCcYR",
-        "text_8t9cPP"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "border_style": false,
-        "padding_top": 40,
-        "padding_left": 0,
-        "padding_right": 0,
-        "padding_bottom": 52
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -53,40 +17,145 @@
         "padding_bottom": 28
       }
     },
-    "featured_collection_c3dCBc": {
-      "type": "featured-collection",
+    "image_banner_BxtyCB": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_aQhBPA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Effortless Moves Start Here!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aQhBPA"
+      ],
       "settings": {
-        "title": "Moving Services",
+        "image": "shopify://shop_images/person-holding-box.jpg",
+        "image_overlay_opacity": 60,
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
+        "image_height": "full",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "adjust_content_position": 70,
+        "section_radius": 0,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_67jCJj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8xghAj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need Moving Services?",
+            "heading_size": "h1"
+          }
+        },
+        "text_Wx6Vdk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Call or text us at 901-361-2828 to schedule your move!</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_8xghAj",
+        "text_Wx6Vdk"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 60,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 20
+      }
+    },
+    "collapsible_content_zqVDKK": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_zjUHYi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What type of moving services do you offer?",
+            "icon": "check_mark",
+            "row_content": "<p>You can book our movers for whatever moving services you need from loading a truck to mounting a TV! </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aEePxX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who are your movers?",
+            "icon": "check_mark",
+            "row_content": "<p>We hire exclusively from the Ole Miss fraternities to provide you the best, most respectful movers in Oxford. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qnWB3k": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you require a deposit?",
+            "icon": "check_mark",
+            "row_content": "<p>We require a $50 deposit via Venmo for all bookings</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hzMGKj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do you charge?",
+            "icon": "check_mark",
+            "row_content": "<p>We charge per hour for your move and payment is sent via Venmo after the move is complete.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_zjUHYi",
+        "collapsible_row_aEePxX",
+        "collapsible_row_qnWB3k",
+        "collapsible_row_hzMGKj"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Moving FAQ",
         "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "absolute_content": false,
-        "show_overlay": false,
-        "description_style": "body",
-        "collection": "moving",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
         "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "rich_text_zrYTTx",
     "main",
-    "featured_collection_c3dCBc"
+    "image_banner_BxtyCB",
+    "rich_text_67jCJj",
+    "collapsible_content_zqVDKK"
   ]
 }
