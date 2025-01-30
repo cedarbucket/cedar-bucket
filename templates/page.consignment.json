@@ -15,13 +15,22 @@
         "heading_crHQPC": {
           "type": "heading",
           "settings": {
-            "heading": "Start Your Consignment Journey",
-            "heading_size": "h1"
+            "heading": "Used Furniture Consignment",
+            "heading_size": "h0"
+          }
+        },
+        "text_CM8j4b": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>We'll handle selling your high quality, used college furniture</strong>",
+            "text_style": "body",
+            "font_size": 20
           }
         }
       },
       "block_order": [
-        "heading_crHQPC"
+        "heading_crHQPC",
+        "text_CM8j4b"
       ],
       "settings": {
         "image": "shopify://shop_images/Dorm_STORE.jpg",
@@ -32,7 +41,7 @@
         "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "adjust_content_position": 70,
+        "adjust_content_position": 40,
         "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-4",

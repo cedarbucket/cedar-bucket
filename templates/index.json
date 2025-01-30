@@ -30,8 +30,8 @@
         "buttons_9xabXM": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Online",
-            "button_link_1": "shopify://pages/products",
+            "button_label_1": "Moving & Storage",
+            "button_link_1": "shopify://pages/storage",
             "btn_one_padding_top": 24,
             "btn_one_padding_left": 24,
             "btn_one_padding_right": 24,
@@ -73,6 +73,195 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "featured_collection_34pb3A": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "College Storage + Moving Packages",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "absolute_content": false,
+        "show_overlay": false,
+        "description_style": "body",
+        "collection": "storage-packages",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_9kTxRU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HygHXy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Just need moving help?",
+            "heading_size": "h1",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_htWYaJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have experienced college student movers to handle or assist your college move.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text"
+          }
+        },
+        "button_HUzxch": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Quote",
+            "button_link": "shopify://pages/moving",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HygHXy",
+        "text_htWYaJ",
+        "button_HUzxch"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/person-holding-box.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_EqiQf4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UgUTwB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Interested in Consignment?",
+            "heading_size": "hxl",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_j8Bt3P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We can help you sell your high quality, used college furniture. Click below to learn more.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text"
+          }
+        },
+        "button_hqR6LJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Consign with Us",
+            "button_link": "shopify://pages/consignment",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UgUTwB",
+        "text_j8Bt3P",
+        "button_hqR6LJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Your_paragraph_text_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_z6NyNY": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_FK4fmP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "headboards"
+          }
+        },
+        "featured_collection_n44jkH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bed"
+          }
+        },
+        "featured_collection_i79nHD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desks-chairs"
+          }
+        },
+        "featured_collection_hNRTjn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lighting"
+          }
+        },
+        "featured_collection_AayXPH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rugs"
+          }
+        },
+        "featured_collection_fzFy7f": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_FK4fmP",
+        "featured_collection_n44jkH",
+        "featured_collection_i79nHD",
+        "featured_collection_hNRTjn",
+        "featured_collection_AayXPH",
+        "featured_collection_fzFy7f"
+      ],
+      "settings": {
+        "title": "Shop Furniture Online",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_rntMki": {
@@ -135,8 +324,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-3",
-        "color_scheme": "scheme-3",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 0,
@@ -254,6 +443,7 @@
         "column_aA3AyG",
         "column_fCV7NA"
       ],
+      "disabled": true,
       "settings": {
         "sb_custom_font": "Poiret One",
         "title": "Find Us On Instagram",
@@ -273,108 +463,16 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
-    },
-    "multicolumn_6pAqqt": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_AtVHKm": {
-          "type": "column",
-          "settings": {
-            "sb_make_image_background": false,
-            "sb_column_numbering": false,
-            "sb_color_scheme": "scheme-1",
-            "sb_text_alignment": "left",
-            "title": "Discover Our Storage Packages",
-            "heading_size": "h1",
-            "text": "<p>Practical solutions for out of state students and parents</p>",
-            "sb_font_size": 24,
-            "link_as_button": true,
-            "link_label": "View Details",
-            "link": "shopify://pages/storage"
-          }
-        },
-        "column_p9rxNi": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Frame_1000003760.png",
-            "sb_make_image_background": true,
-            "sb_column_numbering": false,
-            "sb_color_scheme": "",
-            "sb_text_alignment": "left",
-            "title": "",
-            "heading_size": "h1",
-            "text": "",
-            "sb_font_size": 24,
-            "link_as_button": false,
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_hYNDdn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Frame_1000003691.png",
-            "sb_make_image_background": true,
-            "sb_column_numbering": false,
-            "sb_color_scheme": "",
-            "sb_text_alignment": "left",
-            "title": "",
-            "heading_size": "h1",
-            "text": "",
-            "sb_font_size": 24,
-            "link_as_button": false,
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_AtVHKm",
-        "column_p9rxNi",
-        "column_hYNDdn"
-      ],
-      "settings": {
-        "sb_custom_font": "Neutra Text",
-        "title": "",
-        "heading_position": "left",
-        "heading_size": "h1",
-        "sb_column_grid": true,
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-d274e1e4-1615-48ce-a991-e3acde64136c",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "contact_form_8rpyyA": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "Let’s Connect",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "sb_wrapper_height": 100,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "sb_background_overlay": 90,
-        "image_one": "shopify://shop_images/33560c89bf9f52ef4c088f94c5a365bb.jpg",
-        "image_two": "shopify://shop_images/362f150949906132546966a182fd427a.jpg",
-        "image_three": "shopify://shop_images/be216cb1d7958e42012adc9a49bc126d.jpg"
-      }
     }
   },
   "order": [
     "image_banner",
+    "featured_collection_34pb3A",
+    "image_with_text_9kTxRU",
+    "image_with_text_EqiQf4",
+    "collection_list_z6NyNY",
     "rich_text_rntMki",
     "image_with_text_BdAn7d",
-    "multicolumn_BQAnXq",
-    "multicolumn_6pAqqt",
-    "contact_form_8rpyyA"
+    "multicolumn_BQAnXq"
   ]
 }

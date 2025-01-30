@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Pine-plates.png",
-    "logo_width": 160,
+    "logo": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+    "logo_width": 200,
     "favicon": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
     "search_header": false,
     "shopping_cart": true,
@@ -115,7 +115,8 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p></p>",
-    "brand_image_width": 100,
+    "brand_image": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+    "brand_image_width": 75,
     "social_label": "",
     "social_facebook_link": "#",
     "social_instagram_link": "#",
@@ -141,7 +142,7 @@
         "type": "main-password-header",
         "custom_css": [],
         "settings": {
-          "color_scheme": "scheme-3"
+          "color_scheme": "scheme-1"
         }
       },
       "main-password-footer": {
@@ -153,7 +154,7 @@
       "header-alternate": {
         "type": "header-alternate",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine-plates.png",
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
           "logo_width": 160,
           "logo_position": "left-right",
           "menu": "main-menu",
@@ -175,7 +176,51 @@
       "header-storage": {
         "type": "header-storage",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine-plates.png",
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
+          "logo_width": 160,
+          "logo_position": "left-right",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "sticky_header_type": "reduce-logo-size",
+          "show_line_separator": false,
+          "absolute_header": true,
+          "color_scheme": "scheme-4",
+          "menu_color_scheme": "scheme-3",
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "enable_customer_avatar": true,
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 0,
+          "padding_bottom": 0
+        }
+      },
+      "header-contact": {
+        "type": "header-contact",
+        "settings": {
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
+          "logo_width": 160,
+          "logo_position": "left-right",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "sticky_header_type": "reduce-logo-size",
+          "show_line_separator": false,
+          "absolute_header": true,
+          "color_scheme": "scheme-4",
+          "menu_color_scheme": "scheme-3",
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "enable_customer_avatar": true,
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 0,
+          "padding_bottom": 0
+        }
+      },
+      "header-moving": {
+        "type": "header-moving",
+        "settings": {
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
           "logo_width": 160,
           "logo_position": "left-right",
           "menu": "main-menu",

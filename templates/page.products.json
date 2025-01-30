@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "image_banner_aVVpbc": {
       "type": "image-banner",
       "blocks": {
@@ -16,15 +24,15 @@
           "type": "heading",
           "settings": {
             "heading": "Shop Cedar Bucket",
-            "heading_size": "h1"
+            "heading_size": "hxxl"
           }
         },
         "text_gp689f": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "High quality used furniture for college students",
             "text_style": "body",
-            "font_size": 16
+            "font_size": 22
           }
         }
       },
@@ -34,11 +42,11 @@
       ],
       "settings": {
         "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
-        "image_overlay_opacity": 40,
-        "container_style": "full_frame",
+        "image_overlay_opacity": 50,
+        "container_style": "boxed",
         "show_box_shadow": false,
         "show_box_border": false,
-        "image_height": "large",
+        "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "adjust_content_position": 50,
@@ -53,14 +61,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
       }
     },
     "collapsible_content_kDRYgA": {
@@ -80,7 +80,7 @@
           "settings": {
             "heading": "Pick Up Policy",
             "icon": "truck",
-            "row_content": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After submitting your storage request, you can schedule a pick-up date and time that works best for you.</li><li>Pick-up is available from dorms, apartments, or any location within our service area.</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p><strong>Packaging Requirements</strong></p><ul><li>All items must be securely packed before pick-up.</li><li>We recommend labeling your boxes for easy identification.</li><li>Packing materials are available for purchase upon request.</li></ul><p><strong>Pick-Up Fees</strong></p><ul><li>A nominal pick-up fee may apply, depending on your location.</li><li>Pick-up fees will be clearly communicated during the scheduling process.</li></ul>",
+            "row_content": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After submitting your consignment request, you can schedule a pick-up date and time that works best for you.</li><li>Pick-up is available from dorms, apartments, or any location within our service area.</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p><strong>Packaging Requirements</strong></p><ul><li>All items must be securely packed before pick-up.</li><li>We recommend labeling your boxes for easy identification.</li><li>Packing materials are available for purchase upon request.</li></ul><p><strong>Pick-Up Fees</strong></p><ul><li>A nominal pick-up fee may apply, depending on your location.</li><li>Pick-up fees will be clearly communicated during the scheduling process.</li></ul>",
             "page": ""
           }
         },
@@ -120,19 +120,47 @@
         "featured_collection_aTPmN8": {
           "type": "featured_collection",
           "settings": {
-            "collection": "table"
+            "collection": "headboards"
           }
         },
         "featured_collection_9at4a4": {
           "type": "featured_collection",
           "settings": {
-            "collection": "chair"
+            "collection": "bed"
+          }
+        },
+        "featured_collection_Lyew9m": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desks-chairs"
+          }
+        },
+        "featured_collection_VDNfJH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lighting"
+          }
+        },
+        "featured_collection_7DPF7n": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rugs"
+          }
+        },
+        "featured_collection_t7PX9D": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage"
           }
         }
       },
       "block_order": [
         "featured_collection_aTPmN8",
-        "featured_collection_9at4a4"
+        "featured_collection_9at4a4",
+        "featured_collection_Lyew9m",
+        "featured_collection_VDNfJH",
+        "featured_collection_7DPF7n",
+        "featured_collection_t7PX9D"
       ],
       "settings": {
         "title": "Collections",
@@ -261,14 +289,14 @@
     "featured_collection_LQhtnV": {
       "type": "featured-collection",
       "settings": {
-        "title": "Chairs",
+        "title": "Bed & Headboards",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "absolute_content": true,
         "show_overlay": true,
         "description_style": "body",
-        "collection": "chair",
+        "collection": "headboards",
         "products_to_show": 6,
         "columns_desktop": 3,
         "full_width": false,
@@ -291,14 +319,14 @@
     "featured_collection_AgKHhV": {
       "type": "featured-collection",
       "settings": {
-        "title": "Tables",
+        "title": "Desks & Chairs",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "absolute_content": true,
         "show_overlay": true,
         "description_style": "body",
-        "collection": "table",
+        "collection": "desks-chairs",
         "products_to_show": 6,
         "columns_desktop": 3,
         "full_width": false,
@@ -317,17 +345,48 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_collection_A7cPge": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Rugs",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "absolute_content": false,
+        "show_overlay": false,
+        "description_style": "body",
+        "collection": "rugs",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "image_banner_aVVpbc",
     "main",
+    "image_banner_aVVpbc",
     "collapsible_content_kDRYgA",
     "collection_list_p7DU7k",
     "rich_text_wJVKTh",
     "rich_text_LV7743",
     "rich_text_qprLJj",
     "featured_collection_LQhtnV",
-    "featured_collection_AgKHhV"
+    "featured_collection_AgKHhV",
+    "featured_collection_A7cPge"
   ]
 }
