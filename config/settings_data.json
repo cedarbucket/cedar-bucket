@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
-    "logo_width": 200,
-    "favicon": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+    "logo": "shopify://shop_images/Pine_Plate.png",
+    "logo_width": 160,
+    "favicon": "shopify://shop_images/Pure_Pines-favicon.png",
     "search_header": false,
     "shopping_cart": true,
     "type_header_font": "assistant_n4",
@@ -142,6 +142,9 @@
         "type": "main-password-header",
         "custom_css": [],
         "settings": {
+          "alternate_logo": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+          "logo_width": 160,
+          "logo_position": "middle-left",
           "color_scheme": "scheme-1"
         }
       },

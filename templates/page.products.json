@@ -43,7 +43,7 @@
       "settings": {
         "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
         "image_overlay_opacity": 50,
-        "container_style": "boxed",
+        "container_style": "full_frame",
         "show_box_shadow": false,
         "show_box_border": false,
         "image_height": "full",
@@ -59,8 +59,8 @@
         "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "collapsible_content_kDRYgA": {

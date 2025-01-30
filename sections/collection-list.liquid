@@ -31,6 +31,9 @@
         <h2
           id="SectionHeading-{{ section.id }}"
           class="collection-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {%- if section.settings.sb_custom_font -%}
+          style="font-family: '{{ section.settings.sb_custom_font }}';"
+        {%- endif -%}
         >
           {{ section.settings.title }}
         </h2>
@@ -148,6 +151,26 @@
       "id": "title",
       "default": "t:sections.collection-list.settings.title.default",
       "label": "t:sections.collection-list.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "sb_custom_font",
+      "options": [
+        {
+          "value": "Neutra Text Book",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
+        },
+        {
+          "value": "Neutra Text Bold",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
+        },
+        {
+          "value": "Poiret One",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__3.label"
+        }
+      ],
+      "default": "Neutra Text Book",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
     },
     {
       "type": "select",

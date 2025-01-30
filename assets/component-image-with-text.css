@@ -455,7 +455,7 @@
 .image-with-text .grid__item {
   padding: 0;
 }
-.image-with-text__heading {
+/* .image-with-text__heading {
   font-size: 32px;
   font-weight: 400;
   line-height: 37.44px;
@@ -464,15 +464,15 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 24px;
-}
+} */
 
 @media screen and (max-width: 749px) {
-  .image-with-text__heading {
+  /* .image-with-text__heading {
     font-size: 24px;
     line-height: 24px;
   }
   .image-with-text__text.subtitle {
     font-size: 16px;
     line-height: 20px;
-  }
+  } */
 }
