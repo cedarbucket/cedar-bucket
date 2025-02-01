@@ -79,11 +79,13 @@
       "type": "featured-collection",
       "settings": {
         "title": "College Storage + Moving Packages",
+        "desktop_content_alignment": "center",
+        "sb_custom_font": "Neutra Text Book",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
-        "absolute_content": false,
-        "show_overlay": false,
+        "absolute_content": true,
+        "show_overlay": true,
         "description_style": "body",
         "collection": "storage-packages",
         "products_to_show": 4,
@@ -92,14 +94,19 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
+        "card_color_scheme": "scheme-04f712e0-65c4-4119-adb8-288ac9ba4fcc",
+        "sb_card_heading_font": "Neutra Text Book",
+        "sb_card_heading_font_size": 18,
+        "sb_card_body_font": "Neutra Text Book",
+        "sb_card_body_font_size": 24,
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -121,7 +128,9 @@
           "settings": {
             "text": "<p>We have experienced college student movers to handle or assist your college move.</p>",
             "text_style": "body",
-            "sb_custom_font": "Neutra Text"
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
           }
         },
         "button_HUzxch": {
@@ -143,13 +152,13 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -161,7 +170,7 @@
           "type": "heading",
           "settings": {
             "heading": "Interested in Consignment?",
-            "heading_size": "hxl",
+            "heading_size": "h0",
             "sb_custom_font": "Neutra Text Book"
           }
         },
@@ -170,7 +179,9 @@
           "settings": {
             "text": "<p>We can help you sell your high quality, used college furniture. Click below to learn more.</p>",
             "text_style": "body",
-            "sb_custom_font": "Neutra Text"
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
           }
         },
         "button_hqR6LJ": {
@@ -192,13 +203,13 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -253,6 +264,7 @@
       ],
       "settings": {
         "title": "Shop Furniture Online",
+        "sb_custom_font": "Neutra Text Book",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -264,32 +276,61 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_rntMki": {
-      "type": "rich-text",
+    "parallax_gallery_with_text_CMFqHt": {
+      "type": "parallax-gallery-with-text",
       "blocks": {
-        "text_KD3cUx": {
+        "heading_aDUxfL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Mission:</strong>",
+            "sb_custom_font": "Neutra Text Bold",
+            "heading_size": "h0"
+          }
+        },
+        "text_MAb6Eg": {
           "type": "text",
           "settings": {
-            "text": "<h1><strong>Mission:</strong></h1><p>At Cedar Bucket, we make furniture shopping and storage easy.</p><p>Our <strong>consignment</strong> platform connects buyers with quality pre-owned home furnishings that is affordable and ready to find a new home. Stop paying for marked up retail items and come shop with us instead!</p><p>Our <strong>storage</strong> platform offers unique solutions that local self storage units cannot. Are you looking for a hands free way of storing your belongings over the summer months? Are you looking for a place to safely ship and store your home items in anticipation for move in week? Our warehouses offer a variety of services that meet your needs.</p>",
-            "sb_custom_font": "Poiret One",
-            "sb_font_size": 32,
+            "text": "<p>At Cedar Bucket, we make furniture shopping and storage easy.</p><p>Our <strong>consignment</strong> platform connects buyers with quality pre-owned home furnishings that is affordable and ready to find a new home. Stop paying for marked up retail items and come shop with us instead!</p><p>Our <strong>storage</strong> platform offers unique solutions that local self storage units cannot. Are you looking for a hands free way of storing your belongings over the summer months? Are you looking for a place to safely ship and store your home items in anticipation for move in week? Our warehouses offer a variety of services that meet your needs.</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 22,
             "sb_font_weight": 400
+          }
+        },
+        "gallery_nfcmgC": {
+          "type": "gallery",
+          "settings": {
+            "image_1": "shopify://shop_images/Rectangle_11.png",
+            "image_2": "shopify://shop_images/Frame_1000003764.png",
+            "image_3": "shopify://shop_images/Frame_1000003765.png",
+            "image_4": "shopify://shop_images/362f150949906132546966a182fd427a.jpg"
+          }
+        },
+        "gallery_hyLHxj": {
+          "type": "gallery",
+          "settings": {
+            "image_1": "shopify://shop_images/Frame_1000003702.png",
+            "image_2": "shopify://shop_images/shipping-boxes-on-trolly-close-up.jpg",
+            "image_3": "shopify://shop_images/dorm-packing-checklist-essentials-parents_jpg.webp",
+            "image_4": "shopify://shop_images/Frame_1000003733.png"
           }
         }
       },
       "block_order": [
-        "text_KD3cUx"
+        "heading_aDUxfL",
+        "text_MAb6Eg",
+        "gallery_nfcmgC",
+        "gallery_hyLHxj"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "full_width": true,
         "border_style": false,
-        "padding_top": 52,
-        "padding_left": 52,
-        "padding_right": 52,
-        "padding_bottom": 52
+        "padding_top": 100,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 100
       }
     },
     "image_with_text_BdAn7d": {
@@ -299,16 +340,18 @@
           "type": "heading",
           "settings": {
             "heading": "History",
-            "heading_size": "h1",
-            "sb_custom_font": "Poiret One"
+            "heading_size": "h0",
+            "sb_custom_font": "Neutra Text Bold"
           }
         },
         "text_waGfLw": {
           "type": "text",
           "settings": {
             "text": "<p>The Cedar Bucket, located on Highway 6, serves as a cherished landmark and the gateway to Oxford. Proudly recognized as the world’s largest cedar bucket, it was originally built in 1985 by the previous owner, whose craftsmanship and vision brought this unique structure to life. Preserved as a piece of local history, the Cedar Bucket stands as a testament to the area’s heritage and invites visitors to experience its grandeur firsthand.</p>",
-            "text_style": "subtitle",
-            "sb_custom_font": "Neutra Text"
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 22,
+            "sb_font_weight": 400
           }
         }
       },
@@ -326,7 +369,7 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "scheme-1",
         "color_scheme": "scheme-1",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "center",
         "padding_top": 0,
         "padding_bottom": 0
@@ -471,7 +514,7 @@
     "image_with_text_9kTxRU",
     "image_with_text_EqiQf4",
     "collection_list_z6NyNY",
-    "rich_text_rntMki",
+    "parallax_gallery_with_text_CMFqHt",
     "image_with_text_BdAn7d",
     "multicolumn_BQAnXq"
   ]

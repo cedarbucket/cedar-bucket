@@ -16,6 +16,10 @@
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
   - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional)
+  - show_overlay: {Boolean} Show the overlay on hover. Default: false (optional)
+  - absolute_content: {Boolean} Add the absolute_content class to the card__content element. Default: false (optional)
+  - package_badge: {Boolean} Show the package badge. Default: false (optional)
+  - logo_badge: {Boolean} Show the logo badge. Default: false (optional)
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -57,11 +61,44 @@
         {% if horizontal_class %} card--horizontal{% endif %}
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-    >
+    >    
+    
+    <div class="top-badge-wrapper">
+      {% if package_badge %}
+      <div class="card__badge package-badge top">
+        {{ card_product.title | split: ' ' | first }}
+      </div>
+      {% endif %}
+    
+      {% if logo_badge %}
+      <div class="card__badge logo-badge top">
+        {%- if settings.logo != blank -%}
+        {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+        {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+        {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{%
+        endcapture
+        %}
+        {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{
+        settings.logo_width
+        | times: 2 }}{% endcapture %}
+        {{ settings.logo | image_url: width: 600 | image_tag:
+        class: 'header__heading-logo motion-reduce',
+        widths: widths,
+        height: logo_height,
+        width: settings.logo_width,
+        alt: logo_alt,
+        sizes: sizes,
+        preload: true
+        }}
+        {%- endif -%}
+      </div>
+      {% endif %}
+    </div>
+
       <div
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-      >
+      >      
         {%- if card_product.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
@@ -111,7 +148,8 @@
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
+        <div class="card__content">            
+          {%- if absolute_content == false -%}
           <div class="card__information">
             <h3
               class="card__heading"
@@ -129,7 +167,6 @@
               </a>
             </h3>
           </div>
-          {%- if absolute_content == false -%}
             <div class="card__badge {{ settings.badge_position }}">
               {%- if card_product.available == false -%}
                 <span

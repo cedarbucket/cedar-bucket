@@ -30,19 +30,35 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  .title {
-    color: #000;
-    text-align: center;
-    font-size: 48px;
-    line-height: 60px;
+  .top-badge-wrapper {
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
   }
 
-  @media screen and (max-width: 749px) {
-    .title {
-      font-size: 32px;
-      line-height: 44px;
-    }
+  .package-badge {    
+    background: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 700;
+    margin: auto 0;
   }
+
+  .logo-badge {    
+    background: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding: 10px;
+  } 
 
   .grid__item {
     padding: 10px;
@@ -86,18 +102,71 @@
 
   .absolute_content {
     position: absolute;
+    display: flex !important;
+    justify-content: space-between;    
     bottom: 0;
     padding-left: 4% !important;
     z-index: 30;
   }
 
-  .absolute_content .h5,
-  .absolute_content a {
-    font-family: "Nuetra Text";
-    font-size: 24px;
-    line-height: 1.5;
+  .absolute_content .card__badge {
+    align-self: flex-start;    
+    margin: 0 !important;
+    margin-right: 1.3rem !important;
   }
 
+  .card__information {
+    padding-top: 0px !important;
+  }
+  
+  .absolute_content .h5,
+  .absolute_content a {
+    font-family: {{ section.settings.sb_card_heading_font }};
+    font-size: {{ section.settings.sb_card_heading_font_size }}px;
+    line-height: {{ section.settings.sb_card_heading_font_size | times: 1.2 }}px;
+  }
+  
+  .absolute_content .card-information .price,
+  .absolute_content .card-information--secondary .price {
+    font-family: {{ section.settings.sb_card_body_font }};
+    font-size: {{ section.settings.sb_card_body_font_size }}px;
+    line-height: {{ section.settings.sb_card_body_font_size |  times: 1.2 }}px;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+  .absolute_content {
+      flex-wrap: wrap-reverse;
+  }
+    .card--standard > .card__content .card__information {
+      padding-top: 10px !important;
+    }
+
+    .absolute_content .h5,
+    .absolute_content a {    
+      font-size: {{ section.settings.sb_card_heading_font_size | times: 0.9 }}px;  
+      line-height: {{ section.settings.sb_card_heading_font_size | times: 1 }}px;
+    }
+    
+    .absolute_content .card-information .price,
+    .absolute_content .card-information--secondary .price {    
+      font-size: {{ section.settings.sb_card_body_font_size |  times: 0.75 }}px;    
+      line-height: {{ section.settings.sb_card_body_font_size | times: 1 }}px;
+    }
+  }
+
+
+  @media screen and (max-width: 980px) {    
+
+      .absolute_content {
+        flex-wrap: wrap;
+      }
+
+        .card--standard > .card__content .card__information {
+          padding-top: 0px !important;
+        }
+
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -134,7 +203,7 @@
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
-    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %} {{ section.settings.desktop_content_alignment }}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {%- if section.settings.sb_custom_font -%}
@@ -170,7 +239,7 @@
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.card_color_scheme }}"
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"
@@ -187,7 +256,9 @@
               section_id: section.id,
               quick_add: section.settings.quick_add,
               absolute_content: section.settings.absolute_content,
-              show_overlay: section.settings.show_overlay
+              show_overlay: section.settings.show_overlay,
+              package_badge: section.settings.package_badge
+              logo_badge: section.settings.logo_badge
             %}
           </li>
           {%- assign skip_card_product_styles = true -%}
@@ -285,6 +356,26 @@
       "id": "title",
       "default": "t:sections.featured-collection.settings.title.default",
       "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+    "type": "select",
+    "id": "desktop_content_alignment",
+    "options": [
+        {
+        "value": "left",
+        "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+        "value": "center",
+        "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+        "value": "right",
+        "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+        }
+        ],
+        "default": "center",
+        "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
     },
     {
       "type": "select",
@@ -450,6 +541,73 @@
       "content": "t:sections.featured-collection.settings.header.content"
     },
     {
+      "type": "color_scheme",
+      "id": "card_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-5"
+    },
+    {
+      "type": "select",
+      "id": "sb_card_heading_font",
+      "options": [
+      {
+      "value": "Neutra Text Book",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
+      },
+      {
+      "value": "Neutra Text Bold",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
+      },
+      {
+      "value": "Poiret One",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__3.label"
+      }
+      ],
+      "default": "Neutra Text Book",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
+    },
+    {
+      "type": "range",
+      "id": "sb_card_heading_font_size",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_title_font_size.label",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "sb_card_body_font",
+      "options": [
+      {
+      "value": "Neutra Text Book",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
+      },
+      {
+      "value": "Neutra Text Bold",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
+      },
+      {
+      "value": "Poiret One",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__3.label"
+      }
+      ],
+      "default": "Neutra Text Book",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
+    },
+    {
+      "type": "range",
+      "id": "sb_card_body_font_size",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.rich-text.blocks.text.settings.sb_subtitle_font_size.label",
+      "default": 24
+    },
+    {
       "type": "select",
       "id": "image_ratio",
       "options": [
@@ -509,6 +667,18 @@
       "default": "default",
       "label": "t:sections.all.image_shape.label",
       "info": "t:sections.all.image_shape.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "package_badge",
+      "label": "Show Package Badge",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "logo_badge",
+      "label": "Show Logo Badge",
+      "default": false
     },
     {
       "type": "checkbox",
