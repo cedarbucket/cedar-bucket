@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Pine-plates.png",
+    "logo": "shopify://shop_images/Pine_Plate.png",
     "logo_width": 160,
-    "favicon": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+    "favicon": "shopify://shop_images/Pure_Pines-favicon.png",
     "search_header": false,
     "shopping_cart": true,
     "type_header_font": "assistant_n4",
@@ -60,13 +60,13 @@
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 4,
     "card_shadow_blur": 5,
-    "collection_card_style": "standard",
+    "collection_card_style": "card",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
     "collection_card_color_scheme": "scheme-2",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 10,
-    "collection_card_corner_radius": 0,
+    "collection_card_corner_radius": 16,
     "collection_card_shadow_opacity": 0,
     "collection_card_shadow_horizontal_offset": 0,
     "collection_card_shadow_vertical_offset": 4,
@@ -115,7 +115,8 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p></p>",
-    "brand_image_width": 100,
+    "brand_image": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+    "brand_image_width": 75,
     "social_label": "",
     "social_facebook_link": "#",
     "social_instagram_link": "#",
@@ -141,7 +142,10 @@
         "type": "main-password-header",
         "custom_css": [],
         "settings": {
-          "color_scheme": "scheme-3"
+          "alternate_logo": "shopify://shop_images/Resale-Storage-Moving-Full_Identity.png",
+          "logo_width": 160,
+          "logo_position": "middle-left",
+          "color_scheme": "scheme-1"
         }
       },
       "main-password-footer": {
@@ -153,7 +157,7 @@
       "header-alternate": {
         "type": "header-alternate",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine-plates.png",
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
           "logo_width": 160,
           "logo_position": "left-right",
           "menu": "main-menu",
@@ -175,7 +179,51 @@
       "header-storage": {
         "type": "header-storage",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine-plates.png",
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
+          "logo_width": 160,
+          "logo_position": "left-right",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "sticky_header_type": "reduce-logo-size",
+          "show_line_separator": false,
+          "absolute_header": true,
+          "color_scheme": "scheme-4",
+          "menu_color_scheme": "scheme-3",
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "enable_customer_avatar": true,
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 0,
+          "padding_bottom": 0
+        }
+      },
+      "header-contact": {
+        "type": "header-contact",
+        "settings": {
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
+          "logo_width": 160,
+          "logo_position": "left-right",
+          "menu": "main-menu",
+          "menu_type_desktop": "dropdown",
+          "sticky_header_type": "reduce-logo-size",
+          "show_line_separator": false,
+          "absolute_header": true,
+          "color_scheme": "scheme-4",
+          "menu_color_scheme": "scheme-3",
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "enable_customer_avatar": true,
+          "mobile_logo_position": "center",
+          "margin_bottom": 0,
+          "padding_top": 0,
+          "padding_bottom": 0
+        }
+      },
+      "header-moving": {
+        "type": "header-moving",
+        "settings": {
+          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
           "logo_width": 160,
           "logo_position": "left-right",
           "menu": "main-menu",
@@ -201,6 +249,20 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "hand_wave",
+          "button_text": "live_chat",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
       }
     },
     "color_schemes": {
@@ -250,6 +312,18 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-04f712e0-65c4-4119-adb8-288ac9ba4fcc": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "heading": "#ffffff",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#ffffff"
         }
       }
     }

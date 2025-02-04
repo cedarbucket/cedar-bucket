@@ -23,13 +23,22 @@
         "heading_aQhBPA": {
           "type": "heading",
           "settings": {
-            "heading": "Effortless Moves Start Here!",
-            "heading_size": "h1"
+            "heading": "Student Movers for Hire",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_YERE7A": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>We've got experienced college student movers to help you move</strong>",
+            "text_style": "body",
+            "font_size": 22
           }
         }
       },
       "block_order": [
-        "heading_aQhBPA"
+        "heading_aQhBPA",
+        "text_YERE7A"
       ],
       "settings": {
         "image": "shopify://shop_images/person-holding-box.jpg",
@@ -40,7 +49,7 @@
         "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "adjust_content_position": 70,
+        "adjust_content_position": 39,
         "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-4",
@@ -50,8 +59,8 @@
         "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "rich_text_67jCJj": {
@@ -60,14 +69,15 @@
         "heading_8xghAj": {
           "type": "heading",
           "settings": {
-            "heading": "Need Moving Services?",
+            "heading": "Need a quote for your college move?",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
         "text_Wx6Vdk": {
           "type": "text",
           "settings": {
-            "text": "<p>Call or text us at 901-361-2828 to schedule your move!</p>",
+            "text": "<p>Fill out the form below!</p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400
@@ -90,6 +100,34 @@
         "padding_bottom": 20
       }
     },
+    "1738175141778786fe": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_kfVKAm": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "328476",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 22,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_kfVKAm"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "collapsible_content_zqVDKK": {
       "type": "collapsible-content",
       "blocks": {
@@ -97,7 +135,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "What type of moving services do you offer?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>You can book our movers for whatever moving services you need from loading a truck to mounting a TV! </p>",
             "page": ""
           }
@@ -106,7 +144,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Who are your movers?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>We hire exclusively from the Ole Miss fraternities to provide you the best, most respectful movers in Oxford. </p>",
             "page": ""
           }
@@ -115,7 +153,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Do you require a deposit?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>We require a $50 deposit via Venmo for all bookings</p>",
             "page": ""
           }
@@ -124,7 +162,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "How do you charge?",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "<p>We charge per hour for your move and payment is sent via Venmo after the move is complete.</p>",
             "page": ""
           }
@@ -147,7 +185,7 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 20,
+        "padding_top": 40,
         "padding_bottom": 52
       }
     }
@@ -156,6 +194,7 @@
     "main",
     "image_banner_BxtyCB",
     "rich_text_67jCJj",
+    "1738175141778786fe",
     "collapsible_content_zqVDKK"
   ]
 }

@@ -308,8 +308,10 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-    
-    {% comment %} <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}    
+        
+    <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'ScrollTrigger.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'gsap-tasks.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'custom-scripts.js' | asset_url }}" defer="defer"></script>
 
     <script>

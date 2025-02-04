@@ -3130,6 +3130,12 @@
             "sb_font_size": {
               "label": "Font Size"
             },
+            "sb_title_font_size": {
+              "label": "Title Font Size"
+            },
+            "sb_subtitle_font_size": {
+              "label": "Subtitle Font Size"
+            },
             "sb_font_weight": {
               "label": "Font Weight"
             }

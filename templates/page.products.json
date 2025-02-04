@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "image_banner_aVVpbc": {
       "type": "image-banner",
       "blocks": {
@@ -16,15 +24,15 @@
           "type": "heading",
           "settings": {
             "heading": "Shop Cedar Bucket",
-            "heading_size": "h1"
+            "heading_size": "hxxl"
           }
         },
         "text_gp689f": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "High quality used furniture for college students",
             "text_style": "body",
-            "font_size": 16
+            "font_size": 22
           }
         }
       },
@@ -34,11 +42,11 @@
       ],
       "settings": {
         "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 50,
         "container_style": "full_frame",
         "show_box_shadow": false,
         "show_box_border": false,
-        "image_height": "large",
+        "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "adjust_content_position": 50,
@@ -51,16 +59,107 @@
         "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
+    "rich_text_EAUw7z": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FJbPrn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Online Shopping at Cedar Bucket",
+            "sb_custom_font": "Poiret One",
+            "heading_size": "h1"
+          }
+        },
+        "text_7zTVzE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All our furniture is available online for purchase. If you see it on the website, it's available!</p><p>Online purchase are available for pick-up or local delivery ONLY.</p><p>You may coordinate your pick-up or delivery anytime after purchase.</p>",
+            "sb_custom_font": "Poiret One",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_FJbPrn",
+        "text_7zTVzE"
+      ],
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
+      }
+    },
+    "collection_list_p7DU7k": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_aTPmN8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "headboards"
+          }
+        },
+        "featured_collection_9at4a4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bed"
+          }
+        },
+        "featured_collection_Lyew9m": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desks-chairs"
+          }
+        },
+        "featured_collection_VDNfJH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lighting"
+          }
+        },
+        "featured_collection_7DPF7n": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rugs"
+          }
+        },
+        "featured_collection_t7PX9D": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_aTPmN8",
+        "featured_collection_9at4a4",
+        "featured_collection_Lyew9m",
+        "featured_collection_VDNfJH",
+        "featured_collection_7DPF7n",
+        "featured_collection_t7PX9D"
+      ],
+      "settings": {
+        "title": "Collections",
+        "sb_custom_font": "Neutra Text Book",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "collapsible_content_kDRYgA": {
@@ -71,7 +170,7 @@
           "settings": {
             "heading": "About",
             "icon": "question_mark",
-            "row_content": "<p>At Cedar Bucket, we sell top quality used college furniture to simply your college move. Furniture and decor is available for online purchase to be picked up at our Oxford location or delivered to your future home!</p>",
+            "row_content": "<p>At Cedar Bucket, we sell top quality used college furniture to simply your college move. Furniture and decor is available for online purchase to be picked up at our Oxford location or delivered locally!</p>",
             "page": ""
           }
         },
@@ -80,7 +179,7 @@
           "settings": {
             "heading": "Pick Up Policy",
             "icon": "truck",
-            "row_content": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After submitting your storage request, you can schedule a pick-up date and time that works best for you.</li><li>Pick-up is available from dorms, apartments, or any location within our service area.</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p><strong>Packaging Requirements</strong></p><ul><li>All items must be securely packed before pick-up.</li><li>We recommend labeling your boxes for easy identification.</li><li>Packing materials are available for purchase upon request.</li></ul><p><strong>Pick-Up Fees</strong></p><ul><li>A nominal pick-up fee may apply, depending on your location.</li><li>Pick-up fees will be clearly communicated during the scheduling process.</li></ul>",
+            "row_content": "<p><strong>Scheduling a Pick-Up</strong></p><ul><li>After submitting your consignment request, you can schedule a pick-up date and time that works best for you.</li><li>Pick up is only available during our regular office Hours</li></ul><p><strong>Pick-Up Confirmation</strong></p><ul><li>Once your pick-up request is scheduled, you will receive an email or SMS confirmation with the exact details, including your pick-up window and instructions.</li></ul><p><strong>Pick-Up Services</strong></p><ul><li>Our team will help load your purchase into your vehicle at no extra charge.</li></ul>",
             "page": ""
           }
         },
@@ -89,7 +188,7 @@
           "settings": {
             "heading": "Delivery Policy",
             "icon": "truck",
-            "row_content": "<p><strong>Scheduling a Delivery</strong></p><ul><li>When you’re ready to retrieve your items, simply log into your account or contact us to schedule a delivery.</li><li>Provide at least 10 days notice to ensure availability.</li></ul><p><strong>Delivery Confirmation</strong></p><ul><li>After scheduling your delivery, you’ll receive a confirmation email or SMS with the delivery details and time frame.</li></ul><p><strong>Missed Delivery Policy</strong></p><ul><li>If you are not available during the scheduled delivery time, we will reschedule at the earliest convenience, but a rescheduling fee may apply.</li></ul><p><strong>Delivery Fees</strong></p><ul><li>Delivery fees may vary based on the distance and volume of items.</li><li>Exact fees will be communicated during the scheduling process.</li></ul>",
+            "row_content": "<p><strong>Scheduling a Delivery</strong></p><ul><li>After submitting your consignment request, you can schedule a delivery date and time that works best for you.</li><li>Delivery is available from 8am-5pm every day except Sunday.</li></ul><p><strong>Delivery Confirmation</strong></p><ul><li>Once your delivery request is scheduled, you will receive an email or SMS confirmation with the exact details, including your delivery window and instructions.</li></ul><p><strong>Delivery Fees</strong></p><ul><li>Our team charges a flat rate of $125 for delivery </li></ul>",
             "page": ""
           }
         }
@@ -101,7 +200,7 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "Information",
+        "heading": "Online Shopping FAQ",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
@@ -114,39 +213,6 @@
         "padding_bottom": 12
       }
     },
-    "collection_list_p7DU7k": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_aTPmN8": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "table"
-          }
-        },
-        "featured_collection_9at4a4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "chair"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_aTPmN8",
-        "featured_collection_9at4a4"
-      ],
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "rich_text_wJVKTh": {
       "type": "rich-text",
       "blocks": {
@@ -154,6 +220,7 @@
           "type": "heading",
           "settings": {
             "heading": "Discover Quality Furniture",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
@@ -191,6 +258,7 @@
           "type": "heading",
           "settings": {
             "heading": "Pick-Up Policy",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
@@ -228,22 +296,13 @@
           "type": "heading",
           "settings": {
             "heading": "Delivery Policy",
-            "heading_size": "h1"
-          }
-        },
-        "text_fiKdTw": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Scheduling a Delivery</strong></p><ul><li>When you’re ready to retrieve your items, simply log into your account or contact us to schedule a delivery.</li><li>Provide at least 10 days notice to ensure availability.</li></ul><p><strong>Delivery Confirmation</strong></p><ul><li>After scheduling your delivery, you’ll receive a confirmation email or SMS with the delivery details and time frame.</li></ul><p><strong>Missed Delivery Policy</strong></p><ul><li>If you are not available during the scheduled delivery time, we will reschedule at the earliest convenience, but a rescheduling fee may apply.</li></ul><p><strong>Delivery Fees</strong></p><ul><li>Delivery fees may vary based on the distance and volume of items.</li><li>Exact fees will be communicated during the scheduling process.</li></ul>",
             "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 24,
-            "sb_font_weight": 400
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "heading_q6XmfL",
-        "text_fiKdTw"
+        "heading_q6XmfL"
       ],
       "disabled": true,
       "settings": {
@@ -257,77 +316,16 @@
         "padding_right": 52,
         "padding_bottom": 52
       }
-    },
-    "featured_collection_LQhtnV": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Chairs",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "absolute_content": true,
-        "show_overlay": true,
-        "description_style": "body",
-        "collection": "chair",
-        "products_to_show": 6,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-4",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_collection_AgKHhV": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Tables",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "absolute_content": true,
-        "show_overlay": true,
-        "description_style": "body",
-        "collection": "table",
-        "products_to_show": 6,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-4",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
-    "image_banner_aVVpbc",
     "main",
-    "collapsible_content_kDRYgA",
+    "image_banner_aVVpbc",
+    "rich_text_EAUw7z",
     "collection_list_p7DU7k",
+    "collapsible_content_kDRYgA",
     "rich_text_wJVKTh",
     "rich_text_LV7743",
-    "rich_text_qprLJj",
-    "featured_collection_LQhtnV",
-    "featured_collection_AgKHhV"
+    "rich_text_qprLJj"
   ]
 }

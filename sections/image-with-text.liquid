@@ -87,9 +87,17 @@
                   <div
                     class="image-with-text__text rte {{ block.settings.text_style }}"
                     {{ block.shopify_attributes }}
+                    style="
                     {%- if block.settings.sb_custom_font -%}
-                      style="font-family: '{{ block.settings.sb_custom_font }}';"
+                        font-family: '{{ block.settings.sb_custom_font }}';
                     {%- endif -%}
+                    {%- if block.settings.font_size -%}
+                        font-size:{{ block.settings.font_size }}px; line-height: {{ block.settings.font_size |  times: 1.2}}px;
+                    {%- endif -%}
+                     {%- if block.settings.sb_font_weight -%}
+                        font-weight: {{ block.settings.sb_font_weight }};
+                    {%- endif -%}
+                        "
                   >
                     {{ block.settings.text }}
                   </div>
@@ -475,16 +483,40 @@
           "id": "sb_custom_font",
           "options": [
             {
-              "value": "Neutra Text",
-              "label": "t:sections.all.sb_custom_font.options__1.label"
+              "value": "Neutra Text Book",
+              "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__1.label"
+            },
+            {
+              "value": "Neutra Text Bold",
+              "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__2.label"
             },
             {
               "value": "Poiret One",
-              "label": "t:sections.all.sb_custom_font.options__2.label"
+              "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.options__3.label"
             }
           ],
-          "default": "Neutra Text",
-          "label": "t:sections.all.sb_custom_font.label"
+          "default": "Neutra Text Book",
+          "label": "t:sections.rich-text.blocks.text.settings.sb_custom_font.label"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 12,
+          "max": 72,
+          "step": 1,
+          "unit": "px",
+          "default": 18,
+          "label": "Font Size",
+          "info": "Set the font size between 12px and 72px."
+        },
+        {
+          "type": "range",
+          "id": "sb_font_weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "label": "t:sections.rich-text.blocks.text.settings.sb_font_weight.label",
+          "default": 400
         }
       ]
     },

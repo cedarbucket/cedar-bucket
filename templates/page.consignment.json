@@ -15,16 +15,25 @@
         "heading_crHQPC": {
           "type": "heading",
           "settings": {
-            "heading": "Start Your Consignment Journey",
-            "heading_size": "h1"
+            "heading": "Used Furniture Consignment",
+            "heading_size": "h0"
+          }
+        },
+        "text_CM8j4b": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>We'll handle selling your high quality, used college furniture</strong>",
+            "text_style": "body",
+            "font_size": 20
           }
         }
       },
       "block_order": [
-        "heading_crHQPC"
+        "heading_crHQPC",
+        "text_CM8j4b"
       ],
       "settings": {
-        "image": "shopify://shop_images/Dorm_STORE.jpg",
+        "image": "shopify://shop_images/Your_paragraph_text_1.png",
         "image_overlay_opacity": 60,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -32,7 +41,7 @@
         "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "adjust_content_position": 70,
+        "adjust_content_position": 40,
         "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-4",
@@ -42,8 +51,8 @@
         "padding_bottom": 0,
         "image_behavior": "ambient",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "main": {
@@ -61,6 +70,7 @@
           "type": "heading",
           "settings": {
             "heading": "How to Consign with Us",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
@@ -115,6 +125,7 @@
           "type": "heading",
           "settings": {
             "heading": "Consignor Contract",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },

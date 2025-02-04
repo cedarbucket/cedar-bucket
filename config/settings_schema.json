@@ -3,9 +3,9 @@
     "name": "theme_info",
     "theme_name": "Saibbyweb Theme",
     "theme_version": "1.0",
-    "theme_author": "Md Tanjir Mahabub",
+    "theme_author": "Saibbyweb",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://tanjir.vercel.app"
+    "theme_support_url": "https://saibbyweb.com/"
   },
   {
     "name": "t:settings_schema.logo.name",

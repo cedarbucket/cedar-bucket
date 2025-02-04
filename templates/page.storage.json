@@ -115,22 +115,31 @@
       "type": "featured-collection",
       "settings": {
         "title": "Our Storage Packages",
+        "desktop_content_alignment": "center",
+        "sb_custom_font": "Neutra Text Book",
         "heading_size": "h0",
         "description": "",
         "show_description": false,
-        "absolute_content": false,
+        "absolute_content": true,
         "show_overlay": false,
         "description_style": "body",
         "collection": "storage-packages",
-        "products_to_show": 4,
-        "columns_desktop": 4,
+        "products_to_show": 2,
+        "columns_desktop": 2,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "",
+        "card_color_scheme": "scheme-1",
+        "sb_card_heading_font": "Neutra Text Bold",
+        "sb_card_heading_font_size": 18,
+        "sb_card_body_font": "Neutra Text Book",
+        "sb_card_body_font_size": 26,
         "image_ratio": "adapt",
         "image_shape": "default",
+        "package_badge": false,
+        "logo_badge": false,
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
@@ -228,6 +237,7 @@
           "type": "heading",
           "settings": {
             "heading": "Start Your Storage Request",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
@@ -272,36 +282,45 @@
         "collapsible_row_NG6bxw": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do I...",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "What storage size do I need?",
+            "icon": "none",
+            "row_content": "<p>5x10 should cover one full bedroom. If you have other large items like a couch, entertainment center, barstools, etc., you will need to upgrade.</p>",
             "page": ""
           }
         },
         "collapsible_row_fCinT4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "When do i...",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "How do I schedule pick up / delivery?",
+            "icon": "none",
+            "row_content": "<p>Call us anytime from 9-5 M-F to schedule your pick-up or delivery. </p>",
             "page": ""
           }
         },
         "collapsible_row_FVxgR6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What does...",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Can I add more items throughout the summer?",
+            "icon": "none",
+            "row_content": "<p>Yes! Just give us a call and our movers will pick up and deliver your new items to your personal storage area.</p>",
             "page": ""
           }
         },
         "collapsible_row_RUA9py": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you ...",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "How does ship to services work?",
+            "icon": "none",
+            "row_content": "<p>Email us at shipping@cedarbucket.com with a tracking number and our team will handle the rest!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Kjp8MQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I visit the storage unit?",
+            "icon": "none",
+            "row_content": "<p>You may visit your items anytime during normal office hours. </p>",
             "page": ""
           }
         }
@@ -310,7 +329,8 @@
         "collapsible_row_NG6bxw",
         "collapsible_row_fCinT4",
         "collapsible_row_FVxgR6",
-        "collapsible_row_RUA9py"
+        "collapsible_row_RUA9py",
+        "collapsible_row_Kjp8MQ"
       ],
       "settings": {
         "caption": "",
