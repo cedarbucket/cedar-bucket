@@ -22,7 +22,7 @@
         "text_QEHxDA": {
           "type": "text",
           "settings": {
-            "text": "<strong>Consignment | Storage | Moving</strong>",
+            "text": "<strong>Full service moving, storage, and consignment solution</strong>",
             "text_style": "body",
             "font_size": 18
           }
@@ -30,14 +30,14 @@
         "buttons_9xabXM": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Moving & Storage",
-            "button_link_1": "shopify://pages/storage",
+            "button_label_1": "Get a custom quote",
+            "button_link_1": "https://form.typeform.com/to/QVbLxITR",
             "btn_one_padding_top": 24,
             "btn_one_padding_left": 24,
             "btn_one_padding_right": 24,
             "btn_one_padding_bottom": 24,
             "button_style_secondary_1": false,
-            "button_label_2": "Consign with Us",
+            "button_label_2": "",
             "button_link_2": "shopify://pages/consignment",
             "button_style_secondary_2": true,
             "btn_two_padding_top": 24,
@@ -75,8 +75,18 @@
         "show_text_below": false
       }
     },
+    "custom_liquid_8HEEVb": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div data-tf-live=\"01JKEFQYCV3X8BN62QH77PJS7X\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    },
     "featured_collection_34pb3A": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "College Storage + Moving Packages",
         "desktop_content_alignment": "center",
@@ -508,16 +518,40 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "17386903758486a558": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_b6Wbmx": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_b6Wbmx"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner",
+    "custom_liquid_8HEEVb",
     "featured_collection_34pb3A",
     "image_with_text_9kTxRU",
     "image_with_text_EqiQf4",
     "collection_list_z6NyNY",
     "parallax_gallery_with_text_CMFqHt",
     "image_with_text_BdAn7d",
-    "multicolumn_BQAnXq"
+    "multicolumn_BQAnXq",
+    "17386903758486a558"
   ]
 }
