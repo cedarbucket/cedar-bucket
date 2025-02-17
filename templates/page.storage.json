@@ -99,7 +99,7 @@
         "text_6PGW9U": {
           "type": "text",
           "settings": {
-            "text": "<p>Cedar Bucket provides hassle-free storage solutions for college students, ensuring your belongings are stored securely in our warehouse facility. We make the process easy by helping you load and unload on-site or offering convenient pickup and delivery services.</p>",
+            "text": "<p>Located just off Highway 6 in Oxford, Cedar Bucket offers hassle-free storage solutions at our warehouse facility. Drop off and pick up on-site with our team handling all the loading and unloading, or opt for our full-service pick-up and delivery options. Enjoy flexible access to your items anytime and add more to your space as needed!</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -141,7 +141,7 @@
         "text_i8KW4N": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer a convenient ship-to-storage service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.</p>",
+            "text": "<p>We offer a convenient ship-to-storage service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.<br/><br/>You must have reserved space to use this service, or additional charges will apply if extra space is available.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,

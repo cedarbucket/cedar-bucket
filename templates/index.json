@@ -16,17 +16,9 @@
           "type": "image",
           "settings": {
             "block_image": "shopify://shop_images/Signature_Text-_FFFFFF_d4c37afd-1973-4cb5-a1b7-b108bfd0b14c.png",
-            "image_width": 370,
-            "image_width_mobile": 250,
+            "image_width": 500,
+            "image_width_mobile": 300,
             "alignment": "center"
-          }
-        },
-        "text_QEHxDA": {
-          "type": "text",
-          "settings": {
-            "text": "<strong>Full service moving, storage, and consignment solutions</strong>",
-            "text_style": "body",
-            "font_size": 30
           }
         },
         "buttons_9xabXM": {
@@ -51,7 +43,6 @@
       },
       "block_order": [
         "image_GgNPcY",
-        "text_QEHxDA",
         "buttons_9xabXM"
       ],
       "settings": {
@@ -75,6 +66,43 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "rich_text_WfXG6D": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8q6TKh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Serving Oxford, MS",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_zkiRnt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are Oxford's first-ever resale consignment store for home furnishings. We also offer full-service moving and storage!</p>",
+            "sb_custom_font": "Poiret One",
+            "sb_font_size": 28,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_8q6TKh",
+        "text_zkiRnt"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 56,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
       }
     },
     "image_with_text_EAfyGJ": {
@@ -101,7 +129,7 @@
         "button_b3XXrC": {
           "type": "button",
           "settings": {
-            "button_label": "Get Custom Quote",
+            "button_label": "Learn More",
             "button_link": "shopify://pages/storage",
             "button_style_secondary": false
           }
@@ -174,7 +202,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "image_behavior": "zoom-in",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -233,7 +261,7 @@
         "text_j8Bt3P": {
           "type": "text",
           "settings": {
-            "text": "<p>Cedar Bucket is Oxford’s very first college consignment store, offering a hassle-free way to buy and sell quality furniture & decor. Sell your gently used pieces with our seamless consignment process, including free pickup for all approved items. </p>",
+            "text": "<p>Decluttering? Sell your gently used furniture, décor, and more through our consignment shop and make extra cash! Free pick up is included for all eligible items. </p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -265,7 +293,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "image_behavior": "zoom-in",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -398,7 +426,7 @@
         "text_MAb6Eg": {
           "type": "text",
           "settings": {
-            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p></p><p>More than just a business, we’re working to revive the historic Cedar Bucket property, preserving its legacy while bringing a much-needed service to town. Whether you’re shopping, storing, or moving, we’re here to make it easy.</p>",
+            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p></p><p>More than just a business, we have fully renovated and  revived the well known Cedar Bucket property in Oxford, preserving its legacy while bringing a much-needed service to town. Whether you’re shopping, storing, or moving, we’re here to make it easy.</p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 22,
             "sb_font_weight": 400
@@ -640,6 +668,7 @@
   },
   "order": [
     "image_banner",
+    "rich_text_WfXG6D",
     "image_with_text_EAfyGJ",
     "image_with_text_9kTxRU",
     "featured_collection_34pb3A",

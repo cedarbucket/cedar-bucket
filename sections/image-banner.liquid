@@ -30,6 +30,37 @@
     height: auto;
     display: inline-block;
   }
+
+  {%- for block in section.blocks -%}
+    {% case block.type %}
+      {% when 'heading' %}
+        #Banner-{{ section.id }} .banner__heading-{{ block.id }} {
+          font-size: {{ block.settings.heading_font_size }}px;
+          line-height: 1.2;
+          {% if block.settings.custom_font %}
+            font-family: '{{ block.settings.custom_font }}';
+          {% endif %}
+        }
+        @media screen and (max-width: 749px) {
+          #Banner-{{ section.id }} .banner__heading-{{ block.id }} {
+            font-size: {{ block.settings.heading_font_size_mobile }}px;
+          }
+        }
+      {% when 'text' %}
+        #Banner-{{ section.id }} .banner__text-{{ block.id }} {
+          font-size: {{ block.settings.font_size }}px;
+          line-height: 1.2;
+          {% if block.settings.custom_font %}
+            font-family: '{{ block.settings.custom_font }}';
+          {% endif %}
+        }
+        @media screen and (max-width: 749px) {
+          #Banner-{{ section.id }} .banner__text-{{ block.id }} {
+            font-size: {{ block.settings.font_size_mobile }}px;
+          }
+        }
+    {% endcase %}
+  {%- endfor -%}
 {%- endstyle -%}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
@@ -198,7 +229,8 @@
               {%- endif -%}
             </div>
           {%- when 'heading' -%}
-            <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+            <h2 
+              class="banner__heading inline-richtext banner__heading-{{ block.id }}"
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
@@ -208,9 +240,9 @@
               class="banner__text rte {{ block.settings.text_style }}"
               {{ block.shopify_attributes }}              
             >
-              <p {% if block.settings.font_size %}
-                style="font-size:{{ block.settings.font_size }}px; line-height: 1;"
-              {% endif %}>{{ block.settings.text }}</p>
+              <p class="banner__text-{{ block.id }}">
+                {{ block.settings.text }}
+              </p>
             </div>
           {%- when 'buttons' -%}
             <div
@@ -625,31 +657,47 @@
         },
         {
           "type": "select",
-          "id": "heading_size",
+          "id": "custom_font",
           "options": [
             {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
+              "value": "Neutra Text Book",
+              "label": "Neutra Text Book"
             },
             {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "hxxl",
-              "label": "t:sections.all.heading_size.options__5.label"
+              "value": "Poiret One",
+              "label": "Poiret One"
             }
           ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "default": "Neutra Text Book",
+          "label": "Font Family"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Settings"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size",
+          "min": 20,
+          "max": 150,
+          "step": 2,
+          "unit": "px",
+          "default": 52,
+          "label": "Font Size"
+        },
+        {
+          "type": "header",
+          "content": "Mobile Settings"
+        },
+        {
+          "type": "range",
+          "id": "heading_font_size_mobile",
+          "min": 16,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 32,
+          "label": "Font Size on mobile"
         }
       ]
     },
@@ -689,15 +737,48 @@
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
         },
         {
+          "type": "select",
+          "id": "custom_font",
+          "options": [
+            {
+              "value": "Neutra Text Book",
+              "label": "Neutra Text Book"
+            },
+            {
+              "value": "Poiret One",
+              "label": "Poiret One"
+            }
+          ],
+          "default": "Neutra Text Book",
+          "label": "Font Family"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Settings"
+        },
+        {
           "type": "range",
           "id": "font_size",
           "min": 12,
           "max": 72,
           "step": 1,
           "unit": "px",
+          "default": 18,
+          "label": "Font Size"
+        },
+        {
+          "type": "header",
+          "content": "Mobile Settings"
+        },
+        {
+          "type": "range",
+          "id": "font_size_mobile",
+          "min": 12,
+          "max": 48,
+          "step": 1,
+          "unit": "px",
           "default": 16,
-          "label": "Font Size",
-          "info": "Set the font size between 12px and 72px."
+          "label": "Font Size on mobile"
         }
       ]
     },
