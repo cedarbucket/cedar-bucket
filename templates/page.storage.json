@@ -1,0 +1,435 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_3jRxte": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_TEzMRb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Specialty Storage",
+            "heading_size": "hxl"
+          }
+        },
+        "text_7F6fA9": {
+          "type": "text",
+          "settings": {
+            "text": "We offer a variety of solutions suited to your college move",
+            "text_style": "body",
+            "font_size": 30
+          }
+        },
+        "buttons_bBJf7h": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Get Custom Quote",
+            "button_link_1": "https://form.typeform.com/to/QsMDfXjn",
+            "btn_one_padding_top": 24,
+            "btn_one_padding_left": 24,
+            "btn_one_padding_right": 24,
+            "btn_one_padding_bottom": 24,
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "btn_two_padding_top": 24,
+            "btn_two_padding_left": 24,
+            "btn_two_padding_right": 24,
+            "btn_two_padding_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "heading_TEzMRb",
+        "text_7F6fA9",
+        "buttons_bBJf7h"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ctg_2113-bu-2.webp",
+        "image_overlay_opacity": 60,
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
+        "image_height": "full",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "adjust_content_position": 70,
+        "section_radius": 0,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "custom_liquid_F6bDCY": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div data-tf-live=\"01JM0HHVY41BPWYHTEZ9HQV1Q8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_XT7Jf3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ak9ecC": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Our Facility",
+            "heading_size": "h1",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_6PGW9U": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Bucket provides hassle-free storage solutions for college students, ensuring your belongings are stored securely in our warehouse facility. We make the process easy by helping you load and unload on-site or offering convenient pickup and delivery services.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_ak9ecC",
+        "text_6PGW9U"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/624870.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_E6pL7n": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HGrAKB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ship Ahead Services",
+            "heading_size": "h1",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_i8KW4N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We offer a convenient ship-to-storage service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
+          }
+        },
+        "button_J9gnxm": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HGrAKB",
+        "text_i8KW4N",
+        "button_J9gnxm"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/person-holding-box.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "featured_collection_rcJLNy": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Our Storage Packages",
+        "desktop_content_alignment": "center",
+        "sb_custom_font": "Neutra Text Book",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "absolute_content": true,
+        "show_overlay": false,
+        "description_style": "body",
+        "collection": "storage-packages",
+        "products_to_show": 2,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "card_color_scheme": "scheme-1",
+        "sb_card_heading_font": "Neutra Text Bold",
+        "sb_card_heading_font_size": 18,
+        "sb_card_body_font": "Neutra Text Book",
+        "sb_card_body_font_size": 26,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "package_badge": false,
+        "logo_badge": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_RiHt3E": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MQWW4M": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "Just Storage",
+            "heading_size": "h0",
+            "text": "<p>Bring your items  to our facility to be unloaded by our staff. Give us a call whenever your ready to come back and pick it up!</p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yFcRFK": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "Storage & Moving",
+            "heading_size": "h0",
+            "text": "<p>Bring your items to our facility to be unloaded by our staff. We will store & deliver it back to you at your new location!</p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ndNdpw": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "Full Serivce",
+            "heading_size": "h0",
+            "text": "<p>We will move you out and delivery your items to our storage facility until you are ready for us to deliver your items back to you at your new location.</p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MQWW4M",
+        "column_yFcRFK",
+        "column_ndNdpw"
+      ],
+      "settings": {
+        "sb_custom_font": "Neutra Text",
+        "title": "Sample Storage Packages",
+        "heading_position": "left",
+        "heading_size": "h1",
+        "sb_column_grid": false,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Get Custom Quote",
+        "button_link": "https://form.typeform.com/to/QsMDfXjn",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_a98TQ4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qFcRGT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Storage Request",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "forms_inline_e93BFc": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "settings": {
+            "form_id": "264017",
+            "text_color": "#1e1e1e",
+            "button_background_color": "#1e1e1e",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "left",
+            "form_alignment": "flex-start",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_qFcRGT",
+        "forms_inline_e93BFc"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "border_style": true,
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_8a8dCY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_NG6bxw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What storage size do I need?",
+            "icon": "none",
+            "row_content": "<p>5x10 should cover one full bedroom. If you have other large items like a couch, entertainment center, barstools, etc., you will need to upgrade.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FVxgR6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I add more items throughout the summer?",
+            "icon": "none",
+            "row_content": "<p>Yes! Just give us a call and our movers will pick up and deliver your new items to your personal storage area.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fCinT4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I schedule pick up / delivery?",
+            "icon": "none",
+            "row_content": "<p>Call us anytime from 9-5 M-F to schedule your pick-up or delivery. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RUA9py": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How does ship ahead services work?",
+            "icon": "none",
+            "row_content": "<p>Email us at info@cedarbucket.com with a tracking number and our team will handle the rest!</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Kjp8MQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I visit the storage unit?",
+            "icon": "none",
+            "row_content": "<p>You may visit your items anytime during normal office hours. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_NG6bxw",
+        "collapsible_row_FVxgR6",
+        "collapsible_row_fCinT4",
+        "collapsible_row_RUA9py",
+        "collapsible_row_Kjp8MQ"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Storage FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_3jRxte",
+    "custom_liquid_F6bDCY",
+    "image_with_text_XT7Jf3",
+    "image_with_text_E6pL7n",
+    "main",
+    "featured_collection_rcJLNy",
+    "multicolumn_RiHt3E",
+    "rich_text_a98TQ4",
+    "collapsible_content_8a8dCY"
+  ]
+}

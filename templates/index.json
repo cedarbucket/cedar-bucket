@@ -1,0 +1,654 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "image_GgNPcY": {
+          "type": "image",
+          "settings": {
+            "block_image": "shopify://shop_images/Signature_Text-_FFFFFF_d4c37afd-1973-4cb5-a1b7-b108bfd0b14c.png",
+            "image_width": 370,
+            "image_width_mobile": 250,
+            "alignment": "center"
+          }
+        },
+        "text_QEHxDA": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Full service moving, storage, and consignment solutions</strong>",
+            "text_style": "body",
+            "font_size": 30
+          }
+        },
+        "buttons_9xabXM": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "shopify://pages/storage",
+            "btn_one_padding_top": 24,
+            "btn_one_padding_left": 24,
+            "btn_one_padding_right": 24,
+            "btn_one_padding_bottom": 24,
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/consignment",
+            "button_style_secondary_2": true,
+            "btn_two_padding_top": 24,
+            "btn_two_padding_left": 24,
+            "btn_two_padding_right": 24,
+            "btn_two_padding_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "image_GgNPcY",
+        "text_QEHxDA",
+        "buttons_9xabXM"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/oliviasewelldelaneycavanaugh.jpg",
+        "image_overlay_opacity": 60,
+        "container_style": "full_frame",
+        "show_box_shadow": false,
+        "show_box_border": false,
+        "image_height": "full",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "adjust_content_position": 70,
+        "section_radius": 0,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "image_with_text_EAfyGJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_P7A9LW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Storage Solutions",
+            "heading_size": "h1",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_8JGgyT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We offer flexible, short term summer storage solutions for college students. Whether you’re heading home, studying abroad, or taking an internship, you can store your stuff with us until the next school year.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
+          }
+        },
+        "button_b3XXrC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Custom Quote",
+            "button_link": "shopify://pages/storage",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_P7A9LW",
+        "text_8JGgyT",
+        "button_b3XXrC"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/624870.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_9kTxRU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_HygHXy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Full Service Moving Services",
+            "heading_size": "h1",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_htWYaJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Moving out of your dorm, apartment, or house for the summer? Our movers will come right to your location to pick up your furniture, personal items, and anything else you need stored.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
+          }
+        },
+        "button_HUzxch": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Quote",
+            "button_link": "shopify://pages/moving",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HygHXy",
+        "text_htWYaJ",
+        "button_HUzxch"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/person-holding-box.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_34pb3A": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "College Storage + Moving Packages",
+        "desktop_content_alignment": "center",
+        "sb_custom_font": "Neutra Text Book",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "absolute_content": true,
+        "show_overlay": true,
+        "description_style": "body",
+        "collection": "storage-packages",
+        "products_to_show": 2,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "card_color_scheme": "scheme-04f712e0-65c4-4119-adb8-288ac9ba4fcc",
+        "sb_card_heading_font": "Neutra Text Book",
+        "sb_card_heading_font_size": 18,
+        "sb_card_body_font": "Neutra Text Book",
+        "sb_card_body_font_size": 24,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "package_badge": false,
+        "logo_badge": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_EqiQf4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_UgUTwB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Consignment Services",
+            "heading_size": "h0",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_j8Bt3P": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Bucket is Oxford’s very first college consignment store, offering a hassle-free way to buy and sell quality furniture & decor. Sell your gently used pieces with our seamless consignment process, including free pickup for all approved items. </p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
+          }
+        },
+        "button_hqR6LJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Consign with Us",
+            "button_link": "shopify://pages/consignment",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_UgUTwB",
+        "text_j8Bt3P",
+        "button_hqR6LJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Your_paragraph_text_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_YFrfn4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WfVFyL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop Cedar Bucket",
+            "heading_size": "h0",
+            "sb_custom_font": "Neutra Text Book"
+          }
+        },
+        "text_PM6bRK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Looking to furnish your space? Skip the high retail prices and find affordable, stylish furniture right here. Whether you’re selling or shopping, Cedar Bucket makes it easy.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 18,
+            "sb_font_weight": 400
+          }
+        },
+        "button_XYEkje": {
+          "type": "button",
+          "settings": {
+            "button_label": "See Our Collections",
+            "button_link": "shopify://pages/products",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WfVFyL",
+        "text_PM6bRK",
+        "button_XYEkje"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1161ABC3-787F-4C51-A46A-F68168DB7A68_1.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_z6NyNY": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_FK4fmP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "headboards"
+          }
+        },
+        "featured_collection_n44jkH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bed"
+          }
+        },
+        "featured_collection_i79nHD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desks-chairs"
+          }
+        },
+        "featured_collection_hNRTjn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lighting"
+          }
+        },
+        "featured_collection_AayXPH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rugs"
+          }
+        },
+        "featured_collection_fzFy7f": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_FK4fmP",
+        "featured_collection_n44jkH",
+        "featured_collection_i79nHD",
+        "featured_collection_hNRTjn",
+        "featured_collection_AayXPH",
+        "featured_collection_fzFy7f"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Shop Furniture Online",
+        "sb_custom_font": "Neutra Text Book",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "parallax_gallery_with_text_CMFqHt": {
+      "type": "parallax-gallery-with-text",
+      "blocks": {
+        "heading_aDUxfL": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Mission:</strong>",
+            "sb_custom_font": "Neutra Text Bold",
+            "heading_size": "h0"
+          }
+        },
+        "text_MAb6Eg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p></p><p>More than just a business, we’re working to revive the historic Cedar Bucket property, preserving its legacy while bringing a much-needed service to town. Whether you’re shopping, storing, or moving, we’re here to make it easy.</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 22,
+            "sb_font_weight": 400
+          }
+        },
+        "gallery_nfcmgC": {
+          "type": "gallery",
+          "settings": {
+            "image_1": "shopify://shop_images/Rectangle_11.png",
+            "image_2": "shopify://shop_images/Frame_1000003764.png",
+            "image_3": "shopify://shop_images/Frame_1000003765.png",
+            "image_4": "shopify://shop_images/362f150949906132546966a182fd427a.jpg"
+          }
+        },
+        "gallery_hyLHxj": {
+          "type": "gallery",
+          "settings": {
+            "image_1": "shopify://shop_images/Frame_1000003702.png",
+            "image_2": "shopify://shop_images/shipping-boxes-on-trolly-close-up.jpg",
+            "image_3": "shopify://shop_images/dorm-packing-checklist-essentials-parents_jpg.webp",
+            "image_4": "shopify://shop_images/Frame_1000003733.png"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aDUxfL",
+        "text_MAb6Eg",
+        "gallery_nfcmgC",
+        "gallery_hyLHxj"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 100,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_BdAn7d": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pyxfmG": {
+          "type": "heading",
+          "settings": {
+            "heading": "History",
+            "heading_size": "h0",
+            "sb_custom_font": "Neutra Text Bold"
+          }
+        },
+        "text_waGfLw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Cedar Bucket, located on Highway 6, serves as a cherished landmark and the gateway to Oxford. Proudly recognized as the world’s largest cedar bucket, it was originally built in 1985 by the previous owner, whose craftsmanship and vision brought this unique structure to life. Preserved as a piece of local history, the Cedar Bucket stands as a testament to the area’s heritage and invites visitors to experience its grandeur firsthand.</p>",
+            "text_style": "body",
+            "sb_custom_font": "Neutra Text Book",
+            "font_size": 22,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_pyxfmG",
+        "text_waGfLw"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/CEDAR_BUCKET.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_BQAnXq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Gya9cT": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "scheme-3",
+            "sb_text_alignment": "center",
+            "title": "",
+            "heading_size": "h1",
+            "text": "<p>Quality pre-owned furniture ready to find a new home</p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EkY46P": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cameron_sdorm.webp",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "",
+            "heading_size": "h1",
+            "text": "",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9p9D4T": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "scheme-3",
+            "sb_text_alignment": "center",
+            "title": "",
+            "heading_size": "h1",
+            "text": "<p>Hand-picked furniture, only one visit away</p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_EJYr3h": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Lindy-Goodson-Ole-Miss-dorm-chic.webp",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "",
+            "heading_size": "h1",
+            "text": "",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aA3AyG": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "scheme-3",
+            "sb_text_alignment": "center",
+            "title": "",
+            "heading_size": "h1",
+            "text": "<p>Enjoyable, affordable, and accessible experience for everyone<br/><br/></p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fCV7NA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ctg_2113-bu-2.webp",
+            "sb_make_image_background": true,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "",
+            "sb_text_alignment": "left",
+            "title": "",
+            "heading_size": "h1",
+            "text": "",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Gya9cT",
+        "column_EkY46P",
+        "column_9p9D4T",
+        "column_EJYr3h",
+        "column_aA3AyG",
+        "column_fCV7NA"
+      ],
+      "disabled": true,
+      "settings": {
+        "sb_custom_font": "Poiret One",
+        "title": "Find Us On Instagram",
+        "heading_position": "center",
+        "heading_size": "h1",
+        "sb_column_grid": true,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "17386903758486a558": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_b6Wbmx": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_b6Wbmx"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "image_with_text_EAfyGJ",
+    "image_with_text_9kTxRU",
+    "featured_collection_34pb3A",
+    "image_with_text_EqiQf4",
+    "image_with_text_YFrfn4",
+    "collection_list_z6NyNY",
+    "parallax_gallery_with_text_CMFqHt",
+    "image_with_text_BdAn7d",
+    "multicolumn_BQAnXq",
+    "17386903758486a558"
+  ]
+}

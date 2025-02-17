@@ -1,0 +1,55 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "map_tn4GVj": {
+      "type": "map",
+      "settings": {
+        "background_image": "shopify://shop_images/Frame_1000003738.png",
+        "inner_padding_top": 52,
+        "inner_padding_bottom": 52,
+        "color_scheme": "scheme-4",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0.7,
+        "container_style": "boxed",
+        "show_box_shadow": true,
+        "show_box_border": true,
+        "section_radius": 16,
+        "desktop_content_alignment": "left",
+        "title": "Visit our Loaction",
+        "subtitle": "We make your move easy",
+        "days": "Monday to Saturday",
+        "hours": "9am to 6pm",
+        "address": "979 MS-6, Oxford, MS 38655",
+        "map_address": "979 MS-6, Oxford, MS 38655",
+        "api_key": "YOUR_API_KEY_HERE",
+        "static_iframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.9134367119514!2d-89.6778965246003!3d34.352681101807185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8880729333049e3f%3A0x1689c1a7151df12a!2s979%20MS-6%2C%20Oxford%2C%20MS%2038655!5e0!3m2!1sen!2sus!4v1736454368754!5m2!1sen!2sus\" width=\"800\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"",
+        "button_text": "Delivery Service Agreement",
+        "button_link": "/",
+        "padding_top": 52,
+        "padding_left": 52,
+        "padding_right": 52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "map_tn4GVj"
+  ]
+}
