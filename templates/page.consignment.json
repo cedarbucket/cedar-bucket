@@ -16,7 +16,9 @@
           "type": "heading",
           "settings": {
             "heading": "Used Furniture Consignment",
-            "heading_size": "hxl"
+            "custom_font": "Poiret One",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 32
           }
         },
         "text_CM8j4b": {
@@ -24,7 +26,9 @@
           "settings": {
             "text": "<strong>We'll handle selling your high quality, used college furniture</strong>",
             "text_style": "body",
-            "font_size": 30
+            "custom_font": "Poiret One",
+            "font_size": 30,
+            "font_size_mobile": 16
           }
         }
       },

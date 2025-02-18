@@ -16,7 +16,9 @@
           "type": "heading",
           "settings": {
             "heading": "Specialty Storage",
-            "heading_size": "hxl"
+            "custom_font": "Poiret One",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 32
           }
         },
         "text_7F6fA9": {
@@ -24,33 +26,15 @@
           "settings": {
             "text": "We offer a variety of solutions suited to your college move",
             "text_style": "body",
-            "font_size": 30
-          }
-        },
-        "buttons_bBJf7h": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Get Custom Quote",
-            "button_link_1": "https://form.typeform.com/to/QsMDfXjn",
-            "btn_one_padding_top": 24,
-            "btn_one_padding_left": 24,
-            "btn_one_padding_right": 24,
-            "btn_one_padding_bottom": 24,
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
-            "btn_two_padding_top": 24,
-            "btn_two_padding_left": 24,
-            "btn_two_padding_right": 24,
-            "btn_two_padding_bottom": 24
+            "custom_font": "Poiret One",
+            "font_size": 30,
+            "font_size_mobile": 16
           }
         }
       },
       "block_order": [
         "heading_TEzMRb",
-        "text_7F6fA9",
-        "buttons_bBJf7h"
+        "text_7F6fA9"
       ],
       "settings": {
         "image": "shopify://shop_images/ctg_2113-bu-2.webp",
@@ -77,7 +61,6 @@
     },
     "custom_liquid_F6bDCY": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "custom_liquid": "<div data-tf-live=\"01JM0HHVY41BPWYHTEZ9HQV1Q8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
         "color_scheme": "",
@@ -93,7 +76,7 @@
           "settings": {
             "heading": "About Our Facility",
             "heading_size": "h1",
-            "sb_custom_font": "Neutra Text Book"
+            "sb_custom_font": "Neutra Text Bold"
           }
         },
         "text_6PGW9U": {
@@ -101,8 +84,8 @@
           "settings": {
             "text": "<p>Located just off Highway 6 in Oxford, Cedar Bucket offers hassle-free storage solutions at our warehouse facility. Drop off and pick up on-site with our team handling all the loading and unloading, or opt for our full-service pick-up and delivery options. Enjoy flexible access to your items anytime and add more to your space as needed!</p>",
             "text_style": "body",
-            "sb_custom_font": "Neutra Text Book",
-            "font_size": 18,
+            "sb_custom_font": "Poiret One",
+            "font_size": 20,
             "sb_font_weight": 400
           }
         }
@@ -135,16 +118,16 @@
           "settings": {
             "heading": "Ship Ahead Services",
             "heading_size": "h1",
-            "sb_custom_font": "Neutra Text Book"
+            "sb_custom_font": "Neutra Text Bold"
           }
         },
         "text_i8KW4N": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer a convenient ship-to-storage service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.<br/><br/>You must have reserved space to use this service, or additional charges will apply if extra space is available.</p>",
+            "text": "<p>We offer a convenient ship-ahead service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.</p>",
             "text_style": "body",
-            "sb_custom_font": "Neutra Text Book",
-            "font_size": 18,
+            "sb_custom_font": "Poiret One",
+            "font_size": 20,
             "sb_font_weight": 400
           }
         },
@@ -284,17 +267,17 @@
         "column_ndNdpw"
       ],
       "settings": {
-        "sb_custom_font": "Neutra Text",
+        "sb_custom_font": "Poiret One",
         "title": "Sample Storage Packages",
-        "heading_position": "left",
-        "heading_size": "h1",
+        "heading_position": "center",
+        "heading_size": "h0",
         "sb_column_grid": false,
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Get Custom Quote",
+        "button_label": "",
         "button_link": "https://form.typeform.com/to/QsMDfXjn",
         "color_scheme": "",
         "columns_mobile": "1",
@@ -366,7 +349,7 @@
           "settings": {
             "heading": "Can I add more items throughout the summer?",
             "icon": "none",
-            "row_content": "<p>Yes! Just give us a call and our movers will pick up and deliver your new items to your personal storage area.</p>",
+            "row_content": "<p>Yes! If you have space available you can add to it through our pick up or ship ahead options. </p>",
             "page": ""
           }
         },
@@ -375,7 +358,7 @@
           "settings": {
             "heading": "How do I schedule pick up / delivery?",
             "icon": "none",
-            "row_content": "<p>Call us anytime from 9-5 M-F to schedule your pick-up or delivery. </p>",
+            "row_content": "<p>Call us anytime from 9-5 M-F or email us at info@cedarbucket.com to schedule your pick-up or delivery. </p>",
             "page": ""
           }
         },
@@ -384,7 +367,7 @@
           "settings": {
             "heading": "How does ship ahead services work?",
             "icon": "none",
-            "row_content": "<p>Email us at info@cedarbucket.com with a tracking number and our team will handle the rest!</p>",
+            "row_content": "<p>Email your ship ahead request at info@cedarbucket.com with a tracking number and a brief description. Our team will handle the rest!</p>",
             "page": ""
           }
         },
@@ -393,7 +376,7 @@
           "settings": {
             "heading": "Can I visit the storage unit?",
             "icon": "none",
-            "row_content": "<p>You may visit your items anytime during normal office hours. </p>",
+            "row_content": "<p>You may visit your items anytime during normal office hours. Please call or email to schedule your visit. </p>",
             "page": ""
           }
         }
@@ -405,6 +388,7 @@
         "collapsible_row_RUA9py",
         "collapsible_row_Kjp8MQ"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "Storage FAQ",

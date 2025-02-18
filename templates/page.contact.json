@@ -16,7 +16,9 @@
           "type": "heading",
           "settings": {
             "heading": "Connect with Us - Let's Get in Touch!",
-            "heading_size": "h1"
+            "custom_font": "Poiret One",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 32
           }
         }
       },
@@ -53,6 +55,7 @@
           "type": "heading",
           "settings": {
             "heading": "Questions, Comments, Concerns?",
+            "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },

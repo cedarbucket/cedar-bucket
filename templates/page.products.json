@@ -24,7 +24,9 @@
           "type": "heading",
           "settings": {
             "heading": "Shop Cedar Bucket",
-            "heading_size": "hxl"
+            "custom_font": "Poiret One",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 32
           }
         },
         "text_gp689f": {
@@ -32,7 +34,9 @@
           "settings": {
             "text": "High quality used furniture for college students",
             "text_style": "body",
-            "font_size": 30
+            "custom_font": "Poiret One",
+            "font_size": 30,
+            "font_size_mobile": 16
           }
         }
       },
@@ -180,7 +184,7 @@
           "settings": {
             "heading": "Item Pick Up / Delivery",
             "icon": "truck",
-            "row_content": "<p><strong>Scheduling a Delivery</strong></p><ul><li>After purchasing an item, you can schedule a delivery or a pick up date.</li><li>Delivery / Pick up is available from 8am-5pm every day except Sunday.</li></ul><p><strong>Delivery Confirmation</strong></p><ul><li>Once your delivery request is scheduled, you will receive an email or SMS confirmation with the exact details, including your delivery window and instructions.</li></ul><p><strong>Delivery Fees</strong></p><ul><li>Our team charges a flat rate of $125 for delivery </li></ul>",
+            "row_content": "<p><strong>Scheduling a Delivery</strong></p><ul><li>After purchasing an item, you can schedule a delivery or a pick up date.</li><li>Delivery / Pick up is available during business hours.</li></ul><p><strong>Delivery Confirmation</strong></p><ul><li>Once your delivery request is scheduled, you will receive an email or SMS confirmation with the exact details, including your delivery window and instructions.</li></ul><p><strong>Delivery Fees</strong></p><ul><li>Our team charges a flat rate of $125 for delivery </li></ul>",
             "page": ""
           }
         }

@@ -24,7 +24,9 @@
           "type": "heading",
           "settings": {
             "heading": "Movers for Hire",
-            "heading_size": "hxl"
+            "custom_font": "Poiret One",
+            "heading_font_size": 52,
+            "heading_font_size_mobile": 32
           }
         },
         "text_YERE7A": {
@@ -32,7 +34,9 @@
           "settings": {
             "text": "<strong>We've got experienced college student movers to help you move</strong>",
             "text_style": "body",
-            "font_size": 30
+            "custom_font": "Poiret One",
+            "font_size": 30,
+            "font_size_mobile": 16
           }
         }
       },
@@ -100,11 +104,21 @@
         "padding_bottom": 20
       }
     },
+    "custom_liquid_baRq3X": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div data-tf-live=\"01JMAXE8HNGNF8YB7C838V6FK8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1738175141778786fe": {
       "type": "apps",
       "blocks": {
         "forms_inline_kfVKAm": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
           "settings": {
             "form_id": "328476",
             "text_color": "#202020",
@@ -136,7 +150,7 @@
           "settings": {
             "heading": "What type of moving services do you offer?",
             "icon": "none",
-            "row_content": "<p>You can book our movers for whatever moving services you need from loading a truck to mounting a TV! </p>",
+            "row_content": "<p>Labor only, Labor & Transportation, and addition services such as TV Mounting.</p>",
             "page": ""
           }
         },
@@ -145,16 +159,16 @@
           "settings": {
             "heading": "Who are your movers?",
             "icon": "none",
-            "row_content": "<p>We hire exclusively from the Ole Miss fraternities to provide you the best, most respectful movers in Oxford. </p>",
+            "row_content": "<p>We hire exclusively from the Ole Miss students to provide you the best, most respectful movers in Oxford.</p>",
             "page": ""
           }
         },
         "collapsible_row_qnWB3k": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Do you require a deposit?",
+            "heading": "How does payment work?",
             "icon": "none",
-            "row_content": "<p>We require a $50 deposit via for all bookings</p>",
+            "row_content": "<p>Full payment is required before your move is conducted. We will send an invoice via email with online payment options. </p>",
             "page": ""
           }
         },
@@ -163,7 +177,7 @@
           "settings": {
             "heading": "How do you charge?",
             "icon": "none",
-            "row_content": "<p>We charge per hour for your move and we invoice for payment after the move is complete.</p>",
+            "row_content": "<p>We charge based on a numbers of factors such as numbers of items, what type of items, how long it takes to move them, and any additional services needed.</p>",
             "page": ""
           }
         }
@@ -194,6 +208,7 @@
     "main",
     "image_banner_BxtyCB",
     "rich_text_67jCJj",
+    "custom_liquid_baRq3X",
     "1738175141778786fe",
     "collapsible_content_zqVDKK"
   ]

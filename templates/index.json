@@ -15,7 +15,7 @@
         "image_GgNPcY": {
           "type": "image",
           "settings": {
-            "block_image": "shopify://shop_images/Signature_Text-_FFFFFF_d4c37afd-1973-4cb5-a1b7-b108bfd0b14c.png",
+            "block_image": "shopify://shop_images/Oxford-MS-CB_2.png",
             "image_width": 500,
             "image_width_mobile": 300,
             "alignment": "center"
@@ -71,26 +71,17 @@
     "rich_text_WfXG6D": {
       "type": "rich-text",
       "blocks": {
-        "heading_8q6TKh": {
-          "type": "heading",
-          "settings": {
-            "heading": "Serving Oxford, MS",
-            "sb_custom_font": "Neutra Text Book",
-            "heading_size": "h1"
-          }
-        },
         "text_zkiRnt": {
           "type": "text",
           "settings": {
             "text": "<p>We are Oxford's first-ever resale consignment store for home furnishings. We also offer full-service moving and storage!</p>",
             "sb_custom_font": "Poiret One",
-            "sb_font_size": 28,
-            "sb_font_weight": 400
+            "sb_font_size": 34,
+            "sb_font_weight": 700
           }
         }
       },
       "block_order": [
-        "heading_8q6TKh",
         "text_zkiRnt"
       ],
       "settings": {
@@ -162,7 +153,7 @@
         "heading_HygHXy": {
           "type": "heading",
           "settings": {
-            "heading": "Full Service Moving Services",
+            "heading": "Full Service Moving",
             "heading_size": "h1",
             "sb_custom_font": "Neutra Text Book"
           }
@@ -661,6 +652,7 @@
       "block_order": [
         "instafeed_app_block_b6Wbmx"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
