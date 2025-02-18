@@ -36,7 +36,7 @@
       {% when 'heading' %}
         #Banner-{{ section.id }} .banner__heading-{{ block.id }} {
           font-size: {{ block.settings.heading_font_size }}px;
-          line-height: 1.2;
+          
           {% if block.settings.custom_font %}
             font-family: '{{ block.settings.custom_font }}';
           {% endif %}
@@ -49,7 +49,7 @@
       {% when 'text' %}
         #Banner-{{ section.id }} .banner__text-{{ block.id }} {
           font-size: {{ block.settings.font_size }}px;
-          line-height: 1.2;
+      
           {% if block.settings.custom_font %}
             font-family: '{{ block.settings.custom_font }}';
           {% endif %}
