@@ -26,8 +26,8 @@
           "settings": {
             "text": "We offer a variety of solutions suited to your college move",
             "text_style": "body",
-            "custom_font": "Poiret One",
-            "font_size": 30,
+            "custom_font": "Neutra Text Book",
+            "font_size": 20,
             "font_size_mobile": 16
           }
         }
@@ -75,16 +75,16 @@
           "type": "heading",
           "settings": {
             "heading": "About Our Facility",
-            "heading_size": "h1",
-            "sb_custom_font": "Neutra Text Bold"
+            "heading_size": "h0",
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_6PGW9U": {
           "type": "text",
           "settings": {
-            "text": "<p>Located just off Highway 6 in Oxford, Cedar Bucket offers hassle-free storage solutions at our warehouse facility. Drop off and pick up on-site with our team handling all the loading and unloading, or opt for our full-service pick-up and delivery options. Enjoy flexible access to your items anytime and add more to your space as needed!</p>",
+            "text": "<p>Located just off Highway 6 in Oxford, Cedar Bucket offers climate controlled hassle-free storage solutions at our warehouse facility. Drop off and pick up on-site with our team handling all the loading and unloading, or opt for our full-service pick-up and delivery options. Enjoy flexible access to your items anytime and add more to your space as needed!</p>",
             "text_style": "body",
-            "sb_custom_font": "Poiret One",
+            "sb_custom_font": "Neutra Text Book",
             "font_size": 20,
             "sb_font_weight": 400
           }
@@ -117,8 +117,8 @@
           "type": "heading",
           "settings": {
             "heading": "Ship Ahead Services",
-            "heading_size": "h1",
-            "sb_custom_font": "Neutra Text Bold"
+            "heading_size": "h0",
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_i8KW4N": {
@@ -126,7 +126,7 @@
           "settings": {
             "text": "<p>We offer a convenient ship-ahead service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.</p>",
             "text_style": "body",
-            "sb_custom_font": "Poiret One",
+            "sb_custom_font": "Neutra Text Book",
             "font_size": 20,
             "sb_font_weight": 400
           }
@@ -209,52 +209,46 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_RiHt3E": {
-      "type": "multicolumn",
+    "image_columns_XD7A6b": {
+      "type": "image-columns",
       "blocks": {
-        "column_MQWW4M": {
+        "column_tnH7LN": {
           "type": "column",
           "settings": {
-            "sb_make_image_background": false,
-            "sb_column_numbering": false,
-            "sb_color_scheme": "",
-            "sb_text_alignment": "left",
+            "background_image": "shopify://shop_images/shipping-boxes-on-trolly-close-up.jpg",
+            "overlay_opacity": 50,
             "title": "Just Storage",
-            "heading_size": "h0",
-            "text": "<p>Bring your items  to our facility to be unloaded by our staff. Give us a call whenever your ready to come back and pick it up!</p>",
-            "sb_font_size": 24,
+            "heading_size": "h1",
+            "text": "<p>Bring your items to our facility to be unloaded by our staff. Give us a call whenever your ready to come back and pick it up!</p>",
+            "sb_font_size": 16,
             "link_as_button": false,
             "link_label": "",
             "link": ""
           }
         },
-        "column_yFcRFK": {
+        "column_gcKbF6": {
           "type": "column",
           "settings": {
-            "sb_make_image_background": false,
-            "sb_column_numbering": false,
-            "sb_color_scheme": "",
-            "sb_text_alignment": "left",
-            "title": "Storage & Moving",
-            "heading_size": "h0",
+            "background_image": "shopify://shop_images/10.png",
+            "overlay_opacity": 50,
+            "title": "Store & Move",
+            "heading_size": "h1",
             "text": "<p>Bring your items to our facility to be unloaded by our staff. We will store & deliver it back to you at your new location!</p>",
-            "sb_font_size": 24,
+            "sb_font_size": 16,
             "link_as_button": false,
             "link_label": "",
             "link": ""
           }
         },
-        "column_ndNdpw": {
+        "column_qTKgM6": {
           "type": "column",
           "settings": {
-            "sb_make_image_background": false,
-            "sb_column_numbering": false,
-            "sb_color_scheme": "",
-            "sb_text_alignment": "left",
-            "title": "Full Serivce",
-            "heading_size": "h0",
-            "text": "<p>We will move you out and delivery your items to our storage facility until you are ready for us to deliver your items back to you at your new location.</p>",
-            "sb_font_size": 24,
+            "background_image": "shopify://shop_images/11.png",
+            "overlay_opacity": 50,
+            "title": "Full Service",
+            "heading_size": "h1",
+            "text": "<p>We will move you out and deliver your items to our storage facility until you are ready for us to deliver your items back to you at your new location.</p>",
+            "sb_font_size": 16,
             "link_as_button": false,
             "link_label": "",
             "link": ""
@@ -262,26 +256,18 @@
         }
       },
       "block_order": [
-        "column_MQWW4M",
-        "column_yFcRFK",
-        "column_ndNdpw"
+        "column_tnH7LN",
+        "column_gcKbF6",
+        "column_qTKgM6"
       ],
       "settings": {
-        "sb_custom_font": "Poiret One",
-        "title": "Sample Storage Packages",
+        "title": "Sample Packages",
+        "heading_size": "h1",
         "heading_position": "center",
-        "heading_size": "h0",
-        "sb_column_grid": false,
-        "image_width": "full",
-        "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "https://form.typeform.com/to/QsMDfXjn",
-        "color_scheme": "",
+        "background_style": "none",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -412,7 +398,7 @@
     "image_with_text_E6pL7n",
     "main",
     "featured_collection_rcJLNy",
-    "multicolumn_RiHt3E",
+    "image_columns_XD7A6b",
     "rich_text_a98TQ4",
     "collapsible_content_8a8dCY"
   ]

@@ -24,10 +24,10 @@
         "text_CM8j4b": {
           "type": "text",
           "settings": {
-            "text": "<strong>We'll handle selling your high quality, used college furniture</strong>",
+            "text": "<strong>We'll handle selling your high quality, pre-owned college furniture</strong>",
             "text_style": "body",
-            "custom_font": "Poiret One",
-            "font_size": 30,
+            "custom_font": "Neutra Text Book",
+            "font_size": 20,
             "font_size_mobile": 16
           }
         }
@@ -70,6 +70,15 @@
     "rich_text_pA9wBr": {
       "type": "rich-text",
       "blocks": {
+        "text_cNbP4t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Bucket will remit 50% of the selling price to the consignor. Consignor period will be 120 days with a 15% discount every 30 days. Payment will be provided via check or ACH. </p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        },
         "heading_MLWmfV": {
           "type": "heading",
           "settings": {
@@ -78,10 +87,10 @@
             "heading_size": "h1"
           }
         },
-        "text_rYhF4p": {
+        "text_4cAkUf": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>We are always looking for QUALITY college furniture and decor.<br/>If you have new-condition pieces and would like our consideration:</strong></p>",
+            "text": "<p><strong>We are always looking for QUALITY college furniture and decor.</strong></p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400
@@ -106,8 +115,9 @@
         }
       },
       "block_order": [
+        "text_cNbP4t",
         "heading_MLWmfV",
-        "text_rYhF4p",
+        "text_4cAkUf",
         "forms_inline_KtE9aP"
       ],
       "settings": {
@@ -133,13 +143,21 @@
             "heading_size": "h1"
           }
         },
-        "text_xm4cWD": {
-          "type": "text",
+        "button_AHq3zN": {
+          "type": "button",
           "settings": {
-            "text": "<p>By submitting the form above, you confirm that you have read and understood the terms of the Consignment Contract and agree to accept the conditions therein as applicable to all items consigned with Cedar Bucket.</p>",
-            "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 24,
-            "sb_font_weight": 400
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "button_label": "View Contract",
+            "button_link": "https://docs.google.com/document/d/1GHhR6bTReAmI-Y3o84hObCkuTy1EdVSqOfEDrfpOID8/edit?usp=sharing",
+            "button_style_secondary": false,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_bg_color_2": "#000000",
+            "button_text_color_2": "#ffffff"
           }
         },
         "forms_inline_Jdik3c": {
@@ -162,7 +180,7 @@
       },
       "block_order": [
         "heading_EmceBR",
-        "text_xm4cWD",
+        "button_AHq3zN",
         "forms_inline_Jdik3c"
       ],
       "settings": {
@@ -203,6 +221,7 @@
         "collapsible_row_LDB8dL",
         "collapsible_row_YGzTfJ"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "Online Shopping FAQ",

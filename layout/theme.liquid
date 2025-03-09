@@ -17,6 +17,50 @@
 
     {{ 'custom-font.css' | asset_url | stylesheet_tag }}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://cedarbucket.com",
+  "name": "Cedar Bucket",
+  "image": "https://cdn.shopify.com/s/files/1/0910/5031/1993/files/your-custom-image.png?v=1739984534",
+  "url": "https://cedarbucket.com",
+  "telephone": "662-550-4013",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "979 MS-6, Oxford, MS 38655",
+    "addressLocality": "Oxford",
+    "addressRegion": "MS",
+    "postalCode": "38655",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.3666,
+    "longitude": -89.5199
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+    "sameAs": [
+        "https://www.facebook.com/people/Cedar-Bucket/61571079567899/",
+        "https://www.instagram.com/cedarbucketoxford/"
+    ],
+    "priceRange": "$$"
+}
+</script>
+    
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -320,6 +364,10 @@
       }
     </script>
   </head>
+    <meta property="og:title" content="{{ shop.name }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ shop.url }}" />
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0910/5031/1993/files
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">

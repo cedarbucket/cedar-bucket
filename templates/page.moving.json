@@ -23,7 +23,7 @@
         "heading_aQhBPA": {
           "type": "heading",
           "settings": {
-            "heading": "Movers for Hire",
+            "heading": "College Movers for Hire",
             "custom_font": "Poiret One",
             "heading_font_size": 52,
             "heading_font_size_mobile": 32
@@ -32,10 +32,10 @@
         "text_YERE7A": {
           "type": "text",
           "settings": {
-            "text": "<strong>We've got experienced college student movers to help you move</strong>",
+            "text": "<strong>We've got experienced college student movers at your service</strong>",
             "text_style": "body",
-            "custom_font": "Poiret One",
-            "font_size": 30,
+            "custom_font": "Neutra Text Book",
+            "font_size": 20,
             "font_size_mobile": 16
           }
         }
@@ -73,7 +73,7 @@
         "heading_8xghAj": {
           "type": "heading",
           "settings": {
-            "heading": "Need a quote for your college move?",
+            "heading": "Need a custom quote for your move?",
             "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
@@ -188,6 +188,7 @@
         "collapsible_row_qnWB3k",
         "collapsible_row_hzMGKj"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "Moving FAQ",

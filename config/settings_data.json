@@ -157,8 +157,8 @@
       "header-alternate": {
         "type": "header-alternate",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
-          "logo_width": 160,
+          "alternate_logo": "shopify://shop_images/Group_1000003763_1_6ac971e9-c87b-46aa-a1c8-54893eafe4a1.png",
+          "logo_width": 200,
           "logo_position": "left-right",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
@@ -179,8 +179,8 @@
       "header-storage": {
         "type": "header-storage",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
-          "logo_width": 160,
+          "alternate_logo": "shopify://shop_images/Group_1000003763_1_6ac971e9-c87b-46aa-a1c8-54893eafe4a1.png",
+          "logo_width": 200,
           "logo_position": "left-right",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
@@ -201,8 +201,8 @@
       "header-contact": {
         "type": "header-contact",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
-          "logo_width": 160,
+          "alternate_logo": "shopify://shop_images/Group_1000003763_1_6ac971e9-c87b-46aa-a1c8-54893eafe4a1.png",
+          "logo_width": 200,
           "logo_position": "left-right",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
@@ -223,8 +223,8 @@
       "header-moving": {
         "type": "header-moving",
         "settings": {
-          "alternate_logo": "shopify://shop_images/Pine_Plate.png",
-          "logo_width": 160,
+          "alternate_logo": "shopify://shop_images/Group_1000003763_1_6ac971e9-c87b-46aa-a1c8-54893eafe4a1.png",
+          "logo_width": 200,
           "logo_position": "left-right",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
@@ -263,6 +263,11 @@
           "button_vertical_position": "lowest",
           "greeting_message": ""
         }
+      },
+      "16015553545834452532": {
+        "type": "shopify://apps/bird-pickup-delivery/blocks/app-embed/6e8f5020-fc3a-4acd-a31a-fb627c0270cf",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {

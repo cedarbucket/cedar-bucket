@@ -26,7 +26,7 @@
         "heading_qQRGTh"
       ],
       "settings": {
-        "image": "shopify://shop_images/mobile-contact-us-form.jpg",
+        "image": "shopify://shop_images/Dorm_STORE.jpg",
         "image_overlay_opacity": 60,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -55,7 +55,7 @@
           "type": "heading",
           "settings": {
             "heading": "Questions, Comments, Concerns?",
-            "sb_custom_font": "Neutra Text Book",
+            "sb_custom_font": "Poiret One",
             "heading_size": "h1"
           }
         },
@@ -101,7 +101,7 @@
         "sb_wrapper_height": 65,
         "padding_top": 100,
         "padding_bottom": 88,
-        "sb_background_overlay": 70,
+        "sb_background_overlay": 90,
         "image_one": "shopify://shop_images/33560c89bf9f52ef4c088f94c5a365bb.jpg",
         "image_two": "shopify://shop_images/362f150949906132546966a182fd427a.jpg",
         "image_three": "shopify://shop_images/be216cb1d7958e42012adc9a49bc126d.jpg"

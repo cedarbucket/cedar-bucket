@@ -12,13 +12,23 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "image_GgNPcY": {
-          "type": "image",
+        "heading_9P3h86": {
+          "type": "heading",
           "settings": {
-            "block_image": "shopify://shop_images/Oxford-MS-CB_2.png",
-            "image_width": 500,
-            "image_width_mobile": 300,
-            "alignment": "center"
+            "heading": "Oxford's all-in-one solution for student furnishings",
+            "custom_font": "Poiret One",
+            "heading_font_size": 48,
+            "heading_font_size_mobile": 32
+          }
+        },
+        "text_YFmbGL": {
+          "type": "text",
+          "settings": {
+            "text": "Explore our tailored services, from consignment to moving and storage.",
+            "text_style": "body",
+            "custom_font": "Neutra Text Book",
+            "font_size": 20,
+            "font_size_mobile": 16
           }
         },
         "buttons_9xabXM": {
@@ -42,7 +52,8 @@
         }
       },
       "block_order": [
-        "image_GgNPcY",
+        "heading_9P3h86",
+        "text_YFmbGL",
         "buttons_9xabXM"
       ],
       "settings": {
@@ -74,9 +85,9 @@
         "text_zkiRnt": {
           "type": "text",
           "settings": {
-            "text": "<p>We are Oxford's first-ever resale consignment store for home furnishings. We also offer full-service moving and storage!</p>",
+            "text": "<p>Our Service Offerings</p>",
             "sb_custom_font": "Poiret One",
-            "sb_font_size": 34,
+            "sb_font_size": 60,
             "sb_font_weight": 700
           }
         }
@@ -90,10 +101,10 @@
         "color_scheme": "",
         "full_width": true,
         "border_style": false,
-        "padding_top": 56,
+        "padding_top": 24,
         "padding_left": 0,
         "padding_right": 0,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "image_with_text_EAfyGJ": {
@@ -102,15 +113,15 @@
         "heading_P7A9LW": {
           "type": "heading",
           "settings": {
-            "heading": "Custom Storage Solutions",
-            "heading_size": "h1",
-            "sb_custom_font": "Neutra Text Book"
+            "heading": "Flex Storage Solutions",
+            "heading_size": "h0",
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_8JGgyT": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer flexible, short term summer storage solutions for college students. Whether you’re heading home, studying abroad, or taking an internship, you can store your stuff with us until the next school year.</p>",
+            "text": "<p>We offer flexible, short-term summer storage solutions for college students. Whether you’re heading home, studying abroad, or taking an internship, you can store your belongings with us until the next school year.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -154,14 +165,14 @@
           "type": "heading",
           "settings": {
             "heading": "Full Service Moving",
-            "heading_size": "h1",
-            "sb_custom_font": "Neutra Text Book"
+            "heading_size": "h0",
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_htWYaJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Moving out of your dorm, apartment, or house for the summer? Our movers will come right to your location to pick up your furniture, personal items, and anything else you need stored.</p>",
+            "text": "<p>Moving out for the summer? Our student movers will come directly to your dorm, apartment, or house to pick up your furniture, personal items, and more, then transport them wherever you need.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -246,13 +257,13 @@
           "settings": {
             "heading": "Consignment Services",
             "heading_size": "h0",
-            "sb_custom_font": "Neutra Text Book"
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_j8Bt3P": {
           "type": "text",
           "settings": {
-            "text": "<p>Decluttering? Sell your gently used furniture, décor, and more through our consignment shop and make extra cash! Free pick up is included for all eligible items. </p>",
+            "text": "<p>We'll pick up your furniture and decor, sell it through our online and physical consignment store, and pay you when it sells!</p><p>All approved items will be picked up for free by our team.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -295,15 +306,15 @@
         "heading_WfVFyL": {
           "type": "heading",
           "settings": {
-            "heading": "Shop Cedar Bucket",
+            "heading": "Online Furniture Shop",
             "heading_size": "h0",
-            "sb_custom_font": "Neutra Text Book"
+            "sb_custom_font": "Poiret One"
           }
         },
         "text_PM6bRK": {
           "type": "text",
           "settings": {
-            "text": "<p>Looking to furnish your space? Skip the high retail prices and find affordable, stylish furniture right here. Whether you’re selling or shopping, Cedar Bucket makes it easy.</p>",
+            "text": "<p>Shop the best deals on high-quality college furniture and decor through our online consignment store.<br/><br/>In Oxford? Come visit us in person!</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -313,7 +324,7 @@
         "button_XYEkje": {
           "type": "button",
           "settings": {
-            "button_label": "See Our Collections",
+            "button_label": "Browse Our Collections",
             "button_link": "shopify://pages/products",
             "button_style_secondary": false
           }
@@ -325,7 +336,7 @@
         "button_XYEkje"
       ],
       "settings": {
-        "image": "shopify://shop_images/1161ABC3-787F-4C51-A46A-F68168DB7A68_1.webp",
+        "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -336,8 +347,63 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_Crhqca": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hjr7nX": {
+          "type": "heading",
+          "settings": {
+            "heading": "About the Business",
+            "sb_custom_font": "Poiret One",
+            "heading_size": "hxl"
+          }
+        },
+        "text_HEnbY6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Thanks for checking out our website.</p><p>You'll find a little bit more about us and our mission below.</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 20,
+            "sb_font_weight": 400
+          }
+        },
+        "button_b84WRM": {
+          "type": "button",
+          "settings": {
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_bg_color_2": "#000000",
+            "button_text_color_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hjr7nX",
+        "text_HEnbY6",
+        "button_b84WRM"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
       }
     },
     "collection_list_z6NyNY": {
@@ -403,61 +469,46 @@
         "padding_bottom": 36
       }
     },
-    "parallax_gallery_with_text_CMFqHt": {
-      "type": "parallax-gallery-with-text",
+    "image_with_text_bNwGUN": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_aDUxfL": {
+        "heading_YTyee4": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Mission:</strong>",
-            "sb_custom_font": "Neutra Text Bold",
-            "heading_size": "h0"
+            "heading": "The Cedar Bucket Story",
+            "heading_size": "h1",
+            "sb_custom_font": "Neutra Text Book"
           }
         },
-        "text_MAb6Eg": {
+        "text_qkYJ3a": {
           "type": "text",
           "settings": {
-            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p></p><p>More than just a business, we have fully renovated and  revived the well known Cedar Bucket property in Oxford, preserving its legacy while bringing a much-needed service to town. Whether you’re shopping, storing, or moving, we’re here to make it easy.</p>",
+            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p>Once home to the well-known <strong>Cedar Bucket Furniture Co.</strong>, a respected business famous throughout the Southeast for its quality cedar furniture, the property carries a rich legacy.  We have revitalized and improved the space while preserving its history.</p>",
+            "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 22,
+            "font_size": 18,
             "sb_font_weight": 400
-          }
-        },
-        "gallery_nfcmgC": {
-          "type": "gallery",
-          "settings": {
-            "image_1": "shopify://shop_images/Rectangle_11.png",
-            "image_2": "shopify://shop_images/Frame_1000003764.png",
-            "image_3": "shopify://shop_images/Frame_1000003765.png",
-            "image_4": "shopify://shop_images/362f150949906132546966a182fd427a.jpg"
-          }
-        },
-        "gallery_hyLHxj": {
-          "type": "gallery",
-          "settings": {
-            "image_1": "shopify://shop_images/Frame_1000003702.png",
-            "image_2": "shopify://shop_images/shipping-boxes-on-trolly-close-up.jpg",
-            "image_3": "shopify://shop_images/dorm-packing-checklist-essentials-parents_jpg.webp",
-            "image_4": "shopify://shop_images/Frame_1000003733.png"
           }
         }
       },
       "block_order": [
-        "heading_aDUxfL",
-        "text_MAb6Eg",
-        "gallery_nfcmgC",
-        "gallery_hyLHxj"
+        "heading_YTyee4",
+        "text_qkYJ3a"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "full_width": true,
-        "border_style": false,
-        "padding_top": 100,
-        "padding_left": 0,
-        "padding_right": 0,
-        "padding_bottom": 100
+        "image": "shopify://shop_images/Your_paragraph_text_3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_BdAn7d": {
@@ -474,10 +525,10 @@
         "text_waGfLw": {
           "type": "text",
           "settings": {
-            "text": "<p>The Cedar Bucket, located on Highway 6, serves as a cherished landmark and the gateway to Oxford. Proudly recognized as the world’s largest cedar bucket, it was originally built in 1985 by the previous owner, whose craftsmanship and vision brought this unique structure to life. Preserved as a piece of local history, the Cedar Bucket stands as a testament to the area’s heritage and invites visitors to experience its grandeur firsthand.</p>",
+            "text": "<p>Standing proudly on our property, the world’s largest cedar bucket serves as a local landmark and a gateway to Oxford. It stands 7 feet tall and 6 feet wide while holding over 1500 gallons of water!</p><p>We invite you to visit, experience the bucket’s grandeur firsthand, and see how we’re carrying forward the Cedar Bucket legacy.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
-            "font_size": 22,
+            "font_size": 18,
             "sb_font_weight": 400
           }
         }
@@ -490,7 +541,7 @@
         "image": "shopify://shop_images/CEDAR_BUCKET.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
@@ -499,7 +550,7 @@
         "image_behavior": "zoom-in",
         "mobile_content_alignment": "center",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 20
       }
     },
     "multicolumn_BQAnXq": {
@@ -514,7 +565,7 @@
             "sb_text_alignment": "center",
             "title": "",
             "heading_size": "h1",
-            "text": "<p>Quality pre-owned furniture ready to find a new home</p>",
+            "text": "<p>Quality pre-owned furniture ready to find a new home.</p>",
             "sb_font_size": 24,
             "link_as_button": false,
             "link_label": "",
@@ -547,7 +598,7 @@
             "sb_text_alignment": "center",
             "title": "",
             "heading_size": "h1",
-            "text": "<p>Hand-picked furniture, only one visit away</p>",
+            "text": "<p>Hand-picked furniture, only one visit away.</p>",
             "sb_font_size": 24,
             "link_as_button": false,
             "link_label": "",
@@ -580,7 +631,7 @@
             "sb_text_alignment": "center",
             "title": "",
             "heading_size": "h1",
-            "text": "<p>Enjoyable, affordable, and accessible experience for everyone<br/><br/></p>",
+            "text": "<p>Enjoyable, affordable, and accessible experience for everyone.<br/><br/></p>",
             "sb_font_size": 24,
             "link_as_button": false,
             "link_label": "",
@@ -652,7 +703,6 @@
       "block_order": [
         "instafeed_app_block_b6Wbmx"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -666,8 +716,9 @@
     "featured_collection_34pb3A",
     "image_with_text_EqiQf4",
     "image_with_text_YFrfn4",
+    "rich_text_Crhqca",
     "collection_list_z6NyNY",
-    "parallax_gallery_with_text_CMFqHt",
+    "image_with_text_bNwGUN",
     "image_with_text_BdAn7d",
     "multicolumn_BQAnXq",
     "17386903758486a558"

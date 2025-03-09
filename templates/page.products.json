@@ -34,8 +34,8 @@
           "settings": {
             "text": "High quality used furniture for college students",
             "text_style": "body",
-            "custom_font": "Poiret One",
-            "font_size": 30,
+            "custom_font": "Neutra Text Book",
+            "font_size": 20,
             "font_size_mobile": 16
           }
         }
@@ -73,7 +73,7 @@
         "heading_FJbPrn": {
           "type": "heading",
           "settings": {
-            "heading": "Online Shopping at Cedar Bucket is Coming Soon...",
+            "heading": "Purchase now for delivery in May",
             "sb_custom_font": "Poiret One",
             "heading_size": "h1"
           }
@@ -81,9 +81,9 @@
         "text_7zTVzE": {
           "type": "text",
           "settings": {
-            "text": "<p>All our furniture is available online for purchase. If you see it on the website, it's available!</p><p>Online purchase are available for pick-up or local delivery ONLY.</p><p>You may coordinate your pick-up or delivery anytime after purchase.</p>",
-            "sb_custom_font": "Poiret One",
-            "sb_font_size": 24,
+            "text": "<p>Pick-up or local delivery ONLY.</p><p>We will coordinate your pick-up or delivery after purchase.</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 20,
             "sb_font_weight": 400
           }
         }
@@ -107,58 +107,44 @@
     "collection_list_p7DU7k": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_aTPmN8": {
+        "featured_collection_BU9VPP": {
           "type": "featured_collection",
           "settings": {
-            "collection": "headboards"
+            "collection": "dorm-room-items"
           }
         },
-        "featured_collection_9at4a4": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bed"
-          }
-        },
-        "featured_collection_Lyew9m": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "desks-chairs"
-          }
-        },
-        "featured_collection_VDNfJH": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "lighting"
-          }
-        },
-        "featured_collection_7DPF7n": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "rugs"
-          }
-        },
-        "featured_collection_t7PX9D": {
+        "featured_collection_3fdLKw": {
           "type": "featured_collection",
           "settings": {
             "collection": "storage"
           }
+        },
+        "featured_collection_CKVTbL": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "dorm-furniture-bundles"
+          }
+        },
+        "featured_collection_CEPmEh": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "other"
+          }
         }
       },
       "block_order": [
-        "featured_collection_aTPmN8",
-        "featured_collection_9at4a4",
-        "featured_collection_Lyew9m",
-        "featured_collection_VDNfJH",
-        "featured_collection_7DPF7n",
-        "featured_collection_t7PX9D"
+        "featured_collection_BU9VPP",
+        "featured_collection_3fdLKw",
+        "featured_collection_CKVTbL",
+        "featured_collection_CEPmEh"
       ],
-      "disabled": true,
       "settings": {
         "title": "Collections",
         "sb_custom_font": "Neutra Text Book",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "2",
@@ -193,6 +179,7 @@
         "collapsible_row_38Gk9U",
         "collapsible_row_YmimMU"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "Online Shopping FAQ",
