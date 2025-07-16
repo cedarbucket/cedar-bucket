@@ -121,7 +121,7 @@
         "text_8JGgyT": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer flexible, short-term summer storage solutions for college students. Whether you’re heading home, studying abroad, or taking an internship, you can store your belongings with us until the next school year.</p>",
+            "text": "<p>We provide convenient short-term storage with flexible options, including ship-to-storage services. We’ll pick up your items, store them securely at our facility, and return them to you with hands-free, white glove service. Ship items to us during your storage term, and we’ll place them in your unit for you.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -143,8 +143,8 @@
         "button_b3XXrC"
       ],
       "settings": {
-        "image": "shopify://shop_images/624870.jpg",
-        "height": "adapt",
+        "image": "shopify://shop_images/IMG_0049.jpg",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
@@ -152,7 +152,7 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -194,8 +194,8 @@
         "button_HUzxch"
       ],
       "settings": {
-        "image": "shopify://shop_images/person-holding-box.jpg",
-        "height": "adapt",
+        "image": "shopify://shop_images/IMG_3963.jpg",
+        "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -285,7 +285,7 @@
         "button_hqR6LJ"
       ],
       "settings": {
-        "image": "shopify://shop_images/Your_paragraph_text_1.png",
+        "image": "shopify://shop_images/image.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -306,7 +306,7 @@
         "heading_WfVFyL": {
           "type": "heading",
           "settings": {
-            "heading": "Online Furniture Shop",
+            "heading": "Shop",
             "heading_size": "h0",
             "sb_custom_font": "Poiret One"
           }
@@ -314,7 +314,7 @@
         "text_PM6bRK": {
           "type": "text",
           "settings": {
-            "text": "<p>Shop the best deals on high-quality college furniture and decor through our online consignment store.<br/><br/>In Oxford? Come visit us in person!</p>",
+            "text": "<p>Visit us in person to explore our high-quality used items, or shop online to see the latest new inventory available for purchase!</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -336,7 +336,7 @@
         "button_XYEkje"
       ],
       "settings": {
-        "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
+        "image": "shopify://shop_images/1742911935301QKWIJJL4KI5ISH54H1M9.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -345,7 +345,7 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
         "padding_top": 20,
         "padding_bottom": 20
@@ -483,7 +483,7 @@
         "text_qkYJ3a": {
           "type": "text",
           "settings": {
-            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p>Once home to the well-known <strong>Cedar Bucket Furniture Co.</strong>, a respected business famous throughout the Southeast for its quality cedar furniture, the property carries a rich legacy.  We have revitalized and improved the space while preserving its history.</p>",
+            "text": "<p>Cedar Bucket is a local, family-run business founded by Ole Miss alumni who saw a real need in our community—and made it happen. With high demand for affordable furniture and better storage solutions, we created an all-in-one platform to buy, sell, store, and move home furnishings hassle-free. </p><p>Our property boasts over 20,000 square feet of warehouse and storefront space. Once home to the renowned Cedar Bucket Furniture Co.—a beloved name across the Southeast for its quality cedar furniture—it carries a rich legacy. We’ve revitalized the space, enhancing its functionality while preserving its history.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -496,7 +496,7 @@
         "text_qkYJ3a"
       ],
       "settings": {
-        "image": "shopify://shop_images/Your_paragraph_text_3.png",
+        "image": "shopify://shop_images/IMG_1603.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -505,7 +505,7 @@
         "content_layout": "no-overlap",
         "section_color_scheme": "",
         "color_scheme": "",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -519,7 +519,7 @@
           "settings": {
             "heading": "History",
             "heading_size": "h0",
-            "sb_custom_font": "Neutra Text Bold"
+            "sb_custom_font": "Neutra Text Book"
           }
         },
         "text_waGfLw": {
@@ -538,7 +538,7 @@
         "text_waGfLw"
       ],
       "settings": {
-        "image": "shopify://shop_images/CEDAR_BUCKET.jpg",
+        "image": "shopify://shop_images/IMG_0128.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -691,9 +691,16 @@
         "instafeed_app_block_b6Wbmx": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "",
+            "title": "Instagram",
             "title_color": "",
+            "title_size_v2": 0,
             "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
             "background_color": "",
             "feed_id": "",
             "html_area": ""

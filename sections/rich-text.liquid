@@ -138,9 +138,9 @@
               </div>
           {%- endcase -%}
         {%- endfor -%}
-        <div>
-          {% content_for 'blocks' %}
-        </div>
+        {% comment %} <div> {% endcomment %}
+          {% comment %} {% content_for 'blocks' %} {% endcomment %}
+        {% comment %} </div> {% endcomment %}
         {% if section.settings.border_style %}
           </fieldset>
         {% endif %}

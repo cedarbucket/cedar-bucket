@@ -32,7 +32,7 @@
         "text_gp689f": {
           "type": "text",
           "settings": {
-            "text": "High quality used furniture for college students",
+            "text": "High quality furniture for college students",
             "text_style": "body",
             "custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -45,7 +45,7 @@
         "text_gp689f"
       ],
       "settings": {
-        "image": "shopify://shop_images/view-of-a-tidy-living-room-with-a-grey-sectional.jpg",
+        "image": "shopify://shop_images/image.jpg",
         "image_overlay_opacity": 50,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -73,7 +73,7 @@
         "heading_FJbPrn": {
           "type": "heading",
           "settings": {
-            "heading": "Purchase now for delivery in May",
+            "heading": "Purchase now for delivery or pick-up in August.",
             "sb_custom_font": "Poiret One",
             "heading_size": "h1"
           }
@@ -81,7 +81,7 @@
         "text_7zTVzE": {
           "type": "text",
           "settings": {
-            "text": "<p>Pick-up or local delivery ONLY.</p><p>We will coordinate your pick-up or delivery after purchase.</p>",
+            "text": "",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 20,
             "sb_font_weight": 400
@@ -92,6 +92,7 @@
         "heading_FJbPrn",
         "text_7zTVzE"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -104,43 +105,199 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_7XmpF6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_iDQBBc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Consigment Items Sold In-store Only",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_3WPGyU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Stop by our store in Oxford, MS to browse our high quality resale collection</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_iDQBBc",
+        "text_3WPGyU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_zfmRC7": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "New Dorm Furniture Made In House",
+        "desktop_content_alignment": "center",
+        "sb_custom_font": "Neutra Text Book",
+        "heading_size": "h1",
+        "description": "<p>Pick up and delivery Oxford, MS only. </p>",
+        "show_description": false,
+        "absolute_content": false,
+        "show_overlay": false,
+        "description_style": "body",
+        "collection": "new-custom-furniture",
+        "products_to_show": 2,
+        "columns_desktop": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "card_color_scheme": "",
+        "sb_card_heading_font": "Neutra Text Book",
+        "sb_card_heading_font_size": 38,
+        "sb_card_body_font": "Neutra Text Book",
+        "sb_card_body_font_size": 12,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "package_badge": true,
+        "logo_badge": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_p7DU7k": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_BU9VPP": {
+        "featured_collection_d6XMTN": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dorm-room-items"
+            "collection": "beside-cubbies"
           }
         },
-        "featured_collection_3fdLKw": {
+        "featured_collection_Rd4YFY": {
           "type": "featured_collection",
           "settings": {
-            "collection": "storage"
+            "collection": "desk-hutches"
           }
         },
-        "featured_collection_CKVTbL": {
+        "featured_collection_qyQFjY": {
           "type": "featured_collection",
-          "disabled": true,
           "settings": {
-            "collection": "dorm-furniture-bundles"
+            "collection": "mini-fridge-custom-cabinets"
+          }
+        },
+        "featured_collection_heTzqD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "headboards-1"
+          }
+        },
+        "featured_collection_BYbwBe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rugs"
+          }
+        },
+        "featured_collection_hqMtc8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "side-tables"
+          }
+        },
+        "featured_collection_Bc6iNt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lighting"
           }
         },
         "featured_collection_CEPmEh": {
           "type": "featured_collection",
           "settings": {
-            "collection": "other"
+            "collection": "chairs"
+          }
+        },
+        "featured_collection_yEJNKU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mirrors"
+          }
+        },
+        "featured_collection_9ErKQd": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dresser"
+          }
+        },
+        "featured_collection_MmKyEJ": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "couches-futons"
+          }
+        },
+        "featured_collection_bBN6tL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "desks-chairs"
+          }
+        },
+        "featured_collection_3yB4er": {
+          "type": "featured_collection",
+          "disabled": true,
+          "settings": {
+            "collection": "bedding"
+          }
+        },
+        "featured_collection_CKVTbL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ottomans"
+          }
+        },
+        "featured_collection_fb3m8K": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "storage"
           }
         }
       },
       "block_order": [
-        "featured_collection_BU9VPP",
-        "featured_collection_3fdLKw",
+        "featured_collection_d6XMTN",
+        "featured_collection_Rd4YFY",
+        "featured_collection_qyQFjY",
+        "featured_collection_heTzqD",
+        "featured_collection_BYbwBe",
+        "featured_collection_hqMtc8",
+        "featured_collection_Bc6iNt",
+        "featured_collection_CEPmEh",
+        "featured_collection_yEJNKU",
+        "featured_collection_9ErKQd",
+        "featured_collection_MmKyEJ",
+        "featured_collection_bBN6tL",
+        "featured_collection_3yB4er",
         "featured_collection_CKVTbL",
-        "featured_collection_CEPmEh"
+        "featured_collection_fb3m8K"
       ],
+      "disabled": true,
       "settings": {
-        "title": "Collections",
+        "title": "Consignment Collections",
         "sb_custom_font": "Neutra Text Book",
         "heading_size": "h1",
         "image_ratio": "square",
@@ -304,6 +461,8 @@
     "main",
     "image_banner_aVVpbc",
     "rich_text_EAUw7z",
+    "rich_text_7XmpF6",
+    "featured_collection_zfmRC7",
     "collection_list_p7DU7k",
     "collapsible_content_kDRYgA",
     "rich_text_wJVKTh",

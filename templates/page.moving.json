@@ -23,7 +23,7 @@
         "heading_aQhBPA": {
           "type": "heading",
           "settings": {
-            "heading": "College Movers for Hire",
+            "heading": "Just need moving help?",
             "custom_font": "Poiret One",
             "heading_font_size": 52,
             "heading_font_size_mobile": 32
@@ -32,7 +32,7 @@
         "text_YERE7A": {
           "type": "text",
           "settings": {
-            "text": "<strong>We've got experienced college student movers at your service</strong>",
+            "text": "Our storage space is currently full, but if you need help with moving, just fill out the questionnaire below!",
             "text_style": "body",
             "custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -45,7 +45,7 @@
         "text_YERE7A"
       ],
       "settings": {
-        "image": "shopify://shop_images/person-holding-box.jpg",
+        "image": "shopify://shop_images/IMG_8107.jpg",
         "image_overlay_opacity": 60,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -69,29 +69,6 @@
     },
     "rich_text_67jCJj": {
       "type": "rich-text",
-      "blocks": {
-        "heading_8xghAj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Need a custom quote for your move?",
-            "sb_custom_font": "Neutra Text Book",
-            "heading_size": "h1"
-          }
-        },
-        "text_Wx6Vdk": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Fill out the form below!</p>",
-            "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 24,
-            "sb_font_weight": 400
-          }
-        }
-      },
-      "block_order": [
-        "heading_8xghAj",
-        "text_Wx6Vdk"
-      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -110,6 +87,62 @@
         "custom_liquid": "<div data-tf-live=\"01JMAXE8HNGNF8YB7C838V6FK8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
         "color_scheme": "",
         "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_MjndfK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JTWdnR": {
+          "type": "heading",
+          "settings": {
+            "heading": "More Info",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_whTBTR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cedar Bucket is a locally owned business founded and run by Ole Miss alumni and students. We can move you anywhere within the state of Mississippi. <br/><br/>$100 deposit is required to confirm your booking. This deposit will be applied to the final invoice based on total hours billed.<br/></p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        },
+        "button_jRTgUf": {
+          "type": "button",
+          "settings": {
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "button_label": "Terms of Service",
+            "button_link": "shopify://policies/terms-of-service",
+            "button_style_secondary": false,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_bg_color_2": "#000000",
+            "button_text_color_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JTWdnR",
+        "text_whTBTR",
+        "button_jRTgUf"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
         "padding_bottom": 52
       }
     },
@@ -210,6 +243,7 @@
     "image_banner_BxtyCB",
     "rich_text_67jCJj",
     "custom_liquid_baRq3X",
+    "rich_text_MjndfK",
     "1738175141778786fe",
     "collapsible_content_zqVDKK"
   ]

@@ -15,7 +15,7 @@
         "heading_TEzMRb": {
           "type": "heading",
           "settings": {
-            "heading": "Specialty Storage",
+            "heading": "Moving + Storage Solutions",
             "custom_font": "Poiret One",
             "heading_font_size": 52,
             "heading_font_size_mobile": 32
@@ -24,7 +24,7 @@
         "text_7F6fA9": {
           "type": "text",
           "settings": {
-            "text": "We offer a variety of solutions suited to your college move",
+            "text": "We build custom full services hands free moving plus storage packages",
             "text_style": "body",
             "custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -37,7 +37,7 @@
         "text_7F6fA9"
       ],
       "settings": {
-        "image": "shopify://shop_images/ctg_2113-bu-2.webp",
+        "image": "shopify://shop_images/IMG_0049.jpg",
         "image_overlay_opacity": 60,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -59,8 +59,129 @@
         "show_text_below": false
       }
     },
+    "rich_text_MihLBj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_y8pRYU": {
+          "type": "heading",
+          "settings": {
+            "heading": "***WE ARE CURRENTLY FULLY BOOKED FOR STORAGE RESERVATIONS**",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_gVc8hT": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        },
+        "text_ijMqmJ": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "sb_custom_font": "Poiret One",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_y8pRYU",
+        "text_gVc8hT",
+        "text_ijMqmJ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1746543705dcfef5e5": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_YdkHew": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "X3mCeS"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_YdkHew"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_anTFCn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kwfGj3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Just Need Moving Assistance?",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_mkGmW3": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        },
+        "button_99Tekh": {
+          "type": "button",
+          "settings": {
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "button_label": "Click Here",
+            "button_link": "shopify://pages/moving",
+            "button_style_secondary": false,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_bg_color_2": "#000000",
+            "button_text_color_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kwfGj3",
+        "text_mkGmW3",
+        "button_99Tekh"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
+      }
+    },
     "custom_liquid_F6bDCY": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div data-tf-live=\"01JM0HHVY41BPWYHTEZ9HQV1Q8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
         "color_scheme": "",
@@ -82,7 +203,7 @@
         "text_6PGW9U": {
           "type": "text",
           "settings": {
-            "text": "<p>Located just off Highway 6 in Oxford, Cedar Bucket offers climate controlled hassle-free storage solutions at our warehouse facility. Drop off and pick up on-site with our team handling all the loading and unloading, or opt for our full-service pick-up and delivery options. Enjoy flexible access to your items anytime and add more to your space as needed!</p>",
+            "text": "<p>Conveniently located just off Highway 6 in Oxford, Cedar Bucket provides climate-controlled, hassle-free storage at our secure warehouse facility. Take advantage of our full-service pick-up and delivery options, enjoy flexible access to your items, and easily add more to your space whenever you need!</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -116,7 +237,7 @@
         "heading_HGrAKB": {
           "type": "heading",
           "settings": {
-            "heading": "Ship Ahead Services",
+            "heading": "Ship-to-Storage Services",
             "heading_size": "h0",
             "sb_custom_font": "Poiret One"
           }
@@ -217,9 +338,9 @@
           "settings": {
             "background_image": "shopify://shop_images/shipping-boxes-on-trolly-close-up.jpg",
             "overlay_opacity": 50,
-            "title": "Just Storage",
+            "title": "Move-out",
             "heading_size": "h1",
-            "text": "<p>Bring your items to our facility to be unloaded by our staff. Give us a call whenever your ready to come back and pick it up!</p>",
+            "text": "<p>Don’t let the finger! Our team will come to you and collect all the belongings that you want moved and stored.</p>",
             "sb_font_size": 16,
             "link_as_button": false,
             "link_label": "",
@@ -231,9 +352,9 @@
           "settings": {
             "background_image": "shopify://shop_images/10.png",
             "overlay_opacity": 50,
-            "title": "Store & Move",
+            "title": "Storage",
             "heading_size": "h1",
-            "text": "<p>Bring your items to our facility to be unloaded by our staff. We will store & deliver it back to you at your new location!</p>",
+            "text": "<p>Our dedicated team will transport your items back to our storage facility, carefully wrap them using industrial-grade packing materials, and store them safely in our climate-controlled facility throughout the summer.</p>",
             "sb_font_size": 16,
             "link_as_button": false,
             "link_label": "",
@@ -245,9 +366,9 @@
           "settings": {
             "background_image": "shopify://shop_images/11.png",
             "overlay_opacity": 50,
-            "title": "Full Service",
+            "title": "Move-in",
             "heading_size": "h1",
-            "text": "<p>We will move you out and deliver your items to our storage facility until you are ready for us to deliver your items back to you at your new location.</p>",
+            "text": "<p>When your storage term ends, we’ll carefully load all your items into our trucks and deliver them to your new location—completely hands-free for you.</p>",
             "sb_font_size": 16,
             "link_as_button": false,
             "link_label": "",
@@ -261,7 +382,7 @@
         "column_qTKgM6"
       ],
       "settings": {
-        "title": "Sample Packages",
+        "title": "",
         "heading_size": "h1",
         "heading_position": "center",
         "columns_desktop": 3,
@@ -393,6 +514,9 @@
   },
   "order": [
     "image_banner_3jRxte",
+    "rich_text_MihLBj",
+    "1746543705dcfef5e5",
+    "rich_text_anTFCn",
     "custom_liquid_F6bDCY",
     "image_with_text_XT7Jf3",
     "image_with_text_E6pL7n",

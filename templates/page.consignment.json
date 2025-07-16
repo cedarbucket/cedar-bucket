@@ -37,7 +37,7 @@
         "text_CM8j4b"
       ],
       "settings": {
-        "image": "shopify://shop_images/Your_paragraph_text_1.png",
+        "image": "shopify://shop_images/image_e729ea33-1729-40f2-84dd-56483457d760.jpg",
         "image_overlay_opacity": 60,
         "container_style": "full_frame",
         "show_box_shadow": false,
@@ -67,37 +67,117 @@
         "padding_bottom": 28
       }
     },
-    "rich_text_pA9wBr": {
+    "rich_text_EKcQh6": {
       "type": "rich-text",
       "blocks": {
-        "text_cNbP4t": {
+        "text_egmAAG": {
           "type": "text",
           "settings": {
-            "text": "<p>Cedar Bucket will remit 50% of the selling price to the consignor. Consignor period will be 120 days with a 15% discount every 30 days. Payment will be provided via check or ACH. </p>",
+            "text": "<p>Cedar Bucket offers FREE PICK UP for any approved consignment items. We will remit 50% of the selling price to the consignor. Consignor period will be 120 days with a 15% discount every 30 days. Payment will be provided via mailed check.<br/><br/>Please allow 5-10 seconds for consignment form to load.</p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400
           }
         },
+        "heading_9JAMcQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Please complete the form below. Our team will review your submission and get back to you within a couple of business days regarding approval.",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "button_drgXj3": {
+          "type": "button",
+          "settings": {
+            "margin_top": 20,
+            "margin_bottom": 20,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_bg_color_2": "#000000",
+            "button_text_color_2": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "text_egmAAG",
+        "heading_9JAMcQ",
+        "button_drgXj3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 60,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
+      }
+    },
+    "1744230408bc6b19cd": {
+      "type": "apps",
+      "blocks": {
+        "hulk_form_builder_form_block_CmnMC7": {
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "n6A8vS4adWLz6zaApnVpAw",
+            "form_settings": true,
+            "font_color": "#000000",
+            "size": 14,
+            "input_background_color": "#ffffff",
+            "input_background_color_focus": "#f4dada",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2d2727",
+            "input_font_color": "#3d3131",
+            "input_size": 14,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#ebe9e9",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#f3f3f3",
+            "sub_btn_bg_color": "#3f3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#ffffff",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Times New Roman"
+          }
+        }
+      },
+      "block_order": [
+        "hulk_form_builder_form_block_CmnMC7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_pA9wBr": {
+      "type": "rich-text",
+      "blocks": {
         "heading_MLWmfV": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "How to Consign with Us",
             "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
-        "text_4cAkUf": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>We are always looking for QUALITY college furniture and decor.</strong></p>",
-            "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 24,
-            "sb_font_weight": 400
-          }
-        },
         "forms_inline_KtE9aP": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
           "settings": {
             "form_id": "281463",
             "text_color": "#1e1e1e",
@@ -115,11 +195,10 @@
         }
       },
       "block_order": [
-        "text_cNbP4t",
         "heading_MLWmfV",
-        "text_4cAkUf",
         "forms_inline_KtE9aP"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -162,6 +241,7 @@
         },
         "forms_inline_Jdik3c": {
           "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
           "settings": {
             "form_id": "281471",
             "text_color": "#1e1e1e",
@@ -241,6 +321,8 @@
   "order": [
     "image_banner_TCnbcJ",
     "main",
+    "rich_text_EKcQh6",
+    "1744230408bc6b19cd",
     "rich_text_pA9wBr",
     "rich_text_Xifn4A",
     "collapsible_content_aMpG7T"
