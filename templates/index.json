@@ -9,6 +9,61 @@
  */
 {
   "sections": {
+    "video_banner_3PJkXL": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_pBykX9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oxford's all-in-one solution for student furnishings",
+            "custom_font": "Poiret One",
+            "heading_font_size": 48,
+            "heading_font_size_mobile": 32
+          }
+        },
+        "text_Cb9RyN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Explore our tailored services, from consignment to moving and storage.</p>",
+            "text_style": "body",
+            "custom_font": "Neutra Text Book",
+            "font_size": 20,
+            "font_size_mobile": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_pBykX9",
+        "text_Cb9RyN"
+      ],
+      "name": "Video Banner",
+      "settings": {
+        "background_video_url": "",
+        "background_video_file": "https://saibbyweb.s3.us-east-1.amazonaws.com/cedar-bucket/Video+Jun+28+2025%2C+8+26+08+PM.mov",
+        "autoplay": true,
+        "loop": true,
+        "muted": true,
+        "controls": false,
+        "hide_video_mobile": false,
+        "video_height": 600,
+        "video_height_mobile": 400,
+        "video_overlay_opacity": 30,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "adjust_content_position": 0,
+        "section_radius": 0,
+        "show_box_shadow": false,
+        "show_box_border": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 0,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -56,6 +111,7 @@
         "text_YFmbGL",
         "buttons_9xabXM"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/oliviasewelldelaneycavanaugh.jpg",
         "image_overlay_opacity": 60,
@@ -716,6 +772,7 @@
     }
   },
   "order": [
+    "video_banner_3PJkXL",
     "image_banner",
     "rich_text_WfXG6D",
     "image_with_text_EAfyGJ",

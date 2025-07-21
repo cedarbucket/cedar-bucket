@@ -145,6 +145,7 @@
     },
     "featured_collection_zfmRC7": {
       "type": "featured-collection",
+      "disabled": true,
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "New Dorm Furniture Made In House",
