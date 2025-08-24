@@ -32,7 +32,7 @@
         "text_YERE7A": {
           "type": "text",
           "settings": {
-            "text": "Our storage space is currently full, but if you need help with moving, just fill out the questionnaire below!",
+            "text": "Call or email for availability!",
             "text_style": "body",
             "custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -83,6 +83,7 @@
     },
     "custom_liquid_baRq3X": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<div data-tf-live=\"01JMAXE8HNGNF8YB7C838V6FK8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
         "color_scheme": "",

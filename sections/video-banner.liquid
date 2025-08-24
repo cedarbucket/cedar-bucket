@@ -52,6 +52,26 @@
     z-index: 1;
   }
 
+  /* Desktop video - hide on mobile */
+  .video-banner__media--desktop {
+    display: block;
+  }
+
+  /* Mobile video - hide on desktop */
+  .video-banner__media--mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .video-banner__media--desktop {
+      display: none;
+    }
+    
+    .video-banner__media--mobile {
+      display: block;
+    }
+  }
+
   .banner__image-block {
     margin: 1rem 0;
     width: 100%;
@@ -249,20 +269,6 @@
     }
   }
     
-    {% if section.settings.hide_video_mobile %}
-      #VideoBanner-{{ section.id }} .video-banner__video,
-      #VideoBanner-{{ section.id }} .video-banner__video iframe {
-        display: none;
-      }
-      
-      {% if section.settings.mobile_fallback_image != blank %}
-        #VideoBanner-{{ section.id }} {
-          background-image: url('{{ section.settings.mobile_fallback_image | image_url: width: 1200 }}');
-          background-size: cover;
-          background-position: center;
-        }
-      {% endif %}
-    {% endif %}
 
   }
 {%- endstyle -%}
@@ -271,10 +277,40 @@
   id="VideoBanner-{{ section.id }}"
   class="{{ section.settings.desktop_content_alignment | default: 'center' }} banner banner--content-align-{{ section.settings.desktop_content_alignment | default: 'center' }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment | default: 'center' }}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
-  {%- if section.settings.background_video_url != blank -%}
-    <div class="video-banner__media media{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  {%- liquid
+    assign desktop_video_url = section.settings.background_video_url
+    assign desktop_video_file = section.settings.background_video_file
+    assign desktop_fallback_image = section.settings.desktop_fallback_image
+    assign mobile_video_url = section.settings.mobile_background_video_url
+    assign mobile_video_file = section.settings.mobile_background_video_file
+    assign mobile_fallback_image = section.settings.mobile_fallback_image
+    
+    assign autoplay_val = 0
+    assign muted_val = 0
+    assign controls_val = 1
+    assign loop_val = 0
+    
+    if section.settings.autoplay
+      assign autoplay_val = 1
+    endif
+    if section.settings.muted
+      assign muted_val = 1
+    endif
+    if section.settings.controls
+      assign controls_val = 1
+    else
+      assign controls_val = 0
+    endif
+    if section.settings.loop
+      assign loop_val = 1
+    endif
+  -%}
+
+  <!-- Desktop Video -->
+  <div class="video-banner__media video-banner__media--desktop media{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {%- if desktop_video_url != blank -%}
       {%- liquid
-        assign video_url = section.settings.background_video_url
+        assign video_url = desktop_video_url
         assign video_id = ''
         assign video_type = ''
         
@@ -288,26 +324,6 @@
         elsif video_url contains 'vimeo.com'
           assign video_type = 'vimeo'
           assign video_id = video_url | split: 'vimeo.com/' | last | split: '?' | first
-        endif
-        
-        assign autoplay_val = 0
-        assign muted_val = 0
-        assign controls_val = 1
-        assign loop_val = 0
-        
-        if section.settings.autoplay
-          assign autoplay_val = 1
-        endif
-        if section.settings.muted
-          assign muted_val = 1
-        endif
-        if section.settings.controls
-          assign controls_val = 1
-        else
-          assign controls_val = 0
-        endif
-        if section.settings.loop
-          assign loop_val = 1
         endif
       -%}
       
@@ -329,15 +345,8 @@
           allowfullscreen
         ></iframe>
         <div class="video-overlay"></div>
-      {%- else -%}
-        <div style="padding: 50px; text-align: center; background: #f0f0f0;">
-          <p>Video not detected. Please check URL format.</p>
-          <p>URL entered: {{ video_url }}</p>
-        </div>
       {%- endif -%}
-    </div>
-  {%- elsif section.settings.background_video_file != blank -%}
-    <div class="video-banner__media media{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {%- elsif desktop_video_file != blank -%}
       <video
         class="video-banner__video"
         {% if section.settings.autoplay %}autoplay{% endif %}
@@ -347,22 +356,88 @@
         playsinline
         preload="metadata"
       >
-        <source src="{{ section.settings.background_video_file }}" type="video/mp4">
+        <source src="{{ desktop_video_file }}" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div class="video-overlay"></div>
-    </div>
-  {%- elsif section.settings.mobile_fallback_image != blank -%}
-    <div class="video-banner__media media{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {%- elsif desktop_fallback_image != blank -%}
       {{
-        section.settings.mobile_fallback_image
+        desktop_fallback_image
         | image_url: width: 1920
         | image_tag:
           class: 'video-banner__fallback-image',
           loading: 'lazy'
       }}
-    </div>
-  {%- else -%}
+    {%- endif -%}
+  </div>
+
+  <!-- Mobile Video -->
+  <div class="video-banner__media video-banner__media--mobile media{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {%- if mobile_video_url != blank -%}
+      {%- liquid
+        assign video_url = mobile_video_url
+        assign video_id = ''
+        assign video_type = ''
+        
+        if video_url contains 'youtube.com' or video_url contains 'youtu.be'
+          assign video_type = 'youtube'
+          if video_url contains 'watch?v='
+            assign video_id = video_url | split: 'watch?v=' | last | split: '&' | first
+          elsif video_url contains 'youtu.be/'
+            assign video_id = video_url | split: 'youtu.be/' | last | split: '?' | first
+          endif
+        elsif video_url contains 'vimeo.com'
+          assign video_type = 'vimeo'
+          assign video_id = video_url | split: 'vimeo.com/' | last | split: '?' | first
+        endif
+      -%}
+      
+      {%- if video_type == 'youtube' and video_id != blank -%}
+        <iframe
+          class="video-banner__video"
+          src="https://www.youtube.com/embed/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&mute={{ muted_val }}&controls={{ controls_val }}&playlist={{ video_id }}&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+        <div class="video-overlay"></div>
+      {%- elsif video_type == 'vimeo' and video_id != blank -%}
+        <iframe
+          class="video-banner__video"
+          src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&muted={{ muted_val }}&controls={{ controls_val }}"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+        <div class="video-overlay"></div>
+      {%- endif -%}
+    {%- elsif mobile_video_file != blank -%}
+      <video
+        class="video-banner__video"
+        {% if section.settings.autoplay %}autoplay{% endif %}
+        {% if section.settings.loop %}loop{% endif %}
+        {% if section.settings.muted %}muted{% endif %}
+        {% if section.settings.controls %}controls{% endif %}
+        playsinline
+        preload="metadata"
+      >
+        <source src="{{ mobile_video_file }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+    {%- elsif mobile_fallback_image != blank -%}
+      {{
+        mobile_fallback_image
+        | image_url: width: 1920
+        | image_tag:
+          class: 'video-banner__fallback-image',
+          loading: 'lazy'
+      }}
+    {%- endif -%}
+  </div>
+
+  <!-- Fallback when no videos are set -->
+  {%- if desktop_video_url == blank and desktop_video_file == blank and desktop_fallback_image == blank and mobile_video_url == blank and mobile_video_file == blank and mobile_fallback_image == blank -%}
     <div class="video-banner__media media placeholder{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
@@ -470,25 +545,47 @@
     },
     {
       "type": "header",
-      "content": "Video Settings"
+      "content": "Desktop Video Settings"
     },
     {
       "type": "url",
       "id": "background_video_url",
-      "label": "YouTube/Vimeo Video URL",
-      "info": "Enter a YouTube or Vimeo URL (e.g., https://www.youtube.com/watch?v=VIDEO_ID)"
+      "label": "Desktop YouTube/Vimeo Video URL",
+      "info": "Enter a YouTube or Vimeo URL for desktop (e.g., https://www.youtube.com/watch?v=VIDEO_ID)"
     },
     {
       "type": "url",
       "id": "background_video_file",
-      "label": "Direct Video File URL (Optional)",
-      "info": "Enter direct URL to MP4 video file. To upload videos: Go to Settings > Files in admin, upload your MP4, then copy the URL here."
+      "label": "Desktop Direct Video File URL (Optional)",
+      "info": "Enter direct URL to MP4 video file for desktop. To upload videos: Go to Settings > Files in admin, upload your MP4, then copy the URL here."
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_fallback_image",
+      "label": "Desktop Fallback Image",
+      "info": "Image to show on desktop when video is not available or fails to load"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Video Settings"
+    },
+    {
+      "type": "url",
+      "id": "mobile_background_video_url",
+      "label": "Mobile YouTube/Vimeo Video URL",
+      "info": "Enter a YouTube or Vimeo URL for mobile (e.g., https://www.youtube.com/watch?v=VIDEO_ID)"
+    },
+    {
+      "type": "url",
+      "id": "mobile_background_video_file",
+      "label": "Mobile Direct Video File URL (Optional)",
+      "info": "Enter direct URL to MP4 video file for mobile. To upload videos: Go to Settings > Files in admin, upload your MP4, then copy the URL here."
     },
     {
       "type": "image_picker",
       "id": "mobile_fallback_image",
       "label": "Mobile Fallback Image",
-      "info": "Image to show on mobile when video is hidden or not supported"
+      "info": "Image to show on mobile when video is not available or fails to load"
     },
     {
       "type": "checkbox",
@@ -517,13 +614,6 @@
       "default": false,
       "label": "Show Video Controls",
       "info": "Display play/pause and volume controls"
-    },
-    {
-      "type": "checkbox",
-      "id": "hide_video_mobile",
-      "default": false,
-      "label": "Hide Video on Mobile",
-      "info": "Hide video on mobile devices and show fallback image instead. Recommended for better mobile performance."
     },
     {
       "type": "header",

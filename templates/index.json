@@ -39,7 +39,7 @@
       "name": "Video Banner",
       "settings": {
         "background_video_url": "",
-        "background_video_file": "https://saibbyweb.s3.us-east-1.amazonaws.com/cedar-bucket/Video+Jun+28+2025%2C+8+26+08+PM.mov",
+        "background_video_file": "https://saibbyweb.s3.us-east-1.amazonaws.com/cedar-bucket/%5Bmp4%5D-drone+shot+for+cedar+bucket+.mp4",
         "autoplay": true,
         "loop": true,
         "muted": true,
@@ -370,7 +370,7 @@
         "text_PM6bRK": {
           "type": "text",
           "settings": {
-            "text": "<p>Visit us in person to explore our high-quality used items, or shop online to see the latest new inventory available for purchase!</p>",
+            "text": "<p>Visit us in person to explore our high-quality used items! </p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
