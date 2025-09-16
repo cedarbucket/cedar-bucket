@@ -1,0 +1,500 @@
+{% doc %}
+  @prompt
+    I need a luxury apple style reserve your spot today section that has a black background with white text
+    
+    Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days of payment. Further details about pricing will be covered in your one-on-one consultation that can be scheduled post check out. 
+    
+    The button needs to be able to be linked with a product, I like a white full backgroudn with a black blob in the section and i want title, body and the button and the a body text under the button. 
+    
+    match the style of "Luxury Service Pricing" with gold accents
+    
+    ht the text and make sure im able to chnage the font, ALL I NEED IS FONT OPTIONS, I want the background to be white with a gold border around it the wrods, i need the background to be write and the style to better patch the luxury service pricing, Last thing I want to be able to edit the padding on top and bottom
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-luxury-reserve-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;position: relative;
+    overflow: hidden;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-luxury-reserve-blob-{{ ai_gen_id }} {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, {{ block.settings.blob_color }} 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.8;
+  }
+
+  .ai-luxury-reserve-content-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    text-align: center;
+    background-color: {{ block.settings.content_bg_color }};
+    padding: 80px 60px;
+    border-radius: {{ block.settings.content_border_radius }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+  }
+
+  .ai-luxury-reserve-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.title_font.family }}, {{ block.settings.title_font.fallback_families }};
+    font-weight: {{ block.settings.title_font.weight }};
+    font-style: {{ block.settings.title_font.style }};
+    font-size: {{ block.settings.title_size }}px;
+    line-height: 1.1;
+    margin: 0 0 40px;
+    color: {{ block.settings.text_color }};
+    letter-spacing: -0.02em;
+  }
+
+  .ai-luxury-reserve-accent-{{ ai_gen_id }} {
+    color: {{ block.settings.accent_color }};
+    position: relative;
+  }
+
+  .ai-luxury-reserve-accent-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, {{ block.settings.accent_color }}, transparent);
+    opacity: 0.6;
+  }
+
+  .ai-luxury-reserve-body-{{ ai_gen_id }} {
+    font-family: {{ block.settings.body_font.family }}, {{ block.settings.body_font.fallback_families }};
+    font-weight: {{ block.settings.body_font.weight }};
+    font-style: {{ block.settings.body_font.style }};
+    font-size: {{ block.settings.body_size }}px;
+    line-height: 1.7;
+    margin: 0 0 50px;
+    color: {{ block.settings.text_color }};
+    opacity: 0.9;
+  }
+
+  .ai-luxury-reserve-button-{{ ai_gen_id }} {
+    display: inline-block;
+    background: linear-gradient(135deg, {{ block.settings.button_bg_color }}, {{ block.settings.button_bg_secondary }});
+    color: {{ block.settings.button_text_color }};
+    font-family: {{ block.settings.button_font.family }}, {{ block.settings.button_font.fallback_families }};
+    font-weight: {{ block.settings.button_font.weight }};
+    font-style: {{ block.settings.button_font.style }};
+    font-size: {{ block.settings.button_size }}px;
+    padding: 20px 50px;
+    border-radius: {{ block.settings.button_radius }}px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border: 2px solid {{ block.settings.button_border_color }};
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-luxury-reserve-button-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .ai-luxury-reserve-button-{{ ai_gen_id }}:hover::before {
+    left: 100%;
+  }
+
+  .ai-luxury-reserve-button-{{ ai_gen_id }}:hover {
+    background: linear-gradient(135deg, {{ block.settings.button_hover_bg }}, {{ block.settings.button_hover_bg_secondary }});
+    color: {{ block.settings.button_hover_text }};
+    border-color: {{ block.settings.button_hover_border }};transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+  }
+
+  .ai-luxury-reserve-footer-text-{{ ai_gen_id }} {
+    font-family: {{ block.settings.footer_font.family }}, {{ block.settings.footer_font.fallback_families }};
+    font-weight: {{ block.settings.footer_font.weight }};
+    font-style: {{ block.settings.footer_font.style }};
+    font-size: {{ block.settings.footer_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+    margin: 0;font-style: italic;
+  }
+
+  .ai-luxury-reserve-decorative-line-{{ ai_gen_id }} {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, {{ block.settings.accent_color }}, transparent);
+    margin: 30px auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-luxury-reserve-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.7 }}px 20px {{ block.settings.padding_bottom | times: 0.7 }}px;
+      min-height: 600px;
+    }
+
+    .ai-luxury-reserve-blob-{{ ai_gen_id }} {
+      width: 400px;
+      height: 400px;
+      top: 10%;
+      right: -20%;
+    }
+
+    .ai-luxury-reserve-content-{{ ai_gen_id }} {
+      padding: 50px 30px;
+      max-width: 90%;
+    }
+
+    .ai-luxury-reserve-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+      margin-bottom: 30px;
+    }
+
+    .ai-luxury-reserve-body-{{ ai_gen_id }} {
+      font-size: {{ block.settings.body_size | times: 0.9 }}px;
+      margin-bottom: 40px;
+    }
+
+    .ai-luxury-reserve-button-{{ ai_gen_id }} {
+      padding: 18px 40px;
+      font-size: {{ block.settings.button_size | times: 0.9 }}px;
+      margin-bottom: 30px;
+    }
+
+    .ai-luxury-reserve-footer-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.footer_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}<div class="ai-luxury-reserve-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-luxury-reserve-blob-{{ ai_gen_id }}"></div>
+  <div class="ai-luxury-reserve-content-{{ ai_gen_id }}">
+    {% if block.settings.title != blank %}
+      <h2 class="ai-luxury-reserve-title-{{ ai_gen_id }}">
+        {% assign title_parts = block.settings.title | split: block.settings.accent_word %}
+        {% if title_parts.size > 1 and block.settings.accent_word != blank %}
+          {{ title_parts[0] }}<span class="ai-luxury-reserve-accent-{{ ai_gen_id }}">{{ block.settings.accent_word }}</span>{{ title_parts[1] }}
+        {% else %}
+          {{ block.settings.title }}
+        {% endif %}
+      </h2>
+    {% endif %}<div class="ai-luxury-reserve-decorative-line-{{ ai_gen_id }}"></div>
+
+    {% if block.settings.body_text != blank %}
+      <div class="ai-luxury-reserve-body-{{ ai_gen_id }}">
+        {{ block.settings.body_text }}
+      </div>
+    {% endif %}
+
+    {% if block.settings.button_text != blank %}
+      {% if block.settings.button_product != blank %}
+        <a href="{{ block.settings.button_product.url }}" class="ai-luxury-reserve-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      {% elsif block.settings.button_url != blank %}
+        <a href="{{ block.settings.button_url }}" class="ai-luxury-reserve-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      {% else %}
+        <a href="#" class="ai-luxury-reserve-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      {% endif %}
+    {% endif %}
+
+    {% if block.settings.footer_text != blank %}
+      <div class="ai-luxury-reserve-footer-text-{{ ai_gen_id }}">
+        {{ block.settings.footer_text }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Luxury reserve spot",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Reserve Your Spot Today"
+    },
+    {
+      "type": "text",
+      "id": "accent_word",
+      "label": "Accent word",
+      "default": "Today"
+    },
+    {
+      "type": "richtext",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "<p>Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days of payment.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Reserve Now"
+    },
+    {
+      "type": "product",
+      "id": "button_product",
+      "label": "Button product link"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "richtext",
+      "id": "footer_text",
+      "label": "Footer text",
+      "default": "<p>Further details about pricing will be covered in your one-on-one consultation that can be scheduled post checkout.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "title_font",
+      "label": "Title font",
+      "default": "serif"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 32,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 56
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "min": 16,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Body size",
+      "default": 18
+    },
+    {
+      "type": "font_picker",
+      "id": "button_font",
+      "label": "Button font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button size",
+      "default": 16
+    },
+    {
+      "type": "font_picker",
+      "id": "footer_font",
+      "label": "Footer font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "footer_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Footer size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "content_bg_color",
+      "label": "Content background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "default": "#d4af37"
+    },
+    {
+      "type": "color",
+      "id": "blob_color",
+      "label": "Blob",
+      "default": "#d4af37"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Content border",
+      "default": "#d4af37"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "content_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Content border radius",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background",
+      "default": "#d4af37"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_secondary",
+      "label": "Background secondary",
+      "default": "#b8941f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border",
+      "default": "#d4af37"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg",
+      "label": "Hover background",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_secondary",
+      "label": "Hover background secondary",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text",
+      "label": "Hover text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border",
+      "label": "Hover border",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "button_radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury reserve spot"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1038 @@
+{% doc %}
+  @prompt
+    I need a very luxury and well organized way to display all the following information
+    
+    Cedar Bucket 2026 Pre-Sales – Reserve Your Spot Now
+    
+    Cedar Bucket has been Oxford’s #1 choice for Ole Miss student moving and storage, voted Best Moving Company and Best Storage Company in Oxford for 2025. We’re opening limited pre-sales for Summer 2026, and space will go fast.
+    Our Moving + Storage Premium Package is the ultimate hands-free solution for students and families who want a stress-free summer. We handle everything from start to finish so you don’t have to lift a finger.
+     
+    What’s Included in the Premium Package
+    • White-glove moving service
+    Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.
+    • Climate-controlled storage
+    Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.
+    • Delivery back to your new space
+    When the fall semester begins, we return and set up your belongings where you need them.
+    • Ship-to-Storage service
+    Can’t bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we’ll place them in your reserved unit on your behalf. 
+    • Packing supplies can be provided in advance. Please request for further details! 
+    
+    Additional Services
+    Subject to availability of staff and early scheduling, Cedar Bucket also offers:
+    • Handyman services
+    • Assembly and disassembly services 
+    • Packing services
+    Further details can be provided post reservation. 
+    
+    Why Reserve Now
+    • Limited availability – Space sells out quickly.
+    • Priority scheduling – Early reservations guarantee your preferred move-in and move-out times.
+    • Peace of mind – Secure your storage and avoid last-minute stress.
+    
+    Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days,, A few things - I need to be able to add sections and i'd rather it get stacked on eachother. Put reserve your spot today above why reserve now. Make each section different so it's very easy to read and all the colors are black - I want to be able to add a square image at the top above the hero main title., Few things -  don't change the colors of each block. make them all white i want icons relevant to feature listed and I want the additional services to utilize a multi column view.
+    
+    The reser
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-luxury-presale-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    background: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    font-family: {{ block.settings.body_font.family }}, {{ block.settings.body_font.fallback_families }};
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    font-weight: {{ block.settings.body_font.weight }};
+    font-style: {{ block.settings.body_font.style }};
+  }
+
+  .ai-luxury-presale__hero-image-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .ai-luxury-presale__hero-image-wrapper-{{ ai_gen_id }} {
+    display: inline-block;
+    width: {{ block.settings.hero_image_size }}px;
+    height: {{ block.settings.hero_image_size }}px;
+    border-radius: {{ block.settings.hero_image_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-luxury-presale__hero-image-wrapper-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-luxury-presale__hero-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-luxury-presale__hero-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-luxury-presale__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-luxury-presale__title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 30px;line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .ai-luxury-presale__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  .ai-luxury-presale__section-{{ ai_gen_id }} {
+    margin-bottom: 80px;
+    padding: 60px;
+    border-radius: {{ block.settings.card_border_radius }}px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .ai-luxury-presale__section--cta-{{ ai_gen_id }} {
+    background: #000000;
+    border: 2px solid #000000;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+  }
+
+  .ai-luxury-presale__section--cta-{{ ai_gen_id }} .ai-luxury-presale__cta-title-{{ ai_gen_id }} {
+    color: #ffffff;
+  }
+
+  .ai-luxury-presale__section--cta-{{ ai_gen_id }} .ai-luxury-presale__cta-text-{{ ai_gen_id }} {
+    color: #ffffff;opacity: 0.9;
+  }
+
+  .ai-luxury-presale__section--cta-{{ ai_gen_id }} .ai-luxury-presale__deposit-text-{{ ai_gen_id }} {
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  .ai-luxury-presale__section-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-size: {{ block.settings.section_title_size }}px;
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.01em;
+  }
+
+  .ai-luxury-presale__premium-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .ai-luxury-presale__premium-item-{{ ai_gen_id }} {
+    padding: 40px 30px;
+    background: #f8f9fa;
+    border-radius: {{ block.settings.card_border_radius }}px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .ai-luxury-presale__premium-item-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-luxury-presale__premium-icon-{{ ai_gen_id }} {
+    width: 64px;
+    height: 64px;
+    color: {{ block.settings.accent_color }};
+    margin: 0 auto 24px;
+    stroke-width: 1.5;
+  }
+
+  .ai-luxury-presale__premium-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 15px;
+    font-size: {{ block.settings.item_title_size }}px;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-luxury-presale__premium-description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
+  .ai-luxury-presale__additional-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .ai-luxury-presale__additional-item-{{ ai_gen_id }} {
+    padding: 40px 30px;
+    background: #f8f9fa;
+    border-radius: {{ block.settings.card_border_radius }}px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .ai-luxury-presale__additional-item-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-luxury-presale__additional-icon-{{ ai_gen_id }} {
+    width: 48px;
+    height: 48px;
+    color: {{ block.settings.accent_color }};
+    margin: 0 auto 20px;
+    stroke-width: 1.5;
+  }
+
+  .ai-luxury-presale__additional-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 15px;
+    font-size: {{ block.settings.item_title_size }}px;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-luxury-presale__additional-description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
+  .ai-luxury-presale__why-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .ai-luxury-presale__why-item-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .ai-luxury-presale__why-icon-{{ ai_gen_id }} {
+    width: 64px;
+    height: 64px;
+    color: {{ block.settings.accent_color }};
+    margin: 0 auto 24px;
+    stroke-width: 1.5;
+  }
+
+  .ai-luxury-presale__why-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px;
+    font-size: {{ block.settings.item_title_size }}px;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-luxury-presale__why-description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .ai-luxury-presale__cta-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-size: {{ block.settings.cta_title_size }}px;
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-luxury-presale__cta-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    margin: 0 0 40px;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .ai-luxury-presale__buttons-{{ ai_gen_id }} {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .ai-luxury-presale__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: {{ block.settings.button_text_size }}px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 220px;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-luxury-presale__button--primary-{{ ai_gen_id }} {
+    background: {{ block.settings.primary_button_bg }};
+    color: {{ block.settings.primary_button_color }};
+    border-color: {{ block.settings.primary_button_bg }};
+  }
+
+  .ai-luxury-presale__button--primary-{{ ai_gen_id }}:hover {
+    background: {{ block.settings.primary_button_hover_bg }};
+    border-color: {{ block.settings.primary_button_hover_bg }};
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+  }
+
+  .ai-luxury-presale__button--secondary-{{ ai_gen_id }} {
+    background: {{ block.settings.secondary_button_bg }};
+    color: {{ block.settings.secondary_button_color }};
+    border-color: {{ block.settings.secondary_button_border }};
+  }
+
+  .ai-luxury-presale__button--secondary-{{ ai_gen_id }}:hover {
+    background: {{ block.settings.secondary_button_hover_bg }};
+    color: {{ block.settings.secondary_button_hover_color }};
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.15);
+  }
+
+  .ai-luxury-presale__deposit-info-{{ ai_gen_id }} {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: {{ block.settings.card_border_radius }}px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .ai-luxury-presale__deposit-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    font-size: {{ block.settings.deposit_text_size }}px;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .ai-luxury-presale__additional-note-{{ ai_gen_id }} {
+    margin: 30px 0;
+    font-style: italic;
+    color: {{ block.settings.text_color }};
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-luxury-presale-{{ ai_gen_id }} {
+      padding: 60px 20px;
+    }
+
+    .ai-luxury-presale__section-{{ ai_gen_id }} {
+      padding: 40px 30px;
+      margin-bottom: 60px;
+    }
+
+    .ai-luxury-presale__buttons-{{ ai_gen_id }} {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ai-luxury-presale__button-{{ ai_gen_id }} {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .ai-luxury-presale__hero-image-wrapper-{{ ai_gen_id }} {
+      width: calc({{ block.settings.hero_image_size }}px * 0.8);
+      height: calc({{ block.settings.hero_image_size }}px * 0.8);
+    }
+
+    .ai-luxury-presale__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+
+    .ai-luxury-presale__section-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.section_title_size }}px * 0.9);
+    }
+
+    .ai-luxury-presale__premium-grid-{{ ai_gen_id }},
+    .ai-luxury-presale__additional-grid-{{ ai_gen_id }},
+    .ai-luxury-presale__why-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .ai-luxury-presale__premium-item-{{ ai_gen_id }},
+    .ai-luxury-presale__additional-item-{{ ai_gen_id }} {
+      padding: 20px;
+    }
+
+    .ai-luxury-presale__premium-icon-{{ ai_gen_id }},
+    .ai-luxury-presale__why-icon-{{ ai_gen_id }} {
+      width: 48px;
+      height: 48px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-luxury-presale-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.hero_image %}
+    <div class="ai-luxury-presale__hero-image-{{ ai_gen_id }}">
+      <div class="ai-luxury-presale__hero-image-wrapper-{{ ai_gen_id }}">
+        <img
+          src="{{ block.settings.hero_image | image_url: width: 800}}"
+          alt="{{ block.settings.hero_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.hero_image.width }}"
+          height="{{ block.settings.hero_image.height }}"
+        >
+      </div>
+    </div>
+  {% else %}
+    <div class="ai-luxury-presale__hero-image-{{ ai_gen_id }}">
+      <div class="ai-luxury-presale__hero-image-wrapper-{{ ai_gen_id }}">
+        <div class="ai-luxury-presale__hero-image-placeholder-{{ ai_gen_id }}">
+          {{'image' | placeholder_svg_tag }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="ai-luxury-presale__header-{{ ai_gen_id }}">
+    <h1 class="ai-luxury-presale__title-{{ ai_gen_id }}">{{ block.settings.main_title }}</h1>
+    <p class="ai-luxury-presale__subtitle-{{ ai_gen_id }}">{{ block.settings.main_description }}</p>
+  </div>
+
+  <div class="ai-luxury-presale__section-{{ ai_gen_id }}">
+    <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}">{{ block.settings.premium_package_title }}</h2>
+    <div class="ai-luxury-presale__premium-grid-{{ ai_gen_id }}">
+      <div class="ai-luxury-presale__premium-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__premium-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <rect x="1" y="3" width="15" height="13"/>
+          <polygon points="16,8 20,8 23,11 23,16 16,16"/><circle cx="5.5" cy="18.5" r="2.5"/>
+          <circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+        <h3 class="ai-luxury-presale__premium-title-{{ ai_gen_id }}">{{ block.settings.feature_1_title }}</h3>
+        <p class="ai-luxury-presale__premium-description-{{ ai_gen_id }}">{{ block.settings.feature_1_description }}</p>
+      </div>
+      <div class="ai-luxury-presale__premium-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__premium-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <h3 class="ai-luxury-presale__premium-title-{{ ai_gen_id }}">{{ block.settings.feature_2_title }}</h3>
+        <p class="ai-luxury-presale__premium-description-{{ ai_gen_id }}">{{ block.settings.feature_2_description }}</p>
+      </div>
+      <div class="ai-luxury-presale__premium-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__premium-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M16 3h5v5"/>
+          <path d="M8 3H3v5"/>
+          <path d="M12 22V8"/>
+          <path d="M16 8l-4-5-4 5"/>
+          <path d="M21 8l-5 5"/>
+          <path d="M3 8l5 5"/>
+        </svg>
+        <h3 class="ai-luxury-presale__premium-title-{{ ai_gen_id }}">{{ block.settings.feature_3_title }}</h3>
+        <p class="ai-luxury-presale__premium-description-{{ ai_gen_id }}">{{ block.settings.feature_3_description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-luxury-presale__section-{{ ai_gen_id }}">
+    <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}">{{ block.settings.additional_services_title }}</h2>
+    <p class="ai-luxury-presale__item-description-{{ ai_gen_id }}" style="margin-bottom: 20px;">{{ block.settings.additional_services_description }}</p>
+    <div class="ai-luxury-presale__additional-grid-{{ ai_gen_id }}"><div class="ai-luxury-presale__additional-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__additional-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+        </svg>
+        <h3 class="ai-luxury-presale__additional-title-{{ ai_gen_id }}">{{ block.settings.additional_service_1 }}</h3>
+        <p class="ai-luxury-presale__additional-description-{{ ai_gen_id }}">{{ block.settings.additional_service_1_description }}</p>
+      </div>
+      <div class="ai-luxury-presale__additional-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__additional-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M9 9l6 6"/>
+          <path d="M15 9l-6 6"/>
+        </svg>
+        <h3 class="ai-luxury-presale__additional-title-{{ ai_gen_id }}">{{ block.settings.additional_service_2 }}</h3>
+        <p class="ai-luxury-presale__additional-description-{{ ai_gen_id }}">{{ block.settings.additional_service_2_description }}</p>
+      </div>
+      <div class="ai-luxury-presale__additional-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__additional-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+        <h3 class="ai-luxury-presale__additional-title-{{ ai_gen_id }}">{{ block.settings.additional_service_3 }}</h3>
+        <p class="ai-luxury-presale__additional-description-{{ ai_gen_id }}">{{ block.settings.additional_service_3_description }}</p>
+      </div>
+    </div>
+    <p class="ai-luxury-presale__additional-note-{{ ai_gen_id }}">{{ block.settings.additional_services_note }}</p>
+  </div>
+
+  <div class="ai-luxury-presale__section-{{ ai_gen_id }} ai-luxury-presale__section--cta-{{ ai_gen_id }}">
+    <h2 class="ai-luxury-presale__cta-title-{{ ai_gen_id }}">{{ block.settings.cta_title }}</h2>
+    <p class="ai-luxury-presale__cta-text-{{ ai_gen_id }}">{{ block.settings.cta_description }}</p>
+    
+    <div class="ai-luxury-presale__buttons-{{ ai_gen_id }}">
+      {% if block.settings.cta_product %}
+        <a href="{{ block.settings.cta_product.url }}" class="ai-luxury-presale__button-{{ ai_gen_id }} ai-luxury-presale__button--primary-{{ ai_gen_id }}">
+          {{ block.settings.primary_btn_text }}
+        </a>
+      {% endif %}
+      {% if block.settings.secondary_button_link %}
+        <a href="{{ block.settings.secondary_button_link }}" class="ai-luxury-presale__button-{{ ai_gen_id }} ai-luxury-presale__button--secondary-{{ ai_gen_id }}">
+          {{ block.settings.secondary_btn_text }}
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="ai-luxury-presale__deposit-info-{{ ai_gen_id }}">
+      <p class="ai-luxury-presale__deposit-text-{{ ai_gen_id }}">{{ block.settings.deposit_info }}</p>
+    </div>
+  </div>
+
+  <div class="ai-luxury-presale__section-{{ ai_gen_id }}">
+    <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}" style="text-align: center; border-bottom: none; padding-bottom: 0;">{{ block.settings.why_reserve_title }}</h2>
+    <div class="ai-luxury-presale__why-grid-{{ ai_gen_id }}">
+      <div class="ai-luxury-presale__why-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__why-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12,6 12,12 16,14"/></svg>
+        <h3 class="ai-luxury-presale__why-title-{{ ai_gen_id }}">{{ block.settings.why_reason_1_title }}</h3>
+        <p class="ai-luxury-presale__why-description-{{ ai_gen_id }}">{{ block.settings.why_reason_1_description }}</p>
+      </div>
+      <div class="ai-luxury-presale__why-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__why-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <h3 class="ai-luxury-presale__why-title-{{ ai_gen_id }}">{{ block.settings.why_reason_2_title }}</h3>
+        <p class="ai-luxury-presale__why-description-{{ ai_gen_id }}">{{ block.settings.why_reason_2_description }}</p>
+      </div>
+      <div class="ai-luxury-presale__why-item-{{ ai_gen_id }}">
+        <svg class="ai-luxury-presale__why-icon-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M9 12l2 2 4-4"/>
+          <circle cx="12" cy="12" r="10"/>
+        </svg>
+        <h3 class="ai-luxury-presale__why-title-{{ ai_gen_id }}">{{ block.settings.why_reason_3_title }}</h3>
+        <p class="ai-luxury-presale__why-description-{{ ai_gen_id }}">{{ block.settings.why_reason_3_description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cedar Bucket presale",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero image"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "range",
+      "id": "hero_image_size",
+      "min": 100,
+      "max": 400,
+      "step": 20,
+      "unit": "px",
+      "label": "Hero image size",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "hero_image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Hero image border radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Main content"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main title",
+      "default": "Cedar Bucket 2026Pre-Sales – Reserve Your Spot Now"
+    },
+    {
+      "type": "textarea",
+      "id": "main_description",
+      "label": "Main description",
+      "default": "Cedar Bucket has been Oxford's #1 choice for Ole Miss student moving and storage, voted Best Moving Company and Best Storage Company in Oxford for 2025. We're opening limited pre-sales for Summer 2026, and space will go fast. Our Moving + Storage Premium Package is the ultimate hands-free solution for students and families who want a stress-free summer."
+    },
+    {
+      "type": "header",
+      "content": "Premium package section"
+    },
+    {
+      "type": "text",
+      "id": "premium_package_title",
+      "label": "Premium package title",
+      "default": "What's Included in the Premium Package"
+    },
+    {
+      "type": "text",
+      "id": "feature_1_title",
+      "label": "Feature 1 title",
+      "default": "White-glove moving service"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_1_description",
+      "label": "Feature 1 description",
+      "default": "Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store."
+    },
+    {
+      "type": "text",
+      "id": "feature_2_title",
+      "label": "Feature 2 title",
+      "default": "Climate-controlled storage"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_2_description",
+      "label": "Feature 2 description",
+      "default": "Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage."
+    },
+    {
+      "type": "text",
+      "id": "feature_3_title",
+      "label": "Feature 3 title",
+      "default": "Delivery back to your new space"
+    },
+    {
+      "type": "textarea",
+      "id": "feature_3_description",
+      "label": "Feature 3 description",
+      "default": "When the fall semester begins, we return and set up your belongings where you need them."
+    },
+    {
+      "type": "header",
+      "content": "Additional services section"
+    },
+    {
+      "type": "text",
+      "id": "additional_services_title",
+      "label": "Additional services title",
+      "default": "Additional Services"
+    },
+    {
+      "type": "textarea",
+      "id": "additional_services_description",
+      "label": "Additional services description",
+      "default": "Subject to availability of staff and early scheduling, Cedar Bucket also offers:"
+    },
+    {
+      "type": "text",
+      "id": "additional_service_1",
+      "label": "Additional service 1",
+      "default": "Handyman services"
+    },
+    {
+      "type": "textarea",
+      "id": "additional_service_1_description",
+      "label": "Additional service 1 description",
+      "default": "Professional handyman services for assembly, disassembly, and general maintenance tasks."
+    },
+    {
+      "type": "text",
+      "id": "additional_service_2",
+      "label": "Additional service 2",
+      "default": "Assembly and disassembly services"
+    },
+    {
+      "type": "textarea",
+      "id": "additional_service_2_description",
+      "label": "Additional service 2 description",
+      "default": "Expert furniture assembly and disassembly to make your move even easier."
+    },
+    {
+      "type": "text",
+      "id": "additional_service_3",
+      "label": "Additional service 3",
+      "default": "Packing services"
+    },
+    {
+      "type": "textarea",
+      "id": "additional_service_3_description",
+      "label": "Additional service 3 description",
+      "default": "Professional packing services to ensure your belongings are safely prepared for storage."
+    },
+    {
+      "type": "textarea",
+      "id": "additional_services_note",
+      "label": "Additional services note",
+      "default": "Further details can be provided post reservation."
+    },
+    {
+      "type": "header",
+      "content": "Call to action section"
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "CTA title",
+      "default": "Reserve Your Spot Today"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_description",
+      "label": "CTA description",
+      "default": "Don't wait until the last minute. Secure your premium moving and storage package now."
+    },
+    {
+      "type": "product",
+      "id": "cta_product",
+      "label": "CTA product"
+    },
+    {
+      "type": "text",
+      "id": "primary_btn_text",
+      "label": "Primary button text",
+      "default": "Reserve Now - $500"
+    },
+    {
+      "type": "text",
+      "id": "secondary_btn_text",
+      "label": "Secondary button text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "textarea",
+      "id": "deposit_info",
+      "label": "Deposit information",
+      "default": "Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days."
+    },
+    {
+      "type": "header",
+      "content": "Why reserve section"
+    },
+    {
+      "type": "text",
+      "id": "why_reserve_title",
+      "label": "Why reserve title",
+      "default": "Why Reserve Now"
+    },
+    {
+      "type": "text",
+      "id": "why_reason_1_title",
+      "label": "Reason 1 title",
+      "default": "Limited availability"
+    },
+    {
+      "type": "textarea",
+      "id": "why_reason_1_description",
+      "label": "Reason 1 description",
+      "default": "Space sells out quickly."
+    },
+    {
+      "type": "text",
+      "id": "why_reason_2_title",
+      "label": "Reason 2 title",
+      "default": "Priority scheduling"
+    },
+    {
+      "type": "textarea",
+      "id": "why_reason_2_description",
+      "label": "Reason 2 description",
+      "default": "Early reservations guarantee your preferred move-in and move-out times."
+    },
+    {
+      "type": "text",
+      "id": "why_reason_3_title",
+      "label": "Reason 3 title",
+      "default": "Peace of mind"
+    },
+    {
+      "type": "textarea",
+      "id": "why_reason_3_description",
+      "label": "Reason 3 description",
+      "default": "Secure your storage and avoid last-minute stress."
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Main title size",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 18,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Section title size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Item title size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "cta_title_size",
+      "min": 20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "label": "CTA title size",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "deposit_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Deposit text size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Primary button colors"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_bg",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "primary_button_hover_bg",
+      "label": "Hover background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "header",
+      "content": "Secondary button colors"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_bg",
+      "label": "Background",
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_border",
+      "label": "Border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_hover_bg",
+      "label": "Hover background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "secondary_button_hover_color",
+      "label": "Hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cedar Bucket presale"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

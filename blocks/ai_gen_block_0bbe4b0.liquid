@@ -1,0 +1,690 @@
+{% doc %}
+  @prompt
+    I need a luxury and clear way of displaying the following information. I need the colors to be black and gray and i need to be able to toggle icons and change font.
+    
+    What's Included in the Premium Package
+    White-glove moving service
+    Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.
+    
+    Climate-controlled storage
+    Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.
+    
+    Delivery back to your new space
+    When the fall semester begins, we return and set up your belongings where you need them.
+    
+    Additional Services Available for Add-On
+    Ship-to-Storage service
+    Can’t bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we’ll place them in your reserved unit on your behalf.
+    
+    Handyman services
+    Our student movers will handle the assembly and / or disassembly of any items you need during your move.
+    
+    Packing Supply Delivery
+    We can provide you will all the boxes and moving supplies needed in advance., i'd like the additional services to be displayed differently than what is included, for the what's included multi section - put the icons at the top and allow me to toggle icons on both sections, I need the icons of the handy man to change to a wrench and the ship to storage a truck, fix the handy man service icon its message up, make the handy man icon a hammer
+    
+    and i need to be able to choose whatever font i want, i want the add one services to be displayed differently than the included in premium package one, I want to be able to choose if its bold or not and i want a lock icon for the climate controlled storage, I need to be able to edit the text for everything not just the titles
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-premium-package-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: {{ block.settings.section_padding }}px;
+    background-color: {{ block.settings.background_color }};
+    font-family: {{ block.settings.font_family.family }}, {{ block.settings.font_family.fallback_families }};
+    font-weight: {{ block.settings.font_family.weight }};
+    font-style: {{ block.settings.font_family.style }};
+    {% if block.settings.font_bold %}
+      font-weight: bold;
+    {% endif %}
+  }
+
+  .ai-premium-package__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    text-align: center;
+    margin: 0 0 {{ block.settings.section_spacing }}px;
+    font-weight: {% if block.settings.font_bold %}bold{% else %}600{% endif %};
+  }
+
+  .ai-premium-package__section-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.section_title_size }}px;
+    color: {{ block.settings.section_title_color }};
+    margin: 0 0 {{ block.settings.item_spacing }}px;
+    font-weight: {% if block.settings.font_bold %}bold{% else %}600{% endif %};
+  }
+
+  .ai-premium-package__included-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.section_spacing }}px;
+  }
+
+  .ai-premium-package__included-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-premium-package__included-item-{{ ai_gen_id }} {
+    text-align: center;
+    padding: {{ block.settings.item_padding }}px;
+    background-color: {{ block.settings.included_bg_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: 1px solid {{ block.settings.included_border_color }};
+  }
+
+  .ai-premium-package__included-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto {{ block.settings.icon_spacing }}px;
+    color: {{ block.settings.icon_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-premium-package__included-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-premium-package__included-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.item_title_size }}px;
+    color: {{ block.settings.item_title_color }};
+    margin: 0 0 {{ block.settings.text_spacing }}px;
+    font-weight: {% if block.settings.font_bold %}bold{% else %}600{% endif %};
+  }
+
+  .ai-premium-package__included-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .ai-premium-package__additional-{{ ai_gen_id }} {
+    border-top: 2px solid {{ block.settings.divider_color }};
+    padding-top: {{ block.settings.section_spacing }}px;
+  }
+
+  .ai-premium-package__additional-list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-premium-package__additional-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: {{ block.settings.icon_spacing }}px;
+    padding: {{ block.settings.additional_padding }}px;
+    background-color: {{ block.settings.additional_bg_color }};
+    border: 2px solid {{ block.settings.additional_border_color }};
+    border-radius: {{ block.settings.additional_border_radius }}px;border-left: 5px solid {{ block.settings.additional_accent_color }};
+  }
+
+  .ai-premium-package__additional-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.additional_icon_size }}px;
+    height: {{ block.settings.additional_icon_size }}px;
+    color: {{ block.settings.additional_icon_color }};
+    flex-shrink: 0;margin-top: 2px;
+  }
+
+  .ai-premium-package__additional-icon-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-premium-package__additional-content-{{ ai_gen_id }} {
+    flex: 1;}
+
+  .ai-premium-package__additional-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.additional_title_size }}px;
+    color: {{ block.settings.additional_title_color }};
+    margin: 0 0 {{ block.settings.text_spacing }}px;
+    font-weight: {% if block.settings.font_bold %}bold{% else %}600{% endif %};
+  }
+
+  .ai-premium-package__additional-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.additional_description_size }}px;
+    color: {{ block.settings.additional_description_color }};
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-premium-package__included-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+    .ai-premium-package__additional-item-{{ ai_gen_id }} {
+      flex-direction: column;
+      text-align: center;
+    }
+    .ai-premium-package__additional-icon-{{ ai_gen_id }} {
+      align-self: center;
+      margin-top: 0;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-premium-package-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.main_title != blank %}
+    <h2 class="ai-premium-package__title-{{ ai_gen_id }}">{{ block.settings.main_title }}</h2>
+  {% endif %}<div class="ai-premium-package__included-{{ ai_gen_id }}">
+    {% if block.settings.included_title != blank %}
+      <h3 class="ai-premium-package__section-title-{{ ai_gen_id }}">{{ block.settings.included_title }}</h3>
+    {% endif %}
+
+    <div class="ai-premium-package__included-grid-{{ ai_gen_id }}">
+      <div class="ai-premium-package__included-item-{{ ai_gen_id }}">
+        {% if block.settings.show_included_icons %}
+          <div class="ai-premium-package__included-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+          </div>
+        {% endif %}<h4 class="ai-premium-package__included-title-{{ ai_gen_id }}">{{ block.settings.service_1_title }}</h4>
+        <p class="ai-premium-package__included-description-{{ ai_gen_id }}">{{ block.settings.service_1_description }}</p>
+      </div><div class="ai-premium-package__included-item-{{ ai_gen_id }}">
+        {% if block.settings.show_included_icons %}
+          <div class="ai-premium-package__included-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <circle cx="12" cy="16" r="1"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+        {% endif %}
+        <h4 class="ai-premium-package__included-title-{{ ai_gen_id }}">{{ block.settings.service_2_title }}</h4>
+        <p class="ai-premium-package__included-description-{{ ai_gen_id }}">{{ block.settings.service_2_description }}</p>
+      </div>
+
+      <div class="ai-premium-package__included-item-{{ ai_gen_id }}">
+        {% if block.settings.show_included_icons %}
+          <div class="ai-premium-package__included-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16,8 20,8 23,11 23,16 16,16"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+        {% endif %}
+        <h4 class="ai-premium-package__included-title-{{ ai_gen_id }}">{{ block.settings.service_3_title }}</h4>
+        <p class="ai-premium-package__included-description-{{ ai_gen_id }}">{{ block.settings.service_3_description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-premium-package__additional-{{ ai_gen_id }}">
+    {% if block.settings.additional_title != blank %}
+      <h3 class="ai-premium-package__section-title-{{ ai_gen_id }}">{{ block.settings.additional_title }}</h3>
+    {% endif %}
+
+    <div class="ai-premium-package__additional-list-{{ ai_gen_id }}">
+      <div class="ai-premium-package__additional-item-{{ ai_gen_id }}">
+        {% if block.settings.show_additional_icons %}
+          <div class="ai-premium-package__additional-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16,8 20,8 23,11 23,16 16,16"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+        {% endif %}
+        <div class="ai-premium-package__additional-content-{{ ai_gen_id }}">
+          <h4 class="ai-premium-package__additional-title-{{ ai_gen_id }}">{{ block.settings.addon_1_title }}</h4>
+          <p class="ai-premium-package__additional-description-{{ ai_gen_id }}">{{ block.settings.addon_1_description }}</p>
+        </div>
+      </div>
+
+      <div class="ai-premium-package__additional-item-{{ ai_gen_id }}">
+        {% if block.settings.show_additional_icons %}
+          <div class="ai-premium-package__additional-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+        {% endif %}
+        <div class="ai-premium-package__additional-content-{{ ai_gen_id }}">
+          <h4 class="ai-premium-package__additional-title-{{ ai_gen_id }}">{{ block.settings.addon_2_title }}</h4>
+          <p class="ai-premium-package__additional-description-{{ ai_gen_id }}">{{ block.settings.addon_2_description }}</p>
+        </div>
+      </div>
+
+      <div class="ai-premium-package__additional-item-{{ ai_gen_id }}">
+        {% if block.settings.show_additional_icons %}
+          <div class="ai-premium-package__additional-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+        {% endif %}
+        <div class="ai-premium-package__additional-content-{{ ai_gen_id }}">
+          <h4 class="ai-premium-package__additional-title-{{ ai_gen_id }}">{{ block.settings.addon_3_title }}</h4>
+          <p class="ai-premium-package__additional-description-{{ ai_gen_id }}">{{ block.settings.addon_3_description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Premium package display",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main content"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main title",
+      "default": "What's Included in the Premium Package"
+    },
+    {
+      "type": "text",
+      "id": "included_title",
+      "label": "Included services title",
+      "default": "What's Included in the Premium Package"
+    },
+    {
+      "type": "text",
+      "id": "additional_title",
+      "label": "Additional services title",
+      "default": "Additional Services Available for Add-On"
+    },
+    {
+      "type": "header",
+      "content": "Included services content"
+    },
+    {
+      "type": "text",
+      "id": "service_1_title",
+      "label": "Service 1 title",
+      "default": "White-glove moving service"
+    },
+    {
+      "type": "textarea",
+      "id": "service_1_description",
+      "label": "Service 1 description",
+      "default": "Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store."
+    },
+    {
+      "type": "text",
+      "id": "service_2_title",
+      "label": "Service 2 title",
+      "default": "Climate-controlled storage"
+    },
+    {
+      "type": "textarea",
+      "id": "service_2_description",
+      "label": "Service 2 description",
+      "default": "Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage."
+    },
+    {
+      "type": "text",
+      "id": "service_3_title",
+      "label": "Service 3 title",
+      "default": "Delivery back to your new space"
+    },
+    {
+      "type": "textarea",
+      "id": "service_3_description",
+      "label": "Service 3 description",
+      "default": "When the fall semester begins, we return and set up your belongings where you need them."
+    },
+    {
+      "type": "header",
+      "content": "Additional services content"
+    },
+    {
+      "type": "text",
+      "id": "addon_1_title",
+      "label": "Add-on 1 title",
+      "default": "Ship-to-Storage service"
+    },
+    {
+      "type": "textarea",
+      "id": "addon_1_description",
+      "label": "Add-on 1 description",
+      "default": "Can't bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we'll place them in your reserved unit on your behalf."
+    },
+    {
+      "type": "text",
+      "id": "addon_2_title",
+      "label": "Add-on 2 title",
+      "default": "Handyman services"
+    },
+    {
+      "type": "textarea",
+      "id": "addon_2_description",
+      "label": "Add-on 2 description",
+      "default": "Our student movers will handle the assembly and/or disassembly of any items you need during your move."
+    },
+    {
+      "type": "text",
+      "id": "addon_3_title",
+      "label": "Add-on 3 title",
+      "default": "Packing Supply Delivery"
+    },
+    {
+      "type": "textarea",
+      "id": "addon_3_description",
+      "label": "Add-on 3 description",
+      "default": "We can provide you with all the boxes and moving supplies needed in advance."
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "font_family",
+      "label": "Font family",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "checkbox",
+      "id": "font_bold",
+      "label": "Bold font",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Main title size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 14,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Section title size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Included item title size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Included description size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "additional_title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Additional item title size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "additional_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Additional description size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Main title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "section_title_color",
+      "label": "Section title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Included item title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Included description color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Included icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "included_bg_color",
+      "label": "Included item background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "included_border_color",
+      "label": "Included item border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "additional_title_color",
+      "label": "Additional item title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "additional_description_color",
+      "label": "Additional description color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "additional_icon_color",
+      "label": "Additional icon color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "additional_bg_color",
+      "label": "Additional item background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "additional_border_color",
+      "label": "Additional item border",
+      "default": "#d0d0d0"
+    },
+    {
+      "type": "color",
+      "id": "additional_accent_color",
+      "label": "Additional item accent",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_included_icons",
+      "label": "Show icons for included services",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_additional_icons",
+      "label": "Show icons for additional services",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 24,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "label": "Included icon size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "additional_icon_size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Additional icon size",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "section_spacing",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Section spacing",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 10,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Included item padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "additional_padding",
+      "min": 10,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Additional item padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "icon_spacing",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 4,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Text spacing",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Included border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "additional_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Additional border radius",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium package display"
+    }
+  ]
+}
+{% endschema %}

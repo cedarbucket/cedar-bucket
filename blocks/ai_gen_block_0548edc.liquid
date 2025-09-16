@@ -1,0 +1,657 @@
+{% doc %}
+  @prompt
+    I need a luxury apple style reserve your spot today section that has a black background with white text
+    
+    Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days of payment. Further details about pricing will be covered in your one-on-one consultation that can be scheduled post check out. 
+    
+    The button needs to be able to be linked with a product, I like a white full backgroudn with a black blob in the section and i want title, body and the button and the a body text under the button. 
+    
+    It's important this section looks very professional., Create a section with a light or white background.
+    In the center, add a dark-colored container ("blob") with rounded corners and a slight shadow to make it stand out from the background. This blob should have a black or dark gray background, white text, and be centered on the page with padding., I need another box text section below the button with a border around it to highlight the text and make sure im able to chnage the font, ALL I NEED IS FONT OPTIONS
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-dark-blob-section-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 0 {{ block.settings.section_padding_bottom }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: {{ block.settings.min_height }}px;
+  }
+
+  .ai-dark-blob-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_max_width }}px;
+    width: 100%;
+    padding: 0 {{ block.settings.horizontal_padding }}px;
+  }
+
+  .ai-dark-blob-content-{{ ai_gen_id }} {
+    background-color: {{ block.settings.blob_background_color }};
+    color: {{ block.settings.blob_text_color }};
+    padding: {{ block.settings.blob_padding_vertical }}px {{ block.settings.blob_padding_horizontal }}px;
+    border-radius: {{ block.settings.blob_border_radius }}px;
+    box-shadow: {{ block.settings.shadow_horizontal }}px {{ block.settings.shadow_vertical }}px {{ block.settings.shadow_blur }}px rgba(0, 0, 0, {{ block.settings.shadow_opacity | divided_by: 100.0 }});
+    text-align: {{ block.settings.text_alignment }};
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-dark-blob-heading-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-style: {{ block.settings.heading_font.style }};
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .ai-dark-blob-text-{{ ai_gen_id }} {
+    font-family: {{ block.settings.body_font.family }}, {{ block.settings.body_font.fallback_families }};
+    font-weight: {{ block.settings.body_font.weight }};
+    font-style: {{ block.settings.body_font.style }};
+    font-size: {{ block.settings.body_text_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.body_text_color }};
+    margin: 0 0 {{ block.settings.text_spacing }}px;
+  }
+
+  .ai-dark-blob-text-{{ ai_gen_id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-dark-blob-button-{{ ai_gen_id }} {
+    font-family: {{ block.settings.button_font.family }}, {{ block.settings.button_font.fallback_families }};
+    font-weight: {{ block.settings.button_font.weight }};
+    font-style: {{ block.settings.button_font.style }};
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    transition: all 0.3s ease;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    margin: {{ block.settings.button_spacing }}px 0;
+  }
+
+  .ai-dark-blob-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+    color: {{ block.settings.button_hover_text_color }};
+    transform: translateY(-2px);box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .ai-dark-blob-highlight-box-{{ ai_gen_id }} {
+    font-family: {{ block.settings.highlight_font.family }}, {{ block.settings.highlight_font.fallback_families }};
+    font-weight: {{ block.settings.highlight_font.weight }};
+    font-style: {{ block.settings.highlight_font.style }};
+    background-color: {{ block.settings.highlight_box_background }};
+    color: {{ block.settings.highlight_box_text_color }};
+    border: {{ block.settings.highlight_box_border_width }}px solid {{ block.settings.highlight_box_border_color }};
+    border-radius: {{ block.settings.highlight_box_border_radius }}px;
+    padding: {{ block.settings.highlight_box_padding_vertical }}px {{ block.settings.highlight_box_padding_horizontal }}px;
+    margin-top: {{ block.settings.highlight_box_spacing }}px;
+    font-size: {{ block.settings.highlight_box_text_size }}px;
+    line-height: 1.5;
+    text-align: {{ block.settings.highlight_box_text_alignment }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-dark-blob-section-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top | times: 0.7 }}px 0 {{ block.settings.section_padding_bottom | times: 0.7 }}px;
+      min-height: {{ block.settings.min_height | times: 0.8 }}px;
+    }
+
+    .ai-dark-blob-content-{{ ai_gen_id }} {
+      padding: {{ block.settings.blob_padding_vertical | times: 0.8 }}px {{ block.settings.blob_padding_horizontal | times: 0.8 }}px;border-radius: {{ block.settings.blob_border_radius | times: 0.8 }}px;
+    }
+
+    .ai-dark-blob-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+
+    .ai-dark-blob-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.body_text_size | times: 0.9 }}px;
+    }
+
+    .ai-dark-blob-button-{{ ai_gen_id }} {
+      padding: {{ block.settings.button_padding_vertical | times: 0.9 }}px {{ block.settings.button_padding_horizontal | times: 0.9 }}px;
+      font-size: {{ block.settings.button_text_size | times: 0.9 }}px;
+    }
+
+    .ai-dark-blob-highlight-box-{{ ai_gen_id }} {
+      padding: {{ block.settings.highlight_box_padding_vertical | times: 0.8 }}px {{ block.settings.highlight_box_padding_horizontal | times: 0.8 }}px;
+      font-size: {{ block.settings.highlight_box_text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}<div class="ai-dark-blob-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-dark-blob-container-{{ ai_gen_id }}">
+    <div class="ai-dark-blob-content-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-dark-blob-heading-{{ ai_gen_id }}">
+          {{ block.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.body_text != blank %}
+        <div class="ai-dark-blob-text-{{ ai_gen_id }}">
+          {{ block.settings.body_text }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.button_text != blank %}
+        <a href="{{ block.settings.button_link }}" class="ai-dark-blob-button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      {% endif %}
+
+      {% if block.settings.highlight_box_text != blank %}
+        <div class="ai-dark-blob-highlight-box-{{ ai_gen_id }}">
+          {{ block.settings.highlight_box_text }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Dark blob section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Reserve Your Spot Today"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days of payment."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Reserve Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "textarea",
+      "id": "highlight_box_text",
+      "label": "Highlight box text",
+      "default": "Further details about pricing will be covered in your one-on-one consultation that can be scheduled post checkout."
+    },
+    {
+      "type": "header",
+      "content": "Fonts"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body text font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "button_font",
+      "label": "Button font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "highlight_font",
+      "label": "Highlight box font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "header",
+      "content": "Section colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "blob_background_color",
+      "label": "Blob background color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "blob_text_color",
+      "label": "Blob text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Text colors"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "body_text_color",
+      "label": "Body text color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Button colors"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Highlight box colors"
+    },
+    {
+      "type": "color",
+      "id": "highlight_box_background",
+      "label": "Highlight box background",
+      "default": "#2a2a2a"
+    },
+    {
+      "type": "color",
+      "id": "highlight_box_text_color",
+      "label": "Highlight box text color",
+      "default": "#d0d0d0"
+    },
+    {
+      "type": "color",
+      "id": "highlight_box_border_color",
+      "label": "Highlight box border color",
+      "default": "#444444"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_max_width",
+      "min": 600,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Container maximum width",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "min_height",
+      "min": 300,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Minimum section height",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Section top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Section bottom padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Blob style"
+    },
+    {
+      "type": "range",
+      "id": "blob_padding_vertical",
+      "min": 40,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Blob vertical padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "blob_padding_horizontal",
+      "min": 40,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Blob horizontal padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "blob_border_radius",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Blob border radius",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Shadow"
+    },
+    {
+      "type": "range",
+      "id": "shadow_horizontal",
+      "min": -10,
+      "max": 10,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow horizontal offset",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "shadow_vertical",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow vertical offset",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "shadow_blur",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Shadow blur",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "shadow_opacity",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "label": "Shadow opacity",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "body_text_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Body text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Heading bottom spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Text bottom spacing",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 14,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 12,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button vertical padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 20,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Button horizontal padding",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "min": 0,
+      "max": 3,
+      "step": 1,
+      "unit": "px",
+      "label": "Button border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "button_spacing",
+      "min": 20,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Button spacing",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Highlight box style"
+    },
+    {
+      "type": "range",
+      "id": "highlight_box_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Highlight box text size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "highlight_box_text_alignment",
+      "label": "Highlight box text alignment",
+      "options": [
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "highlight_box_padding_vertical",
+      "min": 12,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Highlight box vertical padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "highlight_box_padding_horizontal",
+      "min": 16,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Highlight box horizontal padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "highlight_box_border_radius",
+      "min": 0,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Highlight box border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "highlight_box_border_width",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Highlight box border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "highlight_box_spacing",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Highlight box top spacing",
+      "default": 25
+    }
+  ],
+  "presets": [
+    {
+      "name": "Dark blob section"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

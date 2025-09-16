@@ -1,0 +1,361 @@
+{% doc %}
+  @prompt
+    can you copy the block above but make sure I can edit the text for every block not just the top one.
+    
+    I also need the handy man icon fixed and the assembly icon to be a hand and packing to be a package box
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-service-features-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-service-features__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-service-features__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-service-features__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 16px 0;
+    font-weight: 600;
+  }
+
+  .ai-service-features__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;line-height: 1.5;
+  }
+
+  .ai-service-features__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .ai-service-features__item-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: {{ block.settings.card_background_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-service-features__item-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-service-features__icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto 20px;
+    background-color: {{ block.settings.icon_background_color }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+  .ai-service-features__icon-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    fill: {{ block.settings.icon_color }};
+  }
+
+  .ai-service-features__item-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.item_title_size }}px;
+    color: {{ block.settings.item_title_color }};
+    margin: 0 0 12px 0;
+    font-weight: 600;
+  }
+
+  .ai-service-features__item-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.item_description_size }}px;
+    color: {{ block.settings.item_description_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-service-features__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .ai-service-features__item-{{ ai_gen_id }} {
+      padding: 25px 15px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-service-features-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-service-features__container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.subtitle != blank %}
+      <div class="ai-service-features__header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-service-features__title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <div class="ai-service-features__subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-service-features__grid-{{ ai_gen_id }}">
+      <div class="ai-service-features__item-{{ ai_gen_id }}">
+        <div class="ai-service-features__icon-{{ ai_gen_id }}">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 9.74l-2-.3V7.5a3 3 0 0 0-3-3h-2.5V2a1 1 0 0 0-2 0v2.5H10a3 3 0 0 0-3 3v1.94l-2 .3A1 1 0 0 0 410.74V19a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-8.26a1 1 0 0 0-1-1.26zM9 7.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2.2l-3-.45-3 .45V7.5zm9 13.5H6a1 1 0 0 1-1-1v-7.64l16-.24V20a1 1 0 0 1-1 1z"/>
+            <circle cx="12" cy="16" r="1"/>
+            <path d="M9.5 13.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"/>
+          </svg>
+        </div>
+        <h3 class="ai-service-features__item-title-{{ ai_gen_id }}">{{ block.settings.handyman_title }}</h3>
+        <p class="ai-service-features__item-description-{{ ai_gen_id }}">{{ block.settings.handyman_description }}</p>
+      </div>
+
+      <div class="ai-service-features__item-{{ ai_gen_id }}">
+        <div class="ai-service-features__icon-{{ ai_gen_id }}">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM5 5h14v14H5V5z"/>
+            <path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h6v2H7z"/>
+            <circle cx="18" cy="8" r="1"/>
+            <circle cx="18" cy="12" r="1"/>
+            <circle cx="18" cy="16" r="1"/>
+          </svg>
+        </div>
+        <h3 class="ai-service-features__item-title-{{ ai_gen_id }}">{{ block.settings.assembly_title }}</h3>
+        <p class="ai-service-features__item-description-{{ ai_gen_id }}">{{ block.settings.assembly_description }}</p>
+      </div>
+
+      <div class="ai-service-features__item-{{ ai_gen_id }}">
+        <div class="ai-service-features__icon-{{ ai_gen_id }}">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6h-3V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a1 1 0 0 0-1-1zM9 4h6v2H9V4zm10 14H5V8h2v1a1 1 0 0 0 2 0V8h6v1a1 1 0 0 0 2 0V8h2v10z"/>
+            <path d="M8 12h8v2H8zM8 15h6v2H8z"/></svg>
+        </div>
+        <h3 class="ai-service-features__item-title-{{ ai_gen_id }}">{{ block.settings.packing_title }}</h3>
+        <p class="ai-service-features__item-description-{{ ai_gen_id }}">{{ block.settings.packing_description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Service features",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our Services"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Professional services you can trust"
+    },
+    {
+      "type": "header",
+      "content": "Handyman service"
+    },
+    {
+      "type": "text",
+      "id": "handyman_title",
+      "label": "Title",
+      "default": "Handyman Services"
+    },
+    {
+      "type": "textarea",
+      "id": "handyman_description",
+      "label": "Description",
+      "default": "Professional repair and maintenance services for your home or office."
+    },
+    {
+      "type": "header",
+      "content": "Assembly service"
+    },
+    {
+      "type": "text",
+      "id": "assembly_title",
+      "label": "Title",
+      "default": "Assembly Services"
+    },
+    {
+      "type": "textarea",
+      "id": "assembly_description",
+      "label": "Description",
+      "default": "Expert assembly of furniture, equipment, and other items with precision and care."
+    },
+    {
+      "type": "header",
+      "content": "Packing service"
+    },
+    {
+      "type": "text",
+      "id": "packing_title",
+      "label": "Title",
+      "default": "Packing Services"
+    },
+    {
+      "type": "textarea",
+      "id": "packing_description",
+      "label": "Description",
+      "default": "Secure and efficient packing solutions for moving, storage, or shipping needs."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Item title",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "item_description_color",
+      "label": "Item description",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "icon_background_color",
+      "label": "Icon background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 16,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Item title size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Item description size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Card border radius",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service features"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

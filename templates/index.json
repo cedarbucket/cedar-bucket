@@ -15,20 +15,20 @@
         "heading_pBykX9": {
           "type": "heading",
           "settings": {
-            "heading": "Oxford's all-in-one solution for student furnishings",
+            "heading": "Oxford's Premier Student Moving & Storage Company",
             "custom_font": "Poiret One",
-            "heading_font_size": 48,
-            "heading_font_size_mobile": 32
+            "heading_font_size": 64,
+            "heading_font_size_mobile": 20
           }
         },
         "text_Cb9RyN": {
           "type": "text",
           "settings": {
-            "text": "<p>Explore our tailored services, from consignment to moving and storage.</p>",
+            "text": "",
             "text_style": "body",
-            "custom_font": "Neutra Text Book",
-            "font_size": 20,
-            "font_size_mobile": 16
+            "custom_font": "",
+            "font_size": 24,
+            "font_size_mobile": 20
           }
         }
       },
@@ -39,12 +39,13 @@
       "name": "Video Banner",
       "settings": {
         "background_video_url": "",
-        "background_video_file": "https://saibbyweb.s3.us-east-1.amazonaws.com/cedar-bucket/%5Bmp4%5D-drone+shot+for+cedar+bucket+.mp4",
+        "background_video_file": "https://saibbyweb.s3.us-east-1.amazonaws.com/cedar-bucket/%5Bdesktop%5D-drone-shot-cedar-bucket.mp4",
+        "mobile_background_video_url": "",
+        "mobile_background_video_file": "https://saibbyweb.s3.us-east-1.amazonaws.com/cedar-bucket/%5Bmp4%5D-drone+shot+for+cedar+bucket+.mp4",
         "autoplay": true,
         "loop": true,
         "muted": true,
         "controls": false,
-        "hide_video_mobile": false,
         "video_height": 600,
         "video_height_mobile": 400,
         "video_overlay_opacity": 30,
@@ -319,7 +320,7 @@
         "text_j8Bt3P": {
           "type": "text",
           "settings": {
-            "text": "<p>We'll pick up your furniture and decor, sell it through our online and physical consignment store, and pay you when it sells!</p><p>All approved items will be picked up for free by our team.</p>",
+            "text": "<p>We'll pick up your furniture and decor, sell it on our consignment floor, and pay you when it sells!</p><p>All approved items will be picked up for free by our team.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 18,
@@ -341,7 +342,7 @@
         "button_hqR6LJ"
       ],
       "settings": {
-        "image": "shopify://shop_images/image.jpg",
+        "image": "shopify://shop_images/IMG_6733.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -391,6 +392,7 @@
         "text_PM6bRK",
         "button_XYEkje"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/1742911935301QKWIJJL4KI5ISH54H1M9.png",
         "height": "adapt",
@@ -645,6 +647,22 @@
             "link": ""
           }
         },
+        "column_wTcMUp": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "scheme-1",
+            "sb_text_alignment": "left",
+            "title": "Column",
+            "heading_size": "h1",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_9p9D4T": {
           "type": "column",
           "settings": {
@@ -672,6 +690,22 @@
             "title": "",
             "heading_size": "h1",
             "text": "",
+            "sb_font_size": 24,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4RmQ8U": {
+          "type": "column",
+          "settings": {
+            "sb_make_image_background": false,
+            "sb_column_numbering": false,
+            "sb_color_scheme": "scheme-1",
+            "sb_text_alignment": "left",
+            "title": "Column",
+            "heading_size": "h1",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "sb_font_size": 24,
             "link_as_button": false,
             "link_label": "",
@@ -715,8 +749,10 @@
       "block_order": [
         "column_Gya9cT",
         "column_EkY46P",
+        "column_wTcMUp",
         "column_9p9D4T",
         "column_EJYr3h",
+        "column_4RmQ8U",
         "column_aA3AyG",
         "column_fCV7NA"
       ],
@@ -747,7 +783,7 @@
         "instafeed_app_block_b6Wbmx": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "Instagram",
+            "title": "",
             "title_color": "",
             "title_size_v2": 0,
             "alignment": "center",
@@ -766,6 +802,7 @@
       "block_order": [
         "instafeed_app_block_b6Wbmx"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }

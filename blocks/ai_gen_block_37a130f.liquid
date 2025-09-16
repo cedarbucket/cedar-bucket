@@ -1,0 +1,566 @@
+{% doc %}
+  @prompt
+    I need a good way to display this in a multi column way -
+    
+    Why Reserve Now
+    • Limited availability – Space sells out quickly.
+    • Priority scheduling – Early reservations guarantee your preferred move-in and move-out times.
+    • Peace of mind – Secure your storage and avoid last-minute stress., the Peace of Mind Icon needs to be cleaned up
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-benefits-grid-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-benefits-grid__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-benefits-grid__heading-{{ ai_gen_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: 600;
+  }
+
+  .ai-benefits-grid__list-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.column_gap }}px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ai-benefits-grid__item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: {{ block.settings.icon_text_gap }}px;
+    padding: {{ block.settings.item_padding }}px;
+    background-color: {{ block.settings.item_background_color }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    border: {{ block.settings.item_border_width }}px solid {{ block.settings.item_border_color }};
+  }
+
+  .ai-benefits-grid__icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    background-color: {{ block.settings.icon_background_color }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .ai-benefits-grid__icon-{{ ai_gen_id }} svg {
+    width: calc({{ block.settings.icon_size }}px * 0.6);
+    height: calc({{ block.settings.icon_size }}px * 0.6);color: {{ block.settings.icon_color }};
+  }
+
+  .ai-benefits-grid__content-{{ ai_gen_id }} {
+    flex-grow: 1;
+  }
+
+  .ai-benefits-grid__title-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.title_spacing }}px;
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 600;
+  }
+
+  .ai-benefits-grid__description-{{ ai_gen_id }} {
+    margin: 0;
+    color: {{ block.settings.description_color }};
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-benefits-grid__list-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+      gap: {{ block.settings.column_gap | times: 0.75 }}px;
+    }
+
+    .ai-benefits-grid__item-{{ ai_gen_id }} {
+      padding: {{ block.settings.item_padding | times: 0.75 }}px;
+    }
+
+    .ai-benefits-grid__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.85 }}px;
+    }
+  }
+{% endstyle %}<div class="ai-benefits-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-benefits-grid__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-benefits-grid__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}<ul class="ai-benefits-grid__list-{{ ai_gen_id }}">
+      {% if block.settings.benefit_1_title != blank %}
+        <li class="ai-benefits-grid__item-{{ ai_gen_id }}">
+          <div class="ai-benefits-grid__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="ai-benefits-grid__content-{{ ai_gen_id }}">
+            <h3 class="ai-benefits-grid__title-{{ ai_gen_id }}">{{ block.settings.benefit_1_title }}</h3>
+            {% if block.settings.benefit_1_description != blank %}
+              <p class="ai-benefits-grid__description-{{ ai_gen_id }}">{{ block.settings.benefit_1_description }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.benefit_2_title != blank %}
+        <li class="ai-benefits-grid__item-{{ ai_gen_id }}">
+          <div class="ai-benefits-grid__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <div class="ai-benefits-grid__content-{{ ai_gen_id }}">
+            <h3 class="ai-benefits-grid__title-{{ ai_gen_id }}">{{ block.settings.benefit_2_title }}</h3>
+            {% if block.settings.benefit_2_description != blank %}
+              <p class="ai-benefits-grid__description-{{ ai_gen_id }}">{{ block.settings.benefit_2_description }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.benefit_3_title != blank %}
+        <li class="ai-benefits-grid__item-{{ ai_gen_id }}">
+          <div class="ai-benefits-grid__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="ai-benefits-grid__content-{{ ai_gen_id }}">
+            <h3 class="ai-benefits-grid__title-{{ ai_gen_id }}">{{ block.settings.benefit_3_title }}</h3>
+            {% if block.settings.benefit_3_description != blank %}
+              <p class="ai-benefits-grid__description-{{ ai_gen_id }}">{{ block.settings.benefit_3_description }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.benefit_4_title != blank %}
+        <li class="ai-benefits-grid__item-{{ ai_gen_id }}">
+          <div class="ai-benefits-grid__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v6m0 6v6"/>
+              <path d="m21 12-6-3-6 3-6-3"/>
+            </svg>
+          </div>
+          <div class="ai-benefits-grid__content-{{ ai_gen_id }}">
+            <h3 class="ai-benefits-grid__title-{{ ai_gen_id }}">{{ block.settings.benefit_4_title }}</h3>
+            {% if block.settings.benefit_4_description != blank %}
+              <p class="ai-benefits-grid__description-{{ ai_gen_id }}">{{ block.settings.benefit_4_description }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.benefit_5_title != blank %}
+        <li class="ai-benefits-grid__item-{{ ai_gen_id }}">
+          <div class="ai-benefits-grid__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+          </div>
+          <div class="ai-benefits-grid__content-{{ ai_gen_id }}">
+            <h3 class="ai-benefits-grid__title-{{ ai_gen_id }}">{{ block.settings.benefit_5_title }}</h3>
+            {% if block.settings.benefit_5_description != blank %}
+              <p class="ai-benefits-grid__description-{{ ai_gen_id }}">{{ block.settings.benefit_5_description }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endif %}
+
+      {% if block.settings.benefit_6_title != blank %}
+        <li class="ai-benefits-grid__item-{{ ai_gen_id }}">
+          <div class="ai-benefits-grid__icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22,4 12,14.01 9,11.01"/>
+            </svg>
+          </div>
+          <div class="ai-benefits-grid__content-{{ ai_gen_id }}">
+            <h3 class="ai-benefits-grid__title-{{ ai_gen_id }}">{{ block.settings.benefit_6_title }}</h3>
+            {% if block.settings.benefit_6_description != blank %}
+              <p class="ai-benefits-grid__description-{{ ai_gen_id }}">{{ block.settings.benefit_6_description }}</p>
+            {% endif %}
+          </div>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Benefits grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Reserve Now"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 30
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 1"
+    },
+    {
+      "type": "text",
+      "id": "benefit_1_title",
+      "label": "Title",
+      "default": "Limited availability"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_1_description",
+      "label": "Description",
+      "default": "Space sells out quickly."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 2"
+    },
+    {
+      "type": "text",
+      "id": "benefit_2_title",
+      "label": "Title",
+      "default": "Priority scheduling"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_2_description",
+      "label": "Description",
+      "default": "Early reservations guarantee your preferred move-in and move-out times."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 3"
+    },
+    {
+      "type": "text",
+      "id": "benefit_3_title",
+      "label": "Title",
+      "default": "Peace of mind"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_3_description",
+      "label": "Description",
+      "default": "Secure your storage and avoid last-minute stress."
+    },
+    {
+      "type": "header",
+      "content": "Benefit 4"
+    },
+    {
+      "type": "text",
+      "id": "benefit_4_title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_4_description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 5"
+    },
+    {
+      "type": "text",
+      "id": "benefit_5_title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_5_description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Benefit 6"
+    },
+    {
+      "type": "text",
+      "id": "benefit_6_title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "benefit_6_description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "icon_background_color",
+      "label": "Icon background color",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_border_color",
+      "label": "Item border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Heading spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Title spacing",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Item padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "icon_text_gap",
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon text gap",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Item border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "item_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Item border width",
+      "default": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits grid"
+    }
+  ]
+}
+{% endschema %}

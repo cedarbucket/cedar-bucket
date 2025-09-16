@@ -15,7 +15,7 @@
         "heading_TEzMRb": {
           "type": "heading",
           "settings": {
-            "heading": "Moving + Storage Solutions",
+            "heading": "2026 Reservations Pre-Sale",
             "custom_font": "Poiret One",
             "heading_font_size": 52,
             "heading_font_size_mobile": 32
@@ -24,7 +24,7 @@
         "text_7F6fA9": {
           "type": "text",
           "settings": {
-            "text": "We build custom full services hands free moving plus storage packages",
+            "text": "Reserve your spot now while availability lasts",
             "text_style": "body",
             "custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -37,15 +37,15 @@
         "text_7F6fA9"
       ],
       "settings": {
-        "image": "shopify://shop_images/IMG_0049.jpg",
-        "image_overlay_opacity": 60,
+        "image": "shopify://shop_images/Untitled_design_12_8d9b6a62-ffab-4f1d-b2d9-0fdee6a58989.png",
+        "image_overlay_opacity": 40,
         "container_style": "full_frame",
         "show_box_shadow": false,
         "show_box_border": false,
         "image_height": "full",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
-        "adjust_content_position": 70,
+        "adjust_content_position": 0,
         "section_radius": 0,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
@@ -65,7 +65,7 @@
         "heading_y8pRYU": {
           "type": "heading",
           "settings": {
-            "heading": "***WE ARE CURRENTLY FULLY BOOKED FOR STORAGE RESERVATIONS**",
+            "heading": "Cedar Bucket 2026 Pre-Sale",
             "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
@@ -73,17 +73,8 @@
         "text_gVc8hT": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "<p>Cedar Bucket has been Oxford’s #1 choice for Ole Miss student moving and storage, voted <a href=\"https://oxfordeagle.com/best-of-oxford-2025/\" target=\"_blank\" title=\"https://oxfordeagle.com/best-of-oxford-2025/\">Best Moving Company and Best Storage Company</a> in Oxford for 2025. We’re opening limited pre-sales for Summer 2026, and space will go fast.</p>",
             "sb_custom_font": "Neutra Text Book",
-            "sb_font_size": 24,
-            "sb_font_weight": 400
-          }
-        },
-        "text_ijMqmJ": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "sb_custom_font": "Poiret One",
             "sb_font_size": 24,
             "sb_font_weight": 400
           }
@@ -91,19 +82,450 @@
       },
       "block_order": [
         "heading_y8pRYU",
-        "text_gVc8hT",
-        "text_ijMqmJ"
+        "text_gVc8hT"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "full_width": true,
         "border_style": false,
         "padding_top": 40,
         "padding_left": 0,
         "padding_right": 0,
-        "padding_bottom": 0
+        "padding_bottom": 40
+      }
+    },
+    "featured_product_6WDdw9": {
+      "type": "featured-product",
+      "blocks": {
+        "text_FkRf3D": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_8iUDiH": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_4RhtjV": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_wDEaAQ": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_gCF4RL": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_BbWrRK": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "icon_with_text_h6bm7P": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "share_QpbykG": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_FkRf3D",
+        "title_8iUDiH",
+        "price_4RhtjV",
+        "variant_picker_wDEaAQ",
+        "quantity_selector_gCF4RL",
+        "buy_buttons_BbWrRK",
+        "icon_with_text_h6bm7P",
+        "share_QpbykG"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "storage-moving-deposit",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17579530802f614c4b": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_29f6af2_E8qyaR": {
+          "type": "ai_gen_block_29f6af2",
+          "settings": {
+            "image": "shopify://shop_images/Best-of-Oxford-2025-Logo.pdf.webp",
+            "image_size": 280,
+            "image_border_radius": 8,
+            "title": "Reserve Your Spot Now",
+            "body": "Cedar Bucket has been Oxford's #1 choice for Ole Miss student moving and storage, voted Best Moving Company and Best Storage Company in Oxford for 2025. \n\nWe're opening limited pre-sales for Summer 2026, and space will go fast.",
+            "content_width": 800,
+            "title_font": "serif",
+            "title_size": 32,
+            "title_color": "#000000",
+            "body_font": "serif",
+            "body_size": 18,
+            "body_color": "#333333",
+            "spacing": 20,
+            "section_padding": 40,
+            "background_color": "#ffffff"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_29f6af2_E8qyaR"
+      ],
+      "settings": {}
+    },
+    "1757966625deb10751": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6b3562a_GfwE46": {
+          "type": "ai_gen_block_6b3562a",
+          "settings": {
+            "premium_section_title": "What's Included in the Premium Package?",
+            "addon_section_title": "Additional Add-On Services",
+            "service_1_title": "Move Out Service",
+            "service_1_description": "Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.",
+            "service_2_title": "Climate-Controlled Storage",
+            "service_2_description": "Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.",
+            "service_3_title": "Move in Service",
+            "service_3_description": "When the fall semester begins, we return and set up your belongings where you need them.",
+            "addon_1_title": "Ship-to-Storage service",
+            "addon_1_description": "Can't bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we'll place them in your reserved unit on your behalf.",
+            "addon_2_title": "Handyman services",
+            "addon_2_description": "Our student movers will handle the assembly and/or disassembly of any items you need during your move.",
+            "addon_3_title": "Packing Supply Delivery",
+            "addon_3_description": "We can provide you with all the boxes and moving supplies needed in advance.",
+            "section_title_font": "serif",
+            "section_title_size": 32,
+            "item_title_font": "serif",
+            "item_title_size": 22,
+            "item_description_font": "serif",
+            "item_description_size": 16,
+            "addon_item_title_font": "serif",
+            "addon_item_title_size": 20,
+            "addon_item_description_font": "serif",
+            "addon_item_description_size": 15,
+            "background_color": "#ffffff",
+            "accent_color": "#d4af37",
+            "premium_bg_color": "#f8f8f8",
+            "premium_border_color": "#d4af37",
+            "premium_title_color": "#1a1a1a",
+            "item_bg_color": "#ffffff",
+            "item_border_color": "#e0e0e0",
+            "item_title_color": "#1a1a1a",
+            "item_description_color": "#666666",
+            "addon_bg_color": "#fafafa",
+            "addon_border_color": "#e0e0e0",
+            "addon_title_color": "#1a1a1a",
+            "addon_item_bg_color": "#ffffff",
+            "addon_item_hover_bg_color": "#f5f5f5",
+            "addon_item_title_color": "#1a1a1a",
+            "addon_item_description_color": "#666666",
+            "icon_size": 60,
+            "icon_bg_color": "#d4af37",
+            "icon_color": "#ffffff",
+            "border_radius": 12,
+            "item_border_radius": 8,
+            "addon_item_border_radius": 6
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6b3562a_GfwE46"
+      ],
+      "settings": {}
+    },
+    "17579533639980354a": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b3824ea_VNnxcb": {
+          "type": "ai_gen_block_b3824ea",
+          "settings": {
+            "heading": "What's Included in the Premium Package",
+            "service_1_title": "White-glove moving service",
+            "service_1_description": "Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.",
+            "service_2_title": "Climate-controlled storage",
+            "service_2_description": "Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.",
+            "service_3_title": "Delivery back to your new space",
+            "service_3_description": "When the fall semester begins, we return and set up your belongings where you need them.",
+            "heading_font": "serif",
+            "title_font": "serif",
+            "body_font": "serif",
+            "font_family": "sans_serif_n4",
+            "heading_weight": "400",
+            "heading_size": 32,
+            "title_size": 20,
+            "description_size": 16,
+            "mobile_heading_size": 24,
+            "background_color": "#ffffff",
+            "column_background": "#ffffff",
+            "heading_color": "#000000",
+            "title_color": "#000000",
+            "description_color": "#333333",
+            "icon_background": "#f5f5f7",
+            "icon_color": "#000000",
+            "border_color": "#e5e5e7",
+            "section_padding": 60,
+            "column_gap": 40,
+            "column_padding": 30,
+            "border_radius": 12,
+            "border_width": 1,
+            "heading_margin": 40,
+            "content_margin": 20,
+            "title_margin": 15,
+            "icon_size": 60,
+            "icon_margin": 25,
+            "mobile_gap": 30,
+            "mobile_padding": 25
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b3824ea_VNnxcb"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "blocks_46GCdL": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b3824ea_4pjF4F": {
+          "type": "ai_gen_block_b3824ea",
+          "settings": {
+            "heading": "Additional Services Available for Add-On",
+            "service_1_title": "Ship-to-Storage service",
+            "service_1_description": "Can’t bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we’ll place them in your reserved unit on your behalf.",
+            "service_2_title": "Handyman services",
+            "service_2_description": "Our student movers will handle the assembly and / or disassembly of any items you need during your move.",
+            "service_3_title": "Packing Supply Delivery",
+            "service_3_description": "We can provide you will all the boxes and moving supplies needed in advance.",
+            "heading_font": "serif",
+            "title_font": "serif",
+            "body_font": "serif",
+            "font_family": "sans_serif_n4",
+            "heading_weight": "400",
+            "heading_size": 32,
+            "title_size": 20,
+            "description_size": 16,
+            "mobile_heading_size": 24,
+            "background_color": "#ffffff",
+            "column_background": "#ffffff",
+            "heading_color": "#000000",
+            "title_color": "#000000",
+            "description_color": "#333333",
+            "icon_background": "#f5f5f7",
+            "icon_color": "#000000",
+            "border_color": "#e5e5e7",
+            "section_padding": 60,
+            "column_gap": 40,
+            "column_padding": 30,
+            "border_radius": 12,
+            "border_width": 1,
+            "heading_margin": 40,
+            "content_margin": 20,
+            "title_margin": 15,
+            "icon_size": 60,
+            "icon_margin": 25,
+            "mobile_gap": 30,
+            "mobile_padding": 25
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b3824ea_4pjF4F"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_hdbF8q": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AVJJWg": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's included in our Premium Service?",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_NALq3C": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Moving + Storage Premium Package is the ultimate hands-free solution for students and families who want a stress-free summer. We handle everything from start to finish so you don’t have to lift a finger.</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
+          }
+        }
+      },
+      "block_order": [
+        "heading_AVJJWg",
+        "text_NALq3C"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 20
+      }
+    },
+    "image_columns_x43H8y": {
+      "type": "image-columns",
+      "blocks": {
+        "column_KxUBD3": {
+          "type": "column",
+          "settings": {
+            "background_image": "shopify://shop_images/IMG_3326_f9ec1b6c-023f-47f8-9398-6ff55b934f3b.jpg",
+            "overlay_opacity": 50,
+            "title": "Move Out Service",
+            "heading_size": "h1",
+            "text": "<p>Our movers collect your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.</p>",
+            "sb_font_size": 14,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NGLc9B": {
+          "type": "column",
+          "settings": {
+            "background_image": "shopify://shop_images/IMG_0046.jpg",
+            "overlay_opacity": 50,
+            "title": "Premium Storage",
+            "heading_size": "h1",
+            "text": "<p>Your items are stored in our climate controlled facility. Our facility is designed to protect your items against humidity, heat, and damage. </p><p></p><p></p>",
+            "sb_font_size": 14,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hthFDa": {
+          "type": "column",
+          "settings": {
+            "background_image": "shopify://shop_images/IMG_3963.jpg",
+            "overlay_opacity": 50,
+            "title": "Move In Service",
+            "heading_size": "h1",
+            "text": "<p>When the fall semester begins, our student movers return and set up your belongings at your new apartment, house, or dorm room.</p>",
+            "sb_font_size": 14,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KxUBD3",
+        "column_NGLc9B",
+        "column_hthFDa"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_position": "center",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_columns_8nMwbA": {
+      "type": "image-columns",
+      "blocks": {
+        "column_CgFnpV": {
+          "type": "column",
+          "settings": {
+            "background_image": "shopify://shop_images/IMG_0052.jpg",
+            "overlay_opacity": 50,
+            "title": "Optional - Ship to Storage",
+            "heading_size": "h1",
+            "text": "<p>Can’t bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we’ll place them in your reserved unit on your behalf. </p>",
+            "sb_font_size": 14,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mPzPCE": {
+          "type": "column",
+          "settings": {
+            "background_image": "shopify://shop_images/Untitled_design_9.png",
+            "overlay_opacity": 50,
+            "title": "Optional - Packing supplies",
+            "heading_size": "h1",
+            "text": "<p>Packing supplies can be provided in advance. Please request for further details! </p>",
+            "sb_font_size": 14,
+            "link_as_button": false,
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_CgFnpV",
+        "column_mPzPCE"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "heading_position": "center",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1746543705dcfef5e5": {
@@ -119,53 +541,76 @@
       "block_order": [
         "klaviyo_email_marketing_sms_form_embed_block_YdkHew"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
     },
-    "rich_text_anTFCn": {
+    "rich_text_tazjYL": {
       "type": "rich-text",
       "blocks": {
-        "heading_kwfGj3": {
+        "heading_Ujhaa3": {
           "type": "heading",
           "settings": {
-            "heading": "Just Need Moving Assistance?",
+            "heading": "What is the full pricing?",
             "sb_custom_font": "Neutra Text Book",
             "heading_size": "h1"
           }
         },
-        "text_mkGmW3": {
+        "text_GV8Gyd": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "<p><strong>Moving Services</strong><br/><br/>• $175 per hour for two movers and a truck<br/></p><p>• 1.5-hour minimum per location<br/></p><p>Services are billed after completion<br/><br/><strong>Storage Rates</strong><br/><br/>•    5x5 Unit – $143/month <br/>    •    5x10 Unit – $240/month<br/>    •    10x10 Unit – $375/month<br/>    •    10x15 Unit – $600/month<br/>    •    10x20 Unit – $750/month<br/>    •    10x30 Unit – $1,050/month<br/><strong><br/>Ship-to-Storage Program</strong><br/><br/>• $200 flat fee for up to 5 packages of any size<br/><br/>• $10 per package for each additional item</p>",
             "sb_custom_font": "Neutra Text Book",
             "sb_font_size": 24,
             "sb_font_weight": 400
           }
-        },
-        "button_99Tekh": {
-          "type": "button",
+        }
+      },
+      "block_order": [
+        "heading_Ujhaa3",
+        "text_GV8Gyd"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "border_style": false,
+        "padding_top": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_Yi3zFJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AKGq9r": {
+          "type": "heading",
           "settings": {
-            "margin_top": 20,
-            "margin_bottom": 20,
-            "button_label": "Click Here",
-            "button_link": "shopify://pages/moving",
-            "button_style_secondary": false,
-            "button_bg_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
-            "button_bg_color_2": "#000000",
-            "button_text_color_2": "#ffffff"
+            "heading": "What are your Packing Requirements?",
+            "sb_custom_font": "Neutra Text Book",
+            "heading_size": "h1"
+          }
+        },
+        "text_8PiX8e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>To ensure belongings are returned in the same condition, we require the following. If you cannot source packing materials, Cedar Bucket can provide them at an additional charge.<br/><br/>• Fabric items must be protected and wrapped before the move. Stretch wrap is available upon request for the cost of materials.<br/><br/>• TVs must be packed in sturdy, durable TV boxes. TV Boxes is available upon request for the cost of the material.<br/><br/>• Glass, mirrors, and other fragile items must be wrapped in bubble wrap. Bubble wrap is provided upon request at cost of the material. <br/><br/>• Bed frames, TV mounts, and other items with loose parts must be secured and labeled separately.<br/><br/>• Customized labels with your information will be delivered prior to your move.<br/><br/>• Customers are required to label belongings clearly using these labels to ensure proper tracking.</p>",
+            "sb_custom_font": "Neutra Text Book",
+            "sb_font_size": 24,
+            "sb_font_weight": 400
           }
         }
       },
       "block_order": [
-        "heading_kwfGj3",
-        "text_mkGmW3",
-        "button_99Tekh"
+        "heading_AKGq9r",
+        "text_8PiX8e"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -188,6 +633,134 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "17579677712f04df93": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_8825c76_yxe3xR": {
+          "type": "ai_gen_block_8825c76",
+          "settings": {
+            "title": "Reserve Your Spot Today",
+            "accent_word": "Today",
+            "body_text": "<p>Reserve your spot with a $500 deposit today and gain access to a 1:1 consultation with a Cedar Bucket team member. During this meeting, we’ll create a custom service package and review all details and pricing with you.</p>",
+            "button_text": "Reserve Now",
+            "button_product": "",
+            "button_url": "",
+            "footer_text": "<p>Further details about pricing will be covered in your one-on-one consultation that can be scheduled post checkout.</p>",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "title_font": "serif",
+            "title_size": 34,
+            "body_font": "serif",
+            "body_size": 18,
+            "button_font": "serif",
+            "button_size": 16,
+            "footer_font": "serif",
+            "footer_size": 14,
+            "background_color": "#ffffff",
+            "content_bg_color": "#ffffff",
+            "text_color": "#1a1a1a",
+            "accent_color": "#ffffff",
+            "blob_color": "#d4af37",
+            "border_color": "#d4af37",
+            "border_width": 2,
+            "content_border_radius": 20,
+            "button_bg_color": "#d4af37",
+            "button_bg_secondary": "#b8941f",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#d4af37",
+            "button_hover_bg": "#1a1a1a",
+            "button_hover_bg_secondary": "#333333",
+            "button_hover_text": "#ffffff",
+            "button_hover_border": "#1a1a1a",
+            "button_radius": 8
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_fa47ffc_hNKiEL": {
+          "type": "ai_gen_block_fa47ffc",
+          "settings": {
+            "calculator_title": "Moving Services Price Calculator",
+            "total_label": "Estimated Total",
+            "breakdown_title": "Price Breakdown",
+            "moving_section_title": "Moving Services",
+            "moving_hours_label": "Estimated Hours",
+            "additional_locations_label": "Additional Locations",
+            "moving_rate_note": "$175 per hour for two movers and a truck",
+            "additional_locations_note": "$175 minimum per additional location",
+            "moving_hourly_rate": "175",
+            "moving_minimum_hours": "1.5",
+            "additional_location_rate": "175",
+            "packing_handyman_section_title": "Packing Services",
+            "packing_handyman_checkbox_label": "Add Packing Services",
+            "packing_handyman_hours_label": "Estimated Hours",
+            "workers_count_label": "Number of Workers",
+            "packing_handyman_note": "$80 per hour per worker. Must be scheduled ahead of time.",
+            "packing_handyman_rate": "80",
+            "packing_handyman_minimum_hours": "1",
+            "assembly_section_title": "Handy Man Services",
+            "assembly_checkbox_label": "Add Handy Man Services",
+            "assembly_hours_label": "Estimated Hours (1 hour minimum)",
+            "assembly_note": "$150 per hour,1 hour minimum. Must be scheduled ahead of time.",
+            "assembly_rate": "150",
+            "assembly_minimum_hours": "1",
+            "storage_section_title": "Storage Services",
+            "storage_unit_label": "Storage Unit Size",
+            "storage_months_label": "Number of Months",
+            "storage_note": "Most common size for one person is 5x10",
+            "storage_5x5_label": "5x5 Unit - $143/month",
+            "storage_5x5_price": "143",
+            "storage_5x10_label": "5x10 Unit - $240/month",
+            "storage_5x10_price": "240",
+            "storage_10x10_label": "10x10 Unit - $425/month",
+            "storage_10x10_price": "425",
+            "storage_10x15_label": "10x15 Unit - $600/month",
+            "storage_10x15_price": "600",
+            "storage_10x20_label": "10x20 Unit - $750/month",
+            "storage_10x20_price": "750",
+            "storage_10x30_label": "10x30 Unit - $1,050/month",
+            "storage_10x30_price": "1050",
+            "ship_storage_section_title": "Ship-to-Storage Program",
+            "ship_storage_checkbox_label": "Add Ship-to-Storage Program",
+            "packages_count_label": "Number of Packages",
+            "ship_storage_note": "$200 flat fee for up to 5 packages, $10 per additional package",
+            "ship_storage_base_rate": "200",
+            "ship_storage_additional_rate": "10",
+            "font_family": "serif",
+            "heading_size": 28,
+            "section_heading_size": 20,
+            "label_size": 14,
+            "total_label_size": 20,
+            "total_amount_size": 32,
+            "accent_color": "#d4af37",
+            "background_color": "#ffffff",
+            "section_background": "#f9f9f9",
+            "checkbox_background": "#edece7",
+            "note_background": "#f5f5f5",
+            "heading_color": "#1e1e1e",
+            "section_heading_color": "#1e1e1e",
+            "text_color": "#333333",
+            "label_color": "#1e1e1e",
+            "note_color": "#666666",
+            "border_color": "#e0e0e0",
+            "input_background": "#ffffff",
+            "input_text_color": "#1e1e1e",
+            "input_border_color": "#cccccc",
+            "total_background": "#f0f8ff",
+            "total_label_color": "#1e1e1e",
+            "breakdown_background": "#ffffff",
+            "border_radius": 8,
+            "section_border_radius": 6,
+            "input_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_8825c76_yxe3xR",
+        "ai_gen_block_fa47ffc_hNKiEL"
+      ],
+      "settings": {}
     },
     "image_with_text_XT7Jf3": {
       "type": "image-with-text",
@@ -215,8 +788,9 @@
         "heading_ak9ecC",
         "text_6PGW9U"
       ],
+      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/624870.jpg",
+        "image": "shopify://shop_images/IMG_0049.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -231,43 +805,35 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_E6pL7n": {
+    "image_with_text_3pixwL": {
       "type": "image-with-text",
       "blocks": {
-        "heading_HGrAKB": {
+        "heading_3Gqeng": {
           "type": "heading",
           "settings": {
-            "heading": "Ship-to-Storage Services",
+            "heading": "About Our Staff",
             "heading_size": "h0",
             "sb_custom_font": "Poiret One"
           }
         },
-        "text_i8KW4N": {
+        "text_AAWdWx": {
           "type": "text",
           "settings": {
-            "text": "<p>We offer a convenient ship-ahead service, allowing customers to send items directly to their purchased storage space from the comfort of their home. We securely store your belongings in our facility until you're ready to pick them up or request our delivery service.</p>",
+            "text": "<p>At Cedar Bucket, we exclusively employ students from the Ole Miss fraternity system, ensuring you receive the most reliable, trustworthy, and professional service possible. Our team is dedicated to making your storage experience safe, seamless, and stress-free—whether we’re picking up your items, delivering them back, or helping you expand your space as needed.</p>",
             "text_style": "body",
             "sb_custom_font": "Neutra Text Book",
             "font_size": 20,
             "sb_font_weight": 400
           }
-        },
-        "button_J9gnxm": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false
-          }
         }
       },
       "block_order": [
-        "heading_HGrAKB",
-        "text_i8KW4N",
-        "button_J9gnxm"
+        "heading_3Gqeng",
+        "text_AAWdWx"
       ],
+      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/person-holding-box.jpg",
+        "image": "shopify://shop_images/IMG_3326.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -326,69 +892,6 @@
         "quick_add": "none",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_columns_XD7A6b": {
-      "type": "image-columns",
-      "blocks": {
-        "column_tnH7LN": {
-          "type": "column",
-          "settings": {
-            "background_image": "shopify://shop_images/shipping-boxes-on-trolly-close-up.jpg",
-            "overlay_opacity": 50,
-            "title": "Move-out",
-            "heading_size": "h1",
-            "text": "<p>Don’t let the finger! Our team will come to you and collect all the belongings that you want moved and stored.</p>",
-            "sb_font_size": 16,
-            "link_as_button": false,
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_gcKbF6": {
-          "type": "column",
-          "settings": {
-            "background_image": "shopify://shop_images/10.png",
-            "overlay_opacity": 50,
-            "title": "Storage",
-            "heading_size": "h1",
-            "text": "<p>Our dedicated team will transport your items back to our storage facility, carefully wrap them using industrial-grade packing materials, and store them safely in our climate-controlled facility throughout the summer.</p>",
-            "sb_font_size": 16,
-            "link_as_button": false,
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_qTKgM6": {
-          "type": "column",
-          "settings": {
-            "background_image": "shopify://shop_images/11.png",
-            "overlay_opacity": 50,
-            "title": "Move-in",
-            "heading_size": "h1",
-            "text": "<p>When your storage term ends, we’ll carefully load all your items into our trucks and deliver them to your new location—completely hands-free for you.</p>",
-            "sb_font_size": 16,
-            "link_as_button": false,
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_tnH7LN",
-        "column_gcKbF6",
-        "column_qTKgM6"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "heading_position": "center",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "columns_mobile": "1",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -515,14 +1018,23 @@
   "order": [
     "image_banner_3jRxte",
     "rich_text_MihLBj",
+    "featured_product_6WDdw9",
+    "17579530802f614c4b",
+    "1757966625deb10751",
+    "17579533639980354a",
+    "blocks_46GCdL",
+    "rich_text_hdbF8q",
+    "image_columns_x43H8y",
+    "image_columns_8nMwbA",
     "1746543705dcfef5e5",
-    "rich_text_anTFCn",
+    "rich_text_tazjYL",
+    "rich_text_Yi3zFJ",
     "custom_liquid_F6bDCY",
+    "17579677712f04df93",
     "image_with_text_XT7Jf3",
-    "image_with_text_E6pL7n",
+    "image_with_text_3pixwL",
     "main",
     "featured_collection_rcJLNy",
-    "image_columns_XD7A6b",
     "rich_text_a98TQ4",
     "collapsible_content_8a8dCY"
   ]

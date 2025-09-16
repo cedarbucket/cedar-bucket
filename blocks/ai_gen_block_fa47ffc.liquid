@@ -1,0 +1,1115 @@
+{% doc %}
+  @prompt
+    match the style above and I need a full price calculator 
+    
+    Moving Services
+    $175 per hour for two movers and a truck, 1.5 hour minimum
+    $175 minimum per additional location
+    Actual move times will be billed upon completion
+    Packing Services
+    Must be scheduled ahead of time. Workers must be assigned and confirmed before the service date and are typically scheduled separately from the move-in date
+    Limited availability based on packing team schedules
+    $80 per hour per packer
+    Separate fee for materials if needed
+    Handy Man Services
+    Must be scheduled ahead of time
+    Limited availability based on our handy man’s schedule
+    $150 per hour, 1 hour minimum
+    Assembly Services
+    Must be scheduled ahead of time
+    Limited availability based on our assembly team’s schedule
+    $150 per hour, 1 hour minimum
+    Storage Rates (50 percent increase from last season)
+    5x5 Unit – $143 per month, was $95, $5.72 per square foot
+    5x10 Unit – $240 per month, was $160, $4.80 per square foot
+    10x10 Unit – $425 per month, was $250, $4.25 per square foot
+    10x15 Unit – $600 per month, was $400, $4.00 per square foot
+    10x20 Unit – $750 per month, was $500, $3.75 per square foot
+    10x30 Unit – $1,050 per month, was $700, $3.50 per square foot
+    Ship-to-Storage Program
+    $200 flat fee for up to 5 packages of any size
+    $10 per package for each additional item, combine handy man and packing serivce and I want you to add golf accents to match the rest of the page
+    
+    Storage serivces are required
+    
+    All me to edit all the words and the prices, remove the all the emojis and allow me to edit the font, the drop down for strorage services is really buggy can you fix that, the dropdown for storage unit does not work it glitches
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-price-calculator-{{ ai_gen_id }} {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    font-family: {{ block.settings.font_family.family }}, {{ block.settings.font_family.fallback_families }};
+    font-weight: {{ block.settings.font_family.weight }};
+    border: 2px solid {{ block.settings.accent_color }};
+  }
+
+  .ai-price-calculator-title-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 30px;
+    text-align: center;
+    position: relative;
+  }
+
+  .ai-price-calculator-section-{{ ai_gen_id }} {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: {{ block.settings.section_background }};
+    border-radius: {{ block.settings.section_border_radius }}px;
+    border: 1px solid {{ block.settings.border_color }};
+    position: relative;
+  }
+
+  .ai-price-calculator-section-title-{{ ai_gen_id }} {
+    color: {{ block.settings.section_heading_color }};
+    font-size: {{ block.settings.section_heading_size }}px;
+    margin: 0 0 15px;
+    font-weight: 600;
+    border-bottom: 2px solid {{ block.settings.accent_color }};
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+
+  .ai-price-calculator-field-{{ ai_gen_id }} {
+    margin-bottom: 15px;
+  }
+
+  .ai-price-calculator-label-{{ ai_gen_id }} {
+    display: block;
+    margin-bottom: 5px;
+    color: {{ block.settings.label_color }};
+    font-size: {{ block.settings.label_size }}px;
+    font-weight: 500;
+  }
+
+  .ai-price-calculator-input-{{ ai_gen_id }},
+  .ai-price-calculator-select-{{ ai_gen_id }} {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    font-size: 14px;
+    background-color: {{ block.settings.input_background }};
+    color: {{ block.settings.input_text_color }};
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+
+  .ai-price-calculator-select-{{ ai_gen_id }} {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+  }
+
+  .ai-price-calculator-input-{{ ai_gen_id }}:focus,
+  .ai-price-calculator-select-{{ ai_gen_id }}:focus {
+    outline: none;
+    border-color: {{ block.settings.accent_color }};
+    box-shadow: 0 0 0 3px {{ block.settings.accent_color }}33;
+  }
+
+  .ai-price-calculator-checkbox-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: {{ block.settings.checkbox_background }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    border: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-price-calculator-checkbox-{{ ai_gen_id }} {
+    width: 18px;
+    height: 18px;
+    accent-color: {{ block.settings.accent_color }};
+  }
+
+  .ai-price-calculator-note-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: {{ block.settings.note_color }};
+    margin-top: 5px;font-style: italic;
+    padding: 8px;
+    background-color: {{ block.settings.note_background }};
+    border-radius:4px;
+    border-left: 3px solid {{ block.settings.accent_color }};
+  }
+
+  .ai-price-calculator-total-{{ ai_gen_id }} {
+    background: linear-gradient(135deg, {{ block.settings.total_background }}, {{ block.settings.accent_color }}22);
+    padding: 25px;
+    border-radius: {{ block.settings.section_border_radius }}px;
+    text-align: center;
+    border: 3px solid {{ block.settings.accent_color }};
+    position: relative;
+  }
+
+  .ai-price-calculator-total-label-{{ ai_gen_id }} {
+    color: {{ block.settings.total_label_color }};
+    font-size: {{ block.settings.total_label_size }}px;
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  .ai-price-calculator-total-amount-{{ ai_gen_id }} {
+    color: {{ block.settings.accent_color }};
+    font-size: {{ block.settings.total_amount_size }}px;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .ai-price-calculator-breakdown-{{ ai_gen_id }} {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: {{ block.settings.breakdown_background }};
+    border-radius: {{ block.settings.section_border_radius }}px;
+    border: 1px solid {{ block.settings.border_color }};
+  }
+
+  .ai-price-calculator-breakdown-title-{{ ai_gen_id }} {
+    color: {{ block.settings.section_heading_color }};
+    font-size: {{ block.settings.section_heading_size }}px;
+    margin: 0 0 15px;
+    font-weight: 600;
+    border-bottom: 2px solid {{ block.settings.accent_color }};
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+
+  .ai-price-calculator-breakdown-item-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid {{ block.settings.border_color }};
+    color: {{ block.settings.text_color }};
+    font-size: 14px;
+  }
+
+  .ai-price-calculator-breakdown-item-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-price-calculator-breakdown-item-{{ ai_gen_id }}:nth-child(odd) {
+    background-color: {{ block.settings.accent_color }}11;
+    margin: 0 -10px;
+    padding: 12px 10px;
+    border-radius: 4px;
+  }
+
+  .ai-price-calculator-row-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .ai-price-calculator-required-{{ ai_gen_id }} {
+    background: linear-gradient(135deg, {{ block.settings.accent_color }}22, {{ block.settings.accent_color }}11);
+    border: 2px solid {{ block.settings.accent_color }};
+  }
+
+  .ai-price-calculator-required-{{ ai_gen_id }} .ai-price-calculator-section-title-{{ ai_gen_id }}::after {
+    content: " *";
+    color: {{ block.settings.accent_color }};font-weight: bold;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-price-calculator-{{ ai_gen_id }} {
+      padding: 20px;
+    }
+    
+    .ai-price-calculator-row-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}<moving-price-calculator-{{ ai_gen_id }}
+  class="ai-price-calculator-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <h2 class="ai-price-calculator-title-{{ ai_gen_id }}">{{ block.settings.calculator_title }}</h2>
+
+  <div class="ai-price-calculator-section-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-section-title-{{ ai_gen_id }}">{{ block.settings.moving_section_title }}</h3>
+    <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="moving-hours-{{ ai_gen_id }}">{{ block.settings.moving_hours_label }}</label>
+      <input
+        type="number"
+        id="moving-hours-{{ ai_gen_id }}"
+        class="ai-price-calculator-input-{{ ai_gen_id }}"
+        min="{{ block.settings.moving_minimum_hours }}"
+        step="0.5"
+        value="{{ block.settings.moving_minimum_hours }}"
+        data-service="moving"><div class="ai-price-calculator-note-{{ ai_gen_id }}">
+        {{ block.settings.moving_rate_note }}
+      </div>
+    </div>
+    <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="additional-locations-{{ ai_gen_id }}">
+        {{ block.settings.additional_locations_label }}
+      </label>
+      <input
+        type="number"
+        id="additional-locations-{{ ai_gen_id }}"
+        class="ai-price-calculator-input-{{ ai_gen_id }}"
+        min="0"
+        value="0"
+        data-service="moving"
+      >
+      <div class="ai-price-calculator-note-{{ ai_gen_id }}">
+        {{ block.settings.additional_locations_note }}
+      </div>
+    </div></div>
+
+  <div class="ai-price-calculator-section-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-section-title-{{ ai_gen_id }}">{{ block.settings.packing_handyman_section_title }}</h3>
+    <div class="ai-price-calculator-checkbox-wrapper-{{ ai_gen_id }}">
+      <input
+        type="checkbox"
+        id="packing-handyman-service-{{ ai_gen_id }}"
+        class="ai-price-calculator-checkbox-{{ ai_gen_id }}"
+        data-service="packingHandyman"
+      >
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="packing-handyman-service-{{ ai_gen_id }}">
+        {{ block.settings.packing_handyman_checkbox_label }}
+      </label>
+    </div>
+    <div class="ai-price-calculator-row-{{ ai_gen_id }}">
+      <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+        <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="packing-handyman-hours-{{ ai_gen_id }}">
+          {{ block.settings.packing_handyman_hours_label }}
+        </label>
+        <input
+          type="number"
+          id="packing-handyman-hours-{{ ai_gen_id }}"
+          class="ai-price-calculator-input-{{ ai_gen_id }}"
+          min="{{ block.settings.packing_handyman_minimum_hours }}"
+          step="0.5"
+          value="{{ block.settings.packing_handyman_minimum_hours }}"
+          data-service="packingHandyman"
+          disabled
+        >
+      </div>
+      <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+        <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="workers-count-{{ ai_gen_id }}">
+          {{ block.settings.workers_count_label }}
+        </label>
+        <input
+          type="number"
+          id="workers-count-{{ ai_gen_id }}"
+          class="ai-price-calculator-input-{{ ai_gen_id }}"
+          min="1"
+          value="1"
+          data-service="packingHandyman"
+          disabled
+        >
+      </div>
+    </div>
+    <div class="ai-price-calculator-note-{{ ai_gen_id }}">
+      {{ block.settings.packing_handyman_note }}
+    </div>
+  </div>
+
+  <div class="ai-price-calculator-section-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-section-title-{{ ai_gen_id }}">{{ block.settings.assembly_section_title }}</h3>
+    <div class="ai-price-calculator-checkbox-wrapper-{{ ai_gen_id }}">
+      <input
+        type="checkbox"
+        id="assembly-service-{{ ai_gen_id }}"
+        class="ai-price-calculator-checkbox-{{ ai_gen_id }}"
+        data-service="assembly"
+      >
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="assembly-service-{{ ai_gen_id }}">
+        {{ block.settings.assembly_checkbox_label }}
+      </label>
+    </div>
+    <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="assembly-hours-{{ ai_gen_id }}">
+        {{ block.settings.assembly_hours_label }}
+      </label>
+      <input
+        type="number"
+        id="assembly-hours-{{ ai_gen_id }}"
+        class="ai-price-calculator-input-{{ ai_gen_id }}"
+        min="{{ block.settings.assembly_minimum_hours }}"
+        step="0.5"
+        value="{{ block.settings.assembly_minimum_hours }}"
+        data-service="assembly"
+        disabled
+      ><div class="ai-price-calculator-note-{{ ai_gen_id }}">
+        {{ block.settings.assembly_note }}
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-price-calculator-section-{{ ai_gen_id }} ai-price-calculator-required-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-section-title-{{ ai_gen_id }}">{{ block.settings.storage_section_title }}</h3>
+    <div class="ai-price-calculator-row-{{ ai_gen_id }}">
+      <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+        <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="storage-unit-{{ ai_gen_id }}">
+          {{ block.settings.storage_unit_label }}
+        </label>
+        <select
+          id="storage-unit-{{ ai_gen_id }}"
+          class="ai-price-calculator-select-{{ ai_gen_id }}"
+          data-service="storage"
+        >
+          <option value="{{ block.settings.storage_5x5_price }}">{{ block.settings.storage_5x5_label }}</option>
+          <option value="{{ block.settings.storage_5x10_price }}">{{ block.settings.storage_5x10_label }}</option>
+          <option value="{{ block.settings.storage_10x10_price }}">{{ block.settings.storage_10x10_label }}</option>
+          <option value="{{ block.settings.storage_10x15_price }}">{{ block.settings.storage_10x15_label }}</option>
+          <option value="{{ block.settings.storage_10x20_price }}">{{ block.settings.storage_10x20_label }}</option>
+          <option value="{{ block.settings.storage_10x30_price }}">{{ block.settings.storage_10x30_label }}</option>
+        </select>
+      </div>
+      <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+        <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="storage-months-{{ ai_gen_id }}">
+          {{ block.settings.storage_months_label }}
+        </label>
+        <input
+          type="number"
+          id="storage-months-{{ ai_gen_id }}"
+          class="ai-price-calculator-input-{{ ai_gen_id }}"
+          min="1"
+          value="1"
+          data-service="storage"
+        >
+      </div>
+    </div>
+    <div class="ai-price-calculator-note-{{ ai_gen_id }}">
+      {{ block.settings.storage_note }}
+    </div>
+  </div>
+
+  <div class="ai-price-calculator-section-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-section-title-{{ ai_gen_id }}">{{ block.settings.ship_storage_section_title }}</h3>
+    <div class="ai-price-calculator-checkbox-wrapper-{{ ai_gen_id }}">
+      <input
+        type="checkbox"
+        id="ship-storage-service-{{ ai_gen_id }}"
+        class="ai-price-calculator-checkbox-{{ ai_gen_id }}"
+        data-service="shipStorage"
+      >
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="ship-storage-service-{{ ai_gen_id }}">
+        {{ block.settings.ship_storage_checkbox_label }}
+      </label>
+    </div>
+    <div class="ai-price-calculator-field-{{ ai_gen_id }}">
+      <label class="ai-price-calculator-label-{{ ai_gen_id }}" for="packages-count-{{ ai_gen_id }}">
+        {{ block.settings.packages_count_label }}
+      </label>
+      <input
+        type="number"
+        id="packages-count-{{ ai_gen_id }}"
+        class="ai-price-calculator-input-{{ ai_gen_id }}"
+        min="1"
+        value="1"
+        data-service="shipStorage"
+        disabled
+      >
+      <div class="ai-price-calculator-note-{{ ai_gen_id }}">
+        {{ block.settings.ship_storage_note }}
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-price-calculator-total-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-total-label-{{ ai_gen_id }}">{{ block.settings.total_label }}</h3>
+    <p class="ai-price-calculator-total-amount-{{ ai_gen_id }}" id="total-amount-{{ ai_gen_id }}">$262.50</p>
+  </div>
+
+  <div class="ai-price-calculator-breakdown-{{ ai_gen_id }}" id="breakdown-{{ ai_gen_id }}">
+    <h3 class="ai-price-calculator-breakdown-title-{{ ai_gen_id }}">{{ block.settings.breakdown_title }}</h3>
+    <div id="breakdown-items-{{ ai_gen_id }}"><div class="ai-price-calculator-breakdown-item-{{ ai_gen_id }}">
+        <span>Moving Services (1.5 hours)</span>
+        <span>$262.50</span>
+      </div>
+    </div>
+  </div>
+</moving-price-calculator-{{ ai_gen_id }}><script>
+(function() {
+  class MovingPriceCalculator{{ ai_gen_id }} extends HTMLElement {
+    constructor() {
+      super();
+      this.storageOptions = [
+        { value: parseFloat('{{ block.settings.storage_5x5_price }}') || 143, label: '{{ block.settings.storage_5x5_label }}' },
+        { value: parseFloat('{{ block.settings.storage_5x10_price }}') || 240, label: '{{ block.settings.storage_5x10_label }}' },
+        { value: parseFloat('{{ block.settings.storage_10x10_price }}') || 425, label: '{{ block.settings.storage_10x10_label }}' },
+        { value: parseFloat('{{ block.settings.storage_10x15_price }}') || 600, label: '{{ block.settings.storage_10x15_label }}' },
+        { value: parseFloat('{{ block.settings.storage_10x20_price }}') || 750, label: '{{ block.settings.storage_10x20_label }}' },
+        { value: parseFloat('{{ block.settings.storage_10x30_price }}') || 1050, label: '{{ block.settings.storage_10x30_label }}' }
+      ];
+    }
+
+    connectedCallback() {
+      this.setupEventListeners();
+      this.calculateTotal();
+    }
+
+    getRates() {
+      return {
+        moving: parseFloat('{{ block.settings.moving_hourly_rate }}') || 175,
+        additionalLocation: parseFloat('{{ block.settings.additional_location_rate }}') || 175,
+        packingHandyman: parseFloat('{{ block.settings.packing_handyman_rate }}') || 80,
+        assembly: parseFloat('{{ block.settings.assembly_rate }}') || 150,
+        shipStorageBase: parseFloat('{{ block.settings.ship_storage_base_rate }}') || 200,
+        shipStorageAdditional: parseFloat('{{ block.settings.ship_storage_additional_rate }}') || 10
+      };
+    }
+
+    setupEventListeners() {
+      const inputs = this.querySelectorAll('input, select');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => this.calculateTotal());
+        input.addEventListener('change', () => this.calculateTotal());
+      });
+
+      const checkboxes = this.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+          this.toggleServiceInputs(e.target);
+          this.calculateTotal();
+        });
+      });
+    }
+
+    toggleServiceInputs(checkbox) {
+      const service = checkbox.dataset.service;
+      const relatedInputs = this.querySelectorAll(`[data-service="${service}"]:not([type="checkbox"])`);
+      
+      relatedInputs.forEach(input => {
+        input.disabled = !checkbox.checked;
+        if (!checkbox.checked) {
+          if (input.type === 'number') {
+            input.value = input.min || 0;
+          }
+        }
+      });
+    }
+
+    calculateTotal() {
+      const rates = this.getRates();
+      let total = 0;
+      const breakdown = [];
+
+      const movingMinHours = parseFloat('{{ block.settings.moving_minimum_hours }}') || 1.5;
+      const movingHours = Math.max(movingMinHours, parseFloat(this.querySelector('#moving-hours-{{ ai_gen_id }}').value) || movingMinHours);
+      const additionalLocations = parseInt(this.querySelector('#additional-locations-{{ ai_gen_id }}').value) || 0;
+      const movingCost = movingHours * rates.moving;
+      const locationCost = additionalLocations * rates.additionalLocation;
+      const totalMovingCost = movingCost + locationCost;
+      total += totalMovingCost;
+      breakdown.push({
+        label: `{{ block.settings.moving_section_title }} (${movingHours} hours${additionalLocations > 0 ? `, ${additionalLocations} additional locations` : ''})`,
+        amount: totalMovingCost
+      });
+
+      const packingHandymanEnabled = this.querySelector('#packing-handyman-service-{{ ai_gen_id }}').checked;
+      if (packingHandymanEnabled) {
+        const packingHandymanMinHours = parseFloat('{{ block.settings.packing_handyman_minimum_hours }}') || 1;
+        const packingHandymanHours = Math.max(packingHandymanMinHours, parseFloat(this.querySelector('#packing-handyman-hours-{{ ai_gen_id }}').value) || packingHandymanMinHours);
+        const workersCount = parseInt(this.querySelector('#workers-count-{{ ai_gen_id }}').value) || 1;
+        const packingHandymanCost = packingHandymanHours * workersCount * rates.packingHandyman;
+        total += packingHandymanCost;
+        breakdown.push({
+          label: `{{ block.settings.packing_handyman_section_title }} (${packingHandymanHours} hours, ${workersCount} workers)`,
+          amount: packingHandymanCost
+        });
+      }
+
+      const assemblyEnabled = this.querySelector('#assembly-service-{{ ai_gen_id }}').checked;
+      if (assemblyEnabled) {
+        const assemblyMinHours = parseFloat('{{ block.settings.assembly_minimum_hours }}') || 1;
+        const assemblyHours = Math.max(assemblyMinHours, parseFloat(this.querySelector('#assembly-hours-{{ ai_gen_id }}').value) || assemblyMinHours);
+        const assemblyCost = assemblyHours * rates.assembly;
+        total += assemblyCost;
+        breakdown.push({
+          label: `{{ block.settings.assembly_section_title }} (${assemblyHours} hours)`,
+          amount: assemblyCost
+        });
+      }
+
+      const storageSelect = this.querySelector('#storage-unit-{{ ai_gen_id }}');
+      const selectedIndex = storageSelect.selectedIndex;
+      const storageRate = this.storageOptions[selectedIndex].value;
+      const storageLabel = this.storageOptions[selectedIndex].label;
+      const storageMonths = parseInt(this.querySelector('#storage-months-{{ ai_gen_id }}').value) || 1;
+      const storageCost = storageRate * storageMonths;
+      total += storageCost;
+      breakdown.push({
+        label: `${storageLabel} (${storageMonths} months)`,
+        amount: storageCost
+      });
+
+      const shipStorageEnabled = this.querySelector('#ship-storage-service-{{ ai_gen_id }}').checked;
+      if (shipStorageEnabled) {
+        const packagesCount = parseInt(this.querySelector('#packages-count-{{ ai_gen_id }}').value) || 1;
+        let shipStorageCost = rates.shipStorageBase;
+        if (packagesCount > 5) {
+          shipStorageCost += (packagesCount - 5) * rates.shipStorageAdditional;
+        }
+        total += shipStorageCost;
+        breakdown.push({
+          label: `{{ block.settings.ship_storage_section_title }} (${packagesCount} packages)`,
+          amount: shipStorageCost
+        });
+      }
+
+      this.updateDisplay(total, breakdown);
+    }
+
+    updateDisplay(total, breakdown) {
+      const totalElement = this.querySelector('#total-amount-{{ ai_gen_id }}');
+      const breakdownContainer = this.querySelector('#breakdown-items-{{ ai_gen_id }}');
+
+      totalElement.textContent = `$${total.toFixed(2)}`;
+
+      breakdownContainer.innerHTML = '';
+      breakdown.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'ai-price-calculator-breakdown-item-{{ ai_gen_id }}';
+        div.innerHTML = `
+          <span>${item.label}</span>
+          <span>$${item.amount.toFixed(2)}</span>
+        `;
+        breakdownContainer.appendChild(div);
+      });
+    }
+  }
+
+  customElements.define('moving-price-calculator-{{ ai_gen_id }}', MovingPriceCalculator{{ ai_gen_id }});
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Moving price calculator",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "text",
+      "id": "calculator_title",
+      "label": "Calculator title",
+      "default": "Moving Services Price Calculator"
+    },
+    {
+      "type": "text",
+      "id": "total_label",
+      "label": "Total label",
+      "default": "Estimated Total"
+    },
+    {
+      "type": "text",
+      "id": "breakdown_title",
+      "label": "Breakdown title",
+      "default": "Price Breakdown"
+    },
+    {
+      "type": "header",
+      "content": "Moving services"
+    },
+    {
+      "type": "text",
+      "id": "moving_section_title",
+      "label": "Section title",
+      "default": "Moving Services"
+    },
+    {
+      "type": "text",
+      "id": "moving_hours_label",
+      "label": "Hours label",
+      "default": "Estimated Hours"
+    },
+    {
+      "type": "text",
+      "id": "additional_locations_label",
+      "label": "Additional locations label",
+      "default": "Additional Locations"
+    },
+    {
+      "type": "text",
+      "id": "moving_rate_note",
+      "label": "Rate note",
+      "default": "$175 per hour for two movers and a truck"
+    },
+    {
+      "type": "text",
+      "id": "additional_locations_note",
+      "label": "Additional locations note",
+      "default": "$175 minimum per additional location"
+    },
+    {
+      "type": "text",
+      "id": "moving_hourly_rate",
+      "label": "Hourly rate",
+      "default": "175"
+    },
+    {
+      "type": "text",
+      "id": "moving_minimum_hours",
+      "label": "Minimum hours",
+      "default": "1.5"
+    },
+    {
+      "type": "text",
+      "id": "additional_location_rate",
+      "label": "Additional location rate",
+      "default": "175"
+    },
+    {
+      "type": "header",
+      "content": "Packing & handyman services"
+    },
+    {
+      "type": "text",
+      "id": "packing_handyman_section_title",
+      "label": "Section title",
+      "default": "Packing & Handyman Services"
+    },
+    {
+      "type": "text",
+      "id": "packing_handyman_checkbox_label",
+      "label": "Checkbox label",
+      "default": "Add Packing & Handyman Services"
+    },
+    {
+      "type": "text",
+      "id": "packing_handyman_hours_label",
+      "label": "Hours label",
+      "default": "Estimated Hours"
+    },
+    {
+      "type": "text",
+      "id": "workers_count_label",
+      "label": "Workers count label",
+      "default": "Number of Workers"
+    },
+    {
+      "type": "text",
+      "id": "packing_handyman_note",
+      "label": "Service note",
+      "default": "$80 per hour per worker. Must be scheduled ahead of time."
+    },
+    {
+      "type": "text",
+      "id": "packing_handyman_rate",
+      "label": "Hourly rate",
+      "default": "80"
+    },
+    {
+      "type": "text",
+      "id": "packing_handyman_minimum_hours",
+      "label": "Minimum hours",
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Assembly services"
+    },
+    {
+      "type": "text",
+      "id": "assembly_section_title",
+      "label": "Section title",
+      "default": "Assembly Services"
+    },
+    {
+      "type": "text",
+      "id": "assembly_checkbox_label",
+      "label": "Checkbox label",
+      "default": "Add Assembly Services"
+    },
+    {
+      "type": "text",
+      "id": "assembly_hours_label",
+      "label": "Hours label",
+      "default": "Estimated Hours (1 hour minimum)"
+    },
+    {
+      "type": "text",
+      "id": "assembly_note",
+      "label": "Service note",
+      "default": "$150 per hour,1 hour minimum. Must be scheduled ahead of time."
+    },
+    {
+      "type": "text",
+      "id": "assembly_rate",
+      "label": "Hourly rate",
+      "default": "150"
+    },
+    {
+      "type": "text",
+      "id": "assembly_minimum_hours",
+      "label": "Minimum hours",
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Storage services"
+    },
+    {
+      "type": "text",
+      "id": "storage_section_title",
+      "label": "Section title",
+      "default": "Storage Services"
+    },
+    {
+      "type": "text",
+      "id": "storage_unit_label",
+      "label": "Unit size label",
+      "default": "Storage Unit Size"
+    },
+    {
+      "type": "text",
+      "id": "storage_months_label",
+      "label": "Months label",
+      "default": "Number of Months"
+    },
+    {
+      "type": "text",
+      "id": "storage_note",
+      "label": "Storage note",
+      "default": "Storage rates have increased 50% from last season"
+    },
+    {
+      "type": "text",
+      "id": "storage_5x5_label",
+      "label": "5x5 unit label",
+      "default": "5x5 Unit - $143/month"
+    },
+    {
+      "type": "text",
+      "id": "storage_5x5_price",
+      "label": "5x5 unit price",
+      "default": "143"
+    },
+    {
+      "type": "text",
+      "id": "storage_5x10_label",
+      "label": "5x10 unit label",
+      "default": "5x10 Unit - $240/month"
+    },
+    {
+      "type": "text",
+      "id": "storage_5x10_price",
+      "label": "5x10 unit price",
+      "default": "240"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x10_label",
+      "label": "10x10 unit label",
+      "default": "10x10 Unit - $425/month"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x10_price",
+      "label": "10x10 unit price",
+      "default": "425"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x15_label",
+      "label": "10x15 unit label",
+      "default": "10x15 Unit - $600/month"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x15_price",
+      "label": "10x15 unit price",
+      "default": "600"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x20_label",
+      "label": "10x20 unit label",
+      "default": "10x20 Unit - $750/month"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x20_price",
+      "label": "10x20 unit price",
+      "default": "750"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x30_label",
+      "label": "10x30 unit label",
+      "default": "10x30 Unit - $1,050/month"
+    },
+    {
+      "type": "text",
+      "id": "storage_10x30_price",
+      "label": "10x30 unit price",
+      "default": "1050"
+    },
+    {
+      "type": "header",
+      "content": "Ship-to-storage program"
+    },
+    {
+      "type": "text",
+      "id": "ship_storage_section_title",
+      "label": "Section title",
+      "default": "Ship-to-Storage Program"
+    },
+    {
+      "type": "text",
+      "id": "ship_storage_checkbox_label",
+      "label": "Checkbox label",
+      "default": "Add Ship-to-Storage Program"
+    },
+    {
+      "type": "text",
+      "id": "packages_count_label",
+      "label": "Packages count label",
+      "default": "Number of Packages"
+    },
+    {
+      "type": "text",
+      "id": "ship_storage_note",
+      "label": "Service note",
+      "default": "$200 flat fee for up to 5 packages, $10 per additional package"
+    },
+    {
+      "type": "text",
+      "id": "ship_storage_base_rate",
+      "label": "Base rate (up to 5 packages)",
+      "default": "200"
+    },
+    {
+      "type": "text",
+      "id": "ship_storage_additional_rate",
+      "label": "Additional package rate",
+      "default": "10"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "font_family",
+      "label": "Font family",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Main heading size",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "section_heading_size",
+      "min": 16,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Section heading size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Label size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "total_label_size",
+      "min": 16,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Total label size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "total_amount_size",
+      "min": 24,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Total amount size",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#2E7D32"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "checkbox_background",
+      "label": "Checkbox background",
+      "default": "#f0f8f0"
+    },
+    {
+      "type": "color",
+      "id": "note_background",
+      "label": "Note background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Main heading color",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "section_heading_color",
+      "label": "Section heading color",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "note_color",
+      "label": "Note color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Input styling"
+    },
+    {
+      "type": "color",
+      "id": "input_background",
+      "label": "Input background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text color",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Total section"
+    },
+    {
+      "type": "color",
+      "id": "total_background",
+      "label": "Total background",
+      "default": "#f0f8ff"
+    },
+    {
+      "type": "color",
+      "id": "total_label_color",
+      "label": "Total label color",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "breakdown_background",
+      "label": "Breakdown background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Main border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "section_border_radius",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "px",
+      "label": "Section border radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Input border radius",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Moving price calculator"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

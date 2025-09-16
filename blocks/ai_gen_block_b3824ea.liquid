@@ -1,0 +1,523 @@
+{% doc %}
+  @prompt
+    make a mutli column apple style display of the following using icons above each column and black colors
+    
+    What’s Included in the Premium Package
+    • White-glove moving service
+    Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.
+    • Climate-controlled storage
+    Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.
+    • Delivery back to your new space
+    When the fall semester begins, we return and set up your belongings where you need them., I need to be able to edit the font and use a truck and the delivery icon, the heading title is bold and i don't want it bold, i need to be able to edit the icon
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-premium-package-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 20px;
+    background-color: {{ block.settings.background_color }};
+    font-family: {{ block.settings.font_family.family }}, {{ block.settings.font_family.fallback_families }};
+  }
+
+  .ai-premium-package__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-premium-package__heading-{{ ai_gen_id }} {
+    text-align: center;
+    margin: 0 0 {{ block.settings.heading_margin }}px;
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    font-weight: {{ block.settings.heading_weight }};
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+  }
+
+  .ai-premium-package__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: {{ block.settings.column_gap }}px;
+    margin-top: {{ block.settings.content_margin }}px;
+  }
+
+  .ai-premium-package__column-{{ ai_gen_id }} {
+    text-align: center;
+    padding: {{ block.settings.column_padding }}px;
+    background-color: {{ block.settings.column_background }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-premium-package__icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto {{ block.settings.icon_margin }}px;
+    background-color: {{ block.settings.icon_background }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-premium-package__icon-{{ ai_gen_id }} svg {
+    width: {{ block.settings.icon_size | times: 0.5 }}px;
+    height: {{ block.settings.icon_size | times: 0.5 }}px;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-premium-package__icon-{{ ai_gen_id }} img {
+    width: {{ block.settings.icon_size | times: 0.6 }}px;
+    height: {{ block.settings.icon_size | times: 0.6 }}px;
+    object-fit: contain;
+  }
+
+  .ai-premium-package__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.title_margin }}px;
+    font-family: {{ block.settings.title_font.family }}, {{ block.settings.title_font.fallback_families }};
+  }
+
+  .ai-premium-package__description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.6;
+    color: {{ block.settings.description_color }};
+    margin: 0;
+    font-family: {{ block.settings.body_font.family }}, {{ block.settings.body_font.fallback_families }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-premium-package__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-premium-package__column-{{ ai_gen_id }} {
+      padding: {{ block.settings.mobile_padding }}px;
+    }
+
+    .ai-premium-package__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_heading_size }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-premium-package-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-premium-package__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-premium-package__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="ai-premium-package__grid-{{ ai_gen_id }}">
+      <div class="ai-premium-package__column-{{ ai_gen_id }}">
+        <div class="ai-premium-package__icon-{{ ai_gen_id }}">
+          {% if block.settings.service_1_icon %}
+            <img src="{{ block.settings.service_1_icon | image_url: width: 100 }}" alt="{{ block.settings.service_1_title | escape }}">
+          {% else %}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+            </svg>
+          {% endif %}
+        </div><h3 class="ai-premium-package__title-{{ ai_gen_id }}">{{ block.settings.service_1_title }}</h3>
+        <p class="ai-premium-package__description-{{ ai_gen_id }}">{{ block.settings.service_1_description }}</p>
+      </div>
+
+      <div class="ai-premium-package__column-{{ ai_gen_id }}">
+        <div class="ai-premium-package__icon-{{ ai_gen_id }}">
+          {% if block.settings.service_2_icon %}
+            <img src="{{ block.settings.service_2_icon | image_url: width: 100 }}" alt="{{ block.settings.service_2_title | escape }}">
+          {% else %}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          {% endif %}
+        </div>
+        <h3 class="ai-premium-package__title-{{ ai_gen_id }}">{{ block.settings.service_2_title }}</h3>
+        <p class="ai-premium-package__description-{{ ai_gen_id }}">{{ block.settings.service_2_description }}</p>
+      </div>
+
+      <div class="ai-premium-package__column-{{ ai_gen_id }}">
+        <div class="ai-premium-package__icon-{{ ai_gen_id }}">
+          {% if block.settings.service_3_icon %}
+            <img src="{{ block.settings.service_3_icon | image_url: width: 100 }}" alt="{{ block.settings.service_3_title | escape }}">
+          {% else %}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          {% endif %}
+        </div>
+        <h3 class="ai-premium-package__title-{{ ai_gen_id }}">{{ block.settings.service_3_title }}</h3>
+        <p class="ai-premium-package__description-{{ ai_gen_id }}">{{ block.settings.service_3_description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Premium package display",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What's Included in the Premium Package"
+    },
+    {
+      "type": "header",
+      "content": "Service 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "service_1_icon",
+      "label": "Service 1 icon"
+    },
+    {
+      "type": "text",
+      "id": "service_1_title",
+      "label": "Service 1 title",
+      "default": "White-glove moving service"
+    },
+    {
+      "type": "textarea",
+      "id": "service_1_description",
+      "label": "Service 1 description",
+      "default": "Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store."
+    },
+    {
+      "type": "header",
+      "content": "Service 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "service_2_icon",
+      "label": "Service 2 icon"
+    },
+    {
+      "type": "text",
+      "id": "service_2_title",
+      "label": "Service 2 title",
+      "default": "Climate-controlled storage"
+    },
+    {
+      "type": "textarea",
+      "id": "service_2_description",
+      "label": "Service 2 description",
+      "default": "Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage."
+    },
+    {
+      "type": "header",
+      "content": "Service 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "service_3_icon",
+      "label": "Service 3 icon"
+    },
+    {
+      "type": "text",
+      "id": "service_3_title",
+      "label": "Service 3 title",
+      "default": "Delivery back to your new space"
+    },
+    {
+      "type": "textarea",
+      "id": "service_3_description",
+      "label": "Service 3 description",
+      "default": "When the fall semester begins, we return and set up your belongings where you need them."
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "title_font",
+      "label": "Title font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "font_family",
+      "label": "General font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Heading font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 18,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile heading size",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "column_background",
+      "label": "Column background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "icon_background",
+      "label": "Icon background",
+      "default": "#f5f5f7"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e5e5e7"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 80,
+      "step": 10,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "column_padding",
+      "min": 20,
+      "max": 60,
+      "step": 10,
+      "unit": "px",
+      "label": "Column padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "heading_margin",
+      "min": 20,
+      "max": 60,
+      "step": 10,
+      "unit": "px",
+      "label": "Heading bottom margin",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "content_margin",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "unit": "px",
+      "label": "Content top margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "min": 10,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Title bottom margin",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Icons"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 40,
+      "max": 80,
+      "step": 10,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "icon_margin",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Icon bottom margin",
+      "default": 25
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 20,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile column gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile column padding",
+      "default": 25
+    }
+  ],
+  "presets": [
+    {
+      "name": "Premium package display"
+    }
+  ]
+}
+{% endschema %}

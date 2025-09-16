@@ -1,0 +1,1044 @@
+{% doc %}
+  @prompt
+    I need a very luxury and well organized way to display all the following information
+    
+    Cedar Bucket 2026 Pre-Sales – Reserve Your Spot Now
+    
+    Cedar Bucket has been Oxford’s #1 choice for Ole Miss student moving and storage, voted Best Moving Company and Best Storage Company in Oxford for 2025. We’re opening limited pre-sales for Summer 2026, and space will go fast.
+    Our Moving + Storage Premium Package is the ultimate hands-free solution for students and families who want a stress-free summer. We handle everything from start to finish so you don’t have to lift a finger.
+     
+    What’s Included in the Premium Package
+    • White-glove moving service
+    Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.
+    • Climate-controlled storage
+    Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.
+    • Delivery back to your new space
+    When the fall semester begins, we return and set up your belongings where you need them.
+    • Ship-to-Storage service
+    Can’t bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we’ll place them in your reserved unit on your behalf. 
+    • Packing supplies can be provided in advance. Please request for further details! 
+    
+    Additional Services
+    Subject to availability of staff and early scheduling, Cedar Bucket also offers:
+    • Handyman services
+    • Assembly and disassembly services 
+    • Packing services
+    Further details can be provided post reservation. 
+    
+    Why Reserve Now
+    • Limited availability – Space sells out quickly.
+    • Priority scheduling – Early reservations guarantee your preferred move-in and move-out times.
+    • Peace of mind – Secure your storage and avoid last-minute stress.
+    
+    Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days, the colors need to be black and i need carefully place image opportunities, remove the image from the premium package overview and the $500 deposit block.
+    
+    Make it to where if  i don't put an image the image block isn't visible for the others so that I have the option.
+    
+    in the What's Included in the Premium Package-  I want relevant icons in black and white
+    
+    Additional Services needs to have Icons above Handyman services
+    Assembly and disassembly services
+    Packing services and they do not need to
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-luxury-presale-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, {{ block.settings.background_color }} 0%, {{ block.settings.background_gradient_color }} 100%);
+    border-radius: {{ block.settings.border_radius }}px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+  }
+
+  .ai-luxury-presale__header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 2px solid {{ block.settings.accent_color }};
+    padding-bottom: 40px;
+    position: relative;
+  }
+
+  .ai-luxury-presale__hero-image-{{ ai_gen_id }} {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 30px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .ai-luxury-presale__hero-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-luxury-presale__hero-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-luxury-presale__hero-placeholder-{{ ai_gen_id }} svg {
+    width: 80%;
+    height: 80%;
+    opacity: 0.3;
+  }
+
+  .ai-luxury-presale__hero-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .ai-luxury-presale__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+  .ai-luxury-presale__subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .ai-luxury-presale__content-{{ ai_gen_id }} {
+    display: grid;
+    gap: 40px;
+  }
+
+  .ai-luxury-presale__section-{{ ai_gen_id }} {
+    background: {{ block.settings.section_background }};
+    padding: 40px;
+    border-radius: {{ block.settings.section_border_radius }}px;
+    border-left: 4px solid {{ block.settings.accent_color }};box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  .ai-luxury-presale__section--no-border-{{ ai_gen_id }} {
+    border-left: none;
+  }
+
+  .ai-luxury-presale__section-image-{{ ai_gen_id }} {
+    width: 200px;
+    height: 150px;
+    float: right;
+    margin: 0 0 20px 30px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-luxury-presale__section-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-luxury-presale__section-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-luxury-presale__section-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-luxury-presale__section-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .ai-luxury-presale__section-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.section_title_size }}px;
+    color: {{ block.settings.section_title_color }};
+    margin: 0 0 25px;
+    font-weight: 600;
+  }
+
+  .ai-luxury-presale__section-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.body_text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  .ai-luxury-presale__features-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 20px;
+  }
+
+  .ai-luxury-presale__feature-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  .ai-luxury-presale__feature-image-{{ ai_gen_id }} {
+    width: 80px;
+    height: 60px;
+    float: right;
+    margin: 0 0 10px 15px;
+    border-radius:8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-luxury-presale__feature-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-luxury-presale__feature-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-luxury-presale__feature-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+  }
+
+  .ai-luxury-presale__feature-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2px 4px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 2px;
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .ai-luxury-presale__feature-icon-{{ ai_gen_id }} {
+    width: 40px;
+    height: 40px;
+    background: {{ block.settings.accent_color }};
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .ai-luxury-presale__feature-icon-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+
+  .ai-luxury-presale__feature-content-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-luxury-presale__feature-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.feature_title_size }}px;
+    color: {{ block.settings.section_title_color }};
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  .ai-luxury-presale__feature-desc-{{ ai_gen_id }} {
+    font-size: {{ block.settings.feature_desc_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-luxury-presale__additional-services-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .ai-luxury-presale__service-{{ ai_gen_id }} {
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .ai-luxury-presale__service-{{ ai_gen_id }}:hover {
+    border-color: {{ block.settings.accent_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-luxury-presale__service-icon-{{ ai_gen_id }} {
+    width: 60px;
+    height: 60px;
+    background: {{ block.settings.accent_color }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+  .ai-luxury-presale__service-icon-{{ ai_gen_id }} svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+
+  .ai-luxury-presale__service-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.service_title_size }}px;
+    color: {{ block.settings.section_title_color }};
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .ai-luxury-presale__benefits-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+  }
+
+  .ai-luxury-presale__benefit-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+
+  .ai-luxury-presale__benefit-icon-{{ ai_gen_id }} {
+    width: 60px;
+    height: 60px;
+    background: {{ block.settings.accent_color }};
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-luxury-presale__benefit-icon-{{ ai_gen_id }} svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+
+  .ai-luxury-presale__benefit-content-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-luxury-presale__benefit-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.benefit_title_size }}px;
+    color: {{ block.settings.section_title_color }};
+    font-weight: 600;
+    margin: 0 0 5px;
+  }
+
+  .ai-luxury-presale__benefit-desc-{{ ai_gen_id }} {
+    font-size: {{ block.settings.benefit_desc_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .ai-luxury-presale__cta-{{ ai_gen_id }} {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background: linear-gradient(135deg, {{ block.settings.cta_background }}, {{ block.settings.cta_background_alt }});
+    border-radius: {{ block.settings.section_border_radius }}px;
+    border: 2px solid {{ block.settings.accent_color }};
+    position: relative;
+  }
+
+  .ai-luxury-presale__deposit-info-{{ ai_gen_id }} {
+    font-size: {{ block.settings.deposit_text_size }}px;
+    color: {{ block.settings.deposit_text_color }};
+    margin: 0 0 25px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .ai-luxury-presale__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 40px;
+    background: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-luxury-presale__button-{{ ai_gen_id }}:hover {
+    background: {{ block.settings.button_hover_background }};
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-luxury-presale-{{ ai_gen_id }} {
+      padding: 40px 20px;
+    }
+
+    .ai-luxury-presale__hero-image-{{ ai_gen_id }} {
+      width: 300px;
+      height: 300px;
+    }
+
+    .ai-luxury-presale__section-{{ ai_gen_id }} {
+      padding: 25px;
+    }
+
+    .ai-luxury-presale__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+
+    .ai-luxury-presale__feature-image-{{ ai_gen_id }} {
+      float: none;
+      width: 100%;
+      height: 120px;
+      margin: 0 0 15px 0;
+    }
+
+    .ai-luxury-presale__additional-services-{{ ai_gen_id }},
+    .ai-luxury-presale__benefits-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-luxury-presale-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <header class="ai-luxury-presale__header-{{ ai_gen_id }}">
+    {% if block.settings.hero_image %}
+      <div class="ai-luxury-presale__hero-image-{{ ai_gen_id }}">
+        <img
+          src="{{ block.settings.hero_image | image_url: width: 800}}"
+          alt="{{ block.settings.hero_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.hero_image.width }}"
+          height="{{ block.settings.hero_image.height }}"
+        >
+      </div>
+    {% else %}
+      <div class="ai-luxury-presale__hero-image-{{ ai_gen_id }}">
+        <div class="ai-luxury-presale__hero-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}<div class="ai-luxury-presale__hero-empty-state-{{ ai_gen_id }}">
+            Add hero image
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    
+    <h1 class="ai-luxury-presale__title-{{ ai_gen_id }}">{{ block.settings.main_title }}</h1>
+    <p class="ai-luxury-presale__subtitle-{{ ai_gen_id }}">{{ block.settings.main_subtitle }}</p>
+  </header>
+
+  <div class="ai-luxury-presale__content-{{ ai_gen_id }}">
+    <section class="ai-luxury-presale__section-{{ ai_gen_id }}">
+      <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}">Premium Package Overview</h2>
+      <p class="ai-luxury-presale__section-text-{{ ai_gen_id }}">{{ block.settings.package_description }}</p>
+    </section>
+
+    <section class="ai-luxury-presale__section-{{ ai_gen_id }}">
+      <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}">What's Included in the Premium Package</h2>
+      <ul class="ai-luxury-presale__features-{{ ai_gen_id }}">
+        <li class="ai-luxury-presale__feature-{{ ai_gen_id }}">
+          {% if block.settings.feature_1_image %}
+            <div class="ai-luxury-presale__feature-image-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.feature_1_image | image_url: width: 200}}"
+                alt="{{ block.settings.feature_1_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.feature_1_image.width }}"
+                height="{{ block.settings.feature_1_image.height }}"
+              >
+            </div>
+          {% endif %}
+          <div class="ai-luxury-presale__feature-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__feature-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__feature-title-{{ ai_gen_id }}">White-glove moving service</h3>
+            <p class="ai-luxury-presale__feature-desc-{{ ai_gen_id }}">Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.</p>
+          </div>
+        </li>
+        
+        <li class="ai-luxury-presale__feature-{{ ai_gen_id }}">
+          {% if block.settings.feature_2_image %}
+            <div class="ai-luxury-presale__feature-image-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.feature_2_image | image_url: width: 200 }}"
+                alt="{{ block.settings.feature_2_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.feature_2_image.width }}"
+                height="{{ block.settings.feature_2_image.height }}"
+              >
+            </div>
+          {% endif %}
+          
+          <div class="ai-luxury-presale__feature-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__feature-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__feature-title-{{ ai_gen_id }}">Climate-controlled storage</h3>
+            <p class="ai-luxury-presale__feature-desc-{{ ai_gen_id }}">Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.</p>
+          </div>
+        </li>
+        
+        <li class="ai-luxury-presale__feature-{{ ai_gen_id }}">
+          {% if block.settings.feature_3_image %}
+            <div class="ai-luxury-presale__feature-image-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.feature_3_image | image_url: width: 200 }}"
+                alt="{{ block.settings.feature_3_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.feature_3_image.width }}"
+                height="{{ block.settings.feature_3_image.height }}"
+              >
+            </div>
+          {% endif %}
+          
+          <div class="ai-luxury-presale__feature-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__feature-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__feature-title-{{ ai_gen_id }}">Delivery back to your new space</h3>
+            <p class="ai-luxury-presale__feature-desc-{{ ai_gen_id }}">When the fall semester begins, we return and set up your belongings where you need them.</p>
+          </div>
+        </li>
+        
+        <li class="ai-luxury-presale__feature-{{ ai_gen_id }}">
+          {% if block.settings.feature_4_image %}
+            <div class="ai-luxury-presale__feature-image-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.feature_4_image | image_url: width: 200 }}"
+                alt="{{ block.settings.feature_4_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.feature_4_image.width }}"
+                height="{{ block.settings.feature_4_image.height }}"
+              >
+            </div>
+          {% endif %}
+          
+          <div class="ai-luxury-presale__feature-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__feature-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__feature-title-{{ ai_gen_id }}">Ship-to-Storage service</h3>
+            <p class="ai-luxury-presale__feature-desc-{{ ai_gen_id }}">Can't bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we'll place them in your reserved unit on your behalf.</p>
+          </div>
+        </li>
+        
+        <li class="ai-luxury-presale__feature-{{ ai_gen_id }}">
+          {% if block.settings.feature_5_image %}
+            <div class="ai-luxury-presale__feature-image-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.feature_5_image | image_url: width: 200 }}"
+                alt="{{ block.settings.feature_5_image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.feature_5_image.width }}"
+                height="{{ block.settings.feature_5_image.height }}"
+              >
+            </div>
+          {% endif %}
+          
+          <div class="ai-luxury-presale__feature-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__feature-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__feature-title-{{ ai_gen_id }}">Packing supplies provided</h3>
+            <p class="ai-luxury-presale__feature-desc-{{ ai_gen_id }}">Packing supplies can be provided in advance. Please request for further details!</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="ai-luxury-presale__section-{{ ai_gen_id }}">
+      <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}">Additional Services</h2>
+      <p class="ai-luxury-presale__section-text-{{ ai_gen_id }}">Subject to availability of staff and early scheduling, Cedar Bucket also offers:</p>
+      <div class="ai-luxury-presale__additional-services-{{ ai_gen_id }}">
+        <div class="ai-luxury-presale__service-{{ ai_gen_id }}">
+          <div class="ai-luxury-presale__service-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6l6 6 1.6-4.7c1.12.4.7 5.4-1.3 7.4-1.9 1.9-4.6 2.4-6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+            </svg>
+          </div>
+          <h3 class="ai-luxury-presale__service-title-{{ ai_gen_id }}">Handyman services</h3>
+        </div>
+        <div class="ai-luxury-presale__service-{{ ai_gen_id }}">
+          <div class="ai-luxury-presale__service-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 4H5V5h14v2zm0 6H5c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2zm0 4H5v-2h14v2z"/>
+            </svg>
+          </div>
+          <h3 class="ai-luxury-presale__service-title-{{ ai_gen_id }}">Assembly and disassembly services</h3>
+        </div>
+        <div class="ai-luxury-presale__service-{{ ai_gen_id }}">
+          <div class="ai-luxury-presale__service-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="ai-luxury-presale__service-title-{{ ai_gen_id }}">Packing services</h3>
+        </div>
+      </div>
+      <p class="ai-luxury-presale__section-text-{{ ai_gen_id }}">Further details can be provided post reservation.</p>
+    </section>
+
+    <section class="ai-luxury-presale__section-{{ ai_gen_id }} ai-luxury-presale__section--no-border-{{ ai_gen_id }}">
+      <h2 class="ai-luxury-presale__section-title-{{ ai_gen_id }}">Why Reserve Now</h2>
+      <div class="ai-luxury-presale__benefits-{{ ai_gen_id }}">
+        <div class="ai-luxury-presale__benefit-{{ ai_gen_id }}">
+          <div class="ai-luxury-presale__benefit-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__benefit-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__benefit-title-{{ ai_gen_id }}">Limited availability</h3>
+            <p class="ai-luxury-presale__benefit-desc-{{ ai_gen_id }}">Space sells out quickly.</p>
+          </div>
+        </div>
+        <div class="ai-luxury-presale__benefit-{{ ai_gen_id }}">
+          <div class="ai-luxury-presale__benefit-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__benefit-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__benefit-title-{{ ai_gen_id }}">Priority scheduling</h3>
+            <p class="ai-luxury-presale__benefit-desc-{{ ai_gen_id }}">Early reservations guarantee your preferred move-in and move-out times.</p>
+          </div>
+        </div>
+        <div class="ai-luxury-presale__benefit-{{ ai_gen_id }}">
+          <div class="ai-luxury-presale__benefit-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+            </svg>
+          </div>
+          <div class="ai-luxury-presale__benefit-content-{{ ai_gen_id }}">
+            <h3 class="ai-luxury-presale__benefit-title-{{ ai_gen_id }}">Peace of mind</h3>
+            <p class="ai-luxury-presale__benefit-desc-{{ ai_gen_id }}">Secure your storage and avoid last-minute stress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ai-luxury-presale__cta-{{ ai_gen_id }}">
+      <p class="ai-luxury-presale__deposit-info-{{ ai_gen_id }}">{{ block.settings.deposit_info }}</p>
+      <a href="{{ block.settings.cta_link }}" class="ai-luxury-presale__button-{{ ai_gen_id }}">
+        {{ block.settings.cta_text }}
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Luxury presale display",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero section"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main title",
+      "default": "Cedar Bucket 2026Pre-Sales – Reserve Your Spot Now"
+    },
+    {
+      "type": "textarea",
+      "id": "main_subtitle",
+      "label": "Main subtitle",
+      "default": "Cedar Bucket has been Oxford's #1 choice for Ole Miss student moving and storage, voted Best Moving Company and Best Storage Company in Oxford for 2025. We're opening limited pre-sales for Summer 2026, and space will go fast."
+    },
+    {
+      "type": "header",
+      "content": "Package section"
+    },
+    {
+      "type": "textarea",
+      "id": "package_description",
+      "label": "Package description",
+      "default": "Our Moving + Storage Premium Package is the ultimate hands-free solution for students and families who want a stress-free summer. We handle everything from start to finish so you don't have to lift a finger."
+    },
+    {
+      "type": "header",
+      "content": "Feature images"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_1_image",
+      "label": "White-glove moving service image"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_2_image",
+      "label": "Climate-controlled storage image"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_3_image",
+      "label": "Delivery service image"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_4_image",
+      "label": "Ship-to-Storage service image"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_5_image",
+      "label": "Packing supplies image"
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button text",
+      "default": "Reserve Your Spot Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "textarea",
+      "id": "deposit_info",
+      "label": "Deposit information",
+      "default": "Your $500 deposit reserves your spot and will be credited toward your final invoice. You may request a refund within 30 days."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "background_gradient_color",
+      "label": "Background gradient color",
+      "default": "#f8f9fa"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "section_title_color",
+      "label": "Section title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "cta_background",
+      "label": "CTA background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "cta_background_alt",
+      "label": "CTA background alt",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "deposit_text_color",
+      "label": "Deposit text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#f0f0f0"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 18,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Section title size",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "body_text_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Body text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "feature_title_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Feature title size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "feature_desc_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Feature description size",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "service_title_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Service title size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "benefit_title_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Benefit title size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "benefit_desc_size",
+      "min": 12,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Benefit description size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "deposit_text_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Deposit text size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 14,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Main border radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "section_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Section border radius",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury presale display"
+    }
+  ]
+}
+{% endschema %}

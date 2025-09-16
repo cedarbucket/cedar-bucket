@@ -32,7 +32,7 @@
         "text_YERE7A": {
           "type": "text",
           "settings": {
-            "text": "Call or email for availability!",
+            "text": "Fill out the form below for a quote",
             "text_style": "body",
             "custom_font": "Neutra Text Book",
             "font_size": 20,
@@ -67,25 +67,10 @@
         "show_text_below": false
       }
     },
-    "rich_text_67jCJj": {
-      "type": "rich-text",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "border_style": false,
-        "padding_top": 60,
-        "padding_left": 0,
-        "padding_right": 0,
-        "padding_bottom": 20
-      }
-    },
     "custom_liquid_baRq3X": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
-        "custom_liquid": "<div data-tf-live=\"01JMAXE8HNGNF8YB7C838V6FK8\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
+        "custom_liquid": "<div data-tf-live=\"01K3VN0YSD5GP82PBDDC3YMXFS\"></div><script src=\"//embed.typeform.com/next/embed.js\"></script>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -242,7 +227,6 @@
   "order": [
     "main",
     "image_banner_BxtyCB",
-    "rich_text_67jCJj",
     "custom_liquid_baRq3X",
     "rich_text_MjndfK",
     "1738175141778786fe",

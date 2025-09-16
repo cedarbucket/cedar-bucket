@@ -1,0 +1,623 @@
+{% doc %}
+  @prompt
+    display this in a luxury way - i need to be able to edit all fonts. I only need icons for the premium package.
+    
+    Make it very clear what we offer utilizing mutli column set up for whats included and display it diffferently for the add on services.
+    
+    What's Included in the Premium Package
+    What's Included in the Premium Package
+    White-glove moving service
+    Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store.
+    
+    Climate-controlled storage
+    Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage.
+    
+    Delivery back to your new space
+    When the fall semester begins, we return and set up your belongings where you need them.
+    
+    Additional Services Available for Add-On
+    Ship-to-Storage service
+    Can't bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we'll place them in your reserved unit on your behalf.
+    
+    Handyman services
+    Our student movers will handle the assembly and/or disassembly of any items you need during your move.
+    
+    Packing Supply Delivery
+    We can provide you with all the boxes and moving supplies needed in advance., do not bold the main title, make the icon of move out serive to an arrow pointed right and the icon of the move in serivce to an arrow pointed left, remove main title and main subtitle, add a right arrow as the icon of white glove moving service
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-luxury-pricing-{{ ai_gen_id }} {
+    padding: 60px 40px;
+    background: {{ block.settings.background_color }};
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-luxury-pricing__premium-section-{{ ai_gen_id }} {
+    background: {{ block.settings.premium_bg_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    padding: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid {{ block.settings.premium_border_color }};
+  }
+
+  .ai-luxury-pricing__premium-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ai-luxury-pricing__premium-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.section_title_font.family }}, {{ block.settings.section_title_font.fallback_families }};
+    font-weight: {{ block.settings.section_title_font.weight }};
+    font-size: {{ block.settings.section_title_size }}px;
+    color: {{ block.settings.premium_title_color }};
+    margin: 0;position: relative;
+    display: inline-block;
+  }
+
+  .ai-luxury-pricing__premium-title-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: {{ block.settings.accent_color }};
+  }
+
+  .ai-luxury-pricing__premium-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .ai-luxury-pricing__premium-item-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 30px 20px;
+    background: {{ block.settings.item_bg_color }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    border: 1px solid {{ block.settings.item_border_color }};
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-luxury-pricing__premium-item-{{ ai_gen_id }}:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-luxury-pricing__icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    margin: 0 auto 20px;
+    background: {{ block.settings.icon_bg_color }};
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-luxury-pricing__icon-{{ ai_gen_id }} svg {
+    width: {{ block.settings.icon_size | times: 0.6 }}px;
+    height: {{ block.settings.icon_size | times: 0.6 }}px;
+  }
+
+  .ai-luxury-pricing__item-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.item_title_font.family }}, {{ block.settings.item_title_font.fallback_families }};
+    font-weight: {{ block.settings.item_title_font.weight }};
+    font-size: {{ block.settings.item_title_size }}px;
+    color: {{ block.settings.item_title_color }};
+    margin: 0 0 15px;}
+
+  .ai-luxury-pricing__item-description-{{ ai_gen_id }} {
+    font-family: {{ block.settings.item_description_font.family }}, {{ block.settings.item_description_font.fallback_families }};
+    font-weight: {{ block.settings.item_description_font.weight }};
+    font-size: {{ block.settings.item_description_size }}px;
+    color: {{ block.settings.item_description_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-luxury-pricing__addon-section-{{ ai_gen_id }} {
+    background: {{ block.settings.addon_bg_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    padding: 40px;
+    border: 1px solid {{ block.settings.addon_border_color }};
+  }
+
+  .ai-luxury-pricing__addon-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .ai-luxury-pricing__addon-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.section_title_font.family }}, {{ block.settings.section_title_font.fallback_families }};
+    font-weight: {{ block.settings.section_title_font.weight }};
+    font-size: {{ block.settings.section_title_size }}px;
+    color: {{ block.settings.addon_title_color }};
+    margin: 0;
+  }
+
+  .ai-luxury-pricing__addon-list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .ai-luxury-pricing__addon-item-{{ ai_gen_id }} {
+    padding: 25px;
+    background: {{ block.settings.addon_item_bg_color }};
+    border-radius: {{ block.settings.addon_item_border_radius }}px;
+    border-left: 4px solid {{ block.settings.accent_color }};
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-luxury-pricing__addon-item-{{ ai_gen_id }}:hover {
+    background: {{ block.settings.addon_item_hover_bg_color }};
+  }
+
+  .ai-luxury-pricing__addon-item-title-{{ ai_gen_id }} {
+    font-family: {{ block.settings.addon_item_title_font.family }}, {{ block.settings.addon_item_title_font.fallback_families }};
+    font-weight: {{ block.settings.addon_item_title_font.weight }};
+    font-size: {{ block.settings.addon_item_title_size }}px;
+    color: {{ block.settings.addon_item_title_color }};
+    margin: 0 0 10px;
+  }
+
+  .ai-luxury-pricing__addon-item-description-{{ ai_gen_id }} {
+    font-family: {{ block.settings.addon_item_description_font.family }}, {{ block.settings.addon_item_description_font.fallback_families }};
+    font-weight: {{ block.settings.addon_item_description_font.weight }};
+    font-size: {{ block.settings.addon_item_description_size }}px;
+    color: {{ block.settings.addon_item_description_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-luxury-pricing-{{ ai_gen_id }} {
+      padding: 40px 20px;
+    }
+
+    .ai-luxury-pricing__premium-section-{{ ai_gen_id }},
+    .ai-luxury-pricing__addon-section-{{ ai_gen_id }} {
+      padding: 30px20px;
+    }
+
+    .ai-luxury-pricing__premium-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .ai-luxury-pricing__premium-title-{{ ai_gen_id }},
+    .ai-luxury-pricing__addon-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.section_title_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}<div class="ai-luxury-pricing-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-luxury-pricing__premium-section-{{ ai_gen_id }}">
+    <div class="ai-luxury-pricing__premium-header-{{ ai_gen_id }}">
+      <h2 class="ai-luxury-pricing__premium-title-{{ ai_gen_id }}">{{ block.settings.premium_section_title }}</h2>
+    </div>
+
+    <div class="ai-luxury-pricing__premium-grid-{{ ai_gen_id }}"><div class="ai-luxury-pricing__premium-item-{{ ai_gen_id }}">
+        <div class="ai-luxury-pricing__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </div>
+        <h3 class="ai-luxury-pricing__item-title-{{ ai_gen_id }}">{{ block.settings.service_1_title }}</h3>
+        <p class="ai-luxury-pricing__item-description-{{ ai_gen_id }}">{{ block.settings.service_1_description }}</p>
+      </div>
+
+      <div class="ai-luxury-pricing__premium-item-{{ ai_gen_id }}">
+        <div class="ai-luxury-pricing__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        </div>
+        <h3 class="ai-luxury-pricing__item-title-{{ ai_gen_id }}">{{ block.settings.service_2_title }}</h3>
+        <p class="ai-luxury-pricing__item-description-{{ ai_gen_id }}">{{ block.settings.service_2_description }}</p>
+      </div>
+
+      <div class="ai-luxury-pricing__premium-item-{{ ai_gen_id }}">
+        <div class="ai-luxury-pricing__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+          </svg>
+        </div>
+        <h3 class="ai-luxury-pricing__item-title-{{ ai_gen_id }}">{{ block.settings.service_3_title }}</h3>
+        <p class="ai-luxury-pricing__item-description-{{ ai_gen_id }}">{{ block.settings.service_3_description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ai-luxury-pricing__addon-section-{{ ai_gen_id }}">
+    <div class="ai-luxury-pricing__addon-header-{{ ai_gen_id }}">
+      <h2 class="ai-luxury-pricing__addon-title-{{ ai_gen_id }}">{{ block.settings.addon_section_title }}</h2>
+    </div>
+
+    <div class="ai-luxury-pricing__addon-list-{{ ai_gen_id }}">
+      <div class="ai-luxury-pricing__addon-item-{{ ai_gen_id }}">
+        <h3 class="ai-luxury-pricing__addon-item-title-{{ ai_gen_id }}">{{ block.settings.addon_1_title }}</h3>
+        <p class="ai-luxury-pricing__addon-item-description-{{ ai_gen_id }}">{{ block.settings.addon_1_description }}</p>
+      </div>
+
+      <div class="ai-luxury-pricing__addon-item-{{ ai_gen_id }}">
+        <h3 class="ai-luxury-pricing__addon-item-title-{{ ai_gen_id }}">{{ block.settings.addon_2_title }}</h3>
+        <p class="ai-luxury-pricing__addon-item-description-{{ ai_gen_id }}">{{ block.settings.addon_2_description }}</p>
+      </div>
+
+      <div class="ai-luxury-pricing__addon-item-{{ ai_gen_id }}">
+        <h3 class="ai-luxury-pricing__addon-item-title-{{ ai_gen_id }}">{{ block.settings.addon_3_title }}</h3>
+        <p class="ai-luxury-pricing__addon-item-description-{{ ai_gen_id }}">{{ block.settings.addon_3_description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Luxury service pricing",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main content"
+    },
+    {
+      "type": "text",
+      "id": "premium_section_title",
+      "label": "Premium section title",
+      "default": "What's Included in the Premium Package"
+    },
+    {
+      "type": "text",
+      "id": "addon_section_title",
+      "label": "Add-on section title",
+      "default": "Additional Services Available for Add-On"
+    },
+    {
+      "type": "header",
+      "content": "Premium services"
+    },
+    {
+      "type": "text",
+      "id": "service_1_title",
+      "label": "Service 1 title",
+      "default": "White-glove moving service"
+    },
+    {
+      "type": "textarea",
+      "id": "service_1_description",
+      "label": "Service 1 description",
+      "default": "Our student movers come pick up your belongings directly from your dorm, apartment, or house. We carefully load your items onto our moving trucks and take them back to our facility to store."
+    },
+    {
+      "type": "text",
+      "id": "service_2_title",
+      "label": "Service 2 title",
+      "default": "Climate-controlled storage"
+    },
+    {
+      "type": "textarea",
+      "id": "service_2_description",
+      "label": "Service 2 description",
+      "default": "Your items are stored in our secure, professionally managed facility designed to protect against humidity, heat, and damage."
+    },
+    {
+      "type": "text",
+      "id": "service_3_title",
+      "label": "Service 3 title",
+      "default": "Delivery back to your new space"
+    },
+    {
+      "type": "textarea",
+      "id": "service_3_description",
+      "label": "Service 3 description",
+      "default": "When the fall semester begins, we return and set up your belongings where you need them."
+    },
+    {
+      "type": "header",
+      "content": "Add-on services"
+    },
+    {
+      "type": "text",
+      "id": "addon_1_title",
+      "label": "Add-on 1 title",
+      "default": "Ship-to-Storage service"
+    },
+    {
+      "type": "textarea",
+      "id": "addon_1_description",
+      "label": "Add-on 1 description",
+      "default": "Can't bring everything with you? Need to purchase items online? Opt into our ship to service. Simply ship items to the Cedar Bucket, and we'll place them in your reserved unit on your behalf."
+    },
+    {
+      "type": "text",
+      "id": "addon_2_title",
+      "label": "Add-on 2 title",
+      "default": "Handyman services"
+    },
+    {
+      "type": "textarea",
+      "id": "addon_2_description",
+      "label": "Add-on 2 description",
+      "default": "Our student movers will handle the assembly and/or disassembly of any items you need during your move."
+    },
+    {
+      "type": "text",
+      "id": "addon_3_title",
+      "label": "Add-on 3 title",
+      "default": "Packing Supply Delivery"
+    },
+    {
+      "type": "textarea",
+      "id": "addon_3_description",
+      "label": "Add-on 3 description",
+      "default": "We can provide you with all the boxes and moving supplies needed in advance."
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "section_title_font",
+      "label": "Section title font",
+      "default": "serif"
+    },
+    {
+      "type": "range",
+      "id": "section_title_size",
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Section title size",
+      "default": 32
+    },
+    {
+      "type": "font_picker",
+      "id": "item_title_font",
+      "label": "Item title font",
+      "default": "serif"
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 16,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Item title size",
+      "default": 22
+    },
+    {
+      "type": "font_picker",
+      "id": "item_description_font",
+      "label": "Item description font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "item_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Item description size",
+      "default": 16
+    },
+    {
+      "type": "font_picker",
+      "id": "addon_item_title_font",
+      "label": "Add-on title font",
+      "default": "serif"
+    },
+    {
+      "type": "range",
+      "id": "addon_item_title_size",
+      "min": 16,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "label": "Add-on title size",
+      "default": 20
+    },
+    {
+      "type": "font_picker",
+      "id": "addon_item_description_font",
+      "label": "Add-on description font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "addon_item_description_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Add-on description size",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#d4af37"
+    },
+    {
+      "type": "header",
+      "content": "Premium section colors"
+    },
+    {
+      "type": "color",
+      "id": "premium_bg_color",
+      "label": "Premium background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "premium_border_color",
+      "label": "Premium border",
+      "default": "#d4af37"
+    },
+    {
+      "type": "color",
+      "id": "premium_title_color",
+      "label": "Premium title color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "item_bg_color",
+      "label": "Item background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_border_color",
+      "label": "Item border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Item title color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "item_description_color",
+      "label": "Item description color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Add-on section colors"
+    },
+    {
+      "type": "color",
+      "id": "addon_bg_color",
+      "label": "Add-on background",
+      "default": "#fafafa"
+    },
+    {
+      "type": "color",
+      "id": "addon_border_color",
+      "label": "Add-on border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "addon_title_color",
+      "label": "Add-on title color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "addon_item_bg_color",
+      "label": "Add-on item background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "addon_item_hover_bg_color",
+      "label": "Add-on item hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "addon_item_title_color",
+      "label": "Add-on item title color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "addon_item_description_color",
+      "label": "Add-on item description color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Icon style"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 40,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "icon_bg_color",
+      "label": "Icon background",
+      "default": "#d4af37"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Section border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Item border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "addon_item_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Add-on item border radius",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Luxury service pricing"
+    }
+  ]
+}
+{% endschema %}
